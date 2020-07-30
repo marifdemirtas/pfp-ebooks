@@ -1,12 +1,8 @@
-Overview of Runestone Interactive
+Purpose-first programming proof-of-concept
 ==================================
 
-This repository contains basic documentation, FAQ, and a tour of the tools Runestone Interactive provides, and information for instructors looking to use one of the books found at `Runestone Academy <http://runestone.academy>`_. The information can be found on runestone.academy.
+Many learners may not care about exactly how a programming language works, but they do care about what code can achieve for them. I propose the creation of "purpose-first" scaffolds, which allow novices can quickly and easily create or understand authentic code without the need for deep knowledge of semantics. Prior work suggests that this approach may lead to higher engagement by increasing both expectancy of success and subjective task value. 
 
-It can be built as a book using `Runestone Components <https://github.com/RunestoneInteractive/RunestoneComponents>`_.
-
-If you are looking for full developer and contribution documentation for Runestone, please see the `Runestone Interactive website <http://runestoneinteractive.org/build/html/index.html>`.
-
-If you find an error in this documentation, please send an email, open a github issue, or make a pull request.
+In this ebook, I develop a proof-of-concept purpose-first programming curriculum. This curriculum will be used in an experiment to evaluate the expectancy of success as well as task value that novice programmers have for purpose-first programming activities.
 
 
