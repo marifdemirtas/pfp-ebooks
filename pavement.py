@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "overview"
+project_name = "LearnWebScraping"
 ###############################
 
 master_url = "https://runestone.academy"
@@ -40,7 +40,7 @@ options(
             "appname": master_app,
             "loglevel": 10,
             "course_url": master_url,
-            "dynamic_pages": True,
+            "dynamic_pages": False,
             "use_services": "true",
             "basecourse": "overview",
             "python3": "true",
