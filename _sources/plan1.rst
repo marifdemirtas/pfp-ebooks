@@ -15,7 +15,7 @@
 
 .. qnum::
    :start: 1
-   :prefix: sc-1-
+   :prefix: p1-
 
 
 Plan 1: Example
