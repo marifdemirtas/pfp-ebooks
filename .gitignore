@@ -10,3 +10,5 @@ sphinx_settings.json
 sphinx-enki-info.txt
 build_info
 .history
+*.swp
+.DS_Store
