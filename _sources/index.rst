@@ -24,7 +24,7 @@ The internet is full of information people would like to collect. Copying and pa
  *Web scraping* involves fetching a web page and extracting data from the page.
 
 In this curriculum you will learn with *plans*
-:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::
 
 During this lesson, you will learn common patterns used by real professionals who do web scraping. These patterns are called "plans". 
 
@@ -33,7 +33,7 @@ During this lesson, you will learn common patterns used by real professionals wh
    A plan has the following parts: code, a goal, slots, and subgoals.
    
    .. image:: _static/plan_example.png
-       :scale: 20%
+       :scale: 90%
        :align: center
        :alt: An example of the plan and all its parts.
 
@@ -41,7 +41,7 @@ During this lesson, you will learn common patterns used by real professionals wh
 These 10 plans are based on real practice. The plans were created after an anaylsis of 100 web scraping files from Github, a place where people store code files, as well as two interviews with people who use web scraping in their jobs. These plans represent the most common patterns in web scraping with BeautifulSoup. 
 
 Plan 1: Get information from a webpage
-:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
@@ -50,7 +50,7 @@ Plan 1: Get information from a webpage
 
 
 Plans 2-3: Get the webpage
-:::::::::::::::::::::
+::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
@@ -59,7 +59,7 @@ Plans 2-3: Get the webpage
    plan3.rst
 
 Plans 4-6: Extract info from the webpage
-:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
@@ -69,7 +69,7 @@ Plans 4-6: Extract info from the webpage
    plan6.rst
 
 Plans 7-8: Get info from tag
-:::::::::::::::::::::
+::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
@@ -78,7 +78,7 @@ Plans 7-8: Get info from tag
    plan8.rst
 
 Plans 9-10: Do something with the info
-:::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
