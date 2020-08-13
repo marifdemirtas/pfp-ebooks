@@ -19,14 +19,14 @@ Learn Web Scraping!
 What is web scraping?
 :::::::::::::::::::::
  
-The internet is full of information people would like to collect. Copying and pasting it would take forever! How can we get that information with code?
+The internet is full of information people would like to collect. Copying and pasting it would take forever! In this ebook, we'll explore an easier way.
 
- *Web scraping* involves fetching a web page and extracting data from the page.
+ *Web scraping* is the process of getting information from web pages with code.
 
-In this curriculum you will learn with *plans*
-::::::::::::::::::::::::::::::::::::::::::::::
+How this ebook works
+::::::::::::::::::::
 
-During this lesson, you will learn common patterns used by real professionals who do web scraping. These patterns are called "plans". 
+During this lesson, you will learn common patterns used by *real professionals* who do web scraping. These patterns are called **plans**. 
 
 .. admonition::  What is a **plan**?
    
@@ -38,7 +38,7 @@ During this lesson, you will learn common patterns used by real professionals wh
        :alt: An example of the plan and all its parts.
 
 
-These 10 plans are based on real practice. The plans were created after an anaylsis of 100 web scraping files from Github, a place where people store code files, as well as two interviews with people who use web scraping in their jobs. These plans represent the most common patterns in web scraping with BeautifulSoup. 
+These plans represent the most common patterns in web scraping with BeautifulSoup. The 10 plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, a place where people store code files, as well as two interviews with people who use web scraping in their jobs. 
 
 Plan 1: Get information from a webpage
 ::::::::::::::::::::::::::::::::::::::
@@ -53,7 +53,7 @@ Plans 2-3: Get the webpage
 ::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    plan2.rst
    plan3.rst
@@ -62,7 +62,7 @@ Plans 4-6: Extract info from the webpage
 ::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    plan4.rst
    plan5.rst
@@ -72,7 +72,7 @@ Plans 7-8: Get info from tag
 ::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    plan7.rst
    plan8.rst
@@ -81,8 +81,18 @@ Plans 9-10: Do something with the info
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    plan9.rst
    plan10.rst
+
+Putting it together
+::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   activity-writing.rst
+   activity-debugging.rst
+   activity-explaining.rst
 
