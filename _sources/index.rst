@@ -26,19 +26,11 @@ The internet is full of information people would like to collect. Copying and pa
 How this ebook works
 ::::::::::::::::::::
 
-During this lesson, you will learn common patterns used by *real professionals* who do web scraping. These patterns are called **plans**. 
 
-.. admonition::  What is a **plan**?
+
+.. admonition:: During this lesson, you will learn code plans used by *real professionals*.
    
-   A plan has the following parts: code, a goal, slots, and subgoals.
-   
-   .. image:: _static/plan_example.png
-       :scale: 90%
-       :align: center
-       :alt: An example of the plan and all its parts.
-
-
-These plans represent the most common patterns in web scraping with BeautifulSoup. The 10 plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, a place where people store code files, as well as two interviews with people who use web scraping in their jobs. 
+   These plans represent the most common patterns in web scraping with BeautifulSoup. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
 
 Plan 1: Get information from a webpage
 ::::::::::::::::::::::::::::::::::::::
