@@ -21,6 +21,10 @@
 Plan 5: Example
 ====================================
 
+Some more tags
+====================================
+
+
 
 Plan 5: Outline
 ====================================
@@ -39,7 +43,7 @@ Plan 5: Exercises
 
 This is filler text.
 
-.. dragndrop:: dnd1
+.. dragndrop:: dnd
     :feedback: This is feedback.
     :match_1: Drag me to 1|||I am 1
     :match_2: Drag me to 2|||I am 2
@@ -47,7 +51,7 @@ This is filler text.
 
     This is a drag n drop question.
 
-.. dragndrop:: order
+.. dragndrop:: orde
     :feedback: This is feedback.
     :match_1: Plan #10 ||| # Get the webpage
     :match_2: Plan #4 ||| # Extract info from the page

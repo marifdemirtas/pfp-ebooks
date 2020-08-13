@@ -18,42 +18,75 @@
    :prefix: p3-
 
 
-Plan 3: Example
+Plan 2: Example
 ====================================
 
+Maybe we want to get information from the University of Michigan wikipedia page.
 
-Plan 3: Outline
+The first step in web scraping is getting information from a webpage.
+
+Here is the code for preparing to get information from the University of Michigan wikipedia page. 
+
+
+.. activecode:: umich_plan1
+   :language: python
+   :nocodelens:
+
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+
+   # Get a soup from a URL 
+   url = 'https://en.wikipedia.org/wiki/University_of_Michigan'
+   r = requests.get(url)
+   soup = BeautifulSoup(r.content)
+
+In this code, we get a **soup** from the **University of Michigan wikipedia page**. A soup is something that we can get information from using BeautifulSoup.
+
+Plan 2: Outline
 ====================================
 
-Goal: 
-
-.. image:: _static/plan1outline.png
-    :scale: 90%
+.. image:: _static/plan2outline.png
+    :scale: 100%
     :align: center
-    :alt: Plan 1 outline
+    :alt: Plan 2 outline
 
 
-
-Plan 3: Exercises
+What are URL endings?
 ====================================
 
-This is filler text.
+A URL is a web address, like you see in your web browser. It should be complete (starting with http:// or https://). 
 
-.. dragndrop:: dnd1
-    :feedback: This is feedback.
-    :match_1: Drag me to 1|||I am 1
-    :match_2: Drag me to 2|||I am 2
-    :match_3: Drag me to 3|||I am 3
+In this plan, a URL should be surrounded by quotes (:code:`''`).
 
-    This is a drag n drop question.
 
-.. dragndrop:: order
-    :feedback: This is feedback.
-    :match_1: Plan #10 ||| # Get the webpage
-    :match_2: Plan #4 ||| # Extract info from the page
-    :match_3: Plan #3 ||| # Do something with the info
+Plan 2: Exercises
+====================================
 
-    This is a drag n drop question.
+What parts of this plan are changeable?
 
+.. clickablearea:: umich_plan2_click
+    :question: If you wanted to get a soup from the MDen website, which part(s) of the code below would you change?
+    :iscode:
+    :feedback: Check out the plan outline above to identify the slot.
+
+    # Load libraries for web scraping
+    :click-incorrect:from bs4 import BeautifulSoup:endclick:
+    :click-incorrect:import requests:endclick:
+
+    # Get a soup from a URL 
+    :click-incorrect:url =:endclick: :click-correct:'https://en.wikipedia.org/wiki/University_of_Michigan':endclick:
+    :click-incorrect:r = requests.get(url):endclick:
+    :click-incorrect:soup = BeautifulSoup(r.content)::endclick:
+
+.. parsonsprob:: plan2
+
+   Choose the subgoals that achieve **Get a soup from a webpage**, and put them in the right order.
+   -----
+   # Load libraries for web scraping
+   =====
+   # Get a soup from a URL 
+   =====
+   # Get a soup from the University of Michigan wikipedia page #distractor
 
 

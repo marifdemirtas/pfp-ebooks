@@ -7,9 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-
-..  shortname:: Overview
-..  description:: This is an overview chapter for the web site.
+..  shortname:: Plan1
+..  description:: Worked examples plus practice for Plan 1.
 
 .. setup for automatic question numbering.
 
@@ -25,15 +24,44 @@ Plan 1: Example
 Plan 1: Outline
 ====================================
 
+Goal: 
+
 .. image:: _static/plan1outline.png
     :scale: 90%
     :align: center
     :alt: Plan 1 outline
 
 
+.. image:: _static/PythonTutor.gif
+    :scale: 90%
+    :align: center
+    :alt: Plan 1 outline
+
+
+
 
 Plan 1: Exercises
 ====================================
+
+This is filler text.
+
+.. dragndrop:: dnd1
+    :feedback: This is feedback.
+    :match_1: Drag me to 1|||I am 1
+    :match_2: Drag me to 2|||I am 2
+    :match_3: Drag me to 3|||I am 3
+
+    This is a drag n drop question.
+
+This is filler text.
+
+.. dragndrop:: order
+    :feedback: This is feedback.
+    :match_1: Plan #10 ||| # Get the webpage
+    :match_2: Plan #4 ||| # Extract info from the page
+    :match_3: Plan #3 ||| # Do something with the info
+
+    This is a drag n drop question.
 
 
 
