@@ -32,14 +32,6 @@ Goal:
     :alt: Plan 1 outline
 
 
-.. image:: _static/PythonTutor.gif
-    :scale: 90%
-    :align: center
-    :alt: Plan 1 outline
-
-
-
-
 Plan 1: Exercises
 ====================================
 
