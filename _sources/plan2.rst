@@ -29,7 +29,7 @@ Here is the code for preparing to get information from the University of Michiga
 
 
 .. activecode:: umich_plan1
-   :language: python
+   :language: python3
    :nocodelens:
 
    # Load libraries for web scraping

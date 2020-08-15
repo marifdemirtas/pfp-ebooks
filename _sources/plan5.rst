@@ -21,6 +21,31 @@
 Plan 5: Example
 ====================================
 
+.. activecode:: umich_wiki_toc
+   :language: python3
+   :nocodelens:
+
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+   # Get a soup from a URL 
+   url = 'https://en.wikipedia.org/wiki/University_of_Michigan'
+   r = requests.get(url)
+   soup = BeautifulSoup(r.content)
+
+   # Get all tags of a certain type from the soup
+   tags = soup.find_all('span', class_ = 'toctext')
+   # Collect info from the tags
+   collect_info = []
+   for tag in tags:
+       # Get text from tag
+       info = tag.text
+       collect_info.append(info)
+
+   # Do something with info
+   # Print the info
+   print(collect_info)
+
 Some more tags
 ====================================
 
