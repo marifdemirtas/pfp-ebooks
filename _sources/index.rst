@@ -88,3 +88,12 @@ Putting it together
    activity-debugging.rst
    activity-explaining.rst
 
+
+Download the plans
+::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   downloads.rst
+
