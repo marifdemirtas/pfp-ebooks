@@ -23,7 +23,7 @@ Plan 1: Example
 Let's say that you want to make a list of all the Cottage Inn Pizza locations. When you go to their website, it turns out that there are a *lot* of locations. 
 
 .. image:: _static/cottageinn_scroll.gif
-    :scale: 90%
+    :scale: 70%
     :align: center
     :alt: Scrolling around the Cottage Inn locations page to see that there are a lot of locations
 

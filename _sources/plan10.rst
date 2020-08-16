@@ -21,6 +21,7 @@
 Plan 10: Example
 ====================================
 
+
 What is a json file?
 ====================================
 
@@ -32,7 +33,7 @@ Plan 10: Outline
 .. image:: _static/plan10outline.png
     :scale: 90%
     :align: center
-    :alt: Plan 2 outline
+    :alt: Plan 10 outline
 
 
 

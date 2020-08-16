@@ -21,14 +21,11 @@
 Plan 2: Example
 ====================================
 
-Maybe we want to get information from the University of Michigan wikipedia page.
-
 The first step in web scraping is getting information from a webpage.
 
-Here is the code for preparing to get information from the University of Michigan wikipedia page. 
+Here is the code for preparing to get information from the Cottage Inn location page. 
 
-
-.. activecode:: umich_plan1
+.. activecode:: cottage_plan2
    :language: python3
    :nocodelens:
 
@@ -37,11 +34,11 @@ Here is the code for preparing to get information from the University of Michiga
    import requests
 
    # Get a soup from a URL 
-   url = 'https://en.wikipedia.org/wiki/University_of_Michigan'
+   url = 'https://cottageinn.com/pick-a-location/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content)
 
-In this code, we get a **soup** from the **University of Michigan wikipedia page**. A soup is something that we can get information from using BeautifulSoup.
+In this code, we get a **soup** from the **Cottage Inn location page**. A soup is something that we can get information from using BeautifulSoup.
 
 Plan 2: Outline
 ====================================
@@ -57,7 +54,13 @@ What is a URL?
 
 A URL is a web address, like you see in your web browser. It should be complete (starting with http:// or https://). 
 
-In this plan, a URL should be surrounded by quotes (:code:`''`).
+.. image:: _static/cottageinn_url.gif
+    :scale: 90%
+    :align: center
+    :alt: Scrolling around the Cottage Inn locations page to see that there are a lot of locations
+
+
+In this plan, a URL should be surrounded by quotes (:code:`' '`).
 
 
 Plan 2: Exercises
@@ -75,13 +78,13 @@ What parts of this plan are changeable?
     :click-incorrect:import requests:endclick:
 
     # Get a soup from a URL 
-    :click-incorrect:url =:endclick: :click-correct:'https://en.wikipedia.org/wiki/University_of_Michigan':endclick:
+    :click-incorrect:url =:endclick: :click-correct:'https://cottageinn.com/pick-a-location/':endclick:
     :click-incorrect:r = requests.get(url):endclick:
     :click-incorrect:soup = BeautifulSoup(r.content)::endclick:
 
 .. fillintheblank:: plan2_fill
 
-   Fill in the plan in order to get a soup from the Cottage Inn website.
+   Fill in the plan in order to get a soup from the University of Michigan wikipedia page.
 
    ``# Load libraries for web scraping``
 
@@ -95,7 +98,7 @@ What parts of this plan are changeable?
 
    ``r = requests.get(url)``
 
-   ``soup = BeautifulSoup(r.content)``
+   ``soup = BeautifulSoup(r.content, 'html.parser')``
 
 
    -    :'https://cottageinn.com': Correct.  

@@ -21,6 +21,14 @@
 Plan 5: Example
 ====================================
 
+
+.. image:: _static/cottageinn_inspect.gif
+    :scale: 90%
+    :align: center
+    :alt: By inspecting the locations, we see that they are all h3 tags.
+
+
+
 .. activecode:: umich_wiki_toc
    :language: python3
    :nocodelens:
@@ -31,7 +39,7 @@ Plan 5: Example
    # Get a soup from a URL 
    url = 'https://en.wikipedia.org/wiki/University_of_Michigan'
    r = requests.get(url)
-   soup = BeautifulSoup(r.content)
+   soup = BeautifulSoup(r.content, 'html.parser')
 
    # Get all tags of a certain type from the soup
    tags = soup.find_all('span', class_ = 'toctext')

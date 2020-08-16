@@ -22,15 +22,16 @@ Plan 7: Example
 ====================================
 
 
+
 Plan 7: Outline
 ====================================
 
 Goal: 
 
-.. image:: _static/plan1outline.png
+.. image:: _static/plan7outline.png
     :scale: 90%
     :align: center
-    :alt: Plan 1 outline
+    :alt: Plan 7 outline
 
 
 

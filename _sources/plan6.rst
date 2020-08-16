@@ -57,7 +57,7 @@ Even more tags?
 Plan 6: Outline
 ====================================
 
-.. image:: _static/plan2outline.png
+.. image:: _static/plan6outline.png
     :scale: 90%
     :align: center
     :alt: Plan 6 outline

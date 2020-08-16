@@ -18,7 +18,7 @@
    :prefix: p3-
 
 
-Plan 2: Example
+Plan 3: Example
 ====================================
 
 Maybe we want to get information from the University of Michigan wikipedia page.
@@ -43,13 +43,13 @@ Here is the code for preparing to get information from the University of Michiga
 
 In this code, we get a **soup** from the **University of Michigan wikipedia page**. A soup is something that we can get information from using BeautifulSoup.
 
-Plan 2: Outline
+Plan 3: Outline
 ====================================
 
-.. image:: _static/plan2outline.png
+.. image:: _static/plan3outline.png
     :scale: 100%
     :align: center
-    :alt: Plan 2 outline
+    :alt: Plan 3 outline
 
 
 What are URL endings?
@@ -60,7 +60,7 @@ A URL is a web address, like you see in your web browser. It should be complete 
 In this plan, a URL should be surrounded by quotes (:code:`''`).
 
 
-Plan 2: Exercises
+Plan 3: Exercises
 ====================================
 
 What parts of this plan are changeable?

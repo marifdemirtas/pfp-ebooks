@@ -83,10 +83,10 @@ What is a tag?
 Plan 4: Outline
 ====================================
 
-.. image:: _static/plan2outline.png
+.. image:: _static/plan4outline.png
     :scale: 90%
     :align: center
-    :alt: Plan 2 outline
+    :alt: Plan 4 outline
 
 
 
