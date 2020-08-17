@@ -21,9 +21,10 @@
 Plan 2: Example
 ====================================
 
-The first step in web scraping is getting information from a webpage.
+The first step in web scraping is getting information from a webpage. 
+To use the BeautifulSoup web scraping library, we have to put the webpage into something called a soup.
 
-Here is the code for preparing to get information from the Cottage Inn location page. 
+Here is the code for getting a **soup** from the **Cottage Inn location page**.
 
 .. activecode:: cottage_plan2
    :language: python3
@@ -38,10 +39,11 @@ Here is the code for preparing to get information from the Cottage Inn location 
    r = requests.get(url)
    soup = BeautifulSoup(r.content)
 
-In this code, we get a **soup** from the **Cottage Inn location page**. A soup is something that we can get information from using BeautifulSoup.
 
 Plan 2: Outline
 ====================================
+
+Here is what the plan looks like in general.
 
 .. image:: _static/plan2outline.png
     :scale: 100%
@@ -52,7 +54,9 @@ Plan 2: Outline
 What is a URL?
 ====================================
 
-A URL is a web address, like you see in your web browser. It should be complete (starting with http:// or https://). 
+A URL is a web address, like you see in your web browser. 
+It should be complete (starting with http:// or https://). 
+In this plan, a URL should be surrounded by quotes (:code:`' '`).
 
 .. image:: _static/cottageinn_url.gif
     :scale: 90%
@@ -60,16 +64,11 @@ A URL is a web address, like you see in your web browser. It should be complete 
     :alt: Scrolling around the Cottage Inn locations page to see that there are a lot of locations
 
 
-In this plan, a URL should be surrounded by quotes (:code:`' '`).
-
-
 Plan 2: Exercises
 ====================================
 
-What parts of this plan are changeable?
-
 .. clickablearea:: umich_plan2_click
-    :question: If you wanted to get a soup from the MDen website, which part(s) of the code below would you change?
+    :question: If you wanted to get a soup from the MDen homepage, which part(s) of the code below would you change?
     :iscode:
     :feedback: Check out the plan outline above to identify the slot.
 
@@ -101,10 +100,11 @@ What parts of this plan are changeable?
    ``soup = BeautifulSoup(r.content, 'html.parser')``
 
 
-   -    :'https://cottageinn.com': Correct.  
-        :https://cottageinn.com: Remember that URLs in this plan should have quotes around them.
-        :.*: Use 5 in the second blank
-
+   -    :'https://en.wikipedia.org/wiki/University_of_Michigan': Correct.  
+        :https://en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should have quotes around them.
+        :en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should start with https:// or http://
+        :.*: Incorrect. 
+        
 .. parsonsprob:: plan2_parsons
 
    Choose the subgoals that achieve **Get a soup from a webpage**, and put them in the right order.

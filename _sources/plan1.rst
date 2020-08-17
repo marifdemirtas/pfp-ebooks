@@ -29,13 +29,13 @@ Let's say that you want to make a list of all the Cottage Inn Pizza locations. W
 
 If only you could write a little Python to easily collect them all... 
 
-It turns out that you can! 
+It turns out that you can! Run the code below to see what it collects.
 
 .. activecode:: football_roster_3
    :language: python3
    :nocodelens:
 
-   # Get the webpage
+   #Get the webpage
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -44,17 +44,17 @@ It turns out that you can!
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')
 
-   # Extract info from the page
+   #Extract info from the page
    # Get all tags of a certain type from the soup
    tags = soup.find_all('h3')
    # Collect info from the tags
    collect_info = []
    for tag in tags:
-      # Get text from tag
-      info = tag.text
-      collect_info.append(info)
+       # Get text from tag
+       info = tag.text
+       collect_info.append(info)
 
-   # Do something with the info
+   #Do something with the info
    # Print the info
    print(collect_info)
 
@@ -72,23 +72,38 @@ Plan 1: Outline
 Plan 1: Exercises
 ====================================
 
-The exercise below doesn't really work. I need to replace it with something else. Maybe a select question.
+.. clickablearea:: plan1_click
+    :question: Which parts of the example are a part of Plan 1's Slot 2?
+    :iscode:
+    :feedback: Check out the plan outline above to identify the slot.
 
-.. dragndrop:: plan1_drag
-    :feedback: This is feedback.
-    :match_1: Get a soup from a webpage|||Get the webpage
-    :match_2: Get a soup from multiple webpages|||Get the webpage
-    :match_3: Get info from a single tag|||Get info from the webpage
-    :match_4: Get info from all tags of a certain type|||Get info from the webpage
-    :match_5: Get info from all tags of a certain type, within another tag|||Get info from the webpage
-    :match_6: Print info|||Do something with the info
-    :match_7: Save info in a json file|||Do something with the info
+    :click-incorrect:#Get the webpage:endclick:
+    :click-incorrect:# Load libraries for web scraping:endclick:
+    :click-incorrect:from bs4 import BeautifulSoup:endclick:
+    :click-incorrect:import requests:endclick:
+    :click-incorrect:# Get a soup from a URL:endclick:
+    :click-incorrect:url = 'https://cottageinn.com/pick-a-location/':endclick:
+    :click-incorrect:r = requests.get(url):endclick:
+    :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser'):endclick:
 
-    Put the plans on the left into the slot they fit into on the right.
+    :click-incorrect:#Extract info from the page:endclick:
+    :click-correct:# Get all tags of a certain type from the soup:endclick:
+    :click-correct:tags = soup.find_all('h3'):endclick:
+    :click-correct:# Collect info from the tags:endclick:
+    :click-correct:collect_info = []:endclick:
+    :click-correct:for tag in tags::endclick:
+        :click-correct:# Get text from tag:endclick:
+        :click-correct:info = tag.text:endclick:
+        :click-correct:collect_info.append(info):endclick:
+
+    :click-incorrect:#Do something with the info:endclick:
+    :click-incorrect:# Print the info:endclick:
+    :click-incorrect:print(collect_info):endclick:
+
 
 .. parsonsprob:: plan1_order
 
-   Choose the subgoals that achieve **Scrape a webpage**, and put them in the right order.
+   Choose the subgoals that achieve Plan 1's goal, **Scrape a webpage**, and put them in the right order.
    -----
    # Get the webpage
    =====

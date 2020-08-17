@@ -21,6 +21,9 @@
 Plan 5: Example
 ====================================
 
+To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags. 
+
+A great way to figure this out is to use the "inspect" function on your browser. 
 
 .. image:: _static/cottageinn_inspect.gif
     :scale: 90%
@@ -28,41 +31,25 @@ Plan 5: Example
     :alt: By inspecting the locations, we see that they are all h3 tags.
 
 
+We see that we need to get all the ``h3`` tags from the webpage. The text in those tags has the information we need!
 
-.. activecode:: umich_wiki_toc
+.. activecode:: plan5_example
    :language: python3
    :nocodelens:
 
-   # Load libraries for web scraping
-   from bs4 import BeautifulSoup
-   import requests
-   # Get a soup from a URL 
-   url = 'https://en.wikipedia.org/wiki/University_of_Michigan'
-   r = requests.get(url)
-   soup = BeautifulSoup(r.content, 'html.parser')
-
    # Get all tags of a certain type from the soup
-   tags = soup.find_all('span', class_ = 'toctext')
+   tags = soup.find_all('h3')
+   
    # Collect info from the tags
    collect_info = []
    for tag in tags:
-       # Get text from tag
-       info = tag.text
-       collect_info.append(info)
-
-   # Do something with info
-   # Print the info
-   print(collect_info)
-
-Some more tags
-====================================
-
+      # Get text from tag
+      info = tag.text
+      collect_info.append(info)
 
 
 Plan 5: Outline
 ====================================
-
-Goal: 
 
 .. image:: _static/plan5outline.png
     :scale: 90%
@@ -70,27 +57,70 @@ Goal:
     :alt: Plan 5 outline
 
 
-
 Plan 5: Exercises
 ====================================
 
-This is filler text.
+.. image:: _static/p_tag_example.png
+    :scale: 90%
+    :align: center
+    :alt: Example of a p tag
 
-.. dragndrop:: dnd
-    :feedback: This is feedback.
-    :match_1: Drag me to 1|||I am 1
-    :match_2: Drag me to 2|||I am 2
-    :match_3: Drag me to 3|||I am 3
+.. clickablearea:: plan5_click
+    :question: If you wanted to get the text from all the p tags, which part(s) of the code below would you change?
+    :iscode:
+    :feedback: Check out the plan outline above to identify the relevant slot(s).
 
-    This is a drag n drop question.
+   # Get all tags of a certain type from the soup
+   :click-incorrect:tags = soup.find_all(:endclick::click-correct:'h3':endclick::click-incorrect:):endclick:
+   
+   # Collect info from the tags
+   :click-incorrect:collect_info = []:endclick:
+   :click-incorrect:for tag in tags::endclick:
+       :click-incorrect:# Get info from tag:endclick:
+       :click-incorrect:info = tag.text:endclick:
+       :click-incorrect:collect_info.append(info):endclick:
 
-.. dragndrop:: orde
-    :feedback: This is feedback.
-    :match_1: Plan #10 ||| # Get the webpage
-    :match_2: Plan #4 ||| # Extract info from the page
-    :match_3: Plan #3 ||| # Do something with the info
+.. fillintheblank:: plan5_fill
 
-    This is a drag n drop question.
+   Fill in the plan in order to get the links from all *a* tags.
+
+   ``# Get all tags of a certain type from the soup``
+
+   ``tags = soup.find_all(`` |blank| ``)``
+   
+   ``# Collect info from the tags``
+
+   ``collect_info = []``
+
+   ``for tag in tags:``
+
+      ``# Get info from tag``
+
+      |blank|
+      
+      ``collect_info.append(info)``
+
+   -    :'a': Correct.  
+        :a: Remember that URLs in this plan should have quotes around them.
+        :.*: Incorrect. 
+   -    :tag.get('href'): Correct.
+        :tag.text: Remember that you are trying to get the link.
+        :tag.*: Incorrect, but good start!
+        :.*: Incorrect.   
+
+.. parsonsprob:: plan5_parsons
+
+   Choose the subgoals that achieve **Get info from all tags of a certain type**, and put them in the right order.
+   -----
+   # Get all tags of a certain type from the soup
+   =====
+   # Collect info from the tags
+   =====
+   # Get info from the tag#distractor
+   =====
+   # Get first tag of a certain type from the soup#distractor
+   =====
+   # Get all tags of a certain type from the first tag#distractor
 
 
 
