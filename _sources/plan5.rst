@@ -60,8 +60,10 @@ Plan 5: Outline
 Plan 5: Exercises
 ====================================
 
+Here's an example of some p tags on Dr. Ericson's UMSI website.
+
 .. image:: _static/p_tag_example.png
-    :scale: 90%
+    :scale: 60%
     :align: center
     :alt: Example of a p tag
 
@@ -70,15 +72,15 @@ Plan 5: Exercises
     :iscode:
     :feedback: Check out the plan outline above to identify the relevant slot(s).
 
-   # Get all tags of a certain type from the soup
-   :click-incorrect:tags = soup.find_all(:endclick::click-correct:'h3':endclick::click-incorrect:):endclick:
+    # Get all tags of a certain type from the soup
+    :click-incorrect:tags = soup.find_all(:endclick::click-correct:'h3':endclick::click-incorrect:):endclick:
    
-   # Collect info from the tags
-   :click-incorrect:collect_info = []:endclick:
-   :click-incorrect:for tag in tags::endclick:
-       :click-incorrect:# Get info from tag:endclick:
-       :click-incorrect:info = tag.text:endclick:
-       :click-incorrect:collect_info.append(info):endclick:
+    # Collect info from the tags
+    :click-incorrect:collect_info = []:endclick:
+    :click-incorrect:for tag in tags::endclick:
+        :click-incorrect:# Get info from tag:endclick:
+        :click-incorrect:info = tag.text:endclick:
+        :click-incorrect:collect_info.append(info):endclick:
 
 .. fillintheblank:: plan5_fill
 
