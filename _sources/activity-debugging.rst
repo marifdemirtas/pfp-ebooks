@@ -21,3 +21,43 @@ Please complete this activity
 
 Code debugging activity
 :::::::::::::::::::::::::
+
+This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Can you fix it?
+
+.. activecode:: debug_code_1
+        :language: python3
+        :nocodelens:
+
+
+        #Get the webpage
+        # Load libraries for web scraping
+        from bs4 import BeautifulSoup
+        import requests
+        # Get a soup from a URL 
+        url = 'https://dining.umich.edu/menus-locations/dining-halls/'
+        r = requests.get(url)
+        soup = BeautifulSoup(r.content, 'html.parser')
+
+        #Extract info from the webpage
+        # Get first tag of a certain type from the soup
+        first_tag = soup.find('div', class_='medium-7 columns')
+        # Get all tags of a certain type from the first tag
+        tags = soup.find_all('a')
+        # Collect info from the tags
+        collect_info = []
+        for tag in tags:
+            # Get link from tag
+            info = tag.get('href')
+            collect_info.append(info)
+
+        #Do something with info
+        # Print the info
+        print(collect_info)
+
+
+
+.. image:: _static/dining_halls.gif
+    :scale: 90%
+    :align: center
+    :alt: Plan 10 outline
+
