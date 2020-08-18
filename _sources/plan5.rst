@@ -96,11 +96,11 @@ Here's an example of some p tags on Dr. Ericson's UMSI website.
 
    ``for tag in tags:``
 
-      ``# Get info from tag``
+       ``# Get info from tag``
 
-      |blank|
+       |blank|
       
-      ``collect_info.append(info)``
+       ``collect_info.append(info)``
 
    -    :'a': Correct.  
         :a: Remember that URLs in this plan should have quotes around them.

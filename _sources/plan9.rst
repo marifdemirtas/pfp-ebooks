@@ -21,6 +21,19 @@
 Plan 9: Example
 ====================================
 
+.. activecode:: plan8_example_1
+    :language: python3
+    :nocodelens:
+
+    print(info)
+
+.. activecode:: plan8_example_2
+    :language: python3
+    :nocodelens:
+
+    print(collect_info)
+
+
 
 Plan 9: Outline
 ====================================
@@ -39,21 +52,5 @@ Plan 9: Exercises
 
 This is filler text.
 
-.. dragndrop:: dnd1
-    :feedback: This is feedback.
-    :match_1: Drag me to 1|||I am 1
-    :match_2: Drag me to 2|||I am 2
-    :match_3: Drag me to 3|||I am 3
-
-    This is a drag n drop question.
-
-.. dragndrop:: order
-    :feedback: This is feedback.
-    :match_1: Plan #10 ||| # Get the webpage
-    :match_2: Plan #4 ||| # Extract info from the page
-    :match_3: Plan #3 ||| # Do something with the info
-
-    This is a drag n drop question.
-
-
+Exercises should involve putting things together with plans 4-6
 

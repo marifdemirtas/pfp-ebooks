@@ -21,35 +21,14 @@
 Plan 8: Example
 ====================================
 
-.. activecode:: football_roster
-   :language: python
-   :nocodelens:
-   :enabledownload:
+.. activecode:: plan8_example
+    :language: python3
+    :nocodelens:
+
+    info = tag.text
 
 
-   # Load libraries for web scraping
-   from bs4 import BeautifulSoup
-   import requests
-   # Get a soup from a URL 
-   url = 'https://mgoblue.com/sports/football/roster'
-   r = requests.get(url)
-   soup = BeautifulSoup(r.content)
-
-   # Get all tags of a certain type from the soup
-   first_tag = soup.find('div', class_='sidearm-roster-players-container')
-   tags = first_tag.find_all('span', class_='sidearm-roster-player-hometown')
-   # Collect info from the tags
-   collect_info = []
-   for tag in tags:
-       # Get text from tag
-       info = tag.text
-       collect_info.append(info)
-
-
-   # Do something with info
-   # Print the info
-   print(collect_info)
-
+TODO: Have several pictures of different tags, highlighting their text
 
 Plan 8: Outline
 ====================================

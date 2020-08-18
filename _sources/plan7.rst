@@ -21,6 +21,7 @@
 Plan 7: Example
 ====================================
 
+When we look at the code, we see that the content we want is in-between two <> <>
 
 
 Plan 7: Outline
@@ -37,8 +38,6 @@ Goal:
 
 Plan 7: Exercises
 ====================================
-
-This is filler text.
 
 .. dragndrop:: dnd1
     :feedback: This is feedback.
