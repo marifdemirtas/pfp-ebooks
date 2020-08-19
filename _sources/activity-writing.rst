@@ -60,8 +60,8 @@ Code writing activity
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from multiple URLs 
-   base_url = ___________________________________
-   endings =  ___________________________________
+   base_url = ________________________________
+   endings =  ________________________________
    for ending in endings:
        url = base_url + ending 
        r = requests.get(url) 
@@ -108,6 +108,55 @@ Code writing activity
        :language: python3
        :nocodelens:
 
-
-        #Get the webpage
+           # Load libraries for web scraping
+           from bs4 import BeautifulSoup
+           import requests
+           # Get a soup from a URL 
+           url = _________________________
+           r = requests.get(url)
+           soup = BeautifulSoup(r.content, 'html.parser')   
+           
+           # Load libraries for web scraping
+           from bs4 import BeautifulSoup
+           import requests
+           # Get a soup from multiple URLs 
+           base_url = ___________________________________
+           endings =  ___________________________________
+           for ending in endings:
+               url = base_url + ending 
+               r = requests.get(url) 
+               soup = BeautifulSoup(r.content, 'html.parser')
+           
+           # Get first tag of a certain type from the soup
+           tag = soup.find(___________)
+           # Get info from the tag
+           _____________________________________________
+           
+           # Get all tags of a certain type from the soup
+           tags = soup.find_all(___________)
+           # Collect info from the tags
+           collect_info = []
+           for tag in tags:
+               _______________________________________
+               collect_info.append(info)
+           
+           # Get first tag of a certain type from the soup
+           first_tag = soup.find(___________)
+           # Get all tags of a certain type from the first tag
+           tags = first_tag.find_all(____________)
+           # Collect info from the tags
+           collect_info = []
+           for tag in tags: 
+               ________________________________________
+               collect_info.append(info)
+           
+           # Print the info
+           print(____________)
+           
+           # Load library for json files
+           import json
+           # Put info into file
+           f = open(____________, 'w')
+           json.dump(____________, f)
+           f.close()
 
