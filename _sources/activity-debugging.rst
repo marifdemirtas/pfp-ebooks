@@ -15,19 +15,20 @@
 
 .. qnum::
    :start: 1
-   :prefix: p10-
-
-Please complete this activity
+   :prefix: debugging-
 
 Code debugging activity
 :::::::::::::::::::::::::
 
-This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Can you fix it?
+This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes *every* link on the page. 
+
+Can you fix it?
+
+Below the code is a GIF that shows the relevant tags on the dining halls webpage.
 
 .. activecode:: debug_code_1
         :language: python3
         :nocodelens:
-
 
         #Get the webpage
         # Load libraries for web scraping
@@ -55,9 +56,11 @@ This code is supposed to scrape links for all the dining halls from the dining h
         print(collect_info)
 
 
+Relevant tags
+**********************
 
 .. image:: _static/dining_halls.gif
     :scale: 90%
     :align: center
-    :alt: Plan 10 outline
+    :alt: Relevant tags on the dining hall webpage
 
