@@ -8,35 +8,43 @@
     License".
 
 
-..  shortname:: Debugging
-..  description:: Debugging activity .
+..  shortname:: Explaining
+..  description:: Explaining activity.
 
 .. setup for automatic question numbering.
 
 .. qnum::
    :start: 1
-   :prefix: p10-
+   :prefix: explaining-
 
 Code explaining activity
 :::::::::::::::::::::::::
 
 Look at the code below, and try to determine what it does. 
 
-There is a gif below the code that shows relevant tags in the first website.
+There is a GIF below the code that shows relevant tags in the first website.
 
 .. image:: _static/umsi_faces_code.png
     :scale: 30%
     :align: center
     :alt: Code that you are asked to explain
 
+
+Relevant tags
+**********************
+
 .. image:: _static/umsi_faces.gif
     :scale: 90%
     :align: center
     :alt: Plan 10 outline
 
-If you need a hint, you can run the code below.
 
-.. activecode:: explain_code
+.. reveal:: explain_run_code
+    :showtitle: After you've tried this activity, you can click here.
+
+    If you need a hint, you can run the code below and see what happens.
+
+    .. activecode:: explain_code
        :language: python3
        :nocodelens:
 

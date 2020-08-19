@@ -9,7 +9,7 @@
 
 
 ..  shortname:: Debugging
-..  description:: Debugging activity .
+..  description:: Debugging activity.
 
 .. setup for automatic question numbering.
 
