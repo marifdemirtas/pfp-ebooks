@@ -17,17 +17,34 @@
    :start: 1
    :prefix: p7-
 
+Plan 7: Get text from tag
+###########################
+
+Behind every webpage is HTML code. HTML code is made up of *tags*.
+
+There are many types of tags. Some examples from the are below.
 
 Plan 7: Example
 ====================================
 
-When we look at the code, we see that the content we want is in-between two <> <>
+Here is the tag that creates the name of one of the Cottage Inn Pizza locations. The tag is surrounded by the blue rectangle. It is an h3 tag.
+
+.. image:: _static/cottage_inn_h3_text.png
+    :scale: 90%
+    :align: center
+    :alt: h3 tag example
+
+By using the code below, we can get the **text** of the tag. The text is what is in-between the start and end tag (between the ``<h3>`` and ``</h3>``. For the image above, the text is **Ann Arbor Broadway St.**
+
+.. activecode:: plan7
+   :language: python
+   :nocodelens:
+
+   info = tag.text
 
 
 Plan 7: Outline
 ====================================
-
-Goal: 
 
 .. image:: _static/plan7outline.png
     :scale: 90%
@@ -39,22 +56,56 @@ Goal:
 Plan 7: Exercises
 ====================================
 
-.. dragndrop:: dnd1
-    :feedback: This is feedback.
-    :match_1: Drag me to 1|||I am 1
-    :match_2: Drag me to 2|||I am 2
-    :match_3: Drag me to 3|||I am 3
+.. mchoice:: get_text_mc_1
+    :random:
 
-    This is a drag n drop question.
+    What is the text of the tag below?
 
+    .. image:: _static/dining_h2_text.png
+        :align: center
+        :alt: h2 tag on dining page
     
-.. dragndrop:: order
-    :feedback: This is feedback.
-    :match_1: Plan #10 ||| # Get the webpage
-    :match_2: Plan #4 ||| # Extract info from the page
-    :match_3: Plan #3 ||| # Do something with the info
+    -   Today's Menu
 
-    This is a drag n drop question.
+        +   Correct! This text is between the <h2> and </h2>
 
+    -   h2
+
+        -   No, h2 is the tag name.
+
+    -   menuTitle
+
+        -   No
+
+    -   class
+
+        -   No, class is an attribute
+
+
+.. mchoice:: get_text_mc_2
+    :random:
+
+    Which tag in the picture below has text?
+
+    .. image:: _static/dining_span_text.png
+        :align: center
+        :alt: span tag on dining page
+
+    -   h2
+
+        -   No, there is no h2 tag in this image.
+
+    -   span
+
+        +   Correct! The text starts with "With its chandeliers and dramatically vaulted ceiling..."
+
+    -   p
+
+        -   No, this tag contains the span tag.
+
+    -   style
+
+        -   No, style is an attribute
+ 
 
 
