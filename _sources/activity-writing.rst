@@ -61,6 +61,23 @@ This tag is not used anywhere else on the page besides for menu items.
    =====
    Plan #10: Store info in a json file#paired
 
+.. reveal:: write_code_cl_reveal_1
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: write_code_cl_1
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
 
 .. parsonsprob:: write_code_order_plans_code
 
@@ -119,6 +136,24 @@ This tag is not used anywhere else on the page besides for menu items.
    json.dump(____________, f)
    f.close()#paired
    
+.. reveal:: write_code_cl_reveal_2
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: write_code_cl_2
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
+
 
 .. sidebar:: Links to plans
     
@@ -144,8 +179,7 @@ This tag is not used anywhere else on the page besides for menu items.
 
 
 .. reveal:: write_code_fill_in_reveal
-    :showtitle: After you've tried this activity, you can click here.
-
+    :showtitle: Click here for the final writing activity.
 
     Now that you've assembled the correct plans, fill in the blanks to complete the code.
 
@@ -174,3 +208,23 @@ This tag is not used anywhere else on the page besides for menu items.
        #Do something with the info          
        # Print the info
        print(__________)
+
+
+    .. reveal:: write_code_cl_reveal_3
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: write_code_cl_3
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
+

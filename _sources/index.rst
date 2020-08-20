@@ -86,15 +86,6 @@ Putting it together
    activity-debugging.rst
    activity-explaining.rst
 
-Survey
-:::::::::
-
-.. toctree::
-   :maxdepth: 1
-   
-   survey.rst
-
-
 Download the plans
 ::::::::::::::::::
 

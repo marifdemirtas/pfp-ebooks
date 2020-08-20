@@ -62,9 +62,9 @@ Relevant tags
     :alt: UMSI faces website
 
 .. reveal:: explain_run_code
-    :showtitle: After you've tried this activity, you can click here.
+    :showtitle: If you need a hint, click here.
 
-    If you need a hint, you can run the code below and see what happens.
+     You can run the code below and see what happens.
 
     .. activecode:: explain_code
        :language: python3
@@ -112,4 +112,22 @@ Relevant tags
             
             # Print the info
             print(collect_info)
+
+.. reveal:: explain_code_cl_reveal_1
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: explain_code_cl_1
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
 

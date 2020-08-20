@@ -81,6 +81,25 @@ Below the code is a GIF that shows the relevant tags on the dining halls webpage
         print(collect_info)
 
 
+.. reveal:: debug_code_cl_reveal_1
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: debug_code_cl_1
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
+        
+
 Relevant tags
 **********************
 
@@ -127,6 +146,24 @@ Can you fix it?
         print(info)
 
 
+.. reveal:: debug_code_cl_reveal_2
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: debug_code_cl_2
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
+
 Activity 3
 **********************
 
@@ -163,4 +200,22 @@ Can you fix it?
         # Print the info
         print(collect_info)
 
+
+.. reveal:: debug_code_cl_reveal_3
+        :showtitle: After you've done the activity, click here.
+        :hidetitle: Hide question.
+
+        .. poll:: debug_code_cl_3
+           :option_1: Very, very low mental effort
+           :option_2: Very low mental effort
+           :option_3: Low mental effort
+           :option_4: Rather low mental effort
+           :option_5: Neither low nor high mental effort
+           :option_6: Rather high mental effort
+           :option_7: High mental effort
+           :option_8: Very high mental effort
+           :option_9: Very, very high mental effort
+           :results: instructor
+           
+           In solving the preceding problem I invested:
 
