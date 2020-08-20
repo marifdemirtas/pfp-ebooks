@@ -28,13 +28,13 @@ How this ebook works
 
 .. admonition:: During this lesson, you will learn code plans used by *real professionals*.
    
-   These plans represent the most common patterns in web scraping with BeautifulSoup. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
+   These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
 
 Plan 1: Get information from a webpage
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    plan1.rst
 

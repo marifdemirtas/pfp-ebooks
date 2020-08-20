@@ -17,6 +17,11 @@
    :start: 1
    :prefix: p4-
 
+.. _plan_4:
+
+Plan 4: Get info from a single tag
+#####################################
+
 
 Plan 4: Example
 ====================================
@@ -48,7 +53,7 @@ Plan 4: Example
    # Print the info
    print(collect_info)
 
-What is a tag?
+Which tag should I choose?
 ====================================
 
 

@@ -17,6 +17,8 @@
    :start: 1
    :prefix: p7-
 
+.. _plan_7:
+
 Plan 7: Get text from tag
 ###########################
 
@@ -41,6 +43,7 @@ By using the code below, we can get the **text** of the tag. The text is what is
    :nocodelens:
 
    info = tag.text
+
 
 
 Plan 7: Outline

@@ -17,10 +17,35 @@
    :start: 1
    :prefix: debugging-
 
-Code debugging activity
+Code debugging activities
 :::::::::::::::::::::::::
 
-This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes *every* link on the page. 
+.. sidebar:: Links to plans
+    
+    :ref:`plan_1`
+   
+    :ref:`plan_2`
+
+    :ref:`plan_3`
+
+    :ref:`plan_4`
+
+    :ref:`plan_5`
+
+    :ref:`plan_6`
+
+    :ref:`plan_7`
+
+    :ref:`plan_8`
+
+    :ref:`plan_9`
+
+    :ref:`plan_10`
+                
+Activity 1
+**********************
+
+This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes the names of all the dining halls.
 
 Can you fix it?
 
@@ -35,7 +60,90 @@ Below the code is a GIF that shows the relevant tags on the dining halls webpage
         from bs4 import BeautifulSoup
         import requests
         # Get a soup from a URL 
-        url = 'https://dining.umich.edu/menus-locations/dining-halls/'
+        url = 'https://dining.umich.edu/menus-locations/dining-halls'
+        r = requests.get(url)
+        soup = BeautifulSoup(r.content, 'html.parser')
+
+        #Extract info from the webpage
+        # Get first tag of a certain type from the soup
+        first_tag = soup.find('div', class_='medium-7 columns')
+        # Get all tags of a certain type from the first tag
+        tags = first_tag.find_all('a')
+        # Collect info from the tags
+        collect_info = []
+        for tag in tags:
+            # Get text from tag
+            info = tag.text
+            collect_info.append(info)
+
+        #Do something with info
+        # Print the info
+        print(collect_info)
+
+
+Relevant tags
+**********************
+
+.. image:: _static/dining_halls.gif
+    :scale: 90%
+    :align: center
+    :alt: Relevant tags on the dining hall webpage
+
+
+Activity 2
+**********************
+
+This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes the *last* link on the page. 
+
+Can you fix it?
+
+.. activecode:: debug_code_2
+        :language: python3
+        :nocodelens:
+
+        #Get the webpage
+        # Load libraries for web scraping
+        from bs4 import BeautifulSoup
+        import requests
+        # Get a soup from a URL 
+        url = 'https://dining.umich.edu/menus-locations/dining-halls'
+        r = requests.get(url)
+        soup = BeautifulSoup(r.content, 'html.parser')
+
+        #Extract info from the webpage
+        # Get first tag of a certain type from the soup
+        first_tag = soup.find('div', class_='medium-7 columns')
+        # Get all tags of a certain type from the first tag
+        tags = first_tag.find_all('a')
+        # Collect info from the tags
+        collect_info = []
+        for tag in tags:
+            # Get link from tag
+            info = tag.get('href')
+            collect_info.append(info)
+
+        #Do something with info
+        # Print the info
+        print(info)
+
+
+Activity 3
+**********************
+
+This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes *every* link on the page. 
+
+Can you fix it?
+
+.. activecode:: debug_code_3
+        :language: python3
+        :nocodelens:
+
+        #Get the webpage
+        # Load libraries for web scraping
+        from bs4 import BeautifulSoup
+        import requests
+        # Get a soup from a URL 
+        url = 'https://dining.umich.edu/menus-locations/dining-halls'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -55,12 +163,4 @@ Below the code is a GIF that shows the relevant tags on the dining halls webpage
         # Print the info
         print(collect_info)
 
-
-Relevant tags
-**********************
-
-.. image:: _static/dining_halls.gif
-    :scale: 90%
-    :align: center
-    :alt: Relevant tags on the dining hall webpage
 

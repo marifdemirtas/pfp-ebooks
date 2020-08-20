@@ -17,6 +17,11 @@
    :start: 1
    :prefix: p5-
 
+.. _plan_5:
+
+Plan 5: Get info from all tags of a certain type
+#################################################
+
 
 Plan 5: Example
 ====================================
@@ -50,7 +55,6 @@ Here is how to get all the h3 tags from webpage:
       # Get text from tag
       info = tag.text
       collect_info.append(info)
-
 
 Plan 5: Outline
 ====================================

@@ -120,6 +120,29 @@ This tag is not used anywhere else on the page besides for menu items.
    f.close()#paired
    
 
+.. sidebar:: Links to plans
+    
+    :ref:`plan_1`
+   
+    :ref:`plan_2`
+
+    :ref:`plan_3`
+
+    :ref:`plan_4`
+
+    :ref:`plan_5`
+
+    :ref:`plan_6`
+
+    :ref:`plan_7`
+
+    :ref:`plan_8`
+
+    :ref:`plan_9`
+
+    :ref:`plan_10`
+
+
 .. reveal:: write_code_fill_in_reveal
     :showtitle: After you've tried this activity, you can click here.
 
@@ -130,24 +153,24 @@ This tag is not used anywhere else on the page besides for menu items.
        :language: python3
        :nocodelens:
 
-        #Get the webpage
-        # Load libraries for web scraping
-        from bs4 import BeautifulSoup
-        import requests
-        # Get a soup from a URL 
-        url = ______________________________________
-        r = requests.get(url)
-        soup = BeautifulSoup(r.content, 'html.parser')
+       #Get the webpage
+       # Load libraries for web scraping
+       from bs4 import BeautifulSoup
+       import requests
+       # Get a soup from a URL 
+       url = ______________________________________
+       r = requests.get(url)
+       soup = BeautifulSoup(r.content, 'html.parser')
 
-        #Extract info from the webpage
-        # Get all tags of a certain type from the soup
-        tags = soup.find_all(________________)
-        # Collect info from the tags
-        collect_info = []
-        for tag in tags:        
-          _______________
-          collect_info.append(info)
+       #Extract info from the webpage
+       # Get all tags of a certain type from the soup
+       tags = soup.find_all(________________)
+       # Collect info from the tags
+       collect_info = []
+       for tag in tags:        
+           _______________
+           collect_info.append(info)
          
-        #Do something with the info          
-        # Print the info
-        print(__________)
+       #Do something with the info          
+       # Print the info
+       print(__________)

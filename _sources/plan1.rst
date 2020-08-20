@@ -15,6 +15,12 @@
 .. qnum::
    :start: 1
    :prefix: p1-
+   
+
+.. _plan_1:
+
+Plan 1: Scrape webpage(s)
+#####################################
 
 
 Plan 1: Example
@@ -31,7 +37,7 @@ If only you could write a little Python to easily collect them all...
 
 It turns out that you can! Run the code below to see what it collects.
 
-.. activecode:: football_roster_3
+.. activecode:: cottage_inn_example
    :language: python3
    :nocodelens:
 
@@ -40,7 +46,7 @@ It turns out that you can! Run the code below to see what it collects.
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from a URL 
-   url = 'https://cottageinn.com/pick-a-location/'
+   url = 'https://web.archive.org/web/20200427175705/https://cottageinn.com/pick-a-location/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -60,7 +66,6 @@ It turns out that you can! Run the code below to see what it collects.
 
 This code probably seems a bit complicated. In this ebook, we will break down web scraping into a few common "plans". Here is the first one:
 
-
 Plan 1: Outline
 ====================================
 
@@ -73,7 +78,7 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: plan1_click
-    :question: Which parts of the example are a part of Plan 1's Slot 2?
+    :question: Which parts of the example are a part of Plan 1's Slot 2? Click on those parts of the code.
     :iscode:
     :feedback: Check out the plan outline above to identify the slot.
 

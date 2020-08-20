@@ -10,6 +10,9 @@
 ..  shortname:: Downloads
 ..  description:: Downloads of all the plans
 
+You can download all the plans here
+####################################
+
 
 Plan 1
 ====================================
@@ -19,7 +22,7 @@ Plan 1
    :nocodelens:
    :enabledownload:
 
-   # Get  the webpage
+   # Get the webpage
    _____________________________________________
 
    # Extract info from the page

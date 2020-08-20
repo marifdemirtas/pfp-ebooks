@@ -17,6 +17,10 @@
    :start: 1
    :prefix: p6-
 
+.. _plan_6:
+
+Plan 6: Get info from all tags of a certain type, within another tag
+#########################################################################
 
 Plan 6: Example
 ====================================

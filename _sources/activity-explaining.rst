@@ -20,6 +20,29 @@
 Code explaining activity
 :::::::::::::::::::::::::
 
+.. sidebar:: Links to plans
+    
+    :ref:`plan_1`
+   
+    :ref:`plan_2`
+
+    :ref:`plan_3`
+
+    :ref:`plan_4`
+
+    :ref:`plan_5`
+
+    :ref:`plan_6`
+
+    :ref:`plan_7`
+
+    :ref:`plan_8`
+
+    :ref:`plan_9`
+
+    :ref:`plan_10`
+
+
 Look at the code below, and try to determine what it does. 
 
 There is a GIF below the code that shows relevant tags in the first website.
@@ -36,8 +59,7 @@ Relevant tags
 .. image:: _static/umsi_faces.gif
     :scale: 90%
     :align: center
-    :alt: Plan 10 outline
-
+    :alt: UMSI faces website
 
 .. reveal:: explain_run_code
     :showtitle: After you've tried this activity, you can click here.

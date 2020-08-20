@@ -17,6 +17,10 @@
    :start: 1
    :prefix: p10-
 
+.. _plan_10:
+
+Plan 10: Store info in a json file 
+####################################
 
 Plan 10: Example
 ====================================

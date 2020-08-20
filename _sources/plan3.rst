@@ -17,13 +17,16 @@
    :start: 1
    :prefix: p3-
 
+.. _plan_3:
+
+Plan 3: Get a soup from multiple URLs
+#####################################
+
 
 Plan 3: Example
 ====================================
 
-Maybe we want to get information from the UMSI course  wikipedia page.
-
-The first step in web scraping is getting information from a webpage.
+Maybe we want to get information from multiple web pages. For example, maybe we are interested in getting the UMSI course  wikipedia page.
 
 Here is the code for preparing to get information from the University of Michigan wikipedia page. 
 
@@ -57,30 +60,24 @@ Plan 3: Outline
 What are URL endings?
 ====================================
 
-A URL is a web address, like you see in your web browser. It should be complete (starting with http:// or https://). 
-
-In this plan, a URL should be surrounded by quotes (:code:`''`).
-
-MC about endings
-
-https://www.si.umich.edu/programs/courses?title=&page=0
-https://www.si.umich.edu/programs/courses?title=&page=1
-https://www.si.umich.edu/programs/courses?title=&page=2
-https://www.si.umich.edu/programs/courses?title=&page=3
-
 What is the base_url?
 
 What is the endings?
 
+Plan 3: Exercises
+====================================
+
+
 .. fillintheblank:: url_endings_fill
 
-   If these are the URLs you want to scrape, what should the base_url and the 
+   If these are the URLs you want to scrape, what should the base_url and the endings be? 
+   
    ``https://www.si.umich.edu/programs/courses?title=&page=0``
    ``https://www.si.umich.edu/programs/courses?title=&page=1``
    ``https://www.si.umich.edu/programs/courses?title=&page=2``
-   ``https://www.si.umich.edu/programs/courses?title=&page=4``
+   ``https://www.si.umich.edu/programs/courses?title=&page=3``
 
-
+   Fill in the code below
 
    ``# Load libraries for web scraping``
 
@@ -88,25 +85,29 @@ What is the endings?
 
    ``import requests``
 
-   ``# Get a soup from a URL`` 
+   ``# Get a soup from multiple URLs`` 
 
-   ``url =`` |blank|
+   ``base_url =`` |blank|
 
-   ``r = requests.get(url)``
+   ``endings =`` |blank|
 
-   ``soup = BeautifulSoup(r.content, 'html.parser')``
+   ``for ending in endings:``
+
+       ``url = base_url + ending``
+
+       ``r = requests.get(url)``
+
+       ``soup = BeautifulSoup(r.content, 'html.parser')``
 
 
-   -    :'https://cottageinn.com': Correct.  
-        :https://cottageinn.com: Remember that URLs in this plan should have quotes around them.
-        :.*: Use 5 in the second blank
+   -    :'https://www.si.umich.edu/programs/courses?title=&page=': Correct.  
+        :https://www.si.umich.edu/programs/courses?title=&page=: Remember that URLs in this plan should have quotes around them.
+        :.*: Check out the section above for help.
 
+   -    :['0', '1', '2', '3']: Correct.  
+        :[0, 1, 2, 3]:: Remember that endings in this plan should have quotes around each ending.
+        :.*: Check out the section above for help.
 
-
-Plan 3: Exercises
-====================================
-
-What parts of this plan are changeable?
 
 .. clickablearea:: umich_plan3_click
     :question: If you wanted to get a soup from a few different wikipedia pages, which part(s) of the code below would you change?
@@ -122,33 +123,9 @@ What parts of this plan are changeable?
     :click-incorrect:r = requests.get(url):endclick:
     :click-incorrect:soup = BeautifulSoup(r.content)::endclick:
 
-.. fillintheblank:: plan3_fill
-
-   Fill in the plan in order to get a soup from the University of Michigan wikipedia page.
-
-   ``# Load libraries for web scraping``
-
-   ``from bs4 import BeautifulSoup``
-
-   ``import requests``
-
-   ``# Get a soup from a URL`` 
-
-   ``url =`` |blank|
-
-   ``r = requests.get(url)``
-
-   ``soup = BeautifulSoup(r.content, 'html.parser')``
-
-
-   -    :'https://cottageinn.com': Correct.  
-        :https://cottageinn.com: Remember that URLs in this plan should have quotes around them.
-        :.*: Use 5 in the second blank
-
-
 .. parsonsprob:: plan3_subgoal_order
 
-   Choose the subgoals that achieve **Get a soup from a webpage**, and put them in the right order.
+   Choose the subgoals that achieve **Get a soup from multiple webpages**, and put them in the right order.
    -----
    # Load libraries for web scraping
    =====
