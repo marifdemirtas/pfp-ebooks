@@ -23,7 +23,9 @@ Code writing activity
 
 On this page, you will complete a series of activities to write the following scraping code:
 
-Get all the menu items from the `Bursley hall web page <https://dining.umich.edu/menus-locations/dining-halls/bursley/>`_ and print them.
+**Get all the menu items from the Bursley hall web page and print them.**
+
+Here is the link to the `Bursley hall web page <https://dining.umich.edu/menus-locations/dining-halls/bursley/>`_.
 
 
 Here are a few images that show you how the Bursley hall web page works:

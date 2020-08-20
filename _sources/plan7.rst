@@ -42,6 +42,7 @@ By using the code below, we can get the **text** of the tag. The text is what is
    :language: python
    :nocodelens:
 
+   # Get text from tag
    info = tag.text
 
 
@@ -94,19 +95,19 @@ Plan 7: Exercises
         :align: center
         :alt: span tag on dining page
 
-    -   h2
+    -   'h2'
 
         -   No, there is no h2 tag in this image.
 
-    -   span
+    -   span, style='font-weight: 400;'
 
         +   Correct! The text starts with "With its chandeliers and dramatically vaulted ceiling..."
 
-    -   p
+    -   'p'
 
         -   No, this tag contains the span tag.
 
-    -   style
+    -   'style'
 
         -   No, style is an attribute
  
