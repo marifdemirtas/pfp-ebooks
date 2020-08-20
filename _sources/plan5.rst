@@ -90,33 +90,6 @@ Here's an example of some p tags on Dr. Ericson's UMSI website.
         :click-incorrect:info = tag.text:endclick:
         :click-incorrect:collect_info.append(info):endclick:
 
-.. fillintheblank:: plan5_fill_v1
-
-   Fill in the plan in order to get the links from all *a* tags.
-
-   .. code-block:: python 
-
-       # Get all tags of a certain type from the soup
-       tags = soup.find_all( |slot 1| )
-       # Collect info from the tags
-       collect_info = []
-       for tag in tags:
-       # Get info from tag
-           |slot 2|
-           collect_info.append(info)
-
-   Slot 1: |blank|
-   Slot 2: |blank|
-
-   -    :'a': Correct.  
-        :a: Remember that URLs in this plan should have quotes around them.
-        :.*: Incorrect. 
-   -    :tag.get('href'): Correct.
-        :tag.text: Remember that you are trying to get the link.
-        :tag.*: Incorrect, but good start!
-        :.*: Incorrect.   
-
-
 
 .. fillintheblank:: plan5_fill_v2
 

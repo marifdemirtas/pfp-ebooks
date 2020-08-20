@@ -48,8 +48,6 @@ If you want to print info from only one tag, like if you've just used *Plan 5: G
 Plan 9: Outline
 ====================================
 
-Goal: 
-
 .. image:: _static/plan9outline.png
     :scale: 90%
     :align: center
