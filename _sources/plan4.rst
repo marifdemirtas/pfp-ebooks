@@ -36,8 +36,9 @@ Here's what we see when we use the "inspect" function in the browser.
     :alt: By inspecting that location, we see that it is a ``div`` tag with a ``class`` attribute.
 
 
-It is a ``div`` tag with a ``class`` attribute. We need to get that tag, because its text has the information we want.
+It is a ``div`` tag with a ``class`` attribute ``Comments_StyledComments-dzzyvm-0 dvnRbr``. We need to get that tag, because its text has the information we want.
 
+Since that tag is the first of its type on the page, we can use the plan **get info from a single tag**.
 
 Here is how to get the "Most helpful comment":
 
@@ -71,7 +72,7 @@ Plan 4: Exercises
     :feedback: Check out the plan outline above to identify the slot.
 
     :click-incorrect:# Get first tag of a certain type from the soup:endclick:
-    :click-incorrect:tag = soup.find(:endclick::click-correct:'div'::endclick::click-correct:, class_='Comments_StyledComments-dzzyvm-0 dvnRbr'):endclick:
+    :click-incorrect:tag = soup.find(:endclick::click-correct:'div':endclick::click-correct:, class_='Comments_StyledComments-dzzyvm-0 dvnRbr':endclick:)
    
     :click-correct:# Get text from tag:endclick:
     :click-correct:info = tag.text:endclick:
