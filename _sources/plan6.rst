@@ -22,47 +22,42 @@
 Plan 6: Get info from all tags of a certain type, within another tag
 #########################################################################
 
+Sometimes, we get to get some information from only one part of the webpage. It might be that the type of tag that has information we want shows up in multiple parts of the page, but we only care about one part.
+
+For example, maybe we want to get links from the "sidecard" of a wikipedia page, instead of links from the whole page. If we inspect the sidecard, we see that there is a tag that represents the entire sidecard.
+
+.. image:: _static/wiki_sidecard.png
+    :scale: 90%
+    :align: center
+    :alt: Getting links from the wikipedia sidecard
+
+
 Plan 6: Example
 ====================================
 
-.. activecode:: football_roster
+Here is how we get links from just the "sidecard" of the wikipedia page.
+
+.. activecode:: wiki_sidecard
    :language: python3
    :nocodelens:
 
-   # Load libraries for web scraping
-   from bs4 import BeautifulSoup
-   import requests
-   # Get a soup from a URL 
-   url = 'https://mgoblue.com/sports/football/roster'
-   r = requests.get(url)
-   soup = BeautifulSoup(r.content)
-
-   # Get all tags of a certain type from the soup
-   first_tag = soup.find('div', class_='sidearm-roster-players-container')
-   tags = first_tag.find_all('span', class_='sidearm-roster-player-hometown')
+   # Get first tag of a certain type from the soup
+   first_tag = soup.find('table', class_='infobox vcard')
+   # Get all tags of a certain type from the first tag
+   tags = first_tag.find_all('a')
    # Collect info from the tags
    collect_info = []
    for tag in tags:
-       # Get text from tag
-       info = tag.text
+       # Get link from tag
+       info = tag.get('href')
        collect_info.append(info)
-
-
-   # Do something with info
-   # Print the info
-   print(collect_info)
-
-
-Even more tags?
-====================================
-
 
 
 Plan 6: Outline
 ====================================
 
 .. image:: _static/plan6outline.png
-    :scale: 90%
+    :scale: 100%
     :align: center
     :alt: Plan 6 outline
 
@@ -71,4 +66,17 @@ Plan 6: Outline
 Plan 6: Exercises
 ====================================
 
+.. parsonsprob:: plan6_parsons
+
+   Choose the subgoals that achieve **Get info from all tags of a certain type, within another tag**, and put them in the right order.
+   -----
+   # Get first tag of a certain type from the soup
+   =====
+   # Get all tags of a certain type from the soup#distractor
+   =====
+   # Get all tags of a certain type from the first tag
+   =====
+   # Collect info from the tags
+   =====
+   # Get info from the tag#distractor
 
