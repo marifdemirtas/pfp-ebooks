@@ -48,16 +48,6 @@ Plans 2-3: Get the webpage
    plan2.rst
    plan3.rst
 
-Plans 4-6: Extract info from the webpage
-::::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan4.rst
-   plan5.rst
-   plan6.rst
-
 Plans 7-8: Get info from tag
 ::::::::::::::::::::::::::::
 
@@ -66,6 +56,16 @@ Plans 7-8: Get info from tag
 
    plan7.rst
    plan8.rst
+
+Plans 4-6: Extract info from the webpage
+::::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   plan5.rst
+   plan4.rst
+   plan6.rst
 
 Plans 9-10: Do something with the info
 ::::::::::::::::::::::::::::::::::::::
