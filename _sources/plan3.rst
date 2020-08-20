@@ -26,11 +26,29 @@ Plan 3: Get a soup from multiple URLs
 Plan 3: Example
 ====================================
 
-Maybe we want to get information from multiple web pages. For example, maybe we are interested in getting the UMSI course  wikipedia page.
+Sometimes we want to get information from multiple web pages that have the same layout. For example, all of the UMSI faculty pages have the same general design.
 
-Here is the code for preparing to get information from the University of Michigan wikipedia page. 
+.. image:: _static/barbara-ericson.png
+    :scale: 50%
+    :align: center
+    :alt: Plan 3 outline
 
-.. activecode:: umich_plan3
+.. image:: _static/steve-oney.png
+    :scale: 50%
+    :align: center
+    :alt: Plan 3 outline
+
+Maybe we are interested in getting information about mutliple UMSI professors: Dr. Barb Ericson, Dr. Steve Oney, and Dr. Paul Resnick. 
+
+Their webpages are:
+
+``https://www.si.umich.edu/people/barbara-ericson``
+
+``https://www.si.umich.edu/people/steve-oney``
+
+``https://www.si.umich.edu/people/paul-resnick``
+
+.. activecode:: plan3
    :language: python
    :nocodelens:
 
@@ -39,14 +57,14 @@ Here is the code for preparing to get information from the University of Michiga
    import requests
 
    # Get a soup from multiple URLs 
-   base_url = ________________________________________________
-   endings = ________________________________________________
+   base_url = 'https://www.si.umich.edu/people/'
+   endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
    for ending in endings:
        url = base_url + ending 
        r = requests.get(url) 
        soup = BeautifulSoup(r.content, 'html.parser')
 
-In this code, we get a **soup** from the **University of Michigan wikipedia page**. A soup is something that we can get information from using BeautifulSoup.
+In this code, we get a **soup** from multiple **UMSI faculty pages**.
 
 Plan 3: Outline
 ====================================
@@ -56,13 +74,6 @@ Plan 3: Outline
     :align: center
     :alt: Plan 3 outline
 
-
-What are URL endings?
-====================================
-
-What is the base_url?
-
-What is the endings?
 
 Plan 3: Exercises
 ====================================
@@ -110,7 +121,7 @@ Plan 3: Exercises
 
 
 .. clickablearea:: umich_plan3_click
-    :question: If you wanted to get a soup from a few different wikipedia pages, which part(s) of the code below would you change?
+    :question: Right now this code helps you scrape three different wikipedia pages. If you also wanted to scrape the University of Minnesota's wikipedia page, which part(s) of the code below would you change? Click on the code to select your answer.
     :iscode:
     :feedback: Check out the plan outline above to identify the slot.
 
@@ -119,9 +130,12 @@ Plan 3: Exercises
     :click-incorrect:import requests:endclick:
 
     # Get a soup from multiple URLs 
-    :click-incorrect:url =:endclick: :click-correct:'https://en.wikipedia.org/wiki/University_of_Michigan':endclick:
-    :click-incorrect:r = requests.get(url):endclick:
-    :click-incorrect:soup = BeautifulSoup(r.content)::endclick:
+    :click-incorrect:base_url =:endclick: :click-incorrect:'https://en.wikipedia.org/wiki/':endclick:
+    :click-incorrect:endings =:endclick: :click-correct:['University_of_Michigan', 'Ohio_State_University', 'Michigan_State_University']:endclick:
+    :click-incorrect:for ending in endings::endclick:
+        :click-incorrect:url = base_url + ending:endclick:
+        :click-incorrect:r = requests.get(url):endclick:
+        :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser')::endclick:
 
 .. parsonsprob:: plan3_subgoal_order
 
