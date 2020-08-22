@@ -48,23 +48,74 @@ Their webpages are:
 
 ``https://www.si.umich.edu/people/paul-resnick``
 
-.. activecode:: plan3
-   :language: python
-   :nocodelens:
+In this code, we get a **soup** from multiple **UMSI faculty pages**.
 
-   # Load libraries for web scraping
-   from bs4 import BeautifulSoup
-   import requests
+.. raw:: html
+   
+   <pre><strong># Load libraries for web scraping</strong>
+   <mark style="background-color:#FCF3CF;">from bs4 import BeautifulSoup
+   import requests</mark></pre>
 
-   # Get a soup from multiple URLs 
-   base_url = 'https://www.si.umich.edu/people/'
-   endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
+   <pre><strong># Get a soup from multiple URLs</strong>
+   <mark style="background-color:#FCF3CF;">base_url = <mark style="border:2px; border-style:solid; border-color:#1A5276">'https://www.si.umich.edu/people/'</mark>
+   endings = <mark style="border:2px; border-style:solid; border-color:#1A5276">['barbara-ericson', 'steve-oney', 'paul-resnick']</mark>
    for ending in endings:
        url = base_url + ending 
        r = requests.get(url) 
+       soup = BeautifulSoup(r.content, 'html.parser')</mark></pre>
+
+
+When to use this plan
+====================================
+
+Use this plan when you want to scrape the same thing from multiple webpages.
+
+How to use this plan
+====================================
+
+**You should change**
+
+
+If these are your URLs, what should your 
+
+
+Plan 3: Exercises
+====================================
+
+If you want to also get the link to the most recent news item from Dean Tom Finholt's page, how would you change the code below? Dean Finholt's web page is ``https://www.si.umich.edu/people/thomas-finholt``.
+
+Change the code and run it to see if you're right!
+
+.. activecode:: plan3_edit_finholt
+   :language: python
+   :nocodelens:
+
+   #Get the webpage
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+   # Get a soup from multiple URLs
+   base_url = 'https://www.si.umich.edu/people/'
+   endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
+   for ending in endings:
+       url = base_url + ending
+       r = requests.get(url)
        soup = BeautifulSoup(r.content, 'html.parser')
 
-In this code, we get a **soup** from multiple **UMSI faculty pages**.
+       #Extract info from the page
+       # Get first tag of a certain type from the soup
+       tag = soup.find('a', class_='item-teaser--heading-link')
+       # Get link from tag
+       info = tag.get('href')  
+
+       #Do something with the info
+       # Print the info
+       print(info)
+
+
+
+
+
 
 Plan 3: Outline
 ====================================
@@ -74,79 +125,5 @@ Plan 3: Outline
     :align: center
     :alt: Plan 3 outline
 
-
-Plan 3: Exercises
-====================================
-
-
-.. fillintheblank:: url_endings_fill
-
-   If these are the URLs you want to scrape, what should the base_url and the endings be? 
-   
-   ``https://www.si.umich.edu/programs/courses?title=&page=0``
-   ``https://www.si.umich.edu/programs/courses?title=&page=1``
-   ``https://www.si.umich.edu/programs/courses?title=&page=2``
-   ``https://www.si.umich.edu/programs/courses?title=&page=3``
-
-   Fill in the code below
-
-   ``# Load libraries for web scraping``
-
-   ``from bs4 import BeautifulSoup``
-
-   ``import requests``
-
-   ``# Get a soup from multiple URLs`` 
-
-   ``base_url =`` |blank|
-
-   ``endings =`` |blank|
-
-   ``for ending in endings:``
-
-       ``url = base_url + ending``
-
-       ``r = requests.get(url)``
-
-       ``soup = BeautifulSoup(r.content, 'html.parser')``
-
-
-   -    :'https://www.si.umich.edu/programs/courses?title=&page=': Correct.  
-        :https://www.si.umich.edu/programs/courses?title=&page=: Remember that URLs in this plan should have quotes around them.
-        :.*: Check out the section above for help.
-
-   -    :['0', '1', '2', '3']: Correct.  
-        :[0, 1, 2, 3]:: Remember that endings in this plan should have quotes around each ending.
-        :.*: Check out the section above for help.
-
-
-.. clickablearea:: umich_plan3_click
-    :question: Right now this code helps you scrape three different wikipedia pages. If you also wanted to scrape the University of Minnesota's wikipedia page, which part(s) of the code below would you change? Click on the code to select your answer.
-    :iscode:
-    :feedback: Check out the plan outline above to identify the slot.
-
-    # Load libraries for web scraping
-    :click-incorrect:from bs4 import BeautifulSoup:endclick:
-    :click-incorrect:import requests:endclick:
-
-    # Get a soup from multiple URLs 
-    :click-incorrect:base_url =:endclick: :click-incorrect:'https://en.wikipedia.org/wiki/':endclick:
-    :click-incorrect:endings =:endclick: :click-correct:['University_of_Michigan', 'Ohio_State_University', 'Michigan_State_University']:endclick:
-    :click-incorrect:for ending in endings::endclick:
-        :click-incorrect:url = base_url + ending:endclick:
-        :click-incorrect:r = requests.get(url):endclick:
-        :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser')::endclick:
-
-.. parsonsprob:: plan3_subgoal_order
-
-   Choose the subgoals that achieve **Get a soup from multiple webpages**, and put them in the right order.
-   -----
-   # Load libraries for web scraping
-   =====
-   # Get a soup from multiple URLs 
-   =====
-   # Get a soup from a URL#distractor
-   =====
-   # Get a tag from a soup#distractor
 
 

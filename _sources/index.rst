@@ -30,13 +30,14 @@ How this ebook works
    
    These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
 
-Plan 1: Get information from a webpage
+Two scraping examples
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 1
 
-   plan1.rst
+   example1.rst
+   example2.rst
 
 
 Plans 2-3: Get the webpage
@@ -48,24 +49,14 @@ Plans 2-3: Get the webpage
    plan2.rst
    plan3.rst
 
-Plans 7-8: Get info from tag
-::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan7.rst
-   plan8.rst
-
-Plans 4-6: Extract info from the webpage
+Plans 4-5: Extract info from the webpage
 ::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 1
 
-   plan5.rst
    plan4.rst
-   plan6.rst
+   plan5.rst
 
 Plans 9-10: Do something with the info
 ::::::::::::::::::::::::::::::::::::::

@@ -26,37 +26,30 @@ Plan 2: Example
 ====================================
 
 The first step in web scraping is getting information from a webpage. 
-To use the BeautifulSoup web scraping library, we have to put the webpage into something called a soup.
+To use the BeautifulSoup web scraping library, we have to put the webpage into something called a *soup*.
 
 Here is the code for getting a **soup** from the **Cottage Inn location page**.
 
-.. activecode:: cottage_plan2
-   :language: python3
-   :nocodelens:
+.. raw:: html
 
-   # Load libraries for web scraping
-   from bs4 import BeautifulSoup
-   import requests
+  <pre style="background-color:#FCF3CF;">
+  <strong># Load libraries for web scraping</strong>
+  from bs4 import BeautifulSoup
+  import requests
+  <strong># Get a soup from a URL</strong>
+  url = <mark style="border:2px; border-style:solid; border-color:#1A5276">'https://cottageinn.com/pick-a-location/'</mark>
+  r = requests.get(url)
+  soup = BeautifulSoup(r.content, 'html.parser')</pre>
 
-   # Get a soup from a URL 
-   url = 'https://cottageinn.com/pick-a-location/'
-   r = requests.get(url)
-   soup = BeautifulSoup(r.content, 'html.parser')
-
-
-Plan 2: Outline
+When to use this plan
 ====================================
 
-Here is what the plan looks like in general.
+Use this plan when you want to scrape one webpage.
 
-.. image:: _static/plan2outline.png
-    :scale: 100%
-    :align: center
-    :alt: Plan 2 outline
-
-
-What is a URL?
+How to use this plan
 ====================================
+
+Replace the URL with the URL of the website you want to scrape.
 
 A URL is a web address, like you see in your web browser. 
 It should be complete (starting with http:// or https://). 
@@ -65,16 +58,16 @@ In this plan, a URL should be surrounded by quotes (:code:`' '`).
 .. image:: _static/cottageinn_URL.gif
     :scale: 90%
     :align: center
-    :alt: Scrolling around the Cottage Inn locations page to see that there are a lot of locations
+    :alt: Copying a URL from the Cottage Inn location page
 
 
 Plan 2: Exercises
 ====================================
 
-.. clickablearea:: umich_plan2_click
-    :question: If you wanted to get a soup from the MDen homepage, which part(s) of the code below would you change? Click on those parts of the code.
+.. clickablearea:: plan2_click
+    :question: If you wanted to get a soup from the MDen homepage instead of the Cottage Inn location page, which part(s) of the code below would you change? Click on those part(s) of the code.
     :iscode:
-    :feedback: Check out the plan outline above to identify the slot.
+    :feedback: Check out the example of this plan above to identify the area that should be changed.
 
     # Load libraries for web scraping
     :click-incorrect:from bs4 import BeautifulSoup:endclick:
@@ -109,17 +102,6 @@ Plan 2: Exercises
         :en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should start with https:// or http://
         :.*: Incorrect. 
         
-.. parsonsprob:: plan2_parsons
-
-   Choose the subgoals that achieve **Get a soup from a webpage**, and put them in the right order.
-   -----
-   # Load libraries for web scraping
-   =====
-   # Get a soup from a URL 
-   =====
-   # Send an html request #distractor
-   =====
-   # Get a soup from multiple URLs #distractor
 
 
 
