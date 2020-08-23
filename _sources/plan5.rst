@@ -36,47 +36,96 @@ A great way to figure this out is to use the "inspect" function on your browser.
     :alt: By inspecting the locations, we see that they are all h3 tags.
 
 
-We see that we need to get all the ``h3`` tags from the webpage. The text in those tags has the information we need!
+We see that we need to get info from all the ``h3`` tags from the webpage. The *text* in those tags has the information we need!
 
 
-Here is how to get all the h3 tags from webpage:
+Here is how to get **text** from all the **'h3'** tags from webpage:
 
+.. raw:: html
 
-.. activecode:: plan5_example
-   :language: python3
-   :nocodelens:
-
-   # Get all tags of a certain type from the soup
-   tags = soup.find_all('h3')
-   
+   <pre>Goal: Get info from all tags of a certain type
+   <pre style="background-color:#D5F5E3;">
+   # Get all tags of <mark>a certain type</mark> from the soup
+   tags = soup.find_all(<mark>'h3'</mark>)
    # Collect info from the tags
    collect_info = []
    for tag in tags:
-      # Get text from tag
-      info = tag.text
-      collect_info.append(info)
+       # Get <mark>info</mark> from tag
+       info = tag.<mark>text</mark>
+       collect_info.append(info)</pre></pre>
 
-Plan 5: Outline
+
+Looking closer at a tag
 ====================================
 
-.. image:: _static/plan5outline.png
+Behind every webpage is HTML code. HTML code is made up of *tags*.
+
+Here is the tag that creates the name of one of the Cottage Inn Pizza locations. The tag is surrounded by the blue rectangle. It is an 'h3' tag.
+
+.. image:: _static/cottage_inn_h3_text.png
     :scale: 90%
     :align: center
-    :alt: Plan 5 outline
+    :alt: h3 tag example
+
+The name of this tag is 'h3'. In-between the start and end tag (between the ``<h3>`` and ``</h3>`` is the tag's **text**. For this tag, the text is **Ann Arbor Broadway St.**
+
+Plan 5: How to use it
+====================================
+
+Once you've found the tag you want to get information from, do two things:
+
+#1: Find the **tag description** and put it into the first slot in the plan. 
+
+How do you do that? Here are some examples:
+
+``<h3>`` has tag description ``'h3'``
+
+``<p>`` has tag description ``'p'``
+
+``<div class="comment">`` has tag description ``'div', class_='comment'``
+
+``<span style="X5e72">`` has tag description ``'span', style='X5e72'``
+
+``<a class="more-info" href="/people/ericson">`` has tag description ``'a', class_='more info'``
+
+
+#2: Determine if you want to get **text** from a tag, or a **link** from a tag
+
+If you want to get text, use ``text`` in the second slot in the plan.
+
+If you want to get a link, use ``get('href')`` in the second slot in the plan.
 
 
 Plan 5: Exercises
 ====================================
+.. mchoice:: get_text_mc_1
+    :random:
 
-Here's an example of some p tags on Dr. Ericson's UMSI website.
+    What is the text of the tag below?
 
-.. image:: _static/p_tag_example.png
-    :scale: 60%
-    :align: center
-    :alt: Example of a p tag
+    .. image:: _static/dining_h2_text.png
+        :align: center
+        :alt: h2 tag on dining page
+    
+    -   Today's Menu
+
+        +   Correct! This text is between the <h2> and </h2>
+
+    -   h2
+
+        -   No, h2 is the tag name.
+
+    -   menuTitle
+
+        -   No
+
+    -   class
+
+        -   No, class is an attribute
+
 
 .. clickablearea:: plan5_click
-    :question: If you wanted to get the text from all the p tags, which part(s) of the code below would you change?
+    :question: Right now, this code gets the text from all 'h3' tags in the webpage. If you wanted to get the links from all the 'a, class_="headline"' tags in the webpage, which part(s) of the code below would you change?
     :iscode:
     :feedback: Check out the plan outline above to identify the relevant slot(s).
 
@@ -87,13 +136,13 @@ Here's an example of some p tags on Dr. Ericson's UMSI website.
     :click-incorrect:collect_info = []:endclick:
     :click-incorrect:for tag in tags::endclick:
         :click-incorrect:# Get info from tag:endclick:
-        :click-incorrect:info = tag.text:endclick:
+        :click-incorrect:info = tag.:endclick::click-correct:text:endclick:
         :click-incorrect:collect_info.append(info):endclick:
 
 
 .. fillintheblank:: plan5_fill_v2
 
-   Fill in the plan in order to get the links from all *a* tags.
+   Fill in the plan in order to get the text from all `div class="headline"` tags on a webpage.
 
    ``# Get all tags of a certain type from the soup``
 
@@ -107,31 +156,52 @@ Here's an example of some p tags on Dr. Ericson's UMSI website.
 
        ``# Get info from tag``
 
-       |blank|
+       ``info = tag.`` |blank|
       
        ``collect_info.append(info)``
 
-   -    :'a': Correct.  
-        :a: Remember that URLs in this plan should have quotes around them.
+   -    :['"]div['"], class_=['"]headline['"]: Correct.  
+        :['"]div['"], class=['"]headline['"]: Very close--but class should be _class!
+        :div: Good start, but you need more. 
         :.*: Incorrect. 
-   -    :tag.get('href'): Correct.
-        :tag.text: Remember that you are trying to get the link.
-        :tag.*: Incorrect, but good start!
+   -    :text: Correct.
+        :get('href'): Remember that you are trying to get the text.
+        :.text: Incorrect, the . is already there.
         :.*: Incorrect.   
 
-.. parsonsprob:: plan5_parsons
-
-   Choose the subgoals that achieve **Get info from all tags of a certain type**, and put them in the right order.
-   -----
-   # Get all tags of a certain type from the soup
-   =====
-   # Collect info from the tags
-   =====
-   # Get info from the tag#distractor
-   =====
-   # Get first tag of a certain type from the soup#distractor
-   =====
-   # Get all tags of a certain type from the first tag#distractor
 
 
+
+
+.. mchoice:: get_text_mc_2
+    :random:
+
+    Which tag in the picture below has text?
+
+    .. image:: _static/dining_span_text.png
+        :align: center
+        :alt: span tag on dining page
+
+    -   'h2'
+
+        -   No, there is no h2 tag in this image.
+
+    -   span, style='font-weight: 400;'
+
+        +   Correct! The text starts with "With its chandeliers and dramatically vaulted ceiling..."
+
+    -   'p'
+
+        -   No, this tag contains the span tag.
+
+    -   'style'
+
+        -   No, style is an attribute
+
+Here's an example of some p tags on Dr. Ericson's UMSI website.
+
+.. image:: _static/p_tag_example.png
+    :scale: 60%
+    :align: center
+    :alt: Example of a 'p' tag
 

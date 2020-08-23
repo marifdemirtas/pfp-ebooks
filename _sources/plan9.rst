@@ -29,30 +29,21 @@ Plan 9: Example
 
 If you want to print info from only one tag, like if you've just used *Plan 4: Get info from a single tag*, then do this:
 
-.. activecode:: plan9_example_1
-    :language: python3
-    :nocodelens:
+.. raw:: html
 
-    print(info)
+   <pre>Goal: Print the info
+   <pre style="background-color:#D6EAF8;">
+   <strong># Print the <mark>info</mark></strong>
+   print(<mark>collect_info</mark>)</pre></pre>
 
-If you want to print info from only one tag, like if you've just used *Plan 5: Get info from all tags of a certain type*, or *Plan 6: Get info from all tags of a certain type, within another tag*, then do this:
+If you want to print info from only one tag, like if you've just used *Plan 5: Get info from all tags of a certain type*, then do this:
 
-.. activecode:: plan9_example_2
-    :language: python3
-    :nocodelens:
+.. raw:: html
 
-    print(collect_info)
-
-
-
-Plan 9: Outline
-====================================
-
-.. image:: _static/plan9outline.png
-    :scale: 90%
-    :align: center
-    :alt: Plan 9 outline
-
+   <pre>Goal: Print the info
+   <pre style="background-color:#D6EAF8;">
+   <strong># Print the <mark>info</mark></strong>
+   print(<mark>collect_info</mark>)</pre></pre>
 
 
 Plan 9: Exercises
@@ -66,7 +57,7 @@ Plan 9: Exercises
 
    .. code-block:: python 
 
-           #Get the webpage
+           #Get one webpage
            # Load libraries for web scraping
            from bs4 import BeautifulSoup
            import requests
@@ -75,7 +66,7 @@ Plan 9: Exercises
            r = requests.get(url)
            soup = BeautifulSoup(r.content, 'html.parser')
 
-           #Extract info from the page
+           #Get info from all tags of a certain type
            # Get all tags of a certain type from the soup
            tags = soup.find_all('h3')
            # Collect info from the tags
@@ -85,11 +76,12 @@ Plan 9: Exercises
                info = tag.text
                collect_info.append(info)
 
-   ``#Do something with the info``
+           #Print the info
+           # Print the info
+           print(___________)
 
-   ``# Print the info``
-   
-   ``print(`` |blank| ``)``
+
+   ___________ should be |blank|
 
    -    :get_info: Correct.  
         :info: Remember that the variable that goes in this plan depends on the plan above.

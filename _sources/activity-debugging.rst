@@ -1,13 +1,3 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
-    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
-    and/or modify this document under the terms of the GNU Free Documentation
-    License, Version 1.3 or any later version published by the Free Software
-    Foundation; with Invariant Sections being Forward, Prefaces, and
-    Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
-    the license is included in the section entitled "GNU Free Documentation
-    License".
-
-
 ..  shortname:: Debugging
 ..  description:: Debugging activity.
 
@@ -17,39 +7,45 @@
    :start: 1
    :prefix: debugging-
 
-Code debugging activities
+Code debugging activity
 :::::::::::::::::::::::::
 
-.. sidebar:: Links to plans
-    
-    :ref:`plan_1`
-   
-    :ref:`plan_2`
+Every week, a new cat or dog is the Ann Arbor’s 107one Pet-of-the-Week. The code below is supposed to *get the pet of the week webpage*, *scrape the text of the title shown in the picture*, and *print it*.
 
-    :ref:`plan_3`
+.. image:: _static/pet_of_the_week.png
+    :scale: 70%
+    :align: center
+    :alt: The pet of the week from August 22, 2020 is Chester.
 
-    :ref:`plan_4`
+However, it doesn't work! Instead of printing the title text, it prints nothing.
 
-    :ref:`plan_5`
+Can you fix it? Here is the buggy code:
 
-    :ref:`plan_6`
+.. raw:: html
 
-    :ref:`plan_7`
+   <pre><strong>#Get the webpage</strong>
+   <a href="/plan2.html"><pre style="background-color:#FCF3CF;">
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+   # Get a soup from <mark>a URL</mark> 
+   url = <mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'https://www.hshv.org/petsoftheweek/'</mark>
+   r = requests.get(url)
+   soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
-    :ref:`plan_8`
+   <pre><strong># Get info from one tag</strong>
+   <a href="/plan2.html"><pre style="background-color:#FCF3CF;">
+   # Get first tag of <mark>a certain type</mark> from the soup
+   tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'a', class_='pt-cv-none cvplbd'</mark>)
+   # Get <mark>link</mark> from tag
+   info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
-    :ref:`plan_9`
+   <pre><strong>#Do something with the info</strong>
+   <a href="/plan9.html"><pre style="background-color:#D6EAF8;">
+   # Print <mark style="background-color:#ABEBC6">the info</mark>
+   print(<mark style="border:2px; border-style:solid; border-color:#1A5276; background-color:#ABEBC6">info</mark>)</pre></a></pre>
 
-    :ref:`plan_10`
-                
-Activity 1
-**********************
-
-This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes the names of all the dining halls.
-
-Can you fix it?
-
-Below the code is a GIF that shows the relevant tags on the dining halls webpage.
+Try to fix the buggy code below. Run the code to save your progress.
 
 .. activecode:: debug_code_1
         :language: python3
@@ -60,26 +56,19 @@ Below the code is a GIF that shows the relevant tags on the dining halls webpage
         from bs4 import BeautifulSoup
         import requests
         # Get a soup from a URL 
-        url = 'https://dining.umich.edu/menus-locations/dining-halls'
+        url = 'https://www.hshv.org/petsoftheweek/'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
-        #Extract info from the webpage
+        #Get info from one tag
         # Get first tag of a certain type from the soup
-        first_tag = soup.find('div', class_='medium-7 columns')
-        # Get all tags of a certain type from the first tag
-        tags = first_tag.find_all('a')
-        # Collect info from the tags
-        collect_info = []
-        for tag in tags:
-            # Get text from tag
-            info = tag.text
-            collect_info.append(info)
+        tag = soup.find('a', class_='pt-cv-none cvplbd')
+        # Get link from tag
+        info = tag.get('href')
 
-        #Do something with info
+        #Do something with the info
         # Print the info
-        print(collect_info)
-
+        print(info)
 
 .. reveal:: debug_code_cl_reveal_1
         :showtitle: After you've done the activity, click here.
@@ -98,124 +87,16 @@ Below the code is a GIF that shows the relevant tags on the dining halls webpage
            :results: instructor
            
            In solving the preceding problem I invested:
-        
 
-Relevant tags
-**********************
+.. sidebar:: Links to plans
+    
+    :ref:`plan_2`
 
-.. image:: _static/dining_halls.gif
-    :scale: 90%
-    :align: center
-    :alt: Relevant tags on the dining hall webpage
+    :ref:`plan_3`
 
+    :ref:`plan_4`
 
-Activity 2
-**********************
+    :ref:`plan_5`
 
-This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes the *last* link on the page. 
-
-Can you fix it?
-
-.. activecode:: debug_code_2
-        :language: python3
-        :nocodelens:
-
-        #Get the webpage
-        # Load libraries for web scraping
-        from bs4 import BeautifulSoup
-        import requests
-        # Get a soup from a URL 
-        url = 'https://dining.umich.edu/menus-locations/dining-halls'
-        r = requests.get(url)
-        soup = BeautifulSoup(r.content, 'html.parser')
-
-        #Extract info from the webpage
-        # Get first tag of a certain type from the soup
-        first_tag = soup.find('div', class_='medium-7 columns')
-        # Get all tags of a certain type from the first tag
-        tags = first_tag.find_all('a')
-        # Collect info from the tags
-        collect_info = []
-        for tag in tags:
-            # Get link from tag
-            info = tag.get('href')
-            collect_info.append(info)
-
-        #Do something with info
-        # Print the info
-        print(info)
-
-
-.. reveal:: debug_code_cl_reveal_2
-        :showtitle: After you've done the activity, click here.
-        :hidetitle: Hide question.
-
-        .. poll:: debug_code_cl_2
-           :option_1: Very, very low mental effort
-           :option_2: Very low mental effort
-           :option_3: Low mental effort
-           :option_4: Rather low mental effort
-           :option_5: Neither low nor high mental effort
-           :option_6: Rather high mental effort
-           :option_7: High mental effort
-           :option_8: Very high mental effort
-           :option_9: Very, very high mental effort
-           :results: instructor
-           
-           In solving the preceding problem I invested:
-
-Activity 3
-**********************
-
-This code is supposed to scrape links for all the dining halls from the dining halls webpage. However, it doesn't work! Instead, it scrapes *every* link on the page. 
-
-Can you fix it?
-
-.. activecode:: debug_code_3
-        :language: python3
-        :nocodelens:
-
-        #Get the webpage
-        # Load libraries for web scraping
-        from bs4 import BeautifulSoup
-        import requests
-        # Get a soup from a URL 
-        url = 'https://dining.umich.edu/menus-locations/dining-halls'
-        r = requests.get(url)
-        soup = BeautifulSoup(r.content, 'html.parser')
-
-        #Extract info from the webpage
-        # Get first tag of a certain type from the soup
-        first_tag = soup.find('div', class_='medium-7 columns')
-        # Get all tags of a certain type from the first tag
-        tags = soup.find_all('a')
-        # Collect info from the tags
-        collect_info = []
-        for tag in tags:
-            # Get link from tag
-            info = tag.get('href')
-            collect_info.append(info)
-
-        #Do something with info
-        # Print the info
-        print(collect_info)
-
-
-.. reveal:: debug_code_cl_reveal_3
-        :showtitle: After you've done the activity, click here.
-        :hidetitle: Hide question.
-
-        .. poll:: debug_code_cl_3
-           :option_1: Very, very low mental effort
-           :option_2: Very low mental effort
-           :option_3: Low mental effort
-           :option_4: Rather low mental effort
-           :option_5: Neither low nor high mental effort
-           :option_6: Rather high mental effort
-           :option_7: High mental effort
-           :option_8: Very high mental effort
-           :option_9: Very, very high mental effort
-           :results: instructor
-           
-           In solving the preceding problem I invested:
+    :ref:`plan_9`
 

@@ -22,15 +22,6 @@
 Plan 10: Store info in a json file 
 ####################################
 
-Plan 10: Example
-====================================
-
-
-What is a json file?
-====================================
-
-
-
 Plan 10: Outline
 ====================================
 
@@ -38,10 +29,3 @@ Plan 10: Outline
     :scale: 90%
     :align: center
     :alt: Plan 10 outline
-
-
-
-Plan 10: Exercises
-====================================
-
-

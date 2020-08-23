@@ -22,7 +22,10 @@ Get news links from faculty webpages
 
 Let's say that you want to get the link to the first news article on your favorite umsi faculty's webpages. 
 
-
+.. image:: _static/news_ericson.png
+    :scale: 70%
+    :align: center
+    :alt: News article on Barb's page
 
 
 But clicking through to gather all those links would be a pain. Fortunately, we can do that task with BeautifulSoup! 
@@ -33,7 +36,7 @@ Run the code below to see what it collects.
    :language: python3
    :nocodelens:
 
-   #Get the webpage
+   #Get the webpages
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -47,7 +50,7 @@ Run the code below to see what it collects.
 
        #Extract info from the page
        # Get first tag of a certain type from the soup
-       tag = soup.find('a', class_='item-teaser--heading-link')
+       tag = soup.find('a', class_='item-teaser--more')
        # Get link from tag
        info = tag.get('href')  
 
@@ -55,12 +58,12 @@ Run the code below to see what it collects.
        # Print the info
        print(info)
 
-
+This code is made up of three plans. Click on each of the plans below to learn more about it.
 
 .. raw:: html
 
-   <pre><strong>#Get the webpage</strong>
-   <a href="/plan3.html"><pre style="background-color:#FCF3CF;">
+   <pre><strong>#Get the webpages</strong>
+   <a href="/plan3.html"><pre style="background-color:#FDEBD0;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -73,17 +76,13 @@ Run the code below to see what it collects.
        soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
        <pre><strong>#Extract info from the page</strong>
-       <a href="/plan4.html"><pre style="background-color:#FCF3CF;">
+       <a href="/plan4.html"><pre style="background-color:#A9DFBF;">
        # Get first tag of a certain type from the soup
-       tag = soup.find('a', class_='item-teaser--heading-link')
+       tag = soup.find('a', class_='item-teaser--more')
        # Get link from tag
        info = tag.get('href')</pre></a></pre>  
 
        <pre><strong>#Do something with the info</strong>
-       <a href="/plan9.html"><pre style="background-color:#FCF3CF;">
+       <a href="/plan9.html"><pre style="background-color:#D6EAF8;">
        # Print the info
        print(info)</pre></a></pre>
-
-
-This code is made up of three plans. Click on each of the plans above to learn more about it.
-

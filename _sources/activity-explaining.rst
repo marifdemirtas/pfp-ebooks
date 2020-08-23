@@ -1,13 +1,3 @@
-..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
-    Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
-    and/or modify this document under the terms of the GNU Free Documentation
-    License, Version 1.3 or any later version published by the Free Software
-    Foundation; with Invariant Sections being Forward, Prefaces, and
-    Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
-    the license is included in the section entitled "GNU Free Documentation
-    License".
-
-
 ..  shortname:: Explaining
 ..  description:: Explaining activity.
 
@@ -20,10 +10,66 @@
 Code explaining activity
 :::::::::::::::::::::::::
 
+
+Look at the code below, and try to determine what it does. 
+
+Relevant tags
+**********************
+
+Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``:
+
+.. image:: _static/news_ericson.png
+    :scale: 70%
+    :align: center
+    :alt: Code that you are asked to explain
+
+.. raw:: html
+
+  <pre>
+  <pre>Goal: Get a soup from one webpage
+  <pre style="background-color:#FCF3CF;">
+  <strong># Load libraries for web scraping</strong>
+  from bs4 import BeautifulSoup
+  import requests
+  <strong># Get a soup from <mark style="background-color:#F1948A">a URL</mark></strong>
+  url = <mark style="background-color:#F1948A">'https://www.si.umich.edu/people/barbara-ericson'</mark>
+  r = requests.get(url)
+  soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
+  <pre>Goal: Get info from all tags of a certain type
+  <a href="/plan5.html"><pre style="background-color:#D5F5E3;">
+  # Get all tags of <mark>a certain type</mark> from the soup
+  tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
+  # Collect info from the tags
+  collect_info = []
+  for tag in tags:
+      <strong># Get <mark>info</mark> from tag</strong>
+      info = tag.<mark>get('href')</mark>
+      collect_info.append(info)</pre></pre></a>
+  <pre>Goal: Get a soup from multiple webpages
+  <a href="/plan3.html"><pre style="background-color:#FDEBD0;">
+  <strong># Get a soup from multiple URLs</strong>
+  base_url = <mark>'https://www.si.umich.edu/'</mark>
+  endings = <mark>collect_info</mark>
+  for ending in endings:
+       url = base_url + ending
+       r = requests.get(url)
+       soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
+       <pre>Goal: Get info from all tags of a certain type<a href="/plan5.html"><pre style="background-color:#D5F5E3;">
+       <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
+       tags = soup.find_all(<mark>'p'</mark>)
+       # Collect info from the tags
+       collect_info = []
+       for tag in tags:
+           <strong># Get <mark>info</mark> from tag</strong>
+           info = tag.<mark>text</mark>
+           collect_info.append(info)</pre></pre></a>
+           <pre>Goal: Print the info<a href="/plan9.html"><pre style="background-color:#D6EAF8;">
+           <strong># Print the <mark>info</mark></strong>
+           print(<mark>collect_info</mark>)</pre></pre></a>
+           </pre>
+
 .. sidebar:: Links to plans
-    
-    :ref:`plan_1`
-   
+  
     :ref:`plan_2`
 
     :ref:`plan_3`
@@ -32,34 +78,9 @@ Code explaining activity
 
     :ref:`plan_5`
 
-    :ref:`plan_6`
-
-    :ref:`plan_7`
-
-    :ref:`plan_8`
-
     :ref:`plan_9`
 
-    :ref:`plan_10`
 
-
-Look at the code below, and try to determine what it does. 
-
-There is a GIF below the code that shows relevant tags in the first website.
-
-.. image:: _static/umsi_faces_code.png
-    :scale: 30%
-    :align: center
-    :alt: Code that you are asked to explain
-
-
-Relevant tags
-**********************
-
-.. image:: _static/umsi_faces.gif
-    :scale: 90%
-    :align: center
-    :alt: UMSI faces website
 
 .. reveal:: explain_run_code
     :showtitle: If you need a hint, click here.
@@ -67,24 +88,21 @@ Relevant tags
      You can run the code below and see what happens.
 
     .. activecode:: explain_code
-       :language: python3
-       :nocodelens:
-
+        :language: python3
+        :nocodelens:
 
         #Get the webpage
         # Load libraries for web scraping
         from bs4 import BeautifulSoup
         import requests
         # Get a soup from a URL 
-        url = 'https://www.si.umich.edu/people/faces-umsi'
+        url = 'https://www.si.umich.edu/people/barbara-ericson'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
         #Extract info from the webpage
-        # Get the first tag of a certain type from the soup
-        first_tag = soup.find('div', class_='body wysiwyg-content')
-        # Get all tags of a certain type from the first tag
-        tags = first_tag.find_all('a')
+        # Get all tags of a certain type from the soup
+        tags = soup.find_all('a', class_='item-teaser--more')
         # Collect info from the tags
         collect_info = []
         for tag in tags:
@@ -92,7 +110,7 @@ Relevant tags
           info = tag.get('href')
           collect_info.append(info)
 
-        #Do something with info
+        #Do something with the info
         # Get a soup from multiple URLs 
         base_url = 'https://www.si.umich.edu/'
         endings = collect_info

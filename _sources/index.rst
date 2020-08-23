@@ -73,7 +73,9 @@ Putting it together
 .. toctree::
    :maxdepth: 1
 
-   activity-writing.rst
+   activity-writing-1.rst
+   activity-writing-2.rst
+   activity-writing-3.rst
    activity-debugging.rst
    activity-explaining.rst
 

@@ -22,7 +22,6 @@
 Plan 3: Get a soup from multiple URLs
 #####################################
 
-
 Plan 3: Example
 ====================================
 
@@ -38,7 +37,7 @@ Sometimes we want to get information from multiple web pages that have the same 
     :align: center
     :alt: Plan 3 outline
 
-Maybe we are interested in getting information about mutliple UMSI professors: Dr. Barb Ericson, Dr. Steve Oney, and Dr. Paul Resnick. 
+We are interested in getting information about mutliple UMSI professors: Dr. Barb Ericson, Dr. Steve Oney, and Dr. Paul Resnick. 
 
 Their webpages are:
 
@@ -51,33 +50,30 @@ Their webpages are:
 In this code, we get a **soup** from multiple **UMSI faculty pages**.
 
 .. raw:: html
-   
-   <pre><strong># Load libraries for web scraping</strong>
-   <mark style="background-color:#FCF3CF;">from bs4 import BeautifulSoup
-   import requests</mark></pre>
 
-   <pre><strong># Get a soup from multiple URLs</strong>
-   <mark style="background-color:#FCF3CF;">base_url = <mark style="border:2px; border-style:solid; border-color:#1A5276">'https://www.si.umich.edu/people/'</mark>
-   endings = <mark style="border:2px; border-style:solid; border-color:#1A5276">['barbara-ericson', 'steve-oney', 'paul-resnick']</mark>
+   <pre>Goal: Get a soup from multiple webpages
+   <pre style="background-color:#FDEBD0;">
+   <strong># Load libraries for web scraping</strong>
+   from bs4 import BeautifulSoup
+   import requests
+   <strong># Get a soup from <mark style="background-color:#FEF5E7">multiple URLs</mark></strong>
+   base_url = <mark style="background-color:#FEF5E7">'https://www.si.umich.edu/people/'</mark>
+   endings = <mark style="background-color:#FEF5E7">['barbara-ericson', 'steve-oney', 'paul-resnick']</mark>
    for ending in endings:
-       url = base_url + ending 
-       r = requests.get(url) 
-       soup = BeautifulSoup(r.content, 'html.parser')</mark></pre>
+       url = base_url + ending
+       r = requests.get(url)
+       soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
 
-When to use this plan
+Plan 3: When to use this plan
 ====================================
 
 Use this plan when you want to scrape the same thing from multiple webpages.
 
-How to use this plan
+Plan3: How to use this plan
 ====================================
 
-**You should change**
-
-
-If these are your URLs, what should your 
-
+Look at the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the ``base_url``. The parts that are different are the ``endings``.
 
 Plan 3: Exercises
 ====================================
@@ -87,7 +83,7 @@ If you want to also get the link to the most recent news item from Dean Tom Finh
 Change the code and run it to see if you're right!
 
 .. activecode:: plan3_edit_finholt
-   :language: python
+   :language: python3
    :nocodelens:
 
    #Get the webpage
@@ -111,19 +107,4 @@ Change the code and run it to see if you're right!
        #Do something with the info
        # Print the info
        print(info)
-
-
-
-
-
-
-Plan 3: Outline
-====================================
-
-.. image:: _static/plan3outline.png
-    :scale: 100%
-    :align: center
-    :alt: Plan 3 outline
-
-
 

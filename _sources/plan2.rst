@@ -32,24 +32,25 @@ Here is the code for getting a **soup** from the **Cottage Inn location page**.
 
 .. raw:: html
 
+  <pre>Goal: Get a soup from one webpage
   <pre style="background-color:#FCF3CF;">
   <strong># Load libraries for web scraping</strong>
   from bs4 import BeautifulSoup
   import requests
-  <strong># Get a soup from a URL</strong>
-  url = <mark style="border:2px; border-style:solid; border-color:#1A5276">'https://cottageinn.com/pick-a-location/'</mark>
+  <strong># Get a soup from <mark style="background-color:#F1948A">a URL</mark></strong>
+  url = <mark style="background-color:#F1948A">'https://cottageinn.com/pick-a-location/'</mark>
   r = requests.get(url)
-  soup = BeautifulSoup(r.content, 'html.parser')</pre>
+  soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
-When to use this plan
+Plan 2: When to use this plan
 ====================================
 
-Use this plan when you want to scrape one webpage.
+Use this plan when you want to scrape **one webpage**.
 
-How to use this plan
+Plan 2: How to use this plan
 ====================================
 
-Replace the URL with the URL of the website you want to scrape.
+**Replace the URL with the URL of the website you want to scrape.**
 
 A URL is a web address, like you see in your web browser. 
 It should be complete (starting with http:// or https://). 

@@ -26,47 +26,94 @@ Plan 4: Get info from a single tag
 Plan 4: Example
 ====================================
 
-Maybe we want to get just one piece of information from a webpage. For example, maybe we want to get the "Most Helpful Comment" from Dr. Ericson's Rate My Professor page. 
+Maybe we want to get just one piece of information from a webpage. In this example, we want to get the first link to a news story from a professor's page.
 
 Here's what we see when we use the "inspect" function in the browser. 
 
-.. image:: _static/rate_my_prof.png
-    :scale: 75%
+.. image:: _static/news_ericson.png
+    :scale: 70%
     :align: center
-    :alt: By inspecting that location, we see that it is a ``div`` tag with a ``class`` attribute.
-
-
-It is a ``div`` tag with a ``class`` attribute ``Comments_StyledComments-dzzyvm-0 dvnRbr``. We need to get that tag, because its text has the information we want.
-
-Since that tag is the first of its type on the page, we can use the plan **get info from a single tag**.
-
-Here is how to get the "Most helpful comment":
-
-
-.. activecode:: plan4_example
-   :language: python3
-   :nocodelens:
-
-   # Get first tag of a certain type from the soup
-   tag = soup.find('div', class_='Comments_StyledComments-dzzyvm-0 dvnRbr')
+    :alt: The tag that has a link to the news article
    
-   # Get text from tag
-   info = tag.text
+Since that tag is the first of its type on the page, we can use the plan **Get info from a single tag**.
 
-Plan 4: Outline
+.. raw:: html
+
+       <pre>Goal: Get info from a single tag
+       <pre style="background-color:#A9DFBF;">
+       <strong># Get first <mark>tag of a certain type</mark> from the soup</strong>
+       tag = soup.find(<mark>'a', class_='item-teaser--more'</mark>)
+       <strong># Get <mark>info</mark> from tag</strong>
+       info = tag.<mark>get('href')</mark></pre></pre>  
+
+
+Plan 4: When to use it
 ====================================
 
-.. image:: _static/plan4outline.png
-    :scale: 100%
-    :align: center
-    :alt: Plan 4 outline
+Use this when you want to get information that is in the first tag of a certain type on the page.
 
+Plan 4: How to use it
+====================================
+
+Once you've found the tag you want to get information from, do two things:
+
+#1: Find the **tag name** and put it into the first slot. The tag name is what goes between the
+
+How do you do that? Here are some examples:
+
+``<p>`` -> ``'p'``
+
+``<h3>`` -> ``'h3'``
+
+``<div class="comment">`` -> ``'div', class_='comment'``
+
+``<span style="X5e72">`` -> ``'span', style='X5e72'``
+
+
+#2: Determine if you want to get **text** from a tag, or a **link** from a tag
+
+One type of tag, the ``a`` tag, holds a link. 
+
+Here is the tag that creates the link to the North Quad dining hall page. It is an 'a' tag.
+
+.. image:: _static/nq_link.png
+    :scale: 90%
+    :align: center
+    :alt: Link to the North Quad dining hall page
+
+If you want to get the link from a tag, use ``get('href')`` in the second slot in this plan.
 
 
 Plan 4: Exercises
 ====================================
 
-.. clickablearea:: umich_plan4_click
+.. mchoice:: get_link_mc_1
+    :random:
+
+    What is the link of the tag below?
+
+    .. image:: _static/barb_link.png
+        :align: center
+        :alt: Link to Barb's page
+    
+    -   https://www.si.umich.edu/people/barbara-ericson
+
+        -   No, this is the full link, but there is a relative link in the tag. 
+
+    -   /people/barbara-ericson
+
+        +   Correct!
+
+    -   a
+
+        -   No, this is the name of the tag
+
+    -   Barbara Ericson
+
+        -   No, this is the text of the tag
+
+
+.. clickablearea:: plan4_click
     :question: If you wanted to get a link from the first 'a' tag on a webpage, which part(s) of the code below would you change? Click on those parts of the code.
     :iscode:
     :feedback: Check out the plan outline above to identify the slot.
@@ -75,7 +122,7 @@ Plan 4: Exercises
     :click-incorrect:tag = soup.find(:endclick::click-correct:'div':endclick::click-correct:, class_='Comments_StyledComments-dzzyvm-0 dvnRbr':endclick:)
    
     :click-correct:# Get text from tag:endclick:
-    :click-correct:info = tag.text:endclick:
+    :click-incorrect:info = tag.:endclick::click-correct:text:endclick:
 
 
 Check out the image below, that inspects the description of the North Quad dining hall. 
@@ -104,4 +151,20 @@ Check out the image below, that inspects the description of the North Quad dinin
    # Get all tags of a certain type from the soup
    tags = soup.find_all('p')#distractor
 
+
+.. fillintheblank:: get_link_fill
+
+    What is the code to get a link from a tag?
+
+
+    ``# Get first tag of a certain type from the soup``
+
+    ``tags = soup.find('a', style="announcement")``
+
+    ``# Get info from tag``
+
+    ``info = tag.`` |blank|
+
+    -    :get(["']href["']): Correct.  
+         :.*: Check out the highlighted parts of the example for help.
 
