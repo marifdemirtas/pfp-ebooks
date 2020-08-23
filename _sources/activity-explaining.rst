@@ -37,9 +37,9 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
   soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
   <pre>Goal: Get info from all tags of a certain type
   <a href="/plan5.html"><pre style="background-color:#D5F5E3;">
-  # Get all tags of <mark>a certain type</mark> from the soup
+  <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
   tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
-  # Collect info from the tags
+  <strong># Collect info from the tags</strong>
   collect_info = []
   for tag in tags:
       <strong># Get <mark>info</mark> from tag</strong>
