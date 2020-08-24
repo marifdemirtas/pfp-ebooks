@@ -78,7 +78,7 @@ Plan 4
    # Get first tag of a certain type from the soup
    tag = soup.find(___________)
    # Get info from the tag
-   _____________________________________________
+   info = tag.________
    
 
 Plan 5
@@ -94,7 +94,8 @@ Plan 5
    # Collect info from the tags
    collect_info = []
    for tag in tags:
-       _______________________________________
+       # Get info from tag
+       info = tag.________
        collect_info.append(info)
 
 
@@ -113,31 +114,10 @@ Plan 6
    # Collect info from the tags
    collect_info = []
    for tag in tags: 
-       ________________________________________
+       # Get info from tag
+       info = tag.________
        collect_info.append(info)
    
-Plan 7
-====================================
-   
-.. activecode:: plan7_download
-   :language: python3
-   :nocodelens:
-   :enabledownload:
-
-   # Get text from tag
-   info = __________.text   
-
-Plan 8
-====================================
-
-.. activecode:: plan8_download
-   :language: python3
-   :nocodelens:
-   :enabledownload:
-
-   # Get link from tag
-   info = ___________.get('href')  
-
 Plan 9
 ====================================
 
