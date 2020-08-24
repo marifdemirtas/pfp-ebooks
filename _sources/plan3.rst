@@ -108,3 +108,10 @@ Change the code and run it to see if you're right!
        # Print the info
        print(info)
 
+
+.. note:: 
+      
+        .. raw:: html
+
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example2.html" >Click here to go back to the Faculty Pages example</a>
+

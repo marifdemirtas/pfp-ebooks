@@ -18,25 +18,22 @@ Relevant tags
 
 Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``:
 
-.. image:: _static/news_ericson.png
+.. image:: _static/news_ericson_multiple.png
     :scale: 70%
     :align: center
     :alt: Code that you are asked to explain
 
 .. raw:: html
 
-  <pre>
-  <pre>Goal: Get a soup from one webpage
-  <pre style="background-color:#FCF3CF;">
+  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html"><pre style="background-color:#FCF3CF;">
   <strong># Load libraries for web scraping</strong>
   from bs4 import BeautifulSoup
   import requests
   <strong># Get a soup from <mark style="background-color:#F1948A">a URL</mark></strong>
   url = <mark style="background-color:#F1948A">'https://www.si.umich.edu/people/barbara-ericson'</mark>
   r = requests.get(url)
-  soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
-  <pre>Goal: Get info from all tags of a certain type
-  <a href="/plan5.html"><pre style="background-color:#D5F5E3;">
+  soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
+  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
   <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
   tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
   <strong># Collect info from the tags</strong>
@@ -44,17 +41,16 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
   for tag in tags:
       <strong># Get <mark>info</mark> from tag</strong>
       info = tag.<mark>get('href')</mark>
-      collect_info.append(info)</pre></pre></a>
-  <pre>Goal: Get a soup from multiple webpages
-  <a href="/plan3.html"><pre style="background-color:#FDEBD0;">
+      collect_info.append(info)</pre></a>
+  <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html"><pre style="background-color:#FDEBD0;">
   <strong># Get a soup from multiple URLs</strong>
   base_url = <mark>'https://www.si.umich.edu/'</mark>
   endings = <mark>collect_info</mark>
   for ending in endings:
        url = base_url + ending
        r = requests.get(url)
-       soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
-       <pre>Goal: Get info from all tags of a certain type<a href="/plan5.html"><pre style="background-color:#D5F5E3;">
+       soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
+       <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
        <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
        tags = soup.find_all(<mark>'p'</mark>)
        # Collect info from the tags
@@ -62,23 +58,48 @@ Here's the relevant tag from ``https://www.si.umich.edu/people/barbara-ericson``
        for tag in tags:
            <strong># Get <mark>info</mark> from tag</strong>
            info = tag.<mark>text</mark>
-           collect_info.append(info)</pre></pre></a>
-           <pre>Goal: Print the info<a href="/plan9.html"><pre style="background-color:#D6EAF8;">
+           collect_info.append(info)</pre></a>
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
            <strong># Print the <mark>info</mark></strong>
-           print(<mark>collect_info</mark>)</pre></pre></a>
-           </pre>
+           print(<mark>collect_info</mark>)</pre></a>
+           
+.. shortanswer:: explain_answer
+
+   Write down your best guess of what the code does.
+
 
 .. sidebar:: Links to plans
-  
-    :ref:`plan_2`
 
-    :ref:`plan_3`
+    |plan_2|
 
-    :ref:`plan_4`
+    |plan_3|
 
-    :ref:`plan_5`
+    |plan_4|
 
-    :ref:`plan_9`
+    |plan_5|
+
+    |plan_9|
+
+    .. |plan_2| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+
+    .. |plan_3| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+
+    .. |plan_4| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+
+    .. |plan_5| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
+   
+    .. |plan_9| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
+
 
 
 

@@ -10,7 +10,7 @@
 Code debugging activity
 :::::::::::::::::::::::::
 
-Every week, a new cat or dog is the Ann Arbor’s 107one Pet-of-the-Week. The code below is supposed to *get the pet of the week webpage*, *scrape the text of the title shown in the picture*, and *print it*.
+Every week, a new cat or dog is the Ann Arbor’s 107one Pet-of-the-Week. The code below is supposed to **get the pet of the week webpage, scrape the text of the title shown in the picture, and print it**.
 
 .. image:: _static/pet_of_the_week.png
     :scale: 70%
@@ -24,7 +24,7 @@ Can you fix it? Here is the buggy code:
 .. raw:: html
 
    <pre><strong>#Get the webpage</strong>
-   <a href="/plan2.html"><pre style="background-color:#FCF3CF;">
+   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html"><pre style="background-color:#FCF3CF;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -34,14 +34,14 @@ Can you fix it? Here is the buggy code:
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
    <pre><strong># Get info from one tag</strong>
-   <a href="/plan2.html"><pre style="background-color:#FCF3CF;">
+   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html"><pre style="background-color:#FCF3CF;">
    # Get first tag of <mark>a certain type</mark> from the soup
    tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'a', class_='pt-cv-none cvplbd'</mark>)
    # Get <mark>link</mark> from tag
    info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
    <pre><strong>#Do something with the info</strong>
-   <a href="/plan9.html"><pre style="background-color:#D6EAF8;">
+   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
    # Print <mark style="background-color:#ABEBC6">the info</mark>
    print(<mark style="border:2px; border-style:solid; border-color:#1A5276; background-color:#ABEBC6">info</mark>)</pre></a></pre>
 
@@ -63,7 +63,7 @@ Try to fix the buggy code below. Run the code to save your progress.
         #Get info from one tag
         # Get first tag of a certain type from the soup
         tag = soup.find('a', class_='pt-cv-none cvplbd')
-        # Get link from tag
+        # Get info from tag
         info = tag.get('href')
 
         #Do something with the info
@@ -89,14 +89,35 @@ Try to fix the buggy code below. Run the code to save your progress.
            In solving the preceding problem I invested:
 
 .. sidebar:: Links to plans
-    
-    :ref:`plan_2`
 
-    :ref:`plan_3`
+    |plan_2|
 
-    :ref:`plan_4`
+    |plan_3|
 
-    :ref:`plan_5`
+    |plan_4|
 
-    :ref:`plan_9`
+    |plan_5|
+
+    |plan_9|
+
+    .. |plan_2| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+
+    .. |plan_3| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+
+    .. |plan_4| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+
+    .. |plan_5| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
+   
+    .. |plan_9| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
+
 

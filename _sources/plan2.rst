@@ -70,14 +70,14 @@ Plan 2: Exercises
     :iscode:
     :feedback: Check out the example of this plan above to identify the area that should be changed.
 
-    # Load libraries for web scraping
+    :click-incorrect:# Load libraries for web scraping:endclick:
     :click-incorrect:from bs4 import BeautifulSoup:endclick:
     :click-incorrect:import requests:endclick:
 
-    # Get a soup from a URL 
+    :click-incorrect:# Get a soup from a URL:endclick: 
     :click-incorrect:url =:endclick: :click-correct:'https://cottageinn.com/pick-a-location/':endclick:
     :click-incorrect:r = requests.get(url):endclick:
-    :click-incorrect:soup = BeautifulSoup(r.content)::endclick:
+    :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser')::endclick:
 
 .. fillintheblank:: plan2_fill
 
@@ -98,13 +98,17 @@ Plan 2: Exercises
    ``soup = BeautifulSoup(r.content, 'html.parser')``
 
 
-   -    :'https://en.wikipedia.org/wiki/University_of_Michigan': Correct.  
+   -    :['"]https://en.wikipedia.org/wiki/University_of_Michigan['"]: Correct.  
         :https://en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should have quotes around them.
         :en.wikipedia.org/wiki/University_of_Michigan: Remember that URLs in this plan should start with https:// or http://
         :.*: Incorrect. 
         
 
+.. note:: 
+      
+        .. raw:: html
 
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example1.html" >Click here to go back to the Cottage Inn example</a>
 
 
  

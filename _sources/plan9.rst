@@ -34,7 +34,7 @@ If you want to print info from only one tag, like if you've just used *Plan 4: G
    <pre>Goal: Print the info
    <pre style="background-color:#D6EAF8;">
    <strong># Print the <mark>info</mark></strong>
-   print(<mark>collect_info</mark>)</pre></pre>
+   print(<mark>info</mark>)</pre></pre>
 
 If you want to print info from only one tag, like if you've just used *Plan 5: Get info from all tags of a certain type*, then do this:
 
@@ -53,7 +53,7 @@ Plan 9: Exercises
 
    Here is the code to collect all the locations from the Cottage Inn locations page. 
    
-   What should fill the slot in Plan 10 below?
+   What should fill the slot in Plan 9 below?
 
    .. code-block:: python 
 
@@ -83,8 +83,20 @@ Plan 9: Exercises
 
    ___________ should be |blank|
 
-   -    :get_info: Correct.  
+   -    :collect_info: Correct.  
         :info: Remember that the variable that goes in this plan depends on the plan above.
         :.*: Incorrect. 
+
+.. note:: 
+      
+        .. raw:: html
+
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example1.html" >Click here to go back to the Cottage Inn example</a>
+
+.. note:: 
+      
+        .. raw:: html
+
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example2.html" >Click here to go back to the Faculty Pages example</a>
  
 

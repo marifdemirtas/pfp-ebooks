@@ -22,10 +22,6 @@
 Plan 5: Get info from all tags of a certain type
 #################################################
 
-
-Plan 5: Example
-====================================
-
 To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags. 
 
 A great way to figure this out is to use the "inspect" function on your browser. 
@@ -38,6 +34,22 @@ A great way to figure this out is to use the "inspect" function on your browser.
 
 We see that we need to get info from all the ``h3`` tags from the webpage. The *text* in those tags has the information we need!
 
+Looking closer at a tag
+====================================
+
+Behind every webpage is HTML code. HTML code is made up of *tags*.
+
+Here is the tag that creates the name of one of the Cottage Inn Pizza locations. The tag is surrounded by the blue rectangle. It is an 'h3' tag.
+
+.. image:: _static/cottage_inn_h3_text.png
+    :scale: 90%
+    :align: center
+    :alt: h3 tag example
+
+The name of this tag is 'h3'. In-between the start and end tag (between the ``<h3>`` and ``</h3>`` is the tag's **text**. For this tag, the text is **Ann Arbor Broadway St.**
+
+Plan 5: Example
+====================================
 
 Here is how to get **text** from all the **'h3'** tags from webpage:
 
@@ -55,26 +67,13 @@ Here is how to get **text** from all the **'h3'** tags from webpage:
        collect_info.append(info)</pre></pre>
 
 
-Looking closer at a tag
-====================================
-
-Behind every webpage is HTML code. HTML code is made up of *tags*.
-
-Here is the tag that creates the name of one of the Cottage Inn Pizza locations. The tag is surrounded by the blue rectangle. It is an 'h3' tag.
-
-.. image:: _static/cottage_inn_h3_text.png
-    :scale: 90%
-    :align: center
-    :alt: h3 tag example
-
-The name of this tag is 'h3'. In-between the start and end tag (between the ``<h3>`` and ``</h3>`` is the tag's **text**. For this tag, the text is **Ann Arbor Broadway St.**
 
 Plan 5: How to use it
 ====================================
 
 Once you've found the tag you want to get information from, do two things:
 
-#1: Find the **tag description** and put it into the first slot in the plan. 
+1. Find the **tag description** and put it into the first slot in the plan. 
 
 How do you do that? Here are some examples:
 
@@ -89,11 +88,11 @@ How do you do that? Here are some examples:
 ``<a class="more-info" href="/people/ericson">`` has tag description ``'a', class_='more info'``
 
 
-#2: Determine if you want to get **text** from a tag, or a **link** from a tag
+2. Determine if you want to get **text** from a tag, or a **link** from a tag
 
-If you want to get text, use ``text`` in the second slot in the plan.
+If you want to get *text*, use ``text`` in the second slot in the plan.
 
-If you want to get a link, use ``get('href')`` in the second slot in the plan.
+If you want to get a *link*, use ``get('href')`` in the second slot in the plan.
 
 
 Plan 5: Exercises
@@ -109,11 +108,11 @@ Plan 5: Exercises
     
     -   Today's Menu
 
-        +   Correct! This text is between the <h2> and </h2>
+        +   Correct! This text is between the <h2 class="menuItem"> and </h2>
 
     -   h2
 
-        -   No, h2 is the tag name.
+        -   No, h2 is the tag name
 
     -   menuTitle
 
@@ -121,13 +120,38 @@ Plan 5: Exercises
 
     -   class
 
-        -   No, class is an attribute
+        -   No
 
+
+.. mchoice:: get_tag_description_mc_1
+    :random:
+
+    What is the tag description of the tag below?
+
+    .. image:: _static/dining_h2_text.png
+        :align: center
+        :alt: h2 tag on dining page
+    
+    -   'h2', class_='menuTitle'
+
+        +   Correct! This is how you would describe the tag type in our web scraping code.
+
+    -   'h2'
+
+        -   That is a part of the tag description, but we can be more specific.
+
+    -   'h2', class='menuTitle'
+
+        -   Very close, but in web scraping code you should use class_
+
+    -   <h2 class="menuTitle">
+
+        -   This is what is actually in the tag, but it's not how we would describe the tag in web scraping code.
 
 .. clickablearea:: plan5_click
-    :question: Right now, this code gets the text from all 'h3' tags in the webpage. If you wanted to get the links from all the 'a, class_="headline"' tags in the webpage, which part(s) of the code below would you change?
+    :question: Right now, this code gets the *text* from all 'h3' tags in the webpage. If you wanted to get the *links* from all the 'a', class_='headline' tags in the webpage, which part(s) of the code below would you change?
     :iscode:
-    :feedback: Check out the plan outline above to identify the relevant slot(s).
+    :feedback: Check out "how to use this plan".
 
     # Get all tags of a certain type from the soup
     :click-incorrect:tags = soup.find_all(:endclick::click-correct:'h3':endclick::click-incorrect:):endclick:
@@ -161,7 +185,7 @@ Plan 5: Exercises
        ``collect_info.append(info)``
 
    -    :['"]div['"], class_=['"]headline['"]: Correct.  
-        :['"]div['"], class=['"]headline['"]: Very close--but class should be _class!
+        :['"]div['"], class=['"]headline['"]: Very close--but class should be class_!
         :div: Good start, but you need more. 
         :.*: Incorrect. 
    -    :text: Correct.
@@ -198,10 +222,10 @@ Plan 5: Exercises
 
         -   No, style is an attribute
 
-Here's an example of some p tags on Dr. Ericson's UMSI website.
 
-.. image:: _static/p_tag_example.png
-    :scale: 60%
-    :align: center
-    :alt: Example of a 'p' tag
+.. note:: 
+      
+        .. raw:: html
+
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example1.html" >Click here to go back to the Cottage Inn example</a>
 

@@ -77,7 +77,7 @@ One type of tag, the ``a`` tag, holds a link.
 Here is the tag that creates the link to the North Quad dining hall page. It is an 'a' tag.
 
 .. image:: _static/nq_link.png
-    :scale: 90%
+    :scale: 80%
     :align: center
     :alt: Link to the North Quad dining hall page
 
@@ -121,11 +121,11 @@ Plan 4: Exercises
     :click-incorrect:# Get first tag of a certain type from the soup:endclick:
     :click-incorrect:tag = soup.find(:endclick::click-correct:'div':endclick::click-correct:, class_='Comments_StyledComments-dzzyvm-0 dvnRbr':endclick:)
    
-    :click-correct:# Get text from tag:endclick:
+    :click-incorrect:# Get info from tag:endclick:
     :click-incorrect:info = tag.:endclick::click-correct:text:endclick:
 
 
-Check out the image below, that inspects the description of the North Quad dining hall. 
+Check out the image below, that inspects the description of the North Quad dining hall.
 
 .. image:: _static/nq_dining_onetag.png
     :scale: 70%
@@ -134,7 +134,9 @@ Check out the image below, that inspects the description of the North Quad dinin
         
 .. parsonsprob:: plan4_parsons
 
-   Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order.
+   Choose the subgoals that get the text from the tag that has the description of the North Quad dining hall, and put them in the right order. 
+   You do not need to use all the blocks.
+
    -----
    # Get first tag of a certain type from the soup
    tag = soup.find('span', style='font-weight: 400;')
@@ -142,10 +144,10 @@ Check out the image below, that inspects the description of the North Quad dinin
    # Get first tag of a certain type from the soup
    tag = soup.find('span') #paired
    =====
-   # Get text from tag
+   # Get info from tag
    info = tag.text 
    =====
-   # Get link from tag 
+   # Get info from tag 
    info = tag.get('href') #distractor
    =====
    # Get all tags of a certain type from the soup
@@ -159,12 +161,21 @@ Check out the image below, that inspects the description of the North Quad dinin
 
     ``# Get first tag of a certain type from the soup``
 
-    ``tags = soup.find('a', style="announcement")``
+    ``tags = soup.find('a', class_='announcement')``
 
     ``# Get info from tag``
 
     ``info = tag.`` |blank|
 
-    -    :get(["']href["']): Correct.  
+    -    :get\(['"]href['"]\): Correct. 
+         :get\(href\): Almost! Don't forget the quotes around 'href'. 
+         :href: Good start! But there is another part to it. 
          :.*: Check out the highlighted parts of the example for help.
+
+
+.. note:: 
+      
+        .. raw:: html
+
+           <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/example2.html" >Click here to go back to the Faculty Pages example</a>
 

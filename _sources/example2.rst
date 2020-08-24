@@ -51,7 +51,7 @@ Run the code below to see what it collects.
        #Extract info from the page
        # Get first tag of a certain type from the soup
        tag = soup.find('a', class_='item-teaser--more')
-       # Get link from tag
+       # Get info from tag
        info = tag.get('href')  
 
        #Do something with the info
@@ -62,8 +62,8 @@ This code is made up of three plans. Click on each of the plans below to learn m
 
 .. raw:: html
 
-   <pre><strong>#Get the webpages</strong>
-   <a href="/plan3.html"><pre style="background-color:#FDEBD0;">
+   <pre><strong>Plan 3: Get a soup from multiple URLs</strong>
+   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html"><pre style="background-color:#FDEBD0;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -74,15 +74,11 @@ This code is made up of three plans. Click on each of the plans below to learn m
        url = base_url + ending
        r = requests.get(url)
        soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
-
-       <pre><strong>#Extract info from the page</strong>
-       <a href="/plan4.html"><pre style="background-color:#A9DFBF;">
+       <pre><strong>Plan 4: Get info from a single tag</strong><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html"><pre style="background-color:#A9DFBF;">
        # Get first tag of a certain type from the soup
        tag = soup.find('a', class_='item-teaser--more')
-       # Get link from tag
+       # Get info from tag
        info = tag.get('href')</pre></a></pre>  
-
-       <pre><strong>#Do something with the info</strong>
-       <a href="/plan9.html"><pre style="background-color:#D6EAF8;">
+       <pre><strong>Plan 9: Print info</strong><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
        # Print the info
        print(info)</pre></a></pre>
