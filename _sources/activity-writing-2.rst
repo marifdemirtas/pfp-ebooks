@@ -11,12 +11,21 @@
 Code writing activity part 2
 :::::::::::::::::::::::::::::
 
-On this page, you will complete the final activity to write code that:
+On this page, you will complete a second activity to write code that:
 
-**Scrapes all the comments on the Rate My Professor page for Prof. Ericson and Prof. Oney**
+**Scrapes all the comments on the Rate My Professor page for Prof. Ericson and Prof. Oney and prints them**
 
-Here is `the link to Prof. Ericson's Rate My Professor page <https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2454833>`_.
-Here is `the link to Prof. Oney's Rate My Professor page <https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751>`_. 
+Here is |ericson_link|.
+
+Here is |oney_link|.
+
+.. |ericson_link| raw:: html
+
+   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2454833" target="_blank">the link to Prof. Ericson's Rate My Professor page</a>
+
+.. |oney_link| raw:: html
+
+   <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2239751" target="_blank">the link to Prof. Oney's Rate My Professor page</a> 
 
 You can see that both the pages have the same layout.
 
@@ -30,15 +39,44 @@ You can see that both the pages have the same layout.
     :align: center
     :alt: Prof. Ericson's Rate My Professor page
 
-The comments all have the same tag name. Here's what it looks like when you inspect Prof. Ericson's page:
+The comments all have the same tag name, which is ``'div'`` tag with ``class='Comments__StyledComments-dzzyvm-0 dvnRbr'``. Here's what it looks like when you inspect Prof. Ericson's page:
 
 .. image:: _static/rate_my_prof_tags.png
     :scale: 65%
     :align: center
     :alt: Inspecting the tags on the Rate My Professor page
 
-The ``'div'`` tag with ``class='Comments__StyledComments-dzzyvm-0 dvnRbr'`` is not used anywhere else on the page besides for students' comments.
+.. sidebar:: Links to plans
 
+    |plan_2|
+
+    |plan_3|
+
+    |plan_4|
+
+    |plan_5|
+
+    |plan_9|
+
+    .. |plan_2| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+
+    .. |plan_3| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+
+    .. |plan_4| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+
+    .. |plan_5| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
+   
+    .. |plan_9| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
 
 
 .. parsonsprob:: write_code_order_plans_code
@@ -115,17 +153,4 @@ The ``'div'`` tag with ``class='Comments__StyledComments-dzzyvm-0 dvnRbr'`` is n
            :results: instructor
            
            In solving the preceding problem I invested:
-
-
-.. sidebar:: Links to plans
-   
-    :ref:`plan_2`
-
-    :ref:`plan_3`
-
-    :ref:`plan_4`
-
-    :ref:`plan_5`
-
-    :ref:`plan_9`
 
