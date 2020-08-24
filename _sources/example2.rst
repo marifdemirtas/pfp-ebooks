@@ -22,10 +22,10 @@ Get news links from faculty webpages
 
 Let's say that you want to get the link to the first news article on your favorite umsi faculty's webpages. 
 
-.. image:: _static/news_ericson.png
+.. image:: _static/faculty_pages.gif
     :scale: 70%
     :align: center
-    :alt: News article on Barb's page
+    :alt: News articles on faculty pages
 
 
 But clicking through to gather all those links would be a pain. Fortunately, we can do that task with BeautifulSoup! 
