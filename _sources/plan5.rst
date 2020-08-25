@@ -71,28 +71,30 @@ Here is how to get **text** from all the **'h3'** tags from webpage:
 Plan 5: How to use it
 ====================================
 
-Once you've found the tag you want to get information from, do two things:
+Once you've found the tags you want to get information from, do two things:
 
-1. Find the **tag description** and put it into the first slot in the plan. 
+1. Find the **tag description** and put it into the first slot.
 
 How do you do that? Here are some examples:
 
-``<h3>`` has tag description ``'h3'``
-
-``<p>`` has tag description ``'p'``
-
-``<div class="comment">`` has tag description ``'div', class_='comment'``
-
-``<span style="X5e72">`` has tag description ``'span', style='X5e72'``
-
-``<a class="more-info" href="/people/ericson">`` has tag description ``'a', class_='more info'``
-
+==================================== === ===========================  
+What you see when you inspect            Tag description in the code
+==================================== === ===========================  
+``<p>``                              ->  ``'p'``
+``<h3>``                             ->  ``'h3'``
+``<div class="comment">``            ->  ``'div', class_='comment'``
+``<span style="X5e72;">``            ->  ``'span', style='X5e72;'``
+``<a class="css4z" href="/orders">`` ->  ``'a', class_='css4z'``
+==================================== === ===========================  
 
 2. Determine if you want to get **text** from a tag, or a **link** from a tag
 
-If you want to get *text*, use ``text`` in the second slot in the plan.
-
-If you want to get a *link*, use ``get('href')`` in the second slot in the plan.
+================= === ===========================  
+The info you want     What you put in the code
+================= === ===========================  
+The tag's text    ->  ``text``
+The tag's link    ->  ``get('href')``
+================= === ===========================  
 
 
 Plan 5: Exercises
@@ -166,7 +168,7 @@ Plan 5: Exercises
 
 .. fillintheblank:: plan5_fill_v2
 
-   Fill in the plan in order to get the text from all `div class="headline"` tags on a webpage.
+   Fill in the plan in order to get the text from all ``<div class="headline">`` tags on a webpage.
 
    ``# Get all tags of a certain type from the soup``
 

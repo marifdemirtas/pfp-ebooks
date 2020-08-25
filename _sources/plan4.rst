@@ -57,20 +57,29 @@ Plan 4: How to use it
 
 Once you've found the tag you want to get information from, do two things:
 
-#1: Find the **tag name** and put it into the first slot. The tag name is what goes between the
+1. Find the **tag description** and put it into the first slot.
 
 How do you do that? Here are some examples:
 
-``<p>`` -> ``'p'``
+==================================== === ===========================  
+What you see when you inspect            Tag description in the code
+==================================== === ===========================  
+``<p>``                              ->  ``'p'``
+``<h3>``                             ->  ``'h3'``
+``<div class="comment">``            ->  ``'div', class_='comment'``
+``<span style="X5e72;">``            ->  ``'span', style='X5e72;'``
+``<a class="css4z" href="/orders">`` ->  ``'a', class_='css4z'``
+==================================== === ===========================  
 
-``<h3>`` -> ``'h3'``
+2. Determine if you want to get **text** from a tag, or a **link** from a tag
 
-``<div class="comment">`` -> ``'div', class_='comment'``
+================= === ===========================  
+The info you want     What you put in the code
+================= === ===========================  
+The tag's text    ->  ``text``
+The tag's link    ->  ``get('href')``
+================= === ===========================  
 
-``<span style="X5e72">`` -> ``'span', style='X5e72'``
-
-
-#2: Determine if you want to get **text** from a tag, or a **link** from a tag
 
 One type of tag, the ``a`` tag, holds a link. 
 
