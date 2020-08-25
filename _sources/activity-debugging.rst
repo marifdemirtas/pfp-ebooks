@@ -10,7 +10,12 @@
 Code debugging activity
 :::::::::::::::::::::::::
 
-Every week, a new cat or dog is the Ann Arbor’s 107one Pet-of-the-Week. The code below is supposed to **get the pet of the week webpage, scrape the text of the title shown in the picture, and print it**.
+Every week, a new cat or dog is |pet_of_the_week|. The code below is supposed to **get the pet of the week webpage, scrape the text of the title shown in the picture, and print it**.
+
+.. |pet_of_the_week| raw:: html
+
+        <a href="https://www.hshv.org/petsoftheweek/" target="_blank">the Ann Arbor’s 107one Pet-of-the-Week</a>
+
 
 .. image:: _static/pet_of_the_week.png
     :scale: 70%
@@ -34,16 +39,16 @@ Can you fix it? Here is the buggy code:
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
    <pre><strong># Get info from one tag</strong>
-   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html"><pre style="background-color:#FCF3CF;">
+   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html"><pre style="background-color:#A9DFBF;">
    # Get first tag of <mark>a certain type</mark> from the soup
    tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'a', class_='pt-cv-none cvplbd'</mark>)
-   # Get <mark>link</mark> from tag
+   # Get <mark>info</mark> from tag
    info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
    <pre><strong>#Do something with the info</strong>
    <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
-   # Print <mark style="background-color:#ABEBC6">the info</mark>
-   print(<mark style="border:2px; border-style:solid; border-color:#1A5276; background-color:#ABEBC6">info</mark>)</pre></a></pre>
+   # Print <mark>the info</mark>
+   print(<mark style="border:2px; border-style:solid; border-color:#1A5276">info</mark>)</pre></a></pre>
 
 Try to fix the buggy code below. Run the code to save your progress.
 

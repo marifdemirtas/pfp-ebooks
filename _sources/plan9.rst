@@ -36,7 +36,7 @@ If you want to print info from only one tag, like if you've just used *Plan 4: G
    <strong># Print the <mark>info</mark></strong>
    print(<mark>info</mark>)</pre></pre>
 
-If you want to print info from only one tag, like if you've just used *Plan 5: Get info from all tags of a certain type*, then do this:
+If you want to print info from multiple tags, like if you've just used *Plan 5: Get info from all tags of a certain type*, then do this:
 
 .. raw:: html
 
@@ -72,7 +72,7 @@ Plan 9: Exercises
            # Collect info from the tags
            collect_info = []
            for tag in tags:
-               # Get text from tag
+               # Get info from tag
                info = tag.text
                collect_info.append(info)
 
