@@ -19,10 +19,10 @@
 
 .. _plan_2:
 
-Plan 2: Get a soup from a URL
+Plan 1: Get a soup from a URL
 #####################################
 
-Plan 2: Example
+Plan 1: Example
 ====================================
 
 The first step in web scraping is getting information from a webpage. 
@@ -42,12 +42,12 @@ Here is the code for getting a **soup** from the **Cottage Inn location page**.
   r = requests.get(url)
   soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
-Plan 2: When to use this plan
+Plan 1: When to use this plan
 ====================================
 
 Use this plan when you want to scrape **one webpage**.
 
-Plan 2: How to use this plan
+Plan 1: How to use this plan
 ====================================
 
 **Replace the URL with the URL of the website you want to scrape.**
@@ -62,7 +62,7 @@ In this plan, a URL should be surrounded by quotes (:code:`' '`).
     :alt: Copying a URL from the Cottage Inn location page
 
 
-Plan 2: Exercises
+Plan 1: Exercises
 ====================================
 
 .. clickablearea:: plan2_click

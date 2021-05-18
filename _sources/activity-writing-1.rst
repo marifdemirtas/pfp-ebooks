@@ -52,31 +52,31 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
 
     |plan_3|
 
-    |plan_4|
-
     |plan_5|
+
+    |plan_4|
 
     |plan_9|
 
     .. |plan_2| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 2: Get a soup from a URL</a>
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 1: Get a soup from a URL</a>
 
     .. |plan_3| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 3: Get a soup from multiple URLs</a> 
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 2: Get a soup from multiple URLs</a> 
+
+    .. |plan_5| raw:: html
+
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 3: Get info from all tags of a certain type</a> 
 
     .. |plan_4| raw:: html
 
         <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
-
-    .. |plan_5| raw:: html
-
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 5: Get info from all tags of a certain type</a> 
    
     .. |plan_9| raw:: html
 
-        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 9: Print info</a> 
+        <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 5: Print info</a> 
 
 
 .. parsonsprob:: write_code_order_plans_goals
@@ -84,19 +84,19 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
    Choose which of the following plans you will use, and put them in the correct order.
    
    -----
-   Plan #3: Get a soup from multiple webpages
+   Plan #2: Get a soup from multiple webpages
    =====
-   Plan #2: Get a soup from a webpage#paired
+   Plan #1: Get a soup from a webpage#paired
    =====
-   Plan #5: Get info from all tags of a certain type
+   Plan #3: Get info from all tags of a certain type
    =====
    Plan #4: Get info from a single tag#paired
    =====
    Plan #6: Get info from all tags of a certain type, within another tag#paired
    =====
-   Plan #9: Print info
+   Plan #5: Print info
    =====
-   Plan #10: Store info in a json file#paired
+   Plan #7: Store info in a json file#paired
 
 .. reveal:: write_code_cl_reveal_1
         :showtitle: After you've done the activity, click here.

@@ -19,12 +19,12 @@
 
 .. _plan_9:
 
-Plan 9: Print info
+Plan 5: Print info
 ###########################
 
 It's very common to print the information you have just scraped.
 
-Plan 9: Example
+Plan 5: Example
 ====================================
 
 If you want to print info from only one tag, like if you've just used *Plan 4: Get info from a single tag*, then do this:
@@ -46,7 +46,7 @@ If you want to print info from multiple tags, like if you've just used *Plan 5: 
    print(<mark>collect_info</mark>)</pre></pre>
 
 
-Plan 9: Exercises
+Plan 5: Exercises
 ====================================
 
 .. fillintheblank:: plan9_fill_in

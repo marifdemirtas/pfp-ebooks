@@ -19,10 +19,10 @@
 
 .. _plan_3:
 
-Plan 3: Get a soup from multiple URLs
+Plan 2: Get a soup from multiple URLs
 #####################################
 
-Plan 3: Example
+Plan 2: Example
 ====================================
 
 Sometimes we want to get information from multiple web pages that have the same layout. For example, all of the UMSI faculty pages have the same general design.
@@ -65,17 +65,17 @@ In this code, we get a **soup** from multiple **UMSI faculty pages**.
        soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
 
-Plan 3: When to use this plan
+Plan 2: When to use this plan
 ====================================
 
 Use this plan when you want to scrape the same thing from multiple webpages.
 
-Plan3: How to use this plan
+Plan 2: How to use this plan
 ====================================
 
 Look at the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the ``base_url``. The parts that are different are the ``endings``.
 
-Plan 3: Exercises
+Plan 2: Exercises
 ====================================
 
 If you want to also get the link to the most recent news item from Dean Tom Finholt's page, how would you change the code below? Dean Finholt's web page is ``https://www.si.umich.edu/people/thomas-finholt``.

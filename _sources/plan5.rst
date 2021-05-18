@@ -19,7 +19,7 @@
 
 .. _plan_5:
 
-Plan 5: Get info from all tags of a certain type
+Plan 3: Get info from all tags of a certain type
 #################################################
 
 To get information from the Cottage Inn locations page, we need to figure out which tags we should get from the soup, and what information we should get from the tags. 
@@ -48,7 +48,7 @@ Here is the tag that creates the name of one of the Cottage Inn Pizza locations.
 
 The name of this tag is 'h3'. In-between the start and end tag (between the ``<h3>`` and ``</h3>`` is the tag's **text**. For this tag, the text is **Ann Arbor Broadway St.**
 
-Plan 5: Example
+Plan 3: Example
 ====================================
 
 Here is how to get **text** from all the **'h3'** tags from webpage:
@@ -57,18 +57,18 @@ Here is how to get **text** from all the **'h3'** tags from webpage:
 
    <pre>Goal: Get info from all tags of a certain type
    <pre style="background-color:#D5F5E3;">
-   # Get all tags of <mark>a certain type</mark> from the soup
+   <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
    tags = soup.find_all(<mark>'h3'</mark>)
-   # Collect info from the tags
+   <strong># Collect info from the tags</strong>
    collect_info = []
    for tag in tags:
-       # Get <mark>info</mark> from tag
+       <strong># Get <mark>info</mark> from tag</strong>
        info = tag.<mark>text</mark>
        collect_info.append(info)</pre></pre>
 
 
 
-Plan 5: How to use it
+Plan 3: How to use it
 ====================================
 
 Once you've found the tags you want to get information from, do two things:
@@ -87,7 +87,7 @@ What you see when you inspect            Tag description in the code
 ``<a class="css4z" href="/orders">`` ->  ``'a', class_='css4z'``
 ==================================== === ===========================  
 
-2. Determine if you want to get **text** from a tag, or a **link** from a tag
+2. Determine if you want to get **text** from a tag, or a **link** from a tag. Put that information into the second slot.
 
 ================= === ===========================  
 The info you want     What you put in the code
@@ -97,7 +97,7 @@ The tag's link    ->  ``get('href')``
 ================= === ===========================  
 
 
-Plan 5: Exercises
+Plan 3: Exercises
 ====================================
 .. mchoice:: get_text_mc_1
     :random:
