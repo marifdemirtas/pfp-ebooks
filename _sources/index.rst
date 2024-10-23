@@ -23,6 +23,8 @@ The internet is full of information people would like to collect. Copying and pa
 
  *Web scraping* is the process of getting information from web pages with code.
 
+.. randomnumberbox::
+
 How this ebook works
 ::::::::::::::::::::
 
