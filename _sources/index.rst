@@ -25,6 +25,8 @@ The internet is full of information people would like to collect. Copying and pa
 
 .. randomnumberbox::
 
+.. plandisplay:: _static/test.json
+
 How this ebook works
 ::::::::::::::::::::
 

@@ -13,6 +13,9 @@
 # serve to show the default.
 
 import sys, os
+sys.path.insert(0, os.path.abspath('./custom_components'))
+sys.path.insert(0, os.path.abspath('.'))
+print(sys.path)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -230,31 +233,10 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
 
 #### Customizations for Runestone
-
 # Following are custom components
-# Add a directive to create a box that displays a random number
-from docutils import nodes
-from docutils.parsers.rst import Directive
 
-class RandomNumberBox(Directive):
-    has_content = False
+from custom_components import plan_display, random_number_box
 
-    def run(self):
-        html = """
-        <div id="random-number-box" style="border: 1px solid #000; padding: 10px; width: 200px; text-align: center;">
-            <p id="random-number">Click the button to generate a random number</p>
-            <button id="random-number-button">Generate Number</button>
-        </div>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('random-number-button').addEventListener('click', function() {
-                var randomNumber = Math.floor(Math.random() * 10) + 1;
-                document.getElementById('random-number').innerText = randomNumber;
-            });
-        });
-        </script>
-        """
-        return [nodes.raw('', html, format='html')]
 # Save the original setup function if it exists
 original_setup = globals().get('setup', None)
 
@@ -264,6 +246,7 @@ def setup(app):
         original_setup(app)
     
     # Add your custom directive
-    app.add_directive("randomnumberbox", RandomNumberBox)
+    app.add_directive("randomnumberbox", random_number_box.RandomNumberBox)
+    app.add_directive("plandisplay", plan_display.PlanDisplay)
 
 
