@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning with Decision Trees &#8212; Runestone Interactive Overview</title>
+    <title>Plan2: Check NaN &#8212; Runestone Interactive Overview</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
@@ -54,7 +54,8 @@
     <script src="_static/theme.js?v=D899FB97"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plan1: Load Data" href="plan_1_1_LoadData.html" />
+    <link rel="next" title="Plan3: Filter Values" href="plan_1_2_FilterValues.html" />
+    <link rel="prev" title="Plan1: Load Data" href="plan_1_1_LoadData.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -122,7 +123,7 @@
         
           <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         
-        <a class="navbar-brand" href="#" aria-label="index-page">
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
           
           PurposeFirstWebScraping
         </a>
@@ -180,7 +181,7 @@
           </a>
           <ul class='dropdown-menu'>
             
-                <li><a href='#' aria-label="index-page">Table of Contents</a></li>
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
             
             <li><a href='genindex.html'>Book Index</a></li>
             <li class="divider"></li>
@@ -259,7 +260,7 @@
             <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=index'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=plan_1_2_CheckNaN'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -276,8 +277,14 @@
         
         <!-- 
           
-  <li id="relations-next" title='Next Chapter - Plan1: Load Data' data-toggle="tooltip" >              
+  <li id="relations-prev" title="Previous Chapter - Plan1: Load Data" data-toggle="tooltip">
     <a href="plan_1_1_LoadData.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Plan3: Filter Values' data-toggle="tooltip" >              
+    <a href="plan_1_2_FilterValues.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -318,31 +325,19 @@
 
 
   
-  <div class="section" id="machine-learning-with-decision-trees">
-<h1>Machine Learning with Decision Trees<a class="headerlink" href="#machine-learning-with-decision-trees" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/scikitlearn-logo.png"><img alt="Scikit-learn library logo" class="align-center" src="_images/scikitlearn-logo.png" style="width: 240.0px; height: 129.6px;" /></a>
-
-        <div id="random-number-box" style="border: 1px solid #000; padding: 10px; width: 200px; text-align: center;">
-            <p id="random-number">Click the button to generate a random number</p>
-            <button id="random-number-button">Generate Number</button>
-        </div>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('random-number-button').addEventListener('click', function() {
-                var randomNumber = Math.floor(Math.random() * 10) + 1;
-                document.getElementById('random-number').innerText = randomNumber;
-            });
-        });
-        </script>
-        <div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
-
-df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
+  <div class="section" id="plan2-check-nan">
+<h1>Plan2: Check NaN<a class="headerlink" href="#plan2-check-nan" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="plan2-example">
+<h2>Plan2: Example<a class="headerlink" href="#plan2-example" title="Permalink to this headline">¶</a></h2>
+<p>This is a plan</p>
+<div><div><strong>Goal:</strong> Check for missing or non-numerical values</div><pre style='background-color: #e6f7df; padding: 10px;'># Handling missing data with fillna
+df_filled = df.fillna({<span class='changeable' data-original=''column_to_change': 'value_to_fill''>'A': df['A'].mean()</span>})
 </pre>
         <button onclick="randomizeValues()">Randomize</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues = {"file_path": ["data.csv"]};
+        const possibleValues = {"'column_to_change': 'value_to_fill'": ["'A': df['A'].mean()", "'B': df['B'].median()", "'C': 0"]};
 
         function randomizeValues() {
             document.querySelectorAll('.changeable').forEach((elem) => {
@@ -361,41 +356,27 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
             border-radius: 3px;
         }
         </style>
-        <div class="activecode" data-component="activecode" data-uniqueid="my_combined_code" data-language="python3" data-autograde="none">
-<textarea style="display:none;">
-import pandas as pd
+        </div>
+<div class="section" id="plan2-when-to-use-this-plan">
+<h2>Plan2: When to use this plan<a class="headerlink" href="#plan2-when-to-use-this-plan" title="Permalink to this headline">¶</a></h2>
+<p>This plan is used when…</p>
+</div>
+<div class="section" id="plan2-how-to-use-this-plan">
+<h2>Plan2: How to use this plan<a class="headerlink" href="#plan2-how-to-use-this-plan" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="plan-1-exercises">
+<h2>Plan 1: Exercises<a class="headerlink" href="#plan-1-exercises" title="Permalink to this headline">¶</a></h2>
 
-df = pd.read_csv(data.csv)# Handling missing data with fillna
-df_filled = df.fillna({'A': df['A'].mean()})# Keep elements that satisfy the given condition
-filtered_df = df[(df['A'] > 2) & (df['B'] < 50)]
-import matplotlib.pyplot as plt
+<div class="runestone">
+<div data-component="clickablearea" class="runestone alert alert-warning" id="Check NaN_click" data-question_label="1"    >
+<span data-question>Plan2-1: Click on areas to change for...</span><span data-feedback>Check out the example of this plan above to identify the area that should be changed.</span><pre><span data-incorrect># Handling missing data with fillna</span>
+<span data-incorrect>df_filled = df.fillna({</span> <span data-correct>'column_to_change': 'value_to_fill'</span> <span data-incorrect>})</span></pre>
 
-# Plotting histogram
-df['height'].plot(kind='hist', bins=10, edgecolor='black')
-
-# Display the plot
-plt.xlabel('Values')
-plt.ylabel('Frequency')
-plt.title('Histogram of column_name')
-plt.grid(True)
-plt.show()</textarea>
-</div><div class="section" id="how-this-ebook-works">
-<h2>How this ebook works<a class="headerlink" href="#how-this-ebook-works" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-this-lesson-will-walk-you-through-the-steps-of-classifying-penguins admonition">
-<p class="admonition-title">This lesson will walk you through the steps of classifying penguins.</p>
-<p>We’ll use a dataset of penguin species and their measurements to train a machine learning model. The model will predict the species of a penguin based on its measurements.</p>
 </div>
 </div>
-<div class="section" id="classification-with-decision-trees">
-<h2>Classification with Decision Trees<a class="headerlink" href="#classification-with-decision-trees" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_1_LoadData.html">Plan1: Load Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_CheckNaN.html">Plan2: Check NaN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_FilterValues.html">Plan3: Filter Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_3_VisualizeDistribution.html">Plan4: Visualize Distribution</a></li>
-</ul>
-</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<a href="/index.html" >Click here to go back to the main page</a></div>
 </div>
 </div>
 
@@ -406,8 +387,19 @@ plt.show()</textarea>
   
       
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Plan1: Load Data' data-toggle="tooltip" >
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - Plan1: Load Data' data-toggle="tooltip">
     <a href="plan_1_1_LoadData.html" aria-label="Plan1: Load Data">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
+    </a>
+  </li>
+</ul>
+
+  
+<ul>
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Plan3: Filter Values' data-toggle="tooltip" >
+    <a href="plan_1_2_FilterValues.html" aria-label="Plan3: Filter Values">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>

@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning with Decision Trees &#8212; Runestone Interactive Overview</title>
+    <title>Code debugging activity &#8212; Runestone Interactive Overview</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
@@ -54,7 +54,6 @@
     <script src="_static/theme.js?v=D899FB97"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plan1: Load Data" href="plan_1_1_LoadData.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -122,7 +121,7 @@
         
           <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         
-        <a class="navbar-brand" href="#" aria-label="index-page">
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
           
           PurposeFirstWebScraping
         </a>
@@ -180,7 +179,7 @@
           </a>
           <ul class='dropdown-menu'>
             
-                <li><a href='#' aria-label="index-page">Table of Contents</a></li>
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
             
             <li><a href='genindex.html'>Book Index</a></li>
             <li class="divider"></li>
@@ -259,7 +258,7 @@
             <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=index'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=demo'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -276,12 +275,6 @@
         
         <!-- 
           
-  <li id="relations-next" title='Next Chapter - Plan1: Load Data' data-toggle="tooltip" >              
-    <a href="plan_1_1_LoadData.html" >
-        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -318,84 +311,40 @@
 
 
   
-  <div class="section" id="machine-learning-with-decision-trees">
-<h1>Machine Learning with Decision Trees<a class="headerlink" href="#machine-learning-with-decision-trees" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/scikitlearn-logo.png"><img alt="Scikit-learn library logo" class="align-center" src="_images/scikitlearn-logo.png" style="width: 240.0px; height: 129.6px;" /></a>
+  <div class="section" id="code-debugging-activity">
+<h1>Code debugging activity<a class="headerlink" href="#code-debugging-activity" title="Permalink to this headline">¶</a></h1>
+<p>Every week, a new cat or dog is <a href="https://www.hshv.org/petsoftheweek/" target="_blank">the Ann Arbor’s 107one Pet-of-the-Week</a>. The code below is supposed to <strong>get the pet of the week webpage, scrape the text of the title shown in the picture, and print it</strong>.</p>
+<a class="reference internal image-reference" href="_static/pet_of_the_week.png"><img alt="The pet of the week from August 22, 2020 is Chester." class="align-center" src="_static/pet_of_the_week.png" /></a>
+<p>However, it doesn’t work! Instead of printing the title text, it prints nothing.</p>
+<p>Can you fix it? Here is the buggy code:</p>
+<pre>Plan 1: Get a soup from a URL
+<a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html"><pre style="background-color:#FCF3CF;">
+<strong># Load libraries for web scraping</strong>
+from bs4 import BeautifulSoup
+import requests
+<strong># Get a soup from <mark>a URL</mark></strong>
+url = <mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'https://www.humanesociety.org/petsoftheweek/'</mark>
+r = requests.get(url)
+soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
-        <div id="random-number-box" style="border: 1px solid #000; padding: 10px; width: 200px; text-align: center;">
-            <p id="random-number">Click the button to generate a random number</p>
-            <button id="random-number-button">Generate Number</button>
-        </div>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('random-number-button').addEventListener('click', function() {
-                var randomNumber = Math.floor(Math.random() * 10) + 1;
-                document.getElementById('random-number').innerText = randomNumber;
-            });
-        });
-        </script>
-        <div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
+<pre>Plan 4: Get info from a single tag
+<a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html"><pre style="background-color:#A9DFBF;">
+<strong># Get first tag of <mark>a certain type</mark> from the soup</strong>
+tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'a', class_='pt-cv-none cvplbd'</mark>)
+<strong># Get <mark>info</mark> from tag</strong>
+info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
-df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
-</pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
-        
-        <script>
-        // Possible replacements loaded directly from JSON
-        const possibleValues = {"file_path": ["data.csv"]};
-
-        function randomizeValues() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
-                const key = elem.getAttribute('data-original');
-                const values = possibleValues[key];
-                elem.textContent = values[Math.floor(Math.random() * values.length)];
-            });
-        }
-        </script>
-
-        <style>
-        /* CSS to highlight changeable parts */
-        .changeable {
-            background-color: #ffeb3b;
-            padding: 0 3px;
-            border-radius: 3px;
-        }
-        </style>
-        <div class="activecode" data-component="activecode" data-uniqueid="my_combined_code" data-language="python3" data-autograde="none">
-<textarea style="display:none;">
-import pandas as pd
-
-df = pd.read_csv(data.csv)# Handling missing data with fillna
-df_filled = df.fillna({'A': df['A'].mean()})# Keep elements that satisfy the given condition
-filtered_df = df[(df['A'] > 2) & (df['B'] < 50)]
-import matplotlib.pyplot as plt
-
-# Plotting histogram
-df['height'].plot(kind='hist', bins=10, edgecolor='black')
-
-# Display the plot
-plt.xlabel('Values')
-plt.ylabel('Frequency')
-plt.title('Histogram of column_name')
-plt.grid(True)
-plt.show()</textarea>
-</div><div class="section" id="how-this-ebook-works">
-<h2>How this ebook works<a class="headerlink" href="#how-this-ebook-works" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-this-lesson-will-walk-you-through-the-steps-of-classifying-penguins admonition">
-<p class="admonition-title">This lesson will walk you through the steps of classifying penguins.</p>
-<p>We’ll use a dataset of penguin species and their measurements to train a machine learning model. The model will predict the species of a penguin based on its measurements.</p>
-</div>
-</div>
-<div class="section" id="classification-with-decision-trees">
-<h2>Classification with Decision Trees<a class="headerlink" href="#classification-with-decision-trees" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_1_LoadData.html">Plan1: Load Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_CheckNaN.html">Plan2: Check NaN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_FilterValues.html">Plan3: Filter Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_3_VisualizeDistribution.html">Plan4: Visualize Distribution</a></li>
-</ul>
-</div>
+<pre>Plan 5: Print the info
+<a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html"><pre style="background-color:#D6EAF8;">
+<strong># Print <mark>the info</mark></strong>
+print(<mark style="border:2px; border-style:solid; border-color:#1A5276">info</mark>)</pre></a></pre><p>Try to fix the buggy code below. Run the code to save your progress.</p>
+<div class="sidebar">
+<p class="sidebar-title">Links to plans</p>
+<p><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan2.html" target="_blank">Plan 1: Get a soup from a URL</a></p>
+<p><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan3.html" target="_blank">Plan 2: Get a soup from multiple URLs</a></p>
+<p><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html" target="_blank">Plan 3: Get info from all tags of a certain type</a></p>
+<p><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan4.html" target="_blank">Plan 4: Get info from a single tag</a></p>
+<p><a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan9.html" target="_blank">Plan 5: Print info</a></p>
 </div>
 </div>
 
@@ -405,15 +354,6 @@ plt.show()</textarea>
   </div>
   
       
-<ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Plan1: Load Data' data-toggle="tooltip" >
-    <a href="plan_1_1_LoadData.html" aria-label="Plan1: Load Data">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
-    </a>
-  </li>
-</ul>
 
 <script type="text/javascript">
 

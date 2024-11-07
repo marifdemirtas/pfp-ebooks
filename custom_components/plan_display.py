@@ -1,5 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
+from docutils.parsers.rst import directives
 
 # Add a directive to create a box that displays a random number
 
@@ -9,67 +10,60 @@ import json, os
 # @register_tag('plandisplay')
 class PlanDisplay(Directive):
     required_arguments = 1  # JSON file path
+    optional_arguments = 1
+    final_argument_whitespace = True
+    option_spec = {}
+    option_spec.update({
+        'plan': directives.unchanged,
+    })
+    has_content = False
 
     def run(self):
-        file_path = self.arguments[0]
-        # with open(file_path) as f:
-        #     data = json.load(f)
+        file_path = os.path.join('_sources/_static/new', self.arguments[0])
 
-        data = {
-            "goal": "Get info from a single tag",
-            "code": [
-                {
-                    "line": "# Get first tag of a certain type from the soup"
-                },
-                {
-                    "line": "tag = soup.find('$$a$$', class_='$$item-teaser--more$$')",
-                    "changeable": {
-                        "a": ["a", "div", "span"],
-                        "item-teaser--more": ["item-teaser--more", "item-header", "card"]
-                    }
-                },
-                {
-                    "line": "# Get info from tag"
-                },
-                {
-                    "line": "info = tag.get('$$href$$')",
-                    "changeable": {
-                        "href": ["href", "src", "title"]
-                    }
-                }
-            ]
-        }
-        
+        with open(file_path) as f:
+            data = json.load(f)
+
+        # find the dict in the list 'data' that has 'plan_name' == self.arguments[1]
+        for d in data:
+            if d['plan_name'] == self.options.get('plan', ''):
+                data = d
+                break
+        else:
+            print()
+            data = data[0]
+
+        name = data['plan_name']
         goal = data['goal']
-        code_lines = data['code']
+        code_template = data['code_template']
         
+        code_lines = code_template['lines']
+        changeable_areas = code_template.get('changeable_areas', {})
+
         # HTML structure
+        html_code = f"<div><div><strong>Name:</strong> {name}</div>"
         html_code = f"<div><div><strong>Goal:</strong> {goal}</div>"
         html_code += "<pre style='background-color: #e6f7df; padding: 10px;'>"
         
         # Parse code with highlights and initial randomized values
         for line_data in code_lines:
-            line = line_data['line']
-            if 'changeable' in line_data:
-                for original_text, possible_replacements in line_data['changeable'].items():
-                    # Randomize initial value
-                    # random_value = choice(possible_replacements)
-                    random_value = possible_replacements[0]
-                    # Wrap the randomized text in a span for highlighting and later updates
-                    line = line.replace(f"$${original_text}$$", f"<span class='changeable'>{random_value}</span>")
-            html_code += line + "\n"
+            html_code += line_data + "\n"
         
         html_code += "</pre>"
         
+        for placeholder, values in changeable_areas.items():
+            random_value = values[0]
+            # Wrap the randomized text in a span for highlighting and later updates
+            html_code = html_code.replace(f"$${placeholder}$$", f"<span class='changeable' data-original='{placeholder}'>{random_value}</span>")
+
+
         # Add the randomize button
         html_code += """
         <button onclick="randomizeValues()">Randomize</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues = """ + json.dumps(
-            {key: values for line in code_lines if 'changeable' in line for key, values in line['changeable'].items()}
-        ) + """;
+        const possibleValues = """ + json.dumps(changeable_areas) + """;
 
         function randomizeValues() {
             document.querySelectorAll('.changeable').forEach((elem) => {
@@ -78,12 +72,8 @@ class PlanDisplay(Directive):
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
             });
         }
-
-        // Set data-original attribute to match JSON keys for easy access
-        document.querySelectorAll('.changeable').forEach((elem) => {
-            elem.setAttribute('data-original', elem.textContent);
-        });
         </script>
+
         <style>
         /* CSS to highlight changeable parts */
         .changeable {

@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning with Decision Trees &#8212; Runestone Interactive Overview</title>
+    <title>Plan4: Visualize Distribution &#8212; Runestone Interactive Overview</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
@@ -54,7 +54,7 @@
     <script src="_static/theme.js?v=D899FB97"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plan1: Load Data" href="plan_1_1_LoadData.html" />
+    <link rel="prev" title="Plan3: Filter Values" href="plan_1_2_FilterValues.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -122,7 +122,7 @@
         
           <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
         
-        <a class="navbar-brand" href="#" aria-label="index-page">
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
           
           PurposeFirstWebScraping
         </a>
@@ -180,7 +180,7 @@
           </a>
           <ul class='dropdown-menu'>
             
-                <li><a href='#' aria-label="index-page">Table of Contents</a></li>
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
             
             <li><a href='genindex.html'>Book Index</a></li>
             <li class="divider"></li>
@@ -259,7 +259,7 @@
             <li><a href='https://runestone.academy/runestone/static/instructorguide/index.html'>Instructors Guide</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=index'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=PurposeFirstWebScraping&page=plan_1_3_VisualizeDistribution'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -276,12 +276,14 @@
         
         <!-- 
           
-  <li id="relations-next" title='Next Chapter - Plan1: Load Data' data-toggle="tooltip" >              
-    <a href="plan_1_1_LoadData.html" >
-        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+  <li id="relations-prev" title="Previous Chapter - Plan3: Filter Values" data-toggle="tooltip">
+    <a href="plan_1_2_FilterValues.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
-  <li class="divider-vertical"></li>
+  
+    <li class="divider-vertical"></li>
+  
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -318,31 +320,28 @@
 
 
   
-  <div class="section" id="machine-learning-with-decision-trees">
-<h1>Machine Learning with Decision Trees<a class="headerlink" href="#machine-learning-with-decision-trees" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/scikitlearn-logo.png"><img alt="Scikit-learn library logo" class="align-center" src="_images/scikitlearn-logo.png" style="width: 240.0px; height: 129.6px;" /></a>
+  <div class="section" id="plan4-visualize-distribution">
+<h1>Plan4: Visualize Distribution<a class="headerlink" href="#plan4-visualize-distribution" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="plan4-example">
+<h2>Plan4: Example<a class="headerlink" href="#plan4-example" title="Permalink to this headline">¶</a></h2>
+<p>This is a plan</p>
+<div><div><strong>Goal:</strong> Visualize the normality of a column's data distribution</div><pre style='background-color: #e6f7df; padding: 10px;'>import matplotlib.pyplot as plt
 
-        <div id="random-number-box" style="border: 1px solid #000; padding: 10px; width: 200px; text-align: center;">
-            <p id="random-number">Click the button to generate a random number</p>
-            <button id="random-number-button">Generate Number</button>
-        </div>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('random-number-button').addEventListener('click', function() {
-                var randomNumber = Math.floor(Math.random() * 10) + 1;
-                document.getElementById('random-number').innerText = randomNumber;
-            });
-        });
-        </script>
-        <div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
+# Plotting histogram
+df[<span class='changeable' data-original=''column_name''>'height'</span>].plot(kind='hist', bins=<span class='changeable' data-original='bincount'>10</span>, edgecolor='black')
 
-df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
+# Display the plot
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+plt.title('Histogram of column_name')
+plt.grid(True)
+plt.show()
 </pre>
         <button onclick="randomizeValues()">Randomize</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues = {"file_path": ["data.csv"]};
+        const possibleValues = {"bincount": ["10", "15", "20"], "'column_name'": ["'height'", "'weight'", "'age'"]};
 
         function randomizeValues() {
             document.querySelectorAll('.changeable').forEach((elem) => {
@@ -361,41 +360,57 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
             border-radius: 3px;
         }
         </style>
-        <div class="activecode" data-component="activecode" data-uniqueid="my_combined_code" data-language="python3" data-autograde="none">
-<textarea style="display:none;">
-import pandas as pd
+        </div>
+<div class="section" id="plan4-when-to-use-this-plan">
+<h2>Plan4: When to use this plan<a class="headerlink" href="#plan4-when-to-use-this-plan" title="Permalink to this headline">¶</a></h2>
+<p>This plan is used when…</p>
+</div>
+<div class="section" id="plan4-how-to-use-this-plan">
+<h2>Plan4: How to use this plan<a class="headerlink" href="#plan4-how-to-use-this-plan" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="plan-1-exercises">
+<h2>Plan 1: Exercises<a class="headerlink" href="#plan-1-exercises" title="Permalink to this headline">¶</a></h2>
 
-df = pd.read_csv(data.csv)# Handling missing data with fillna
-df_filled = df.fillna({'A': df['A'].mean()})# Keep elements that satisfy the given condition
-filtered_df = df[(df['A'] > 2) & (df['B'] < 50)]
-import matplotlib.pyplot as plt
+<div class="runestone">
+<div data-component="clickablearea" class="runestone alert alert-warning" id="Visualize Distribution_click" data-question_label="1"    >
+<span data-question>Plan4-1: Click on areas to change for...</span><span data-feedback>Check out the example of this plan above to identify the area that should be changed.</span><pre><span data-incorrect>import matplotlib.pyplot as plt</span>
+<span data-incorrect># Plotting histogram</span>
+<span data-incorrect>df[</span> <span data-correct>'column_name'</span> <span data-incorrect>].plot(kind='hist', bins=</span> <span data-correct>bincount</span> <span data-incorrect>, edgecolor='black')</span>
+<span data-incorrect># Display the plot</span>
+<span data-incorrect>plt.xlabel('Values')</span>
+<span data-incorrect>plt.ylabel('Frequency')</span>
+<span data-incorrect>plt.title('Histogram of column_name')</span>
+<span data-incorrect>plt.grid(True)</span>
+<span data-incorrect>plt.show()</span></pre>
 
-# Plotting histogram
-df['height'].plot(kind='hist', bins=10, edgecolor='black')
-
-# Display the plot
-plt.xlabel('Values')
-plt.ylabel('Frequency')
-plt.title('Histogram of column_name')
-plt.grid(True)
-plt.show()</textarea>
-</div><div class="section" id="how-this-ebook-works">
-<h2>How this ebook works<a class="headerlink" href="#how-this-ebook-works" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-this-lesson-will-walk-you-through-the-steps-of-classifying-penguins admonition">
-<p class="admonition-title">This lesson will walk you through the steps of classifying penguins.</p>
-<p>We’ll use a dataset of penguin species and their measurements to train a machine learning model. The model will predict the species of a penguin based on its measurements.</p>
 </div>
 </div>
-<div class="section" id="classification-with-decision-trees">
-<h2>Classification with Decision Trees<a class="headerlink" href="#classification-with-decision-trees" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_1_LoadData.html">Plan1: Load Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_CheckNaN.html">Plan2: Check NaN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_FilterValues.html">Plan3: Filter Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_3_VisualizeDistribution.html">Plan4: Visualize Distribution</a></li>
-</ul>
-</div>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="2" id="'Visualize Distribution_fill'
+ Fill in the plan to...
+ ``import matplotlib.pyplot as plt``" >
+            <dl>
+<dt>Plan4-2:  <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Plotting</span> <span class="pre">histogram</span></code>
+<a href="#id5"><span class="problematic" id="id6">``</span></a>df[<a href="#id7"><span class="problematic" id="id8">``</span></a><input type="text"></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Display</span> <span class="pre">the</span> <span class="pre">plot</span></code>
+<code class="docutils literal notranslate"><span class="pre">plt.xlabel('Values')</span></code>
+<code class="docutils literal notranslate"><span class="pre">plt.ylabel('Frequency')</span></code>
+<code class="docutils literal notranslate"><span class="pre">plt.title('Histogram</span> <span class="pre">of</span> <span class="pre">column_name')</span></code>
+<code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code>
+<code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></p>
+</dd>
+</dl>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*'height'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*'weight'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*'age'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <div class="admonition note">
+<p class="admonition-title">Note</p>
+<a href="/index.html" >Click here to go back to the main page</a></div>
 </div>
 </div>
 
@@ -406,14 +421,16 @@ plt.show()</textarea>
   
       
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Plan1: Load Data' data-toggle="tooltip" >
-    <a href="plan_1_1_LoadData.html" aria-label="Plan1: Load Data">
-      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
-          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
-      </div>
+  <li id="relations-prev" style="opacity:0.4" onmouseover="mouseOverPrev()" onmouseout="mouseOutPrev()"class="navLink" title='Previous Section - Plan3: Filter Values' data-toggle="tooltip">
+    <a href="plan_1_2_FilterValues.html" aria-label="Plan3: Filter Values">
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
+            <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+        </div>
     </a>
   </li>
 </ul>
+
+  
 
 <script type="text/javascript">
 
