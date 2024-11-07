@@ -1,0 +1,166 @@
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:44:11] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:10] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [28/Oct/2024 20:45:10] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [28/Oct/2024 20:45:10] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [28/Oct/2024 20:45:10] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [28/Oct/2024 20:45:10] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [28/Oct/2024 20:45:14] "GET /plan2.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:14] "GET /_images/cottageinn_URL.gif HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:15] "GET /plan4.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:15] "GET /_images/news_ericson.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:15] "GET /_images/nq_link.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:15] "GET /_images/barb_link.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2024 20:45:15] "GET /_images/nq_dining_onetag.png HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [06/Nov/2024 19:22:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56020)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/matrixeq.css?v=58BC228F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/webgldemo.css?v=B36B48D HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/accessibility.css?v=6547A273 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/presenter_mode.css?v=9FF1320F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/user-highlights.css?v=A2326E52 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/runestone-custom-sphinx-bootstrap.css?v=5.3.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/theme-overrides.css?v=2DAFE138 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/underscore.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/doctools.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/matrixeq.js?v=D64CFA5A HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/webglinteractive.js?v=2B768384 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/FileSaver.min.js?v=8408C997 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/Blob.js?v=AEC2447 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/html4css1.css?v=4533ACD3 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/animationbase.js?v=A043C3A7 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/pytutor-embed.bundle.js?v=268B5C04 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery.highlight.js?v=F1C496C8 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/sql-wasm.js?v=44FE0709 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/runestone.js?v=7DFA3710 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery-fix.js?v=1226591B HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/jquery.idle-timer.js?v=E942DAF1 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/presenter_mode.js?v=2DF16FB4 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:28] "GET /_static/theme.js?v=D899FB97 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:29] "GET /_images/web_crawler.png HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56076)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/matrixeq.css?v=58BC228F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/webgldemo.css?v=B36B48D HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/webglinteractive.css?v=910DF1E1 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/CodeChat.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/accessibility.css?v=6547A273 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/presenter_mode.css?v=9FF1320F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/user-highlights.css?v=A2326E52 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/runestone-custom-sphinx-bootstrap.css?v=5.3.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/theme-overrides.css?v=2DAFE138 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/underscore.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/doctools.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/matrixeq.js?v=D64CFA5A HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/webglinteractive.js?v=2B768384 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/FileSaver.min.js?v=8408C997 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/Blob.js?v=AEC2447 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/html4css1.css?v=4533ACD3 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/animationbase.js?v=A043C3A7 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/pytutor-embed.bundle.js?v=268B5C04 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery.highlight.js?v=F1C496C8 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/sql-wasm.js?v=44FE0709 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/runestone.js?v=7DFA3710 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery-fix.js?v=1226591B HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/jquery.idle-timer.js?v=E942DAF1 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/presenter_mode.js?v=2DF16FB4 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/theme.js?v=D899FB97 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/html4css1.css HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_images/web_crawler.png HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:22:33] "GET /_static/bootstrap-3.4.1/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 -
+127.0.0.1 - - [06/Nov/2024 19:22:34] code 404, message File not found
+127.0.0.1 - - [06/Nov/2024 19:22:34] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+
+Aborted!
+127.0.0.1 - - [06/Nov/2024 19:25:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:25:25] "GET /_images/scikitlearn-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:25:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:25:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:25:37] "GET /_images/scikitlearn-logo.png HTTP/1.1" 304 -
+127.0.0.1 - - [06/Nov/2024 19:37:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Nov/2024 19:37:08] "GET /_images/scikitlearn-logo.png HTTP/1.1" 304 -
+
+Aborted!

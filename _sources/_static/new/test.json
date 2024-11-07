@@ -1,0 +1,9 @@
+{
+    "goal": "Get info from a single tag",
+    "code": [
+        {"line": "# Get first tag of a certain type from the soup"},
+        {"line": "tag = soup.find('a', class_='item-teaser--more')", "changeable": ["a", "item-teaser--more"]},
+        {"line": "# Get info from tag"},
+        {"line": "info = tag.get('href')", "changeable": ["href"]}
+    ]
+}

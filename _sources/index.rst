@@ -8,13 +8,13 @@
 
 
 =======================================
-Learn Web Scraping!
+Machine Learning with Decision Trees
 =======================================
 
-.. image:: _static/web_crawler.png
+.. image:: _static/new/scikitlearn-logo.png
     :scale: 20%
     :align: center
-    :alt: A robot looking through a magnifying glass
+    :alt: Scikit-learn library logo
 
 What is web scraping?
 :::::::::::::::::::::
