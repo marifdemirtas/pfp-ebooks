@@ -506,3 +506,972 @@ Aborted!
 127.0.0.1 - - [07/Nov/2024 16:06:49] "GET /_static/language_data.js HTTP/1.1" 304 -
 
 Aborted!
+127.0.0.1 - - [07/Nov/2024 16:23:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Nov/2024 16:23:45] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [07/Nov/2024 16:24:45] "GET /_static/basic.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56963)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [07/Nov/2024 16:24:45] "GET /_static/pygments.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56964)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [07/Nov/2024 16:24:45] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56965)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [07/Nov/2024 16:24:45] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56966)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52460)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/matrixeq.css?v=58BC228F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/webgldemo.css?v=B36B48D HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/webglinteractive.css?v=910DF1E1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/CodeChat.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/accessibility.css?v=6547A273 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/presenter_mode.css?v=9FF1320F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/user-highlights.css?v=A2326E52 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/runestone-custom-sphinx-bootstrap.css?v=5.3.0 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/theme-overrides.css?v=2DAFE138 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/underscore.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/doctools.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/matrixeq.js?v=D64CFA5A HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/webglinteractive.js?v=2B768384 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/FileSaver.min.js?v=8408C997 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/Blob.js?v=AEC2447 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/html4css1.css?v=4533ACD3 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/animationbase.js?v=A043C3A7 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/pytutor-embed.bundle.js?v=268B5C04 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery.highlight.js?v=F1C496C8 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/sql-wasm.js?v=44FE0709 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/runestone.js?v=7DFA3710 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery-fix.js?v=1226591B HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/jquery.idle-timer.js?v=E942DAF1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/theme.js?v=D899FB97 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/html4css1.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_images/scikitlearn-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/presenter_mode.js?v=2DF16FB4 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/bootstrap-3.4.1/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:21:43] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:23:27] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52651)
+Traceback (most recent call last):
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 664, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 435, in handle
+    self.handle_one_request()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 423, in handle_one_request
+    method()
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 671, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/http/server.py", line 870, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Users/mehmetarifdemirtas/opt/anaconda3/envs/runestone-legacy/lib/python3.8/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/matrixeq.css?v=58BC228F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/webgldemo.css?v=B36B48D HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/webglinteractive.css?v=910DF1E1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/CodeChat.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/accessibility.css?v=6547A273 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/presenter_mode.css?v=9FF1320F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/user-highlights.css?v=A2326E52 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/runestone-custom-sphinx-bootstrap.css?v=5.3.0 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/theme-overrides.css?v=2DAFE138 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/underscore.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/doctools.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/matrixeq.js?v=D64CFA5A HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/webglinteractive.js?v=2B768384 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/FileSaver.min.js?v=8408C997 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/Blob.js?v=AEC2447 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/html4css1.css?v=4533ACD3 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/animationbase.js?v=A043C3A7 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery.highlight.js?v=F1C496C8 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/sql-wasm.js?v=44FE0709 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/runestone.js?v=7DFA3710 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery-fix.js?v=1226591B HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/jquery.idle-timer.js?v=E942DAF1 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/presenter_mode.js?v=2DF16FB4 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/theme.js?v=D899FB97 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/pytutor-embed.bundle.js?v=268B5C04 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/html4css1.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_images/scikitlearn-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/bootstrap-3.4.1/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:31] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:34] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:49] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:23:51] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:23:56] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:04] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:24:07] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:24:44] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:08] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/pytutor-embed.bundle.js?v=268B5C04 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/matrixeq.css?v=58BC228F HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/webgldemo.css?v=B36B48D HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/webglinteractive.css?v=910DF1E1 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/CodeChat.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/accessibility.css?v=6547A273 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/presenter_mode.css?v=9FF1320F HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/user-highlights.css?v=A2326E52 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/runestone-custom-sphinx-bootstrap.css?v=5.3.0 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/theme-overrides.css?v=2DAFE138 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/html4css1.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/runestone.js?v=7DFA3710 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/underscore.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/doctools.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/matrixeq.js?v=D64CFA5A HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/webglinteractive.js?v=2B768384 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/FileSaver.min.js?v=8408C997 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/Blob.js?v=AEC2447 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/html4css1.css?v=4533ACD3 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/animationbase.js?v=A043C3A7 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery.highlight.js?v=F1C496C8 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/sql-wasm.js?v=44FE0709 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery-fix.js?v=1226591B HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/theme.js?v=D899FB97 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/presenter_mode.js?v=2DF16FB4 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/jquery.idle-timer.js?v=E942DAF1 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_images/scikitlearn-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/img/logo_small.png HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /_static/bootstrap-3.4.1/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:12] code 404, message File not found
+127.0.0.1 - - [09/Nov/2024 16:25:12] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:25:14] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:25:35] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:32] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:26:33] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:26:46] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:30] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:28:33] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:21] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:38] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:30:39] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:01] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:02] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:12] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:13] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:14] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:29] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:56] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:31:57] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:08] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:32:09] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:55] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:58] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:33:59] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:03] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:34:04] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:41] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:35:42] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:11] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:36:12] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:36:22] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:49] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:37:50] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:11] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:40:12] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:42:52] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:16] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:25] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /plan_1_1_LoadData.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:47] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /plan_1_1_LoadData.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:48] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:54] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:56] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:56] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:57] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:57] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:57] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:57] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /plan_1_2_FilterValues.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:43:58] "GET /plan_1_3_VisualizeDistribution.html HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:14] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:45] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:45:46] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:53:19] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:22] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:31] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:54:49] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:03] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:24] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:55:45] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:01] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:56:02] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:14] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:29] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:56:42] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:38] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:57:39] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:01] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:29] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 16:58:30] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 16:58:51] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:00:55] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:11] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:17] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:01:25] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:43] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:48] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:58] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:58] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:58] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:02:58] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css.map HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:41] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:04:42] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:05:15] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:05:41] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:07:33] "GET /_static/language_data.js HTTP/1.1" 200 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:29] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:31] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /plan_1_2_CheckNaN.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:34] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /plan_1_2_FilterValues.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:08:38] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /plan_1_2_FilterValues.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:09:25] "GET /_static/language_data.js HTTP/1.1" 304 -
+
+Aborted!
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /plan_1_2_FilterValues.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /plan_1_2_FilterValues.html HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:19] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:29] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:33] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:33] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Nov/2024 17:10:33] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+
+Aborted!

@@ -17,6 +17,7 @@ In the copied file, replace:
 from pathlib import Path
 import json, re
 from shutil import copyfile
+import random
 
 with open('./_sources/_static/new/plans.json') as f:
     data = json.load(f)
@@ -48,41 +49,51 @@ for i, plan in enumerate(sorted(data, key=lambda x: (x['group'], x['order'], x['
     ### Replace {plan_code_click} with the code template lines concatenated
     clickable_code = ""
     for line_data in plan['code_template']['lines']:
-        if line_data == "":
-            continue
         line_data = f"    :click-incorrect:{line_data}:endclick:"
         if '$$' in line_data:
-            # replace $$...$$ with __...__ using regex
-            line_data = re.sub(r'\$\$(.*?)\$\$', r':endclick: :click-correct:\1:endclick: :click-incorrect:', line_data)
-        clickable_code += line_data.replace('\t', '    ') + "\n"
+            splitted_line = line_data.split('$$')
+            new_line = ""
+            for piece in splitted_line:
+                if piece in plan['code_template']['changeable_areas']:
+                    piece = f":endclick::click-correct:{random.choice(plan['code_template']['changeable_areas'][piece])}:endclick::click-incorrect:"
+                new_line += piece
+            #matches = re.findall(r'\$\$(.*?)\$\$')
+            #replacements = [random.choice(plan['code_template']['changeable_areas'][match]) for match in matches]
+            #line_data = re.sub(r'\$\$(.*?)\$\$', r':endclick::click-correct:$$replace$$:endclick::click-incorrect:', line_data)
+            line_data = new_line
+        clickable_code += line_data + "\n"
 
     content = content.replace("{plan_code_click}", clickable_code)
 
     ### Replace {plan_code_fill} with the code template lines concatenated
-    fillable_code = "Fill in the plan to...\n"
+    fillable_code = "   Fill in the plan to...\n\n"
+    blank_chosen = False
     for line_data in plan['code_template']['lines']:
         if line_data == "":
-            fillable_code += "\n"
-        if '$$' not in line_data:
-            fillable_code += f"    ``{line_data}``" + "\n"
+            continue # fillable_code += "whitespace character, not space"
+        if '$$' not in line_data or blank_chosen: 
+            fillable_code += f"   ``{line_data}``" + "\n\n"
         else:
             splitted_line = line_data.split('$$')
-            # for i in range(1, len(splitted_line), 2):
-            #     fillable_code += f"``{splitted_line[i]}``" + "|blank|" + "\n"
-            fillable_code += f"    ``{splitted_line[0]}``" + "|blank|" + "\n"
+            end_line = "".join(splitted_line[2:])
+            if end_line == "":
+                fillable_code += f"   ``{splitted_line[0]}``" + " |blank| " + "\n\n"
+            else:
+                fillable_code += f"   ``{splitted_line[0]}``" + " |blank| " + f"``{end_line}``" + "\n\n"
             answers = plan['code_template']['changeable_areas'][splitted_line[1]]
+            blank_chosen = True
 
     fillable_code += "\n"
     for ans in answers:
-        if ans == answers[0]:
-            fillable_code += "   -    :{answer}: Correct.\n".format(answer=ans)
-        else:
-            fillable_code += "        :{answer}: Correct.\n".format(answer=ans)
+        ans_escaped = ans.replace(' ', '\s').replace(':', '\:')
+        fillable_code += "   {dash}    :{answer}: Correct.\n".format(answer=ans_escaped, dash='-' if ans==answers[0] else ' ')
     fillable_code += "        :.*: Incorrect.\n"
 
     content = content.replace("{plan_code_fill}", fillable_code)
 
     # Replace {plan_code_fill} with the code template lines concatenated
+
+    content = content.replace('\t', '    ')
 
     with open(destination, 'w') as f:
         f.write(content)

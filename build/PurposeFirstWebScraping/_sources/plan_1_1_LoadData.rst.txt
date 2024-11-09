@@ -45,20 +45,23 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: Load Data_click
-    :question: Click on areas to change for...
+    :question: Click on parts of the code that would be modified to adapt this plan to a new problem.
     :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+    :feedback: Check out the changeable areas for this plan above to identify what you should change in this example.
 
     :click-incorrect:import pandas as pd:endclick:
-    :click-incorrect:df = pd.read_csv(:endclick: :click-correct:file_path:endclick: :click-incorrect:):endclick:
+    :click-incorrect::endclick:
+    :click-incorrect:df = pd.read_csv(:endclick::click-correct:data.csv:endclick::click-incorrect:):endclick:
 
 
 .. fillintheblank:: 'Load Data_fill'
-    Fill in the plan to...
-    ``import pandas as pd``
 
-    ````
-    ``df = pd.read_csv(``|blank|
+   Fill in the plan to...
+
+   ``import pandas as pd``
+
+   ``df = pd.read_csv(`` |blank| ``)``
+
 
    -    :data.csv: Correct.
         :.*: Incorrect.

@@ -45,14 +45,15 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: {plan_name}_click
-    :question: Click on areas to change for...
+    :question: Click on parts of the code that would be modified to adapt this plan to a new problem.
     :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+    :feedback: Check out the changeable areas for this plan above to identify what you should change in this example.
 
 {plan_code_click}
 
 .. fillintheblank:: '{plan_name}_fill'
-    {plan_code_fill}
+
+{plan_code_fill}
 
 
 .. note:: 

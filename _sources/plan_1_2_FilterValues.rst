@@ -45,24 +45,27 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: Filter Values_click
-    :question: Click on areas to change for...
+    :question: Click on parts of the code that would be modified to adapt this plan to a new problem.
     :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+    :feedback: Check out the changeable areas for this plan above to identify what you should change in this example.
 
     :click-incorrect:# Keep elements that satisfy the given condition:endclick:
-    :click-incorrect:filtered_df = df[:endclick: :click-correct:condition:endclick: :click-incorrect:]:endclick:
+    :click-incorrect:filtered_df = df[:endclick::click-correct:df['A'] > 25:endclick::click-incorrect:]:endclick:
+    :click-incorrect::endclick:
 
 
 .. fillintheblank:: 'Filter Values_fill'
-    Fill in the plan to...
-    ``# Keep elements that satisfy the given condition``
-    ``filtered_df = df[``|blank|
 
-    ````
+   Fill in the plan to...
 
-   -    :(df['A'] > 2) & (df['B'] < 50): Correct.
-        :(df['date_column'] >= start_date) & (df['date_column'] <= end_date): Correct.
-        :df['A'] > 25: Correct.
+   ``# Keep elements that satisfy the given condition``
+
+   ``filtered_df = df[`` |blank| ``]``
+
+
+   -    :(df['A']\s>\s2)\s&\s(df['B']\s<\s50): Correct.
+        :(df['date_column']\s>=\sstart_date)\s&\s(df['date_column']\s<=\send_date): Correct.
+        :df['A']\s>\s25: Correct.
         :.*: Incorrect.
 
 

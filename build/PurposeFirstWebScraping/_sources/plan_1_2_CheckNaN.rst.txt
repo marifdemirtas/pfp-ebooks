@@ -45,22 +45,26 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: Check NaN_click
-    :question: Click on areas to change for...
+    :question: Click on parts of the code that would be modified to adapt this plan to a new problem.
     :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+    :feedback: Check out the changeable areas for this plan above to identify what you should change in this example.
 
     :click-incorrect:# Handling missing data with fillna:endclick:
-    :click-incorrect:df_filled = df.fillna({:endclick: :click-correct:'column_to_change': 'value_to_fill':endclick: :click-incorrect:}):endclick:
+    :click-incorrect:df_filled = df.fillna({:endclick::click-correct:'C': 0:endclick::click-incorrect:}):endclick:
 
 
 .. fillintheblank:: 'Check NaN_fill'
-    Fill in the plan to...
-    ``# Handling missing data with fillna``
-    ``df_filled = df.fillna({``|blank|
 
-   -    :'A': df['A'].mean(): Correct.
-        :'B': df['B'].median(): Correct.
-        :'C': 0: Correct.
+   Fill in the plan to...
+
+   ``# Handling missing data with fillna``
+
+   ``df_filled = df.fillna({`` |blank| ``})``
+
+
+   -    :'A'\:\sdf['A'].mean(): Correct.
+        :'B'\:\sdf['B'].median(): Correct.
+        :'C'\:\s0: Correct.
         :.*: Incorrect.
 
 

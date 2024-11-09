@@ -330,11 +330,12 @@
 <div class="section" id="plan1-example">
 <h2>Plan1: Example<a class="headerlink" href="#plan1-example" title="Permalink to this headline">¶</a></h2>
 <p>This is a plan</p>
-<div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
+<div><div><strong>Name:</strong> Load Data</div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
 
 df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
 </pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
+        <button onclick="randomizeValues()">Show Examples</button>
+        <button onclick="replacePlaceholder()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -345,6 +346,13 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+            });
+        }
+
+        function replacePlaceholder() {
+            document.querySelectorAll('.changeable').forEach((elem) => {
+                const key = elem.getAttribute('data-original');
+                elem.textContent = key;
             });
         }
         </script>
@@ -370,20 +378,18 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
 
 <div class="runestone">
 <div data-component="clickablearea" class="runestone alert alert-warning" id="Load Data_click" data-question_label="1"    >
-<span data-question>Plan1-1: Click on areas to change for...</span><span data-feedback>Check out the example of this plan above to identify the area that should be changed.</span><pre><span data-incorrect>import pandas as pd</span>
-<span data-incorrect>df = pd.read_csv(</span> <span data-correct>file_path</span> <span data-incorrect>)</span></pre>
+<span data-question>Plan1-1: Click on parts of the code that would be modified to adapt this plan to a new problem.</span><span data-feedback>Check out the changeable areas for this plan above to identify what you should change in this example.</span><pre><span data-incorrect>import pandas as pd</span>
+<span data-incorrect></span>
+<span data-incorrect>df = pd.read_csv(</span><span data-correct>data.csv</span><span data-incorrect>)</span></pre>
 
 </div>
 </div>
 
         <div class="runestone">
-        <div data-component="fillintheblank" data-question_label="2" id="'Load Data_fill'
- Fill in the plan to...
- ``import pandas as pd``" >
-            <dl class="simple">
-<dt>Plan1-2:  <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a></dt><dd><p><a href="#id5"><span class="problematic" id="id6">``</span></a>df = pd.read_csv(<a href="#id7"><span class="problematic" id="id8">``</span></a><input type="text"></p>
-</dd>
-</dl>
+        <div data-component="fillintheblank" data-question_label="2" id="'Load Data_fill'" >
+            <p>Plan1-2: Fill in the plan to…</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv(</span></code> <input type="text"> <code class="docutils literal notranslate"><span class="pre">)</span></code></p>
 
         <script type="application/json">
             [[{"regex": "^\\s*data.csv\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect.</p>\n"}]]

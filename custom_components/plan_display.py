@@ -41,8 +41,9 @@ class PlanDisplay(Directive):
         changeable_areas = code_template.get('changeable_areas', {})
 
         # HTML structure
-        html_code = f"<div><div><strong>Name:</strong> {name}</div>"
-        html_code = f"<div><div><strong>Goal:</strong> {goal}</div>"
+        html_code = '<div>'
+        html_code += f"<div><strong>Name:</strong> {name}</div>"
+        html_code += f"<div><strong>Goal:</strong> {goal}</div>"
         html_code += "<pre style='background-color: #e6f7df; padding: 10px;'>"
         
         # Parse code with highlights and initial randomized values
@@ -52,6 +53,7 @@ class PlanDisplay(Directive):
         html_code += "</pre>"
         
         for placeholder, values in changeable_areas.items():
+            print(placeholder, values)
             random_value = values[0]
             # Wrap the randomized text in a span for highlighting and later updates
             html_code = html_code.replace(f"$${placeholder}$$", f"<span class='changeable' data-original='{placeholder}'>{random_value}</span>")
@@ -59,7 +61,8 @@ class PlanDisplay(Directive):
 
         # Add the randomize button
         html_code += """
-        <button onclick="randomizeValues()">Randomize</button></div>
+        <button onclick="randomizeValues()">Show Examples</button>
+        <button onclick="replacePlaceholder()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -70,6 +73,13 @@ class PlanDisplay(Directive):
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+            });
+        }
+
+        function replacePlaceholder() {
+            document.querySelectorAll('.changeable').forEach((elem) => {
+                const key = elem.getAttribute('data-original');
+                elem.textContent = key;
             });
         }
         </script>

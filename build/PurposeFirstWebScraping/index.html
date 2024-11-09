@@ -334,11 +334,12 @@
             });
         });
         </script>
-        <div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
+        <div><div><strong>Name:</strong> Load Data</div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
 
 df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
 </pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
+        <button onclick="randomizeValues()">Show Examples</button>
+        <button onclick="replacePlaceholder()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -349,6 +350,13 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+            });
+        }
+
+        function replacePlaceholder() {
+            document.querySelectorAll('.changeable').forEach((elem) => {
+                const key = elem.getAttribute('data-original');
+                elem.textContent = key;
             });
         }
         </script>
@@ -366,7 +374,7 @@ df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</sp
 import pandas as pd
 
 df = pd.read_csv(data.csv)# Handling missing data with fillna
-df_filled = df.fillna({'A': df['A'].mean()})# Keep elements that satisfy the given condition
+df_filled = df.fillna({$$'column_to_change': 'value_to_fill'$$})# Keep elements that satisfy the given condition
 filtered_df = df[(df['A'] > 2) & (df['B'] < 50)]
 import matplotlib.pyplot as plt
 

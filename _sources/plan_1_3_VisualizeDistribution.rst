@@ -45,13 +45,15 @@ Plan 1: Exercises
 ====================================
 
 .. clickablearea:: Visualize Distribution_click
-    :question: Click on areas to change for...
+    :question: Click on parts of the code that would be modified to adapt this plan to a new problem.
     :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+    :feedback: Check out the changeable areas for this plan above to identify what you should change in this example.
 
     :click-incorrect:import matplotlib.pyplot as plt:endclick:
+    :click-incorrect::endclick:
     :click-incorrect:# Plotting histogram:endclick:
-    :click-incorrect:df[:endclick: :click-correct:'column_name':endclick: :click-incorrect:].plot(kind='hist', bins=:endclick: :click-correct:bincount:endclick: :click-incorrect:, edgecolor='black'):endclick:
+    :click-incorrect:df[:endclick::click-correct:'height':endclick::click-incorrect:].plot(kind='hist', bins=:endclick::click-correct:15:endclick::click-incorrect:, edgecolor='black'):endclick:
+    :click-incorrect::endclick:
     :click-incorrect:# Display the plot:endclick:
     :click-incorrect:plt.xlabel('Values'):endclick:
     :click-incorrect:plt.ylabel('Frequency'):endclick:
@@ -61,20 +63,27 @@ Plan 1: Exercises
 
 
 .. fillintheblank:: 'Visualize Distribution_fill'
-    Fill in the plan to...
-    ``import matplotlib.pyplot as plt``
 
-    ````
-    ``# Plotting histogram``
-    ``df[``|blank|
+   Fill in the plan to...
 
-    ````
-    ``# Display the plot``
-    ``plt.xlabel('Values')``
-    ``plt.ylabel('Frequency')``
-    ``plt.title('Histogram of column_name')``
-    ``plt.grid(True)``
-    ``plt.show()``
+   ``import matplotlib.pyplot as plt``
+
+   ``# Plotting histogram``
+
+   ``df[`` |blank| ``].plot(kind='hist', bins=bincount, edgecolor='black')``
+
+   ``# Display the plot``
+
+   ``plt.xlabel('Values')``
+
+   ``plt.ylabel('Frequency')``
+
+   ``plt.title('Histogram of column_name')``
+
+   ``plt.grid(True)``
+
+   ``plt.show()``
+
 
    -    :'height': Correct.
         :'weight': Correct.

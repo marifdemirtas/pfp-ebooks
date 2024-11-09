@@ -325,7 +325,7 @@
 <div class="section" id="plan4-example">
 <h2>Plan4: Example<a class="headerlink" href="#plan4-example" title="Permalink to this headline">¶</a></h2>
 <p>This is a plan</p>
-<div><div><strong>Goal:</strong> Visualize the normality of a column's data distribution</div><pre style='background-color: #e6f7df; padding: 10px;'>import matplotlib.pyplot as plt
+<div><div><strong>Name:</strong> Visualize Distribution</div><div><strong>Goal:</strong> Visualize the normality of a column's data distribution</div><pre style='background-color: #e6f7df; padding: 10px;'>import matplotlib.pyplot as plt
 
 # Plotting histogram
 df[<span class='changeable' data-original=''column_name''>'height'</span>].plot(kind='hist', bins=<span class='changeable' data-original='bincount'>10</span>, edgecolor='black')
@@ -337,7 +337,8 @@ plt.title('Histogram of column_name')
 plt.grid(True)
 plt.show()
 </pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
+        <button onclick="randomizeValues()">Show Examples</button>
+        <button onclick="replacePlaceholder()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -348,6 +349,13 @@ plt.show()
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+            });
+        }
+
+        function replacePlaceholder() {
+            document.querySelectorAll('.changeable').forEach((elem) => {
+                const key = elem.getAttribute('data-original');
+                elem.textContent = key;
             });
         }
         </script>
@@ -373,9 +381,11 @@ plt.show()
 
 <div class="runestone">
 <div data-component="clickablearea" class="runestone alert alert-warning" id="Visualize Distribution_click" data-question_label="1"    >
-<span data-question>Plan4-1: Click on areas to change for...</span><span data-feedback>Check out the example of this plan above to identify the area that should be changed.</span><pre><span data-incorrect>import matplotlib.pyplot as plt</span>
+<span data-question>Plan4-1: Click on parts of the code that would be modified to adapt this plan to a new problem.</span><span data-feedback>Check out the changeable areas for this plan above to identify what you should change in this example.</span><pre><span data-incorrect>import matplotlib.pyplot as plt</span>
+<span data-incorrect></span>
 <span data-incorrect># Plotting histogram</span>
-<span data-incorrect>df[</span> <span data-correct>'column_name'</span> <span data-incorrect>].plot(kind='hist', bins=</span> <span data-correct>bincount</span> <span data-incorrect>, edgecolor='black')</span>
+<span data-incorrect>df[</span><span data-correct>'height'</span><span data-incorrect>].plot(kind='hist', bins=</span><span data-correct>15</span><span data-incorrect>, edgecolor='black')</span>
+<span data-incorrect></span>
 <span data-incorrect># Display the plot</span>
 <span data-incorrect>plt.xlabel('Values')</span>
 <span data-incorrect>plt.ylabel('Frequency')</span>
@@ -387,20 +397,17 @@ plt.show()
 </div>
 
         <div class="runestone">
-        <div data-component="fillintheblank" data-question_label="2" id="'Visualize Distribution_fill'
- Fill in the plan to...
- ``import matplotlib.pyplot as plt``" >
-            <dl>
-<dt>Plan4-2:  <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Plotting</span> <span class="pre">histogram</span></code>
-<a href="#id5"><span class="problematic" id="id6">``</span></a>df[<a href="#id7"><span class="problematic" id="id8">``</span></a><input type="text"></p>
-<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Display</span> <span class="pre">the</span> <span class="pre">plot</span></code>
-<code class="docutils literal notranslate"><span class="pre">plt.xlabel('Values')</span></code>
-<code class="docutils literal notranslate"><span class="pre">plt.ylabel('Frequency')</span></code>
-<code class="docutils literal notranslate"><span class="pre">plt.title('Histogram</span> <span class="pre">of</span> <span class="pre">column_name')</span></code>
-<code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code>
-<code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></p>
-</dd>
-</dl>
+        <div data-component="fillintheblank" data-question_label="2" id="'Visualize Distribution_fill'" >
+            <p>Plan4-2: Fill in the plan to…</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Plotting</span> <span class="pre">histogram</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">df[</span></code> <input type="text"> <code class="docutils literal notranslate"><span class="pre">].plot(kind='hist',</span> <span class="pre">bins=bincount,</span> <span class="pre">edgecolor='black')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Display</span> <span class="pre">the</span> <span class="pre">plot</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.xlabel('Values')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.ylabel('Frequency')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.title('Histogram</span> <span class="pre">of</span> <span class="pre">column_name')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></p>
 
         <script type="application/json">
             [[{"regex": "^\\s*'height'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*'weight'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*'age'\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect.</p>\n"}]]

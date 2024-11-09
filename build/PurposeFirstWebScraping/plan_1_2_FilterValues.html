@@ -330,11 +330,12 @@
 <div class="section" id="plan3-example">
 <h2>Plan3: Example<a class="headerlink" href="#plan3-example" title="Permalink to this headline">¶</a></h2>
 <p>This is a plan</p>
-<div><div><strong>Goal:</strong> Filter potentially problematic values</div><pre style='background-color: #e6f7df; padding: 10px;'># Keep elements that satisfy the given condition
+<div><div><strong>Name:</strong> Filter Values</div><div><strong>Goal:</strong> Filter potentially problematic values</div><pre style='background-color: #e6f7df; padding: 10px;'># Keep elements that satisfy the given condition
 filtered_df = df[<span class='changeable' data-original='condition'>(df['A'] > 2) & (df['B'] < 50)</span>]
 
 </pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
+        <button onclick="randomizeValues()">Show Examples</button>
+        <button onclick="replacePlaceholder()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -345,6 +346,13 @@ filtered_df = df[<span class='changeable' data-original='condition'>(df['A'] > 2
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+            });
+        }
+
+        function replacePlaceholder() {
+            document.querySelectorAll('.changeable').forEach((elem) => {
+                const key = elem.getAttribute('data-original');
+                elem.textContent = key;
             });
         }
         </script>
@@ -370,21 +378,21 @@ filtered_df = df[<span class='changeable' data-original='condition'>(df['A'] > 2
 
 <div class="runestone">
 <div data-component="clickablearea" class="runestone alert alert-warning" id="Filter Values_click" data-question_label="1"    >
-<span data-question>Plan3-1: Click on areas to change for...</span><span data-feedback>Check out the example of this plan above to identify the area that should be changed.</span><pre><span data-incorrect># Keep elements that satisfy the given condition</span>
-<span data-incorrect>filtered_df = df[</span> <span data-correct>condition</span> <span data-incorrect>]</span></pre>
+<span data-question>Plan3-1: Click on parts of the code that would be modified to adapt this plan to a new problem.</span><span data-feedback>Check out the changeable areas for this plan above to identify what you should change in this example.</span><pre><span data-incorrect># Keep elements that satisfy the given condition</span>
+<span data-incorrect>filtered_df = df[</span><span data-correct>df['A'] > 25</span><span data-incorrect>]</span>
+<span data-incorrect></span></pre>
 
 </div>
 </div>
 
         <div class="runestone">
-        <div data-component="fillintheblank" data-question_label="2" id="'Filter Values_fill'
- Fill in the plan to...
- ``# Keep elements that satisfy the given condition``
- ``filtered_df = df[``|blank|" >
-            <p>Plan3-2:  <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a></p>
-<input type="text">
+        <div data-component="fillintheblank" data-question_label="2" id="'Filter Values_fill'" >
+            <p>Plan3-2: Fill in the plan to…</p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Keep</span> <span class="pre">elements</span> <span class="pre">that</span> <span class="pre">satisfy</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">condition</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">filtered_df</span> <span class="pre">=</span> <span class="pre">df[</span></code> <input type="text"> <code class="docutils literal notranslate"><span class="pre">]</span></code></p>
+
         <script type="application/json">
-            [[{"regex": "^\\s*(df['A']\\s+>\\s+2)\\s+&\\s+(df['B']\\s+<\\s+50)\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*(df['date_column']\\s+>=\\s+start_date)\\s+&\\s+(df['date_column']\\s+<=\\s+end_date)\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*df['A']\\s+>\\s+25\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect.</p>\n"}]]
+            [[{"regex": "^\\s*(df['A']\\s>\\s2)\\s&\\s(df['B']\\s<\\s50)\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*(df['date_column']\\s>=\\sstart_date)\\s&\\s(df['date_column']\\s<=\\send_date)\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*df['A']\\s>\\s25\\s*$", "regexFlags": "", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect.</p>\n"}]]
         </script>
 
         </div>

@@ -30,11 +30,17 @@
 		},
 		"code_template": {
 			"changeable_areas": {
-				"'column_to_change': 'value_to_fill'": [
-				"'A': df['A'].mean()",
-				"'B': df['B'].median()",
-				"'C': 0"
+				"'column_to_change'": [
+				"'A'",
+				"'B'",
+				"'C'"
+				],
+				"'value_to_fill'": [
+					"df['A'].mean()",
+					"df['B'].median()",
+					"0"
 				]
+	
 			},
 			"lines": [
 				"# Handling missing data with fillna",
