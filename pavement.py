@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "PurposeFirstWebScraping"
+project_name = "New"
 ###############################
 
 master_url = "https://runestone.academy"
@@ -42,7 +42,7 @@ options(
             "course_url": master_url,
             "dynamic_pages": False,
             "use_services": "true",
-            "basecourse": "PurposeFirstWebScraping",
+            # "basecourse": "PurposeFirstWebScraping",
             "python3": "true",
             "downloads_enabled": "true",
             "allow_pairs": "false",
@@ -53,5 +53,8 @@ options(
 
 version = pkg_resources.require("runestone")[0].version
 options.build.template_args["runestone_version"] = version
+options.build.template_args["jobe_server"] = "http://127.0.0.1:4000"
+options.build.template_args["proxy_uri_runs"] = '/jobe/index.php/restapi/runs/'
+options.build.template_args["proxy_uri_files"] = '/jobe/index.php/restapi/files/'
 
 from runestone import build  # build is called implicitly by the paver driver.
