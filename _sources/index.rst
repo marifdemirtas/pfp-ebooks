@@ -8,82 +8,39 @@
 
 
 =======================================
-Learn Web Scraping!
+Machine Learning with Decision Trees
 =======================================
 
-.. image:: _static/web_crawler.png
+.. image:: _static/scikitlearn-logo.png
     :scale: 20%
     :align: center
-    :alt: A robot looking through a magnifying glass
+    :alt: Scikit-learn library logo
 
-What is web scraping?
-:::::::::::::::::::::
+Implement a machine learning algorithm for classification, using Pandas and Scikit-learn!
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  
-The internet is full of information people would like to collect. Copying and pasting it would take forever! In this ebook, we'll explore an easier way.
+Machine learning algorithms are everywhere! Through this ebook, you'll quickly learn to implement **decision trees**, an interpretable machine learning algorithm, for classifying data into categories. 
 
- *Web scraping* is the process of getting information from web pages with code.
+You will use the Pandas library to prepare the data and the Scikit-learn library to create the classifier. No prior experience in these libraries is required!
 
-How this ebook works
-::::::::::::::::::::
-
-.. admonition:: During this lesson, you will learn code plans used by *real professionals*.
-   
-   These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
-
-Two scraping examples
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   example1.rst
-   example2.rst
-
-
-Plans 2-3: Get the webpage
-::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan2.rst
-   plan3.rst
-
-Plans 4-5: Extract info from the webpage
+How this lesson is structured?
 ::::::::::::::::::::::::::::::::::::::::
 
-.. toctree::
-   :maxdepth: 1
+.. admonition:: During this lesson, you will learn to build and evaluate decision tree classifiers with Scikit-learn from scratch.
+   
+   This ebook contains several sections explaining concepts in Pandas and Scikit-learn required for building a decision tree classifier. Each section contains descriptions of these concepts, example code, and explanations. You are encouraged to move through the sections in order, but you can also jump between them as needed.
 
-   plan4.rst
-   plan5.rst
+   After you go through all the sections, you will be able to practice what you've learned with a set of activities on decision trees. You will not be able to go back to the sections after you start the activities, so make sure you understand the concepts before moving on!
 
-Plans 9-10: Do something with the info
+
+Table of Contents
 ::::::::::::::::::::::::::::::::::::::
-
 .. toctree::
    :maxdepth: 1
 
-   plan9.rst
-   plan10.rst
-
-Putting it together
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   activity-writing-1.rst
-   activity-writing-2.rst
-   activity-writing-3.rst
-   activity-debugging.rst
-   activity-explaining.rst
-
-Download the plans
-::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   downloads.rst
-
+   01-introduction-a.rst
+   01-introduction-b.rst
+   01-introduction-c.rst
+   02-selection.rst
+   03-operations.rst
+   04-sk-intro.rst

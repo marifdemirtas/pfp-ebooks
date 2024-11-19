@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "New"
+project_name = "DecisionTreeDocs"
 ###############################
 
 master_url = "https://runestone.academy"
