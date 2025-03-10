@@ -9,7 +9,7 @@ import json, os
 
 # @register_tag('plandisplay')
 class PlanDisplay(Directive):
-    required_arguments = 1  # JSON file path
+    required_arguments = 1  # JSON file path - not in use
     optional_arguments = 1
     final_argument_whitespace = True
     option_spec = {}
@@ -19,7 +19,7 @@ class PlanDisplay(Directive):
     has_content = False
 
     def run(self):
-        file_path = os.path.join('_sources/_static/new', self.arguments[0])
+        file_path = os.path.join('_sources/plans.json')
 
         with open(file_path) as f:
             data = json.load(f)
@@ -30,7 +30,6 @@ class PlanDisplay(Directive):
                 data = d
                 break
         else:
-            print()
             data = data[0]
 
         name = data['plan_name']
@@ -39,6 +38,7 @@ class PlanDisplay(Directive):
         
         code_lines = code_template['lines']
         changeable_areas = code_template.get('changeable_areas', {})
+        changeable_areas_colors = code_template.get('changeable_areas_colors', {})
 
         # HTML structure
         html_code = '<div>'
@@ -53,10 +53,9 @@ class PlanDisplay(Directive):
         html_code += "</pre>"
         
         for placeholder, values in changeable_areas.items():
-            print(placeholder, values)
             random_value = values[0]
             # Wrap the randomized text in a span for highlighting and later updates
-            html_code = html_code.replace(f"$${placeholder}$$", f"<span class='changeable' data-original='{placeholder}'>{random_value}</span>")
+            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}'>{random_value}</span>")
 
 
         # Add the randomize button

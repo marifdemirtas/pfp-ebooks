@@ -25,7 +25,7 @@ class PlanfulWorkedExample(Directive):
 
         unique_id = self.arguments[0]
 
-        with open('./_sources/_static/new/plans.json') as f:
+        with open('./_sources/_static/plans.json') as f:
             data = json.load(f)
 
         language = self.options.get('language', 'python3')
@@ -35,7 +35,7 @@ class PlanfulWorkedExample(Directive):
         
         # Combine the contents of all files
         for i, plan in enumerate(sorted(data, key=lambda x: (x['group'], x['order'], x['plan_name']))):
-            combined_code += "\n".join(plan['code_template']['lines'])
+            combined_code += "\n".join(plan['code_template']['lines']) + "\n\n"
             for changeable_area, values in plan['code_template'].get('changeable_areas', {}).items():
                 random_value = values[0]
                 combined_code = combined_code.replace(f"$${changeable_area}$$", f"{random_value}")

@@ -12,6 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+print("conf called")
 import sys, os
 sys.path.insert(0, os.path.abspath('./custom_components'))
 sys.path.insert(0, os.path.abspath('.'))
@@ -235,7 +236,8 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 #### Customizations for Runestone
 # Following are custom components
 
-from custom_components import plan_display, random_number_box, planful_worked_example
+from custom_components import plan_display, random_number_box, planful_worked_example, changeable_areas_display
+# from custom_components import hparsons
 
 # Save the original setup function if it exists
 original_setup = globals().get('setup', None)
@@ -246,6 +248,9 @@ def setup(app):
         original_setup(app)
     
     # Add your custom directive
+    print('Customs added')
     app.add_directive("randomnumberbox", random_number_box.RandomNumberBox)
     app.add_directive("plandisplay", plan_display.PlanDisplay)
     app.add_directive('planexample', planful_worked_example.PlanfulWorkedExample)
+    app.add_directive('changeableareas', changeable_areas_display.ChangeableAreas)
+    # app.add_directive("hparsons", hparsons.HParsonsDirective)

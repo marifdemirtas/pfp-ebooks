@@ -1,0 +1,311 @@
+[
+  {
+    "code_template": {
+      "changeable_areas": {
+        "best_function": [
+          "MAX",
+          "MIN"
+        ],
+        "col": [
+          "column"
+        ],
+        "table": [
+          "table_name"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "best_function": "Function to calculate",
+        "col": "Name of the column you want to get the value",
+        "table": "Name of the table"
+      },
+      "changeable_areas_colors": {
+        "best_function": "#ccebc5",
+        "col": "#b3cde3",
+        "table": "#fbb4ae"
+      },
+      "lines": [
+        "SELECT @@best_function@@(@@col@@) ",
+        "AS best_value",
+        "FROM @@table@@;"
+      ]
+    },
+    "goal": "Retrieve the 'best' value based on a metric from a specific column and label it as 'max_value'",
+    "group": "Truncate Data",
+    "order": "1",
+    "plan_metadata": {
+      "description": "This plan selects the 'best' value in a column based on the function you want to use.",
+      "instruction": "To use this plan, pick a 'best' function (such as minimum or maximum) on your data.",
+      "usage": "This plan is used when you want to learn a best value"
+    },
+    "plan_name": "Get Best Value",
+    "id": 0,
+    "questions": [
+      {
+        "type": "Parsons Problem",
+        "question_id": "Parsons Problem_1",
+        "blocks": [
+          {
+            "text": "SELECT @@best_function@@(@@col@@)",
+            "isDistractor": false
+          },
+          {
+            "text": "AS best_value",
+            "isDistractor": false
+          },
+          {
+            "text": "FROM @@table@@;",
+            "isDistractor": false
+          },
+          {
+            "text": "SELECT best_function",
+            "isDistractor": true
+          }
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You have a database table named 'sales_data' with a column 'revenue'. You need to write a SQL query to retrieve the maximum revenue and label it as 'best_value'. Which of the following SQL queries will achieve this?",
+        "correct": "SELECT MAX(revenue) AS best_value FROM sales_data;",
+        "distractors": [
+          "SELECT MIN(revenue) AS best_value FROM sales_data;",
+          "SELECT MAX(revenue) AS max_value FROM sales_data;",
+          "SELECT MAX(revenue) FROM sales_data;"
+        ],
+        "feedback": [
+          "This query retrieves the minimum revenue, which is not what you need. Use MAX instead of MIN.",
+          "This query uses the correct function but labels the output incorrectly. Ensure the alias is 'best_value'.",
+          "This query does not label the retrieved value. Make sure to use 'AS best_value' to label the output."
+        ]
+      },
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "In the context of a database storing product prices, using the code template 'SELECT MAX(price) AS best_value FROM products;' will correctly retrieve the highest product price and label it as 'max_value'.",
+        "label": "True",
+        "feedback": "Remember, the MAX function is used to retrieve the highest value from the specified column."
+      },
+      {
+        "type": "Fill in the Blank",
+        "question_id": "Fill in the Blank_1",
+        "stem": "You're working with a database of student scores and want to retrieve the highest score from the 'math_scores' column of the 'student_data' table. Fill in the correct function to use in the SQL query.",
+        "area": "best_function",
+        "correct": "MAX"
+      },
+      {
+        "type": "Parsons Problem",
+        "question_id": "Parsons Problem_2",
+        "stem": "Arrange the SQL query blocks to find the maximum salary from the employees table and label it as max_value.",
+        "blocks": [
+          {
+            "text": "AS max_value",
+            "isDistractor": false
+          },
+          {
+            "text": "SELECT MAX(salary)",
+            "isDistractor": false
+          },
+          {
+            "text": "FROM employees",
+            "isDistractor": false
+          },
+          {
+            "text": "AS best_value",
+            "isDistractor": true
+          },
+          {
+            "text": "SELECT MIN(salary)",
+            "isDistractor": true
+          },
+          {
+            "text": "FROM salaries",
+            "isDistractor": true
+          }
+        ],
+        "correctOrder": [
+          1,
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "column_to_check": [
+          "your_column_name"
+        ],
+        "table": [
+          "table_name"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "column_to_check": "Name of the column that should not be null",
+        "table": "Name of the table to filter"
+      },
+      "changeable_areas_colors": {
+        "column_to_check": "#decbe4",
+        "table": "#fed9a6"
+      },
+      "lines": [
+        "DELETE FROM @@table@@",
+        "WHERE @@column_to_check@@ IS NULL;"
+      ]
+    },
+    "goal": "Remove records where a column value does not exist",
+    "group": "Remove Null Values",
+    "order": "1",
+    "plan_metadata": {
+      "description": "This plan removes records where the given column has a null value.",
+      "instruction": "To use this plan, replace the table and the column with your data.",
+      "usage": "This plan is used when you want to calculate statistics that would be skewed by the existence of null values."
+    },
+    "plan_name": "Remove Null",
+    "id": 1,
+    "questions": [
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "This statement can only be used for columns that have numerical values.",
+        "area": "column_to_check",
+        "blocks": [
+          {
+            "text": "DELETE FROM @@table@@",
+            "isDistractor": false
+          },
+          {
+            "text": "WHERE @@column_to_check@@ IS NULL;",
+            "isDistractor": false
+          }
+        ],
+        "correctOrder": [
+          0,
+          1
+        ],
+        "label": "False"
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "column_to_check": [
+          "column1"
+        ],
+        "column_to_update": [
+          "column1"
+        ],
+        "condition_value": [
+          "min_val"
+        ],
+        "new_value": [
+          "0"
+        ],
+        "table": [
+          "table_name"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "column_to_check": "",
+        "column_to_update": "",
+        "condition_value": "",
+        "new_value": "",
+        "table": "table to update"
+      },
+      "changeable_areas_colors": {
+        "column_to_check": "#f2f2f2",
+        "column_to_update": "#e5d8bd",
+        "condition_value": "#b3e2cd",
+        "new_value": "#fddaec",
+        "table": "#ffffcc"
+      },
+      "lines": [
+        "UPDATE @@table@@",
+        "SET @@column_to_update@@ = @@new_value@@",
+        "WHERE @@column_to_check@@ = @@condition_value@@;"
+      ]
+    },
+    "goal": "Update the value of a column in all records meeting a condition",
+    "group": "Truncate Data",
+    "order": 2,
+    "plan_metadata": {
+      "description": "This is a plan",
+      "instruction": "To use this plan, follow these steps...",
+      "usage": "This plan is used when..."
+    },
+    "plan_name": "Update Values Conditionally",
+    "id": 2,
+    "questions": [
+      {
+        "type": "Parsons Problem",
+        "question_id": "Parsons Problem_1",
+        "blocks": [
+          {
+            "text": "UPDATE @@table@@",
+            "isDistractor": false
+          },
+          {
+            "text": "SET @@column_to_update@@ = @@new_value@@",
+            "isDistractor": false
+          },
+          {
+            "text": "WHERE @@column_to_check@@ = @@condition_value@@;",
+            "isDistractor": false
+          }
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2
+        ],
+        "stem": "Update the blocks to complete the code."
+      },
+      {
+        "type": "Fill in the Blank",
+        "question_id": "Fill in the Blank_1",
+        "stem": "Fill in the blanks to replace all records where the column is equal to min_val",
+        "area": "condition_value"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "plan_name": "Test1",
+    "isTest": true,
+    "group": "Tests",
+    "goal": "Exercise Page",
+    "questions": [
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "Test",
+        "label": "True"
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "Test2",
+        "correct": "2",
+        "distractors": [
+          "abc",
+          "def"
+        ],
+        "feedback": [
+          ""
+        ]
+      }
+    ],
+    "code_template": {
+      "lines": [],
+      "changeable_areas": {},
+      "changeable_areas_annotations": {},
+      "changeable_areas_colors": {}
+    }
+  }
+]

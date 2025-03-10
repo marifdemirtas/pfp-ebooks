@@ -38,7 +38,8 @@
 {plan_id}: How to use this plan
 ====================================
 
-.. changeable_areas:: {plan_id}_click
+.. changeableareas:: {plan_name}_change
+    :plan: {plan_name}
 
 
 Plan 1: Exercises
