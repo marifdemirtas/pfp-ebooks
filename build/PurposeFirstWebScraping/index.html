@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning with Decision Trees &#8212; Runestone Interactive Overview</title>
+    <title>&lt;no title&gt; &#8212; Runestone Interactive Overview</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
@@ -54,7 +54,7 @@
     <script src="_static/theme.js?v=D899FB97"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plan1: Load Data" href="plan_1_1_LoadData.html" />
+    <link rel="next" title="Scrape all the Cottage Inn Pizza locations" href="example1.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -73,7 +73,7 @@
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
   eBookConfig.logLevel = 10;
   eBookConfig.loginRequired = false;
-  eBookConfig.build_info = "v1.0";
+  eBookConfig.build_info = "unknown";
   eBookConfig.python3 = true;
   eBookConfig.acDefaultLanguage = '' ? '' : 'python'
   eBookConfig.runestone_version = '5.3.0';
@@ -276,8 +276,8 @@
         
         <!-- 
           
-  <li id="relations-next" title='Next Chapter - Plan1: Load Data' data-toggle="tooltip" >              
-    <a href="plan_1_1_LoadData.html" >
+  <li id="relations-next" title='Next Chapter - Scrape all the Cottage Inn Pizza locations' data-toggle="tooltip" >              
+    <a href="example1.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -318,85 +318,114 @@
 
 
   
-  <div class="section" id="machine-learning-with-decision-trees">
-<h1>Machine Learning with Decision Trees<a class="headerlink" href="#machine-learning-with-decision-trees" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/scikitlearn-logo.png"><img alt="Scikit-learn library logo" class="align-center" src="_images/scikitlearn-logo.png" style="width: 240.0px; height: 129.6px;" /></a>
-
-        <div id="random-number-box" style="border: 1px solid #000; padding: 10px; width: 200px; text-align: center;">
-            <p id="random-number">Click the button to generate a random number</p>
-            <button id="random-number-button">Generate Number</button>
-        </div>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('random-number-button').addEventListener('click', function() {
-                var randomNumber = Math.floor(Math.random() * 10) + 1;
-                document.getElementById('random-number').innerText = randomNumber;
-            });
-        });
-        </script>
-        <div><div><strong>Goal:</strong> Load data from a CSV file</div><pre style='background-color: #e6f7df; padding: 10px;'>import pandas as pd
-
-df = pd.read_csv(<span class='changeable' data-original='file_path'>data.csv</span>)
-</pre>
-        <button onclick="randomizeValues()">Randomize</button></div>
-        
-        <script>
-        // Possible replacements loaded directly from JSON
-        const possibleValues = {"file_path": ["data.csv"]};
-
-        function randomizeValues() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
-                const key = elem.getAttribute('data-original');
-                const values = possibleValues[key];
-                elem.textContent = values[Math.floor(Math.random() * values.length)];
-            });
-        }
-        </script>
-
-        <style>
-        /* CSS to highlight changeable parts */
-        .changeable {
-            background-color: #ffeb3b;
-            padding: 0 3px;
-            border-radius: 3px;
-        }
-        </style>
-        <div class="activecode" data-component="activecode" data-uniqueid="my_combined_code" data-language="python3" data-autograde="none">
-<textarea style="display:none;">
-import pandas as pd
-
-df = pd.read_csv(data.csv)# Handling missing data with fillna
-df_filled = df.fillna({'A': df['A'].mean()})# Keep elements that satisfy the given condition
-filtered_df = df[(df['A'] > 2) & (df['B'] < 50)]
-import matplotlib.pyplot as plt
-
-# Plotting histogram
-df['height'].plot(kind='hist', bins=10, edgecolor='black')
-
-# Display the plot
-plt.xlabel('Values')
-plt.ylabel('Frequency')
-plt.title('Histogram of column_name')
-plt.grid(True)
-plt.show()</textarea>
-</div><div class="section" id="how-this-ebook-works">
-<h2>How this ebook works<a class="headerlink" href="#how-this-ebook-works" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-this-lesson-will-walk-you-through-the-steps-of-classifying-penguins admonition">
-<p class="admonition-title">This lesson will walk you through the steps of classifying penguins.</p>
-<p>We’ll use a dataset of penguin species and their measurements to train a machine learning model. The model will predict the species of a penguin based on its measurements.</p>
+  <hr class="docutils" />
+<p>Learn Web Scraping!</p>
+<hr class="docutils" />
+<p>What is web scraping?</p>
+<hr class="docutils" />
+<p>The internet is full of information people would like to collect. Copying and pasting it would take forever! In this ebook, we’ll explore an easier way.</p>
+<blockquote>
+<div><p><em>Web scraping</em> is the process of getting information from web pages with code.</p>
+</div></blockquote>
+<p>How this ebook works</p>
+<hr class="docutils" />
+<div class="admonition-during-this-lesson-you-will-learn-code-plans-used-by-real-professionals admonition">
+<p class="admonition-title">During this lesson, you will learn code plans used by <em>real professionals</em>.</p>
+<p>These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from <a class="reference external" href="https://github.com/search?l=Python&amp;q=BeautifulSoup%28&amp;type=Code">Github</a>, as well as two interviews with people who use web scraping in their jobs.</p>
 </div>
-</div>
-<div class="section" id="classification-with-decision-trees">
-<h2>Classification with Decision Trees<a class="headerlink" href="#classification-with-decision-trees" title="Permalink to this headline">¶</a></h2>
+<p>Two scraping examples</p>
+<hr class="docutils" />
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_1_LoadData.html">Plan1: Load Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_CheckNaN.html">Plan2: Check NaN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_2_FilterValues.html">Plan3: Filter Values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan_1_3_VisualizeDistribution.html">Plan4: Visualize Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example1.html">Scrape all the Cottage Inn Pizza locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example2.html">Get news links from faculty webpages</a></li>
 </ul>
 </div>
+<p>Plans 2-3: Get the webpage</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plan2.html">Plan 1: Get a soup from a URL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan2.html#plan-1-example">Plan 1: Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan2.html#plan-1-when-to-use-this-plan">Plan 1: When to use this plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan2.html#plan-1-how-to-use-this-plan">Plan 1: How to use this plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan2.html#plan-1-exercises">Plan 1: Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan3.html">Plan 2: Get a soup from multiple URLs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan3.html#plan-2-example">Plan 2: Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan3.html#plan-2-when-to-use-this-plan">Plan 2: When to use this plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan3.html#plan-2-how-to-use-this-plan">Plan 2: How to use this plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan3.html#plan-2-exercises">Plan 2: Exercises</a></li>
+</ul>
+</li>
+</ul>
 </div>
+<p>Plans 4-5: Extract info from the webpage</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plan4.html">Plan 4: Get info from a single tag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan4.html#plan-4-example">Plan 4: Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan4.html#plan-4-when-to-use-it">Plan 4: When to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan4.html#plan-4-how-to-use-it">Plan 4: How to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan4.html#plan-4-exercises">Plan 4: Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan5.html">Plan 3: Get info from all tags of a certain type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan5.html#looking-closer-at-a-tag">Looking closer at a tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan5.html#plan-3-example">Plan 3: Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan5.html#plan-3-how-to-use-it">Plan 3: How to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan5.html#plan-3-exercises">Plan 3: Exercises</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Plans 9-10: Do something with the info</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plan9.html">Plan 5: Print info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan9.html#plan-5-example">Plan 5: Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan9.html#plan-5-exercises">Plan 5: Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan10.html">Plan 10: Store info in a json file</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan10.html#plan-10-outline">Plan 10: Outline</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Putting it together</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="activity-writing-1.html">Code writing activity part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activity-writing-2.html">Code writing activity part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activity-writing-3.html">Code writing activity part 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activity-debugging.html">Code debugging activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="activity-explaining.html">Code explaining activity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="activity-explaining.html#relevant-tags">Relevant tags</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Download the plans</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">You can download all the plans here</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-1">Plan 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-2">Plan 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-3">Plan 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-4">Plan 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-5">Plan 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-6">Plan 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-9">Plan 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downloads.html#plan-10">Plan 10</a></li>
+</ul>
+</li>
+</ul>
 </div>
 
 
@@ -406,8 +435,8 @@ plt.show()</textarea>
   
       
 <ul>
-  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Plan1: Load Data' data-toggle="tooltip" >
-    <a href="plan_1_1_LoadData.html" aria-label="Plan1: Load Data">
+  <li id="relations-next" style="opacity:0.4" onmouseover="mouseOverNext()" onmouseout="mouseOutNext()" class="navLink" title='Next Section - Scrape all the Cottage Inn Pizza locations' data-toggle="tooltip" >
+    <a href="example1.html" aria-label="Scrape all the Cottage Inn Pizza locations">
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
       </div>
