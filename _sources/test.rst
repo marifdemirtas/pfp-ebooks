@@ -1,4 +1,4 @@
-..  shortname:: test1
+..  shortname:: test
 
 ..  description:: Exercise Page
 
@@ -9,24 +9,17 @@
    :start: 1
    :prefix: ex-
 
-Test1
-========
+Plan: test
+==============
 
-.. mchoice:: test1_q1
+.. mchoice:: test_q1
    :answer_a: True
+   :feedback_a: test
    :answer_b: False
-   :correct: a
+   :feedback_b: Correct!
+   :correct: b
 
-   Test
-
-.. mchoice:: test1_q2
-   :random: 
-   :answer_a: 2
-   :answer_b: abc
-   :answer_c: def
-   :correct: a
-
-   Test2
+   True false test
 
 .. note:: 
       

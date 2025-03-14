@@ -9,8 +9,8 @@
    :start: 1
    :prefix: p2-
 
-Update Values Conditionally
-==============================
+Plan: Update Values Conditionally
+=====================================
 
 .. plandisplay:: plans.jsonupdate_values_conditionally_code
    :plan: Update Values Conditionally
@@ -27,31 +27,6 @@ To use this plan, follow these steps...
 
 Plan I - Exercises
 --------------------
-.. parsonsprob:: update_values_conditionally_q1
-
-   Update the blocks to complete the code.
-
-   -----
-
-   UPDATE @@table@@
-   =====
-   SET @@column_to_update@@ = @@new_value@@
-   =====
-   WHERE @@column_to_check@@ = @@condition_value@@;
-
-.. fillintheblank:: update_values_conditionally_q2
-
-   Fill in the blanks to replace all records where the column is equal to min_val
-
-   ``UPDATE table_name``
-
-   ``SET column1 = 0``
-
-   ``WHERE @@column_to_check@@ = `` |blank| ``;``
-
-   -   :min_val: Correct.
-       :x: Try again.
-
 .. note:: 
       
       .. raw:: html

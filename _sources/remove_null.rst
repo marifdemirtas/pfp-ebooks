@@ -9,30 +9,46 @@
    :start: 1
    :prefix: p2-
 
-Remove Null
-==============
+Plan: Remove Null
+=====================
 
 .. plandisplay:: plans.jsonremove_null_code
    :plan: Remove Null
 
-This plan removes records where the given column has a null value.
+This is a plan
 
 Plan I - When to use this plan?
 --------------------------------
-This plan is used when you want to calculate statistics that would be skewed by the existence of null values.
+This plan is used when...
 
 Plan I - What parts can be customized to use this plan?
 -------------------------------------------------------
-To use this plan, replace the table and the column with your data.
+To use this plan, follow these steps...
 
 Plan I - Exercises
 --------------------
 .. mchoice:: remove_null_q1
    :answer_a: True
+   :feedback_a: Correct!
    :answer_b: False
-   :correct: b
+   :feedback_b: The statement is True because the SQL query removes all records where the 'email' column value is NULL, effectively removing entries where the email is not set.
+   :correct: a
 
-   This statement can only be used for columns that have numerical values.
+   In a database containing a 'users' table, executing the plan 'Remove Null' on the 'email' column will remove all records where the email is not set.
+
+.. parsonsprob:: remove_null_q2
+
+   You have a table named 'employees' in your SQL database, and you need to remove all records where the 'email' column is NULL. Arrange the following code blocks in the correct order to accomplish this task.
+
+   -----
+
+   DELETE FROM employees
+   =====
+   WHERE email IS NULL;
+   =====
+   UPDATE employees SET email = '' #distractor
+   =====
+   WHERE email IS NOT NULL; #distractor
 
 .. note:: 
       

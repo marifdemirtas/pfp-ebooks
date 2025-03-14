@@ -21,8 +21,8 @@ Integrated Examples
 .. toctree::
    :maxdepth: 1
 
-   integrated_truncate_data.rst
-   integrated_remove_null_values.rst
+   integrated_update_min.rst
+   integrated_null.rst
 
 List of Plans
 --------------------
@@ -40,5 +40,5 @@ Exercises
 .. toctree::
    :maxdepth: 1
 
-   test1
+   test.rst
 

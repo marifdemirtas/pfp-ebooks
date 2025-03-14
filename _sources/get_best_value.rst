@@ -9,62 +9,52 @@
    :start: 1
    :prefix: p2-
 
-Get Best Value
-=================
+Plan: Get Best Value
+========================
 
 .. plandisplay:: plans.jsonget_best_value_code
    :plan: Get Best Value
 
-This plan selects the 'best' value in a column based on the function you want to use.
+This is a plan
 
 Plan I - When to use this plan?
 --------------------------------
-This plan is used when you want to learn a best value
+This plan is used when...
 
 Plan I - What parts can be customized to use this plan?
 -------------------------------------------------------
-To use this plan, pick a 'best' function (such as minimum or maximum) on your data.
+To use this plan, follow these steps...
 
 Plan I - Exercises
 --------------------
-.. parsonsprob:: get_best_value_q1
+.. mchoice:: get_best_value_q1
+   :random: 
+   :answer_a: SELECT MAX(price) AS best_value FROM products;
+   :feedback_a: Correct!
+   :answer_b: SELECT MIN(price) AS best_value FROM products;
+   :feedback_b: This option retrieves the minimum price, but the goal is to find the highest price.
+   :answer_c: SELECT MAX(column) AS best_value FROM table_name;
+   :feedback_c: This option incorrectly uses 'column' and 'table_name' instead of 'price' and 'products'.
+   :answer_d: SELECT price AS best_value FROM products;
+   :feedback_d: This option selects the price without using an aggregate function to find the maximum value.
+   :correct: a
 
-   undefined
-
-   -----
-
-   SELECT @@best_function@@(@@col@@)
-   =====
-   AS best_value
-   =====
-   FROM @@table@@;
-   =====
-   SELECT best_function #distractor
+   In a database of products, you want to find the highest price among all products and label it as 'best_value'. Which SQL query would you use?
 
 .. mchoice:: get_best_value_q2
-   :random: 
-   :answer_a: SELECT MAX(revenue) AS best_value FROM sales_data;
-   :answer_b: SELECT MIN(revenue) AS best_value FROM sales_data;
-   :answer_c: SELECT MAX(revenue) AS max_value FROM sales_data;
-   :answer_d: SELECT MAX(revenue) FROM sales_data;
-   :correct: a
-
-   You have a database table named 'sales_data' with a column 'revenue'. You need to write a SQL query to retrieve the maximum revenue and label it as 'best_value'. Which of the following SQL queries will achieve this?
-
-.. mchoice:: get_best_value_q3
    :answer_a: True
+   :feedback_a: Correct!
    :answer_b: False
+   :feedback_b: Incorrect. The query does indeed use the MIN function to find the lowest price from the 'price' column in the 'products' table, which matches the plan goal of retrieving the 'best' value based on the metric of minimum price.
    :correct: a
 
-   In the context of a database storing product prices, using the code template 'SELECT MAX(price) AS best_value FROM products;' will correctly retrieve the highest product price and label it as 'max_value'.
+   In a database of products, the following SQL query is used to find the lowest price of a product: SELECT MIN(price) AS best_value FROM products;
 
-.. fillintheblank:: get_best_value_q4
+.. fillintheblank:: get_best_value_q3
 
-   You're working with a database of student scores and want to retrieve the highest score from the 'math_scores' column of the 'student_data' table. Fill in the correct function to use in the SQL query.
+   You are asked to find the highest price from the 'products' table. Which function will you use to retrieve the 'best' value?
 
-   ``SELECT `` |blank| ``(@@col@@) ``
-
-   ``AS best_value``
+   ``SELECT `` |blank| ``(@@col@@) AS best_value``
 
    ``FROM table_name;``
 
@@ -72,23 +62,25 @@ Plan I - Exercises
        :MIN: Correct.
        :x: Try again.
 
+.. clickablearea:: get_best_value_q4
+   :question: Click on the areas to configure a SQL query that retrieves the maximum or minimum value from a specific column in a table.
+   :iscode:
+
+   :click-incorrect::click-incorrect::click-incorrect:SELECT :click-correct:MAX:endclick:(:click-correct:column:endclick:) AS best_value:endclick::endclick::endclick:
+   :click-incorrect::click-incorrect::click-incorrect:FROM :click-correct:table_name:endclick:;:endclick::endclick::endclick:
 .. parsonsprob:: get_best_value_q5
 
-   Arrange the SQL query blocks to find the maximum salary from the employees table and label it as max_value.
+   Arrange the SQL code blocks to retrieve the highest price from the products table and label it as 'max_value'.
 
    -----
 
-   AS max_value
+   SELECT MAX(price) AS max_value
    =====
-   SELECT MAX(salary)
+   FROM products;
    =====
-   FROM employees
+   SELECT MIN(price) AS max_value #distractor
    =====
-   AS best_value #distractor
-   =====
-   SELECT MIN(salary) #distractor
-   =====
-   FROM salaries #distractor
+   FROM table_name; #distractor
 
 .. note:: 
       
