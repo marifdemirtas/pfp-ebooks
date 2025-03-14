@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "test"
+project_name = "PurposeFirstDatabases"
 ###############################
 
 master_url = "https://runestone.academy"

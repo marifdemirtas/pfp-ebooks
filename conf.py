@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 #
 # Problem Solving with Algorithms and Data Structures documentation build configuration file, created by
@@ -236,7 +235,7 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 #### Customizations for Runestone
 # Following are custom components
 
-from custom_components import plan_display, random_number_box, planful_worked_example, changeable_areas_display
+from custom_components import plan_display, random_number_box, planful_worked_example, changeable_areas_display, fill_in_the_blank
 # from custom_components import hparsons
 
 # Save the original setup function if it exists
@@ -253,4 +252,5 @@ def setup(app):
     app.add_directive("plandisplay", plan_display.PlanDisplay)
     app.add_directive('planexample', planful_worked_example.PlanfulWorkedExample)
     app.add_directive('changeableareas', changeable_areas_display.ChangeableAreas)
+    app.add_directive('fillintheblank', fill_in_the_blank.FillInTheBlank)
     # app.add_directive("hparsons", hparsons.HParsonsDirective)

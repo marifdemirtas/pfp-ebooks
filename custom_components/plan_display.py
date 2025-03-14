@@ -55,10 +55,37 @@ class PlanDisplay(Directive):
         
         html_code += "</pre></div>"
         
+        # Add annotations section before processing changeable areas
+        html_code += """
+        <div class="annotations-container">
+            <button class="annotations-toggle" onclick="toggleAnnotations(this)">
+                <span class="toggle-icon">▶</span> Show Field Descriptions
+            </button>
+            <div class="annotations-content" style="display: none;">
+                <div class="annotations-grid">
+        """
+        
+        # Add each annotation
+        for placeholder, annotation in code_template.get('changeable_areas_annotations', {}).items():
+            color = changeable_areas_colors.get(placeholder, '#ffffff')
+            html_code += f"""
+                    <div class="annotation-item">
+                        <span class="annotation-field" style="background-color: {color}">{placeholder}</span>
+                        <span class="annotation-description">{annotation}</span>
+                    </div>
+            """
+        
+        html_code += """
+                </div>
+            </div>
+        </div>
+        """
+        
         for placeholder, values in changeable_areas.items():
             random_value = values[0]
             # Wrap the randomized text in a span for highlighting and later updates
-            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}'>{random_value}</span>")
+            annotation = code_template.get('changeable_areas_annotations', {}).get(placeholder, '')
+            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}' title='{annotation}'>{random_value}</span>")
 
         # Add the randomize button
         html_code += """
@@ -71,6 +98,7 @@ class PlanDisplay(Directive):
         <script>
         // Possible replacements loaded directly from JSON
         const possibleValues = """ + json.dumps(changeable_areas) + """;
+        const annotations = """ + json.dumps(code_template.get('changeable_areas_annotations', {})) + """;
 
         function randomizeValues() {
             document.querySelectorAll('.changeable').forEach((elem) => {
@@ -89,6 +117,20 @@ class PlanDisplay(Directive):
                 elem.classList.add('highlight');
                 setTimeout(() => elem.classList.remove('highlight'), 300);
             });
+        }
+
+        function toggleAnnotations(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.toggle-icon');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+                button.classList.add('active');
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+                button.classList.remove('active');
+            }
         }
         </script>
 
@@ -136,6 +178,71 @@ class PlanDisplay(Directive):
             color: #2c3e50;
         }
 
+        .annotations-container {
+            margin: 15px 0;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .annotations-toggle {
+            width: 100%;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #2c3e50;
+            transition: background-color 0.2s ease;
+        }
+
+        .annotations-toggle:hover {
+            background: #eaecef;
+        }
+
+        .annotations-toggle.active {
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .toggle-icon {
+            margin-right: 8px;
+            font-size: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .annotations-content {
+            padding: 15px;
+            background: white;
+        }
+
+        .annotations-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .annotation-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .annotation-field {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+            font-size: 13px;
+        }
+
+        .annotation-description {
+            color: #2c3e50;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
         .button-container {
             display: flex;
             gap: 10px;
@@ -158,13 +265,41 @@ class PlanDisplay(Directive):
         }
 
         .changeable {
+            position: relative;
             padding: 2px 4px;
             border-radius: 4px;
             transition: all 0.2s ease;
+            cursor: help;
+        }
+
+        .changeable:hover {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .changeable.highlight {
             transform: scale(1.1);
+        }
+
+        /* Custom tooltip styling */
+        .changeable[title] {
+            border-bottom: 1px dotted #666;
+        }
+
+        .changeable[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         </style>
         """
