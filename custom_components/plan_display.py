@@ -41,27 +41,32 @@ class PlanDisplay(Directive):
         changeable_areas_colors = code_template.get('changeable_areas_colors', {})
 
         # HTML structure
-        html_code = '<div>'
-        html_code += f"<div><strong>Name:</strong> {name}</div>"
-        html_code += f"<div><strong>Goal:</strong> {goal}</div>"
-        html_code += "<pre style='background-color: #e6f7df; padding: 10px;'>"
+        html_code = '<div class="plan-display-container">'
+        html_code += '<div class="plan-header">'
+        # html_code += f'<h3 class="plan-name"></h3>'
+        html_code += f'<h5 class="plan-goal">{name}: {goal}</h5>'
+        html_code += '</div>'
+        html_code += '<div class="code-container">'
+        html_code += "<pre>"
         
         # Parse code with highlights and initial randomized values
         for line_data in code_lines:
             html_code += line_data + "\n"
         
-        html_code += "</pre>"
+        html_code += "</pre></div>"
         
         for placeholder, values in changeable_areas.items():
             random_value = values[0]
             # Wrap the randomized text in a span for highlighting and later updates
             html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}'>{random_value}</span>")
 
-
         # Add the randomize button
         html_code += """
-        <button onclick="randomizeValues()">Show Examples</button>
-        <button onclick="replacePlaceholder()">Show Template</button></div>
+        <div class="button-container">
+            <button class="plan-button" onclick="randomizeValues()">Show Examples</button>
+            <button class="plan-button" onclick="replacePlaceholder()">Show Template</button>
+        </div>
+        </div>
         
         <script>
         // Possible replacements loaded directly from JSON
@@ -72,6 +77,8 @@ class PlanDisplay(Directive):
                 const key = elem.getAttribute('data-original');
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
+                elem.classList.add('highlight');
+                setTimeout(() => elem.classList.remove('highlight'), 300);
             });
         }
 
@@ -79,16 +86,85 @@ class PlanDisplay(Directive):
             document.querySelectorAll('.changeable').forEach((elem) => {
                 const key = elem.getAttribute('data-original');
                 elem.textContent = key;
+                elem.classList.add('highlight');
+                setTimeout(() => elem.classList.remove('highlight'), 300);
             });
         }
         </script>
 
         <style>
-        /* CSS to highlight changeable parts */
+        .plan-display-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .plan-header {
+            margin-bottom: 20px;
+        }
+
+        .plan-name {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .plan-goal {
+            color: #34495e;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .code-container {
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin: 15px 0;
+            overflow: auto;
+        }
+
+        .code-container pre {
+            margin: 0;
+            padding: 15px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #2c3e50;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .plan-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .plan-button:hover {
+            background-color: #2980b9;
+        }
+
         .changeable {
-            background-color: #ffeb3b;
-            padding: 0 3px;
-            border-radius: 3px;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .changeable.highlight {
+            transform: scale(1.1);
         }
         </style>
         """
