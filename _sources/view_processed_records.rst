@@ -45,7 +45,7 @@ Plan I - Exercises
    :code_template: |
       SELECT @@blank1@@(column_name) 
       FROM table_name;
-   :correct: ["SUM"]
+         :correct: ["processing_function"]
    :feedback: ["Try using one of these values: processing_function, LENGTH, AVG"]
    :placeholder: ["Enter the appropriate value"]
 

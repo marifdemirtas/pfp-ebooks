@@ -57,8 +57,4 @@ Related Plans:
 
 * Click to go to the plan page for :doc:`update_records_conditionally`
 
-.. toctree::
-   :maxdepth: 1
 
-   view_processed_records.rst
-   update_records_conditionally.rst

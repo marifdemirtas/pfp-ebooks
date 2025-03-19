@@ -23,7 +23,8 @@ We will demonstrate how to insert a new movie record into this table and how to 
    :language: sql
 
    # Insert a new record (row) into the specified table with values for specified columns
-   INSERT INTO movies (title, release_date, genre) VALUES ('Inception', '2010-07-16', 'Sci-Fi') 
+   INSERT INTO movies (title, release_date, genre) 
+   VALUES ('Inception', '2010-07-16', 'Sci-Fi') 
 
    # Calculate aggregated summary statistics for the whole table, or for subsets of the table
    SELECT genre, COUNT(title) 
