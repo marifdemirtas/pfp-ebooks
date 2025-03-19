@@ -1,6 +1,6 @@
-..  shortname:: update_values_conditionally
+..  shortname:: summarize_records
 
-..  description:: Update the value of a column in all records meeting a condition
+..  description:: Calculate aggregated summary statistics for the whole table, or for subsets of the table
 
 
 .. setup for automatic question numbering.
@@ -9,11 +9,11 @@
    :start: 1
    :prefix: p2-
 
-Plan: Update Values Conditionally
-=====================================
+Plan: Summarize Records
+===========================
 
-.. plandisplay:: plans.jsonupdate_values_conditionally_code
-   :plan: Update Values Conditionally
+.. plandisplay:: plans.jsonsummarize_records_code
+   :plan: Summarize Records
 
 This is a plan
 
