@@ -31,15 +31,15 @@ Real-world examples
 ::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    start_here
    integrated_5.rst
    integrated_3.rst
    integrated_2.rst
    integrated_4.rst
-   end_here
-
+   end_here_comparison
+   end_here_usability
 
 List of all plans
 --------------------
