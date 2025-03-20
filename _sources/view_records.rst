@@ -30,7 +30,8 @@ Plan I - Exercises
 .. fillintheblank:: view_records_q1
    :code_template: |
       SELECT @@blank1@@
-      FROM table_name;   :correct: ["column1, column2, column3"]
+      FROM table_name;
+   :correct: ["column1, column2, column3"]
    :feedback: ["Try using one of these values: column1, column2, column3, column_name, *, student_id, name, grade, student_id"]
    :placeholder: ["Enter the appropriate value"]
 
