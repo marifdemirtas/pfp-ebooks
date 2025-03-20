@@ -27,7 +27,7 @@ image[Ad campaign with celebrity endorsements]
    =====
    Add New Record
    =====
-   Summarize Records
+   Summarize Records #distractor
    =====
    View Records #distractor
    =====
