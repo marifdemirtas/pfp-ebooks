@@ -3,7 +3,7 @@ How to query data with SQL?
 
 Welcome! We have learned how databases work and why you might want to use them to organize your data. In this lab, we will go over *four* common types of SQL queries: Creating new records, Updating existing records, Reading records, and Deleting records (known as CRUD operations). 
 
-As a reminder, SQL queries are run on *tables*. Tables are like spreadsheets, with rows and columns. Each row represents a *record*, and each column represents a *field* in that record. For example, each *record* might be a student, with *fields* being IDs, names, grades.
+As a reminder, SQL queries are run on **tables**. Tables are like spreadsheets, with rows and columns. Each row represents a **record**, and each column represents a **field** in that record. For example, each **record** might be a student, with **fields** being IDs, names, grades.
 
 +------------+------------+-----------+
 | student_id | name       | grade     |
