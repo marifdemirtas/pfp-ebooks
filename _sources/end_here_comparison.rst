@@ -1,11 +1,11 @@
-Before You Start The Activity
+Before You Complete The Activity
 ===============================
 
 Rate how much you agree with the given statement.
 
 Rate the first two statements for the **first** student listed on your reflection sheet.
 
-.. poll:: poll-pre1-s1
+.. poll:: poll-post1-s1
    :option_1: Strongly Disagree
    :option_2: Disagree
    :option_3: Somewhat Disagree
@@ -16,7 +16,7 @@ Rate the first two statements for the **first** student listed on your reflectio
 
    I am interested in learning how to manage data and run SQL queries on databases.
 
-.. poll:: poll-pre2-s1
+.. poll:: poll-post2-s1
    :option_1: Strongly Disagree
    :option_2: Disagree
    :option_3: Somewhat Disagree
@@ -31,7 +31,7 @@ Rate the first two statements for the **first** student listed on your reflectio
 
 Rate the next two statements for the **second** student listed on your reflection sheet.
 
-.. poll:: poll-pre1-s2
+.. poll:: poll-post1-s2
    :option_1: Strongly Disagree
    :option_2: Disagree
    :option_3: Somewhat Disagree
@@ -43,7 +43,7 @@ Rate the next two statements for the **second** student listed on your reflectio
 
    I am interested in learning how to manage data and run SQL queries on databases.
 
-.. poll:: poll-pre2-s2
+.. poll:: poll-post2-s2
    :option_1: Strongly Disagree
    :option_2: Disagree
    :option_3: Somewhat Disagree

@@ -1,4 +1,4 @@
-Integrated Example - 2
+Example: Awarding Grammy's and finding recent Grammy nominee songs
 ===============================
 
 In this example, we are managing a database of songs and their artists. Recently, several artists have won Grammy awards, and we need to update our records to reflect their new status as Grammy winners. The database contains columns such as 'artist_name', 'song_title', 'release_date', and 'award_status'. We will update the 'award_status' to 'Awarded' for all songs by artists who have won a Grammy.
@@ -12,7 +12,7 @@ Below is an example of the table structure:
 +==============+=============+==============+==============+
 | Artist A     | Song 1      | 2023-05-01   | Nominated    |
 +--------------+-------------+--------------+--------------+
-| Artist B     | Song 2      | 2023-02-15   | Grammy Winner|
+| Artist B     | Song 2      | 2023-02-15   | Awarded      |
 +--------------+-------------+--------------+--------------+
 | Artist C     | Song 3      | 2022-11-12   | Nominated    |
 +--------------+-------------+--------------+--------------+
@@ -25,23 +25,25 @@ By employing the plans 'Update Records Conditionally' and 'Order Records', we ef
    # Update the value of a column in all records meeting a condition
    UPDATE songs
    SET award_status = 'Awarded'
-   WHERE artist_name = 'Grammy Winner';
+   WHERE artist_name = 'Artist C';
 
    # View records sorted in a given order
    SELECT * FROM songs
    ORDER BY release_date DESC;
    
 
-Related Plans:
+This example uses the following programming plans:
+
+.. toctree::
+   :maxdepth: 1
+   
+   update_records_conditionally
+   order_records
 
 .. plandisplay:: plans.jsonupdate_records_conditionally_code
    :plan: Update Records Conditionally
 
-* Click to go to the plan page for :doc:`update_records_conditionally`
-
 .. plandisplay:: plans.jsonorder_records_code
    :plan: Order Records
-
-* Click to go to the plan page for :doc:`order_records`
 
 
