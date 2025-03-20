@@ -38,6 +38,8 @@ Real-world examples
    integrated_3.rst
    integrated_2.rst
    integrated_4.rst
+   codewriting-1
+   codereading-1
    end_here_comparison
    end_here_usability
 
