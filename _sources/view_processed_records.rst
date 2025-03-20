@@ -42,11 +42,11 @@ Plan I - Exercises
    You are given a database table named 'students' with columns 'name', 'age', and 'grade'. You need to calculate the average grade of all students. Which SQL query correctly uses the 'View Processed Records' plan to achieve this?
 
 .. fillintheblank:: view_processed_records_q2
-   :code_template: |
-      SELECT @@blank1@@(column_name) 
-      FROM table_name;
-         :correct: ["processing_function"]
-   :feedback: ["Try using one of these values: processing_function, LENGTH, AVG"]
+   :code_template:
+      SELECT @@blank1@@(grade) 
+      FROM students;
+   :correct: ["AVG"]
+   :feedback: ["Try using one of these values: AVG"]
    :placeholder: ["Enter the appropriate value"]
 
    Suppose you have a database table named 'sales_data' which contains information about sales transactions. You want to calculate the sum of all sales figures in a column named 'total_sales'. Fill in the blank in the SQL query template to achieve this.

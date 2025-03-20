@@ -28,9 +28,9 @@ To use this plan, replace the table with the table you want to get records (rows
 Plan I - Exercises
 --------------------
 .. fillintheblank:: view_records_q1
-   :code_template: |
+   :code_template:
       SELECT @@blank1@@
-      FROM table_name;
+      FROM student_grades;
    :correct: ["student_id"]
    :feedback: ["Try using one of these values: column1, column2, column3, column_name, *, student_id, name, grade, student_id"]
    :placeholder: ["Enter the appropriate value"]
