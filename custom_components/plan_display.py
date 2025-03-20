@@ -59,7 +59,7 @@ class PlanDisplay(Directive):
         html_code += """
         <div class="annotations-container">
             <button class="annotations-toggle" onclick="toggleAnnotations(this)">
-                <span class="toggle-icon">▶</span> Show Field Descriptions
+                <span class="toggle-icon">▶</span> Show What Each Field Does
             </button>
             <div class="annotations-content" style="display: none;">
                 <div class="annotations-grid">
