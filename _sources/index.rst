@@ -20,11 +20,13 @@ Integrated Examples
 
 .. toctree::
    :maxdepth: 1
-
+   
+   start_here
    integrated_5.rst
    integrated_3.rst
    integrated_2.rst
    integrated_4.rst
+   end_here
 
 List of Plans
 --------------------
