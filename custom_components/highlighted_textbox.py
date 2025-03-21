@@ -10,7 +10,7 @@ class HighlightedTextbox(Directive):
         'title': directives.unchanged,
         'color': directives.unchanged,
         'highlight-color': directives.unchanged,
-        'initially-visible': directives.flag,
+        'highlight-on-load': directives.flag,
     }
     has_content = True
 
@@ -18,7 +18,7 @@ class HighlightedTextbox(Directive):
         title = self.options.get('title', 'Note')
         color = self.options.get('color', '#f9f9c6')  # Default light yellow
         highlight_color = self.options.get('highlight-color', '#ffeb3b')  # Default bright yellow
-        initially_visible = 'initially-visible' in self.options
+        highlight_on_load = 'highlight-on-load' in self.options
         
         # Generate a unique ID for this textbox
         import random
@@ -26,16 +26,12 @@ class HighlightedTextbox(Directive):
         
         content = '\n'.join(self.content)
         
-        display_style = "block" if initially_visible else "none"
-        toggle_text = "Hide" if initially_visible else "Show"
-        toggle_icon = "▼" if initially_visible else "▶"
-        
         html = f"""
         <div class="highlighted-textbox-container">
-            <button class="highlighted-textbox-toggle" onclick="toggleTextbox('{unique_id}', this)">
-                <span class="toggle-icon" id="{unique_id}-icon">{toggle_icon}</span> {title}
-            </button>
-            <div class="highlighted-textbox" id="{unique_id}" style="background-color: {color}; display: {display_style};">
+            <div class="highlighted-textbox" id="{unique_id}" style="background-color: {color};">
+                <div class="highlighted-textbox-header">
+                    <h4 class="highlighted-textbox-title">{title}</h4>
+                </div>
                 <div class="highlighted-textbox-content">
                     {content}
                 </div>
@@ -43,23 +39,26 @@ class HighlightedTextbox(Directive):
         </div>
         
         <script>
-        function toggleTextbox(id, button) {{
-            var textbox = document.getElementById(id);
-            var icon = document.getElementById(id + '-icon');
+        // Apply highlight animation on load if specified
+        document.addEventListener('DOMContentLoaded', function() {{
+            var shouldHighlight = {str(highlight_on_load).lower()};
             
-            if (textbox.style.display === 'none') {{
-                textbox.style.display = 'block';
-                // Apply highlight animation
+            if (shouldHighlight) {{
+                var textbox = document.getElementById('{unique_id}');
                 textbox.style.backgroundColor = '{highlight_color}';
                 setTimeout(function() {{
                     textbox.style.backgroundColor = '{color}';
-                }}, 500);
-                icon.textContent = '▼';
-            }} else {{
-                textbox.style.display = 'none';
-                icon.textContent = '▶';
+                }}, 1000);
             }}
-        }}
+        }});
+        
+        // Make element highlight when clicked
+        document.getElementById('{unique_id}').addEventListener('click', function() {{
+            this.style.backgroundColor = '{highlight_color}';
+            setTimeout(function() {{
+                document.getElementById('{unique_id}').style.backgroundColor = '{color}';
+            }}, 500);
+        }});
         </script>
         
         <style>
@@ -68,39 +67,28 @@ class HighlightedTextbox(Directive):
             font-family: system-ui, -apple-system, sans-serif;
         }}
         
-        .highlighted-textbox-toggle {{
-            width: 100%;
-            padding: 10px 15px;
-            background: #f8f9fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            text-align: left;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 600;
-            color: #2c3e50;
-            transition: background-color 0.2s ease;
-        }}
-        
-        .highlighted-textbox-toggle:hover {{
-            background: #eaecef;
-        }}
-        
-        .toggle-icon {{
-            margin-right: 8px;
-            font-size: 12px;
-            transition: transform 0.2s ease;
-        }}
-        
         .highlighted-textbox {{
-            margin-top: 10px;
             border-radius: 8px;
             border: 1px solid #e1e4e8;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             padding: 15px;
-            transition: all 0.5s ease;
+            transition: background-color 0.5s ease;
+            cursor: pointer;
+        }}
+        
+        .highlighted-textbox:hover {{
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }}
+        
+        .highlighted-textbox-header {{
+            margin-bottom: 10px;
+        }}
+        
+        .highlighted-textbox-title {{
+            font-size: 18px;
+            color: #2c3e50;
+            margin: 0 0 5px 0;
+            font-weight: 600;
         }}
         
         .highlighted-textbox-content {{
