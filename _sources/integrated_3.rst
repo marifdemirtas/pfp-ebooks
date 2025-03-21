@@ -5,17 +5,25 @@ At the University of Illinois Urbana-Champaign, the registrar's office manages a
 
 The `student_grades` table may include columns such as:
 
-+------------+------------+-------+
-| student_id | name       | grade |
-+============+============+=======+
-| 1001       | John Doe   | 85    |
-+------------+------------+-------+
-| 1002       | Jane Smith | 58    |
-+------------+------------+-------+
-| ...        | ...        | ...   |
-+------------+------------+-------+
-| 1014       | Alex Brown | 47    |
-+------------+------------+-------+
++------------+----------------------+-----------+
+| student_id | name                 | grade     |
++============+======================+===========+
+| 001        | James Smith          | 84        |
++------------+----------------------+-----------+
+| 002        | Michael Brown        | 55        |
++------------+----------------------+-----------+
+| 005        | Mary Wilson          | 68        |
++------------+----------------------+-----------+
+| 006        | Jennifer Garcia      | 75        |
++------------+----------------------+-----------+
+| 007        | Elizabeth Martinez   | 92        |
++------------+----------------------+-----------+
+| 008        | Patricia Anderson    | 58        |
++------------+----------------------+-----------+
+| ...        | ...                  | ...       |
++------------+----------------------+-----------+
+| 015        | David Taylor         | 45        |
++------------+----------------------+-----------+
 
 The goal is to remove records where the grade is below 60 and to view all students' records in the `student_grades` table.
 
@@ -33,12 +41,6 @@ The goal is to remove records where the grade is below 60 and to view all studen
 
 This example uses the following programming plans:
 
-.. toctree::
-   :maxdepth: 1
-   
-   remove_records
-   view_records
-
 
 .. plandisplay:: plans.jsonremove_records_code
    :plan: Remove Records
@@ -48,4 +50,14 @@ This example uses the following programming plans:
    :plan: View Records
 
 
+.. shortanswer:: integrated_3_q1
+   Click on "Show Examples" three times each for the plans above. Did you notice anything?
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   remove_records
+   view_records
 

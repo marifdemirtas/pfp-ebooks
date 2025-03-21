@@ -5,15 +5,25 @@ Welcome! We have learned how databases work and why you might want to use them t
 
 As a reminder, SQL queries are run on **tables**. Tables are like spreadsheets, with rows and columns. Each row represents a **record**, and each column represents a **field** in that record. For example, each **record** might be a student, with **fields** being IDs, names, grades.
 
-+------------+------------+-----------+
-| student_id | name       | grade     |
-+============+============+===========+
-| 001        | John Doe   | A         |
-+------------+------------+-----------+
-| ...        | ...        | ...       |
-+------------+------------+-----------+
-| 915        | Emily Jones| A-        |
-+------------+------------+-----------+
++------------+----------------------+-----------+
+| student_id | name                 | grade     |
++============+======================+===========+
+| 001        | James Smith          | A         |
++------------+----------------------+-----------+
+| 002        | Michael Brown        | B+        |
++------------+----------------------+-----------+
+| 005        | Mary Wilson          | A         |
++------------+----------------------+-----------+
+| 006        | Jennifer Garcia      | A-        |
++------------+----------------------+-----------+
+| 007        | Elizabeth Martinez   | B+        |
++------------+----------------------+-----------+
+| 008        | Patricia Anderson    | A         |
++------------+----------------------+-----------+
+| ...        | ...                  | ...       |
++------------+----------------------+-----------+
+| 015        | David Taylor         | A-        |
++------------+----------------------+-----------+
 
 ------------------------------
 
@@ -26,15 +36,12 @@ As a reminder, SQL queries are run on **tables**. Tables are like spreadsheets, 
 
    Throughout the tutorial, you will first see real-world examples of how SQL is used, and then you will see how these examples break down into plans.
 
-
-Real-world examples
-::::::::::::::::::::::::::::::
+<h1> To start, click on the arrow on the bottom right (or the link below that says "Before You Start The Activity"). </h1>
 
 .. toctree::
    :maxdepth: 2
    
    start_here
-   integrated_5.rst
    integrated_3.rst
    integrated_2.rst
    integrated_4.rst
@@ -42,21 +49,4 @@ Real-world examples
    codereading-1
    end_here_comparison
    end_here_usability
-
-List of all plans
---------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   remove_records
-   update_records_conditionally
-   add_new_record
-   drop_column
-   summarize_records
-   order_records
-   view_processed_records
-   update_records_conditionally
-   view_records
-   view_records
 
