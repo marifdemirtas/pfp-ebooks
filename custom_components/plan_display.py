@@ -82,10 +82,10 @@ class PlanDisplay(Directive):
         """
         
         for placeholder, values in changeable_areas.items():
-            random_value = values[0]
-            # Wrap the randomized text in a span for highlighting and later updates
+            # Use placeholder as initial value (template) instead of random example
+            # Wrap the template text in a span for highlighting and later updates
             annotation = code_template.get('changeable_areas_annotations', {}).get(placeholder, '')
-            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}' title='{annotation}'>{random_value}</span>")
+            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable template-value' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}' title='{annotation}'>{placeholder}</span>")
 
         # Add the randomize button
         html_code += """
@@ -149,15 +149,16 @@ class PlanDisplay(Directive):
         document.addEventListener('DOMContentLoaded', function() {
             const tooltip = document.getElementById('custom-tooltip');
             
-            // Initialize buttons and changeable elements to default state (examples)
+            // Initialize buttons and changeable elements to show template initially
             document.querySelectorAll('.changeable').forEach(el => {
-                // Set initial state to example (not template)
-                el.classList.remove('template-value');
+                const key = el.getAttribute('data-original');
+                el.textContent = key;  // Show template text
+                el.classList.add('template-value');  // Add template styling
             });
             
-            // Initial button state - none active
+            // Initial button state - template button active
             document.querySelector('.examples-button').classList.remove('active');
-            document.querySelector('.template-button').classList.remove('active');
+            document.querySelector('.template-button').classList.add('active');
             
             // Set up tooltip functionality
             document.querySelectorAll('.changeable').forEach(el => {
