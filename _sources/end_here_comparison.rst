@@ -1,4 +1,4 @@
-Before You Complete The Activity
+Before You Complete The Activity - 1
 ===============================
 
 Please rate how much you agree with the each statement. Your responses will be anonymized.
@@ -25,9 +25,12 @@ Please rate how much you agree with the each statement. Your responses will be a
 
    I am confident in my ability to write or edit SQL queries to analyze datasets.
 
-You have reached the end of the textbook. If you completed the online activities and your reflection sheet, you can check in with your TA.
 
-If you want to go back to the main page, click the link below.
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
 
-.. raw:: html
-   <a href="/index.html" >Click here to go back to the main page</a>
+   Click on the arrow on the bottom right to continue.
+

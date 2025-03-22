@@ -1,7 +1,9 @@
-Exercise: Understanding Queries Written By Others
+Exercise: Managing Spotify Databases
 ================================
 
-You are working for a music streaming service. One of your coworkers shared the following queries with you, and asked you to interpret the output in a report. Look at the code and describe what the queries might be doing.
+You are working for Spotify. One of your coworkers shared the following queries with you, and asked you to interpret the output in a report. However, they did not comment their code, and it looks like they are offline, so you need to figure out what this does.
+
+Look at the code and describe what the queries might be doing.
 
 .. activecode:: streaming_ex
     :language: sql
@@ -27,6 +29,16 @@ You are working for a music streaming service. One of your coworkers shared the 
     GROUP BY artist
 
 
-.. shortanswer:: unique_id
+.. shortanswer:: exercise_2_q1
 
     Enter your description here.
+
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on the arrow on the bottom right to continue.
+

@@ -7,27 +7,39 @@ Additionally, to showcase the most recent Grammy-winning songs, we will order th
 
 Below is an example of the table structure:
 
-+--------------+-------------+--------------+--------------+
-| artist_name  | song_title  | release_date | award_status |
-+==============+=============+==============+==============+
-| Artist A     | Song 1      | 2023-05-01   | Nominated    |
-+--------------+-------------+--------------+--------------+
-| Artist B     | Song 2      | 2023-02-15   | Awarded      |
-+--------------+-------------+--------------+--------------+
-| Artist C     | Song 3      | 2022-11-12   | Nominated    |
-+--------------+-------------+--------------+--------------+
++-----------------+-------------------------+--------------+--------------+
+| artist_name     | song_title              | release_date | award_status |
++=================+=========================+==============+==============+
+| Taylor Swift    | Anti-Hero               | 2023-05-01   | Nominated    |
++-----------------+-------------------------+--------------+--------------+
+| Harry Styles    | As It Was               | 2023-02-15   | Awarded      |
++-----------------+-------------------------+--------------+--------------+
+| Adele           | Easy On Me              | 2022-11-12   | Nominated    |
++-----------------+-------------------------+--------------+--------------+
+| Lizzo           | About Damn Time         | 2022-09-20   | Awarded      |
++-----------------+-------------------------+--------------+--------------+
+| Beyoncé         | Break My Soul           | 2022-07-29   | Awarded      |
++-----------------+-------------------------+--------------+--------------+
 
 By employing the plans 'Update Records Conditionally' and 'Order Records', we effectively maintain and display our data in a way that highlights recent achievements in the music industry.
 
-.. activecode:: integrated_2
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on <b>Save & Run</b> to see the code run.
+
+.. activecode:: example_2_q1
    :language: sql
 
-   # Update the value of a column in all records meeting a condition
+   -- Update the value of a column in all records meeting a condition
    UPDATE songs
    SET award_status = 'Awarded'
-   WHERE artist_name = 'Artist C';
+   WHERE artist_name = 'Adele';
 
-   # View records sorted in a given order
+   -- View records sorted in a given order
    SELECT * FROM songs
    ORDER BY release_date DESC;
    
@@ -46,4 +58,15 @@ This example uses the following programming plans:
 .. plandisplay:: plans.jsonorder_records_code
    :plan: Order Records
 
+.. shortanswer:: example_2_q2
 
+   Click on "Show Examples" three times each for the plans above. Have you noticed any other values that could be used in these plans?
+
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on the arrow on the bottom right to continue.

@@ -7,9 +7,8 @@
 
 .. qnum::
    :start: 1
-   :prefix: p2-
 
-Plan: Remove Records
+Plan 1: Remove Records
 ========================
 
 .. plandisplay:: plans.jsonremove_records_code
@@ -17,17 +16,17 @@ Plan: Remove Records
 
 This plan is used to remove some records permanently from the table, using a condition to decide which records will be deleted.
 
-Plan I - When to use this plan?
+Plan 1 - When to use this plan?
 --------------------------------
 This plan is used when you want to remove records from the table using some criteria, such as dropping all student grades below some threshold, removing records that is missing a value in the specified field, or simply processing records that are marked for deletion.
 
-Plan I - What parts can be customized to use this plan?
+Plan 1 - What parts can be customized to use this plan?
 -------------------------------------------------------
 To use this plan, replace the table with the name of your table, and specify a condition using fields (columns) such that each record (row) that satisfies that condition will be deleted.
 
-Plan I - Exercises
+Plan 1 - Exercises
 --------------------
-.. parsonsprob:: remove_records_q1
+.. parsonsprob:: plan_1_q1
 
    Rearrange the SQL code blocks to remove records from the 'student_grades' table where the 'grade' is less than 60.
 
@@ -43,7 +42,7 @@ Plan I - Exercises
    =====
    WHERE COLUMN < 2 #distractor
 
-.. mchoice:: remove_records_q2
+.. mchoice:: plan_1_q2
    :random: 
    :answer_a: DELETE FROM student_grades WHERE mt1 IS NULL;
    :feedback_a: Correct!
@@ -55,9 +54,10 @@ Plan I - Exercises
 
    You are working with a database containing student grades. Students who have taken the first midterm have a value under the field 'mt1'. This field is empty for students who have not taken the exam (denoted by the special value NULL). You need to remove records for students who have not taken the exam. Which SQL statement correctly achieves this task?
 
-.. note:: 
-      
-      .. raw:: html
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
 
-       <a href="/index.html" >Click here to go back to the main page</a>
-    
+   Click on the arrow on the bottom right to continue.

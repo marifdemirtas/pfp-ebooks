@@ -27,7 +27,15 @@ The `student_grades` table may include columns such as:
 
 The goal is to remove records where the grade is below 60 and to view all students' records in the `student_grades` table.
 
-.. activecode:: integrated_3
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on <b>Save & Run</b> to see the code run.
+
+.. activecode:: example_1_q1
    :language: sql
 
    -- Remove records where the value in a column meets a condition
@@ -38,8 +46,15 @@ The goal is to remove records where the grade is below 60 and to view all studen
    SELECT student_id, name, grade
    FROM student_grades;
 
+----------------
 
 This example uses the following programming plans:
+
+.. toctree::
+   :maxdepth: 1
+   
+   remove_records
+   view_records
 
 
 .. plandisplay:: plans.jsonremove_records_code
@@ -50,14 +65,16 @@ This example uses the following programming plans:
    :plan: View Records
 
 
-.. shortanswer:: integrated_3_q1
+.. shortanswer:: example_1_q2
+
    Click on "Show Examples" three times each for the plans above. Did you notice anything?
 
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   
-   remove_records
-   view_records
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
 
+   **🔎  First, check the first two questions on your worksheet.**
+   Then, click on the arrow on the bottom right to continue.

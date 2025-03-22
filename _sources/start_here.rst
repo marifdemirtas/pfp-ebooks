@@ -25,4 +25,10 @@ Please rate how much you agree with the each statement. Your responses will be a
 
    I am confident in my ability to write or edit SQL queries to analyze datasets.
 
-Click on the arrow on the bottom right to continue.
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on the arrow on the bottom right to continue.

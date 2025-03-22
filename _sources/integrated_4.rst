@@ -12,12 +12,32 @@ Below is a sample structure of the 'movies' table in the database:
 +-------------+-------------+-----------+
 | Title       | Release Date| Genre     |
 +=============+=============+===========+
+| Oppenheimer | 2023-07-21  | Drama     |
++-------------+-------------+-----------+
+| Barbie      | 2023-07-21  | Comedy    |
++-------------+-------------+-----------+
+| Spider-Man  | 2021-12-17  | Action    |
++-------------+-------------+-----------+
+| Everything  | 2022-03-25  | Sci-Fi    |
++-------------+-------------+-----------+
 | Avatar      | 2009-12-18  | Sci-Fi    |
 +-------------+-------------+-----------+
-| Titanic     | 1997-12-19  | Romance   |
+| Get Out     | 2017-02-24  | Horror    |
++-------------+-------------+-----------+
+| La La Land  | 2016-12-09  | Musical   |
++-------------+-------------+-----------+
+| Parasite    | 2019-10-11  | Drama     |
 +-------------+-------------+-----------+
 
 We will demonstrate how to insert a new movie record into this table and how to summarize the number of movies for each genre. This will help us keep the database updated and generate insightful reports on movie genre trends.
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on <b>Save & Run</b> to see the code run.
 
 .. activecode:: integrated_4
    :language: sql
@@ -45,3 +65,17 @@ This example uses the following programming plans:
 
 .. plandisplay:: plans.jsonsummarize_records_code
    :plan: Summarize Records
+
+
+.. shortanswer:: integrated_4_q1
+
+   Click on "Show Examples" three times each for the plans above. What are some other values for the changeable parts of these plans?
+
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on the arrow on the bottom right to continue.

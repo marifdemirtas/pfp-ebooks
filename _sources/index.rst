@@ -36,7 +36,18 @@ As a reminder, SQL queries are run on **tables**. Tables are like spreadsheets, 
 
    Throughout the tutorial, you will first see real-world examples of how SQL is used, and then you will see how these examples break down into plans.
 
-<h1> To start, click on the arrow on the bottom right (or the link below that says "Before You Start The Activity"). </h1>
+======
+
+.. highlightedtextbox::
+   :title: Getting Started
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Look for these golden boxes for instructions. You will see a magnifying glass (🔎) when you need to go back to your worksheet.
+
+   To start, click on the arrow on the bottom right (or the link below that says "Before You Start The Activity").
+
 
 .. toctree::
    :maxdepth: 2

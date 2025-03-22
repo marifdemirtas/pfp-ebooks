@@ -1,4 +1,4 @@
-Before You Complete The Activity
+Before You Complete The Activity - 2
 ===============================
 
 Rate how much you agree with the given statement based on your experience with this interface.
@@ -30,3 +30,13 @@ Rate how much you agree with the given statement based on your experience with t
 
 
 ----
+
+
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   You have reached the end of the textbook. If you completed the online activities and your reflection sheet, you can check in with your TA. <a href='/ns/books/published/cs102sql/index.html'>If not, click here to go back to the table of contents.</a>

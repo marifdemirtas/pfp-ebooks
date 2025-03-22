@@ -7,9 +7,8 @@
 
 .. qnum::
    :start: 1
-   :prefix: p2-
 
-Plan: Add New Record
+Plan 5: Add New Record
 ========================
 
 .. plandisplay:: plans.jsonadd_new_record_code
@@ -17,17 +16,17 @@ Plan: Add New Record
 
 This is a plan to add new records (rows) into a table.
 
-Plan I - When to use this plan?
+Plan 5 - When to use this plan?
 --------------------------------
 This plan is used when you want to add more data to a table in your database.
 
-Plan I - What parts can be customized to use this plan?
+Plan 5 - What parts can be customized to use this plan?
 -------------------------------------------------------
 To use this plan, replace the name of the table, specify which fields will exist in the row you will insert, and then provide the values for those fields.
 
-Plan I - Exercises
+Plan 5 - Exercises
 --------------------
-.. parsonsprob:: add_new_record_q1
+.. parsonsprob:: plan_5_q1
 
    Arrange the code blocks to insert a new record into the 'users' table with the specified field names and values.
 
@@ -41,7 +40,7 @@ Plan I - Exercises
    =====
    VALUES ('Inception', '2010-07-16', 'Sci-Fi') #distractor
 
-.. mchoice:: add_new_record_q2
+.. mchoice:: plan_5_q2
    :random: 
    :answer_a: INSERT INTO movies (title, release_date, genre) VALUES ('Inception', '2010-07-16', 'Sci-Fi');
    :feedback_a: Correct!
@@ -55,9 +54,10 @@ Plan I - Exercises
 
    You are tasked with adding a new record into the 'movies' table in a database using SQL. Which of the following SQL statements correctly adds a movie titled 'Inception', released on '2010-07-16', with the genre 'Sci-Fi'?
 
-.. note:: 
-      
-      .. raw:: html
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
 
-       <a href="/index.html" >Click here to go back to the main page</a>
-    
+   Click on the arrow on the bottom right to continue.

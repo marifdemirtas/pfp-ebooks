@@ -5,19 +5,25 @@ Let's assume that you are running the advertisement campaign for a drink company
 
 image[Ad campaign with celebrity endorsements]
 
-+------------+----------------+-----------------+
-| Celebrity  | Ad Cost (USD)  | Projected Reach |
-+============+================+=================+
-| A-list     | 50,000         | 500,000         |
-+------------+----------------+-----------------+
-| B-list     | 30,000         | 300,000         |
-+------------+----------------+-----------------+
-| C-list     | 10,000         | 150,000         |
-+------------+----------------+-----------------+
++------------------+----------------+-----------------+
+| Celebrity        | Ad Cost (USD)  | Projected Reach |
++==================+================+=================+
+| Taylor Swift     | 500,000        | 5,000,000       |
++------------------+----------------+-----------------+
+| George Clooney   | 300,000        | 2,000,000       |
++------------------+----------------+-----------------+
+| Emma Watson      | 150,000        | 1,000,000       |
++------------------+----------------+-----------------+
+| Chris Hemsworth  | 200,000        | 1,500,000       |
++------------------+----------------+-----------------+
+| Jennifer Lopez   | 400,000        | 3,000,000       |
++------------------+----------------+-----------------+
+| Robert Downey Jr.| 450,000        | 4,000,000       |
++------------------+----------------+-----------------+
 
-.. parsonsprob:: 1_q1
+.. parsonsprob:: exercise_1_q1
 
-   You just started a new ad campaign with celebrity John Doe. However, to afford it, you will need to stop the ad campaign with the lowest reach *first*. Which plans could you use to achieve this? Order them below.
+   You just started a new ad campaign with the rapper Kendrick Lamar. However, to afford it, you will need to stop the ad campaign with the lowest reach *first*. Which plans could you use to find this campaign, stop this campaign, and start the new campaign? Order them below.
 
    -----
 
@@ -34,9 +40,9 @@ image[Ad campaign with celebrity endorsements]
    Update Records Conditionally #distractor
    
 
-.. parsonsprob:: 1_q2
+.. parsonsprob:: exercise_1_q2
 
-   Assuming that you have already started your John Doe campaign, how can you calculate the average cost of all your ad campaigns?
+   You have already started your campaign with Kendrick Lamar. Your manager wants to learn what is the average cost for your ads. How can you calculate the average cost of all your ad campaigns?
 
    -----
 
@@ -53,5 +59,11 @@ image[Ad campaign with celebrity endorsements]
    ORDER BY 'Ad Cost' #distractor
    
 
-   
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
 
+   **🔎 First, check the first two questions on your worksheet.**
+   Then, click on the arrow on the bottom right to continue.
