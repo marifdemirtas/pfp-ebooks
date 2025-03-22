@@ -35,8 +35,9 @@ The goal is to remove records where the grade is below 60 and to view all studen
 
    Click on <b>Save & Run</b> to see the code run.
 
-.. activecode:: example_1_q1
+.. activecode:: example_1_q1a
    :language: sql
+   :dburl: /_static/student_grades.sqlite3
 
    -- Remove records where the value in a column meets a condition
    DELETE FROM student_grades
@@ -45,6 +46,7 @@ The goal is to remove records where the grade is below 60 and to view all studen
    -- Select and view columns from the specified table
    SELECT student_id, name, grade
    FROM student_grades;
+
 
 ----------------
 
@@ -76,5 +78,5 @@ This example uses the following programming plans:
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   **🔎  First, check the first two questions on your worksheet.**
+   🔎  First, check the first two questions on your worksheet.
    Then, click on the arrow on the bottom right to continue.

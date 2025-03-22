@@ -66,5 +66,5 @@ Plan 6 - Exercises
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   **🔎  First, check the first two questions on your worksheet.**
+   🔎  First, check the first two questions on your worksheet.
    Then, click on the arrow on the bottom right to continue.

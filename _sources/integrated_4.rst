@@ -41,6 +41,7 @@ We will demonstrate how to insert a new movie record into this table and how to 
 
 .. activecode:: integrated_4
    :language: sql
+   :dburl: /_static/movies.sqlite3
 
    # Insert a new record (row) into the specified table with values for specified columns
    INSERT INTO movies (title, release_date, genre) 

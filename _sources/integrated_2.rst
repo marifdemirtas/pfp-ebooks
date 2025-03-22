@@ -33,6 +33,7 @@ By employing the plans 'Update Records Conditionally' and 'Order Records', we ef
 
 .. activecode:: example_2_q1
    :language: sql
+   :dburl: /_static/songs.sqlite3
 
    -- Update the value of a column in all records meeting a condition
    UPDATE songs

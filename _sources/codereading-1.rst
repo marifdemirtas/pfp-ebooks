@@ -7,6 +7,7 @@ Look at the code and describe what the queries might be doing.
 
 .. activecode:: streaming_ex
     :language: sql
+    :dburl: /_static/spotify.sqlite3
 
     INSERT INTO Users (username, email, subscription_status) VALUES
     ('alice_music', 'alice@example.com', 'premium'),
@@ -21,8 +22,8 @@ Look at the code and describe what the queries might be doing.
     ('Shape of Sound', 'Echo Beats', 'Rhythm Nation', 150),
     ('Mountain Ride', 'Echo Beats', 'Rhythm Nation', 20),
     ('Flying Through', 'Synth Dreams', 'Neon Lights', 70),
-    ('Jazz & Chill', 'Smooth Cats', 'Lounge Vibes', 30);
-    ('Night Drive', 'Synth Dreams', 'Neon Lights', 90),
+    ('Jazz & Chill', 'Smooth Cats', 'Lounge Vibes', 30),
+    ('Night Drive', 'Synth Dreams', 'Neon Lights', 90);
 
     SELECT title, artist, COUNT(listened_by)
     FROM Songs
