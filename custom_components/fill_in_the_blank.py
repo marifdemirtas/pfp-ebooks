@@ -71,12 +71,13 @@ class FillInTheBlank(RunestoneIdDirective):
             <div class="feedback-container" style="display: none;">
                 <div class="feedback-text"></div>
             </div>
-            <button class="check-answer-btn">Check Answer</button>
+            <button class="btn-success btn check-answer-btn">Check Me</button>
         </div>
 
         <style>
         .fill-in-blank-container {{
-            background: #FCF8E3;
+            background: color(srgb 0.9387 0.9737 0.999);
+            border: 4px solid black;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
@@ -158,22 +159,6 @@ class FillInTheBlank(RunestoneIdDirective):
             background-color: #fff5f5;
             border: 1px solid #e74c3c;
             color: #e74c3c;
-        }}
-
-        .check-answer-btn {{
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.2s ease;
-            margin-top: 10px;
-        }}
-
-        .check-answer-btn:hover {{
-            background-color: #2980b9;
         }}
         </style>
 

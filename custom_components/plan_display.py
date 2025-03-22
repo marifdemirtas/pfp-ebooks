@@ -315,7 +315,7 @@ class PlanDisplay(Directive):
         }
 
         .plan-button {
-            color: white;
+            color: white !important;
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
