@@ -90,8 +90,8 @@ class PlanDisplay(Directive):
         # Add the randomize button
         html_code += """
         <div class="button-container">
-            <button class="plan-button" onclick="randomizeValues()">Show Examples</button>
-            <button class="plan-button" onclick="replacePlaceholder()">Show Template</button>
+            <button class="plan-button examples-button" onclick="randomizeValues()">Show Examples</button>
+            <button class="plan-button template-button" onclick="replacePlaceholder()">Show Template</button>
         </div>
         </div>
         
@@ -108,8 +108,13 @@ class PlanDisplay(Directive):
                 const values = possibleValues[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
                 elem.classList.add('highlight');
+                elem.classList.remove('template-value');
                 setTimeout(() => elem.classList.remove('highlight'), 300);
             });
+            
+            // Update button states
+            document.querySelector('.examples-button').classList.remove('active');
+            document.querySelector('.template-button').classList.remove('active');
         }
 
         function replacePlaceholder() {
@@ -117,8 +122,13 @@ class PlanDisplay(Directive):
                 const key = elem.getAttribute('data-original');
                 elem.textContent = key;
                 elem.classList.add('highlight');
+                elem.classList.add('template-value');
                 setTimeout(() => elem.classList.remove('highlight'), 300);
             });
+            
+            // Update button states - only template button is active
+            document.querySelector('.examples-button').classList.remove('active');
+            document.querySelector('.template-button').classList.add('active');
         }
 
         function toggleAnnotations(button) {
@@ -139,6 +149,17 @@ class PlanDisplay(Directive):
         document.addEventListener('DOMContentLoaded', function() {
             const tooltip = document.getElementById('custom-tooltip');
             
+            // Initialize buttons and changeable elements to default state (examples)
+            document.querySelectorAll('.changeable').forEach(el => {
+                // Set initial state to example (not template)
+                el.classList.remove('template-value');
+            });
+            
+            // Initial button state - none active
+            document.querySelector('.examples-button').classList.remove('active');
+            document.querySelector('.template-button').classList.remove('active');
+            
+            // Set up tooltip functionality
             document.querySelectorAll('.changeable').forEach(el => {
                 el.addEventListener('mouseenter', function(e) {
                     const annotation = this.getAttribute('title');
@@ -166,13 +187,13 @@ class PlanDisplay(Directive):
                         this.setAttribute('title', annotation);
                     }
                 });
-                
-                // Handle scroll events to reposition tooltip
-                window.addEventListener('scroll', function() {
-                    if (tooltip.style.display === 'block') {
-                        tooltip.style.display = 'none';
-                    }
-                });
+            });
+            
+            // Handle scroll events to reposition tooltip
+            window.addEventListener('scroll', function() {
+                if (tooltip.style.display === 'block') {
+                    tooltip.style.display = 'none';
+                }
             });
         });
         </script>
@@ -293,26 +314,44 @@ class PlanDisplay(Directive):
         }
 
         .plan-button {
-            background-color: #3498db;
             color: white;
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
         }
-
-        .plan-button:hover {
+        
+        .examples-button {
+            background-color: #3498db;
+        }
+        
+        .examples-button:hover {
             background-color: #2980b9;
         }
+        
+        .template-button {
+            background-color: #27ae60;
+        }
+        
+        .template-button:hover {
+            background-color: #219955;
+        }
+        
+        .plan-button.active {
+            box-shadow: 0 0 0 2px white, 0 0 0 4px currentColor;
+            font-weight: bold;
+        }
 
+        /* Changeable styling */
         .changeable {
             position: relative;
             padding: 2px 4px;
             border-radius: 4px;
             transition: all 0.2s ease;
             cursor: help;
+            border-bottom: 1px dotted #666;
         }
 
         .changeable:hover {
@@ -322,10 +361,10 @@ class PlanDisplay(Directive):
         .changeable.highlight {
             transform: scale(1.1);
         }
-
-        /* Changeable styling */
-        .changeable {
-            border-bottom: 1px dotted #666;
+        
+        .changeable.template-value {
+            border: 2px dashed #333;
+            padding: 1px 3px; /* Reduce padding to compensate for border */
         }
         
         /* Custom tooltip styling */
