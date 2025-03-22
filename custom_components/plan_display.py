@@ -95,6 +95,8 @@ class PlanDisplay(Directive):
         </div>
         </div>
         
+        <div id="custom-tooltip" class="custom-tooltip" style="display: none;"></div>
+        
         <script>
         // Possible replacements loaded directly from JSON
         const possibleValues = """ + json.dumps(changeable_areas) + """;
@@ -132,6 +134,47 @@ class PlanDisplay(Directive):
                 button.classList.remove('active');
             }
         }
+        
+        // Add event listeners for all changeable elements after the DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltip = document.getElementById('custom-tooltip');
+            
+            document.querySelectorAll('.changeable').forEach(el => {
+                el.addEventListener('mouseenter', function(e) {
+                    const annotation = this.getAttribute('title');
+                    if (annotation) {
+                        this.removeAttribute('title'); // Remove title to prevent native tooltip
+                        this.setAttribute('data-tooltip', annotation); // Store it in data attribute
+                        
+                        tooltip.textContent = annotation;
+                        tooltip.style.display = 'block';
+                        
+                        // Position the tooltip above the element
+                        const rect = this.getBoundingClientRect();
+                        const tooltipHeight = tooltip.offsetHeight;
+                        
+                        tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                        tooltip.style.top = (window.scrollY + rect.top - tooltipHeight - 10) + 'px';
+                    }
+                });
+                
+                el.addEventListener('mouseleave', function() {
+                    tooltip.style.display = 'none';
+                    // Restore title attribute for accessibility
+                    const annotation = this.getAttribute('data-tooltip');
+                    if (annotation) {
+                        this.setAttribute('title', annotation);
+                    }
+                });
+                
+                // Handle scroll events to reposition tooltip
+                window.addEventListener('scroll', function() {
+                    if (tooltip.style.display === 'block') {
+                        tooltip.style.display = 'none';
+                    }
+                });
+            });
+        });
         </script>
 
         <style>
@@ -280,37 +323,41 @@ class PlanDisplay(Directive):
             transform: scale(1.1);
         }
 
-        /* Custom tooltip styling */
-        .changeable[title] {
+        /* Changeable styling */
+        .changeable {
             border-bottom: 1px dotted #666;
         }
-
-        .changeable[title]:hover::after {
-            content: attr(title);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 8px;
+        
+        /* Custom tooltip styling */
+        .custom-tooltip {
+            position: fixed;
             background: rgba(0,0,0,0.8);
             color: white;
+            padding: 8px 12px;
             border-radius: 4px;
             font-size: 12px;
-            white-space: pre-wrap;
             max-width: 300px;
             z-index: 9999;
             pointer-events: none;
             font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        /* Fix for tooltip container */
-        .code-container {
-            position: relative;
-            overflow: visible !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: opacity 0.2s ease;
+            text-align: center;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         
-        .plan-display-container {
-            overflow: visible !important;
+        .custom-tooltip:after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid rgba(0,0,0,0.8);
         }
         </style>
         """
