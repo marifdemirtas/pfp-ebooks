@@ -296,10 +296,21 @@ class PlanDisplay(Directive):
             color: white;
             border-radius: 4px;
             font-size: 12px;
-            white-space: nowrap;
-            z-index: 1000;
+            white-space: pre-wrap;
+            max-width: 300px;
+            z-index: 9999;
             pointer-events: none;
             font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        /* Fix for tooltip container */
+        .code-container {
+            position: relative;
+            overflow: visible !important;
+        }
+        
+        .plan-display-container {
+            overflow: visible !important;
         }
         </style>
         """
