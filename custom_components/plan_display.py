@@ -63,7 +63,7 @@ class PlanDisplay(Directive):
         html_code += f"""
         <div class="annotations-container">
             <button class="annotations-toggle" onclick="toggleAnnotations_{instance_id}(this)">
-                <span class="toggle-icon">▶</span> Show What Each Field Does
+                <span class="toggle-icon">▶</span> Show What To Write In Changeable Areas
             </button>
             <div class="annotations-content" style="display: none;">
                 <div class="annotations-grid">
@@ -355,6 +355,7 @@ class PlanDisplay(Directive):
         .plan-button.active {
             box-shadow: 0 0 0 2px white, 0 0 0 4px currentColor;
             font-weight: bold;
+            border: 1px solid gray;
         }
 
         /* Changeable styling */
