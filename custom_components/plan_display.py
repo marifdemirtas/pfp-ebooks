@@ -6,6 +6,7 @@ from docutils.parsers.rst import directives
 
 from random import choice
 import json, os
+import uuid
 
 # @register_tag('plandisplay')
 class PlanDisplay(Directive):
@@ -55,10 +56,13 @@ class PlanDisplay(Directive):
         
         html_code += "</pre></div>"
         
+        # Generate a unique ID for this instance
+        instance_id = f"plan-display-{uuid.uuid4().hex[:8]}"
+        
         # Add annotations section before processing changeable areas
-        html_code += """
+        html_code += f"""
         <div class="annotations-container">
-            <button class="annotations-toggle" onclick="toggleAnnotations(this)">
+            <button class="annotations-toggle" onclick="toggleAnnotations_{instance_id}(this)">
                 <span class="toggle-icon">▶</span> Show What Each Field Does
             </button>
             <div class="annotations-content" style="display: none;">
@@ -85,86 +89,91 @@ class PlanDisplay(Directive):
             # Use placeholder as initial value (template) instead of random example
             # Wrap the template text in a span for highlighting and later updates
             annotation = code_template.get('changeable_areas_annotations', {}).get(placeholder, '')
-            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable template-value' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}' title='{annotation}'>{placeholder}</span>")
+            html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable template-value {instance_id}' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}' title='{annotation}'>{placeholder}</span>")
 
         # Add the randomize button
-        html_code += """
+        html_code += f"""
         <div class="button-container">
-            <button class="plan-button examples-button" onclick="randomizeValues()">Show Examples</button>
-            <button class="plan-button template-button" onclick="replacePlaceholder()">Show Template</button>
+            <button class="plan-button examples-button" onclick="randomizeValues_{instance_id}()">Show Examples</button>
+            <button class="plan-button template-button" onclick="replacePlaceholder_{instance_id}()">Show Template</button>
         </div>
         </div>
         
-        <div id="custom-tooltip" class="custom-tooltip" style="display: none;"></div>
+        <div id="custom-tooltip-{instance_id}" class="custom-tooltip" style="display: none;"></div>
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues = """ + json.dumps(changeable_areas) + """;
-        const annotations = """ + json.dumps(code_template.get('changeable_areas_annotations', {})) + """;
+        const possibleValues_{instance_id} = """ + {json.dumps(changeable_areas)} + """;
+        const annotations_{instance_id} = """ + {json.dumps(code_template.get('changeable_areas_annotations', {}))} + """;
 
-        function randomizeValues() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
+        function randomizeValues_{instance_id}() {{
+            document.querySelectorAll('.changeable.{instance_id}').forEach((elem) => {{
                 const key = elem.getAttribute('data-original');
-                const values = possibleValues[key];
+                const values = possibleValues_{instance_id}[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
                 elem.classList.add('highlight');
                 elem.classList.remove('template-value');
                 setTimeout(() => elem.classList.remove('highlight'), 300);
-            });
+            }});
             
             // Update button states
             document.querySelector('.examples-button').classList.remove('active');
             document.querySelector('.template-button').classList.remove('active');
-        }
+        }}
 
-        function replacePlaceholder() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
+        function replacePlaceholder_{instance_id}() {{
+            document.querySelectorAll('.changeable.{instance_id}').forEach((elem) => {{
                 const key = elem.getAttribute('data-original');
                 elem.textContent = key;
                 elem.classList.add('highlight');
                 elem.classList.add('template-value');
                 setTimeout(() => elem.classList.remove('highlight'), 300);
-            });
+            }});
             
             // Update button states - only template button is active
             document.querySelector('.examples-button').classList.remove('active');
             document.querySelector('.template-button').classList.add('active');
-        }
+        }}
 
-        function toggleAnnotations(button) {
+        function toggleAnnotations_{instance_id}(button) {{
             const content = button.nextElementSibling;
             const icon = button.querySelector('.toggle-icon');
-            if (content.style.display === 'none') {
+            if (content.style.display === 'none') {{
                 content.style.display = 'block';
                 icon.textContent = '▼';
                 button.classList.add('active');
-            } else {
+            }} else {{
                 content.style.display = 'none';
                 icon.textContent = '▶';
                 button.classList.remove('active');
-            }
-        }
+            }}
+        }}
         
         // Add event listeners for all changeable elements after the DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            const tooltip = document.getElementById('custom-tooltip');
+        document.addEventListener('DOMContentLoaded', function() {{
+            const tooltip = document.getElementById('custom-tooltip-{instance_id}');
             
             // Initialize buttons and changeable elements to show template initially
-            document.querySelectorAll('.changeable').forEach(el => {
+            document.querySelectorAll('.changeable.{instance_id}').forEach(el => {{
                 const key = el.getAttribute('data-original');
                 el.textContent = key;  // Show template text
                 el.classList.add('template-value');  // Add template styling
-            });
+            }});
             
             // Initial button state - template button active
-            document.querySelector('.examples-button').classList.remove('active');
-            document.querySelector('.template-button').classList.add('active');
+            const container = document.getElementById('custom-tooltip-{instance_id}').closest('.plan-display-container');
+            if (container) {{
+                const examplesButton = container.querySelector('.examples-button');
+                const templateButton = container.querySelector('.template-button');
+                if (examplesButton) examplesButton.classList.remove('active');
+                if (templateButton) templateButton.classList.add('active');
+            }}
             
             // Set up tooltip functionality
-            document.querySelectorAll('.changeable').forEach(el => {
-                el.addEventListener('mouseenter', function(e) {
+            document.querySelectorAll('.changeable.{instance_id}').forEach(el => {{
+                el.addEventListener('mouseenter', function(e) {{
                     const annotation = this.getAttribute('title');
-                    if (annotation) {
+                    if (annotation) {{
                         this.removeAttribute('title'); // Remove title to prevent native tooltip
                         this.setAttribute('data-tooltip', annotation); // Store it in data attribute
                         
@@ -177,28 +186,31 @@ class PlanDisplay(Directive):
                         
                         tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
                         tooltip.style.top = (window.scrollY + rect.top - tooltipHeight - 10) + 'px';
-                    }
-                });
+                    }}
+                }});
                 
-                el.addEventListener('mouseleave', function() {
+                el.addEventListener('mouseleave', function() {{
                     tooltip.style.display = 'none';
                     // Restore title attribute for accessibility
                     const annotation = this.getAttribute('data-tooltip');
-                    if (annotation) {
+                    if (annotation) {{
                         this.setAttribute('title', annotation);
-                    }
-                });
-            });
+                    }}
+                }});
+            }});
             
             // Handle scroll events to reposition tooltip
-            window.addEventListener('scroll', function() {
-                if (tooltip.style.display === 'block') {
+            window.addEventListener('scroll', function() {{
+                if (tooltip.style.display === 'block') {{
                     tooltip.style.display = 'none';
-                }
-            });
-        });
+                }}
+            }});
+        }});
         </script>
-
+        """
+        
+        # Add the CSS only once per page using a global flag
+        html_code += """
         <style>
         .plan-display-container {
             background: white;
