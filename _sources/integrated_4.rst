@@ -1,4 +1,4 @@
-Example: Tracking new movie releases
+Example 3: Tracking new movie releases
 ===============================
 
 In this context, we are managing a database of movie releases. Each record in the database represents a movie, with details such as the movie title, release date, and genre. Our database needs to be updated regularly with new movie releases. 

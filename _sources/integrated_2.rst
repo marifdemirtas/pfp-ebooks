@@ -1,4 +1,4 @@
-Example: Awarding Grammy's and finding recent Grammy nominee songs
+Example 2: Awarding Grammy's and finding recent Grammy nominee songs
 ===============================
 
 In this example, we are managing a database of songs and their artists. Recently, several artists have won Grammy awards, and we need to update our records to reflect their new status as Grammy winners. The database contains columns such as 'artist_name', 'song_title', 'release_date', and 'award_status'. We will update the 'award_status' to 'Awarded' for all songs by artists who have won a Grammy.

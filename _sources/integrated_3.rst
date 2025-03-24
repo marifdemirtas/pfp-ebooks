@@ -1,4 +1,4 @@
-Example: Dropping students with failing grades from the class
+Example 1: Dropping students with failing grades from the class
 ===============================
 
 At the University of Illinois Urbana-Champaign, the registrar's office manages a database that includes a table called `student_grades`. This table contains records of students' grades for various courses. The university needs to ensure that records of students who are currently failing a course (with a grade below 60) are reviewed and potentially removed for academic advising purposes. Additionally, they want to review the list of students and their grades for reporting.

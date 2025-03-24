@@ -1,4 +1,4 @@
-Exercise: Managing Spotify Databases
+Exercise 2: Managing Spotify Databases
 ================================
 
 You are working for Spotify. One of your coworkers shared the following queries with you, and asked you to interpret the output in a report. However, they did not comment their code, and it looks like they are offline, so you need to figure out what this does.

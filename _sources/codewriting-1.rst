@@ -1,4 +1,4 @@
-Exercise: Writing Queries for Ad Management
+Exercise 1: Writing Queries for Ad Management
 ================================
 
 Let's assume that you are running the advertisement campaign for a drink company. You have multiple ads with different celebrities, and you keep track of who you worked with, the cost of each ad, and projected reach (how many users have seen the ad). Here's an example table: 
