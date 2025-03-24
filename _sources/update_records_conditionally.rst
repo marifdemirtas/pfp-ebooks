@@ -28,7 +28,7 @@ Plan 3 - Exercises
 --------------------
 
 .. clickablearea:: plan_3_q1
-   :question: You are working in a database with user emails. You need to mark accounts that have used a test email address for deletion. One of your colleagues shared the following query, saying that you can use this as a template. Click on the field that you would need to change to check if the email column in the given table is 'test@email.com'.
+   :question: You are working in a database with user emails. You need to mark accounts that have used a test email address for deletion. One of your colleagues shared the following query, saying that you can use this as a template. Click on the field(s) that you would need to change to check if the email column in the given table is 'test@email.com'.
    :iscode:
 
    :click-incorrect:UPDATE users:endclick:
@@ -38,7 +38,7 @@ Plan 3 - Exercises
 
 .. clickablearea:: plan_3_q2
    :question: You are working in a database with user emails. You need to mark accounts who have an email address on record as verified. One of your colleagues shared the following query, saying that you can use this as a template.
-   Click on the field that you would need to change to set the verified_status column to True.
+   Click on the field(s) that you would need to change to set the verified_status column to True.
    :iscode:
 
    :click-incorrect:UPDATE users:endclick:

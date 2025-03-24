@@ -3,16 +3,17 @@
     "code_template": {
       "changeable_areas": {
         "condition": [
-          "condition",
-          "COLUMN IS NULL",
-          "COLUMN < 2",
-          "column=1",
-          "column='removal_value'",
+          "grade IS NULL",
+          "product_count < 2",
+          "movie_name='Avatar'",
           "grade < 60"
         ],
         "table": [
-          "table_name",
-          "student_grades"
+          "products",
+          "student_grades",
+          "users",
+          "movies",
+          "songs"
         ]
       },
       "changeable_areas_annotations": {
@@ -90,18 +91,15 @@
     "code_template": {
       "changeable_areas": {
         "column_to_check": [
-          "column1",
           "likes",
           "artist_name"
         ],
         "column_to_update": [
-          "column1",
-          "column_name",
           "engagement_score",
           "award_status"
         ],
         "condition_value": [
-          "min_val",
+          "minimum_value",
           "5",
           "'test@email.com'",
           "100",
@@ -116,7 +114,10 @@
           "'Awarded'"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
           "tiktok_engagement",
           "songs"
         ]
@@ -205,14 +206,16 @@
           "(title, release_date, genre)"
         ],
         "field_values": [
-          "field_values",
           "('Alice', 'alice@illinois.edu')",
           "('Bob', 'bob@illinois.edu')",
           "('Inception', '2010-07-16', 'Sci-Fi')"
         ],
         "table": [
+          "movies",
+          "products",
+          "student_grades",
           "users",
-          "movies"
+          "songs"
         ]
       },
       "changeable_areas_annotations": {
@@ -290,11 +293,14 @@
     "code_template": {
       "changeable_areas": {
         "column": [
-          "column_name",
+          "redundant_data",
           "unnecessary_metric"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
           "tiktok_engagement"
         ]
       },
@@ -351,17 +357,20 @@
           "AVG"
         ],
         "column_to_process": [
-          "column_name",
-          "column1, column_2",
-          "title"
+          "sales",
+          "grades",
+          "movie_title"
         ],
         "optional_column_to_group": [
-          "column_name",
+          "year",
           "genre"
         ],
         "table": [
-          "table_name",
-          "movies"
+          "products",
+          "student_grades",
+          "users",
+          "movies",
+          "songs"
         ]
       },
       "changeable_areas_annotations": {
@@ -453,7 +462,10 @@
           "DESC"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
           "songs"
         ]
       },
@@ -523,7 +535,11 @@
           "AVG"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
+          "songs",
           "tiktok_engagement"
         ]
       },
@@ -583,13 +599,10 @@
     "code_template": {
       "changeable_areas": {
         "column_to_check": [
-          "column1",
           "likes",
           "artist_name"
         ],
         "column_to_update": [
-          "column1",
-          "column_name",
           "engagement_score",
           "award_status"
         ],
@@ -609,7 +622,10 @@
           "'Awarded'"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
           "tiktok_engagement",
           "songs"
         ]
@@ -678,14 +694,16 @@
     "code_template": {
       "changeable_areas": {
         "column_or_columns": [
-          "column1, column2, column3",
-          "column_name",
           "*",
           "student_id, name, grade",
           "student_id"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
+          "songs",
           "student_grades"
         ]
       },
@@ -732,14 +750,16 @@
     "code_template": {
       "changeable_areas": {
         "column_or_columns": [
-          "column1, column2, column3",
-          "column_name",
           "*",
           "student_id, name, grade",
           "student_id"
         ],
         "table": [
-          "table_name",
+          "products",
+          "student_grades",
+          "users",
+          "movies",
+          "songs",
           "student_grades"
         ]
       },

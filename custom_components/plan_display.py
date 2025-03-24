@@ -66,7 +66,7 @@ class PlanDisplay(Directive):
         """
         
         # Add each annotation
-        for placeholder, annotation in code_template.get('changeable_areas_annotations', {}).items():
+        for placeholder, annotation in reversed(code_template.get('changeable_areas_annotations', {}).items()):
             color = changeable_areas_colors.get(placeholder, '#ffffff')
             html_code += f"""
                     <div class="annotation-item">
