@@ -1,6 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
+import uuid
 
 # Add a directive to create a box that displays a random number
 
@@ -40,8 +41,11 @@ class PlanDisplay(Directive):
         changeable_areas = code_template.get('changeable_areas', {})
         changeable_areas_colors = code_template.get('changeable_areas_colors', {})
 
+        # Generate a unique ID for this instance
+        unique_id = f"plan-display-{uuid.uuid4().hex[:8]}"
+        
         # HTML structure
-        html_code = '<div>'
+        html_code = f'<div id="{unique_id}" class="plan-display">'
         html_code += f"<div><strong>Name:</strong> {name}</div>"
         html_code += f"<div><strong>Goal:</strong> {goal}</div>"
         html_code += "<pre style='background-color: #e6f7df; padding: 10px;'>"
@@ -58,38 +62,38 @@ class PlanDisplay(Directive):
             html_code = html_code.replace(f"@@{placeholder}@@", f"<span class='changeable' style='background-color: {changeable_areas_colors[placeholder]}' data-original='{placeholder}'>{random_value}</span>")
 
 
-        # Add the randomize button
-        html_code += """
-        <button onclick="randomizeValues()">Show Examples</button>
-        <button onclick="replacePlaceholder()">Show Template</button></div>
+        # Add the randomize button with scoped functions
+        html_code += f"""
+        <button onclick="randomizeValues_{unique_id}()">Show Examples</button>
+        <button onclick="replacePlaceholder_{unique_id}()">Show Template</button></div>
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues = """ + json.dumps(changeable_areas) + """;
+        const possibleValues_{unique_id} = """ + {json.dumps(changeable_areas)} + """;
 
-        function randomizeValues() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
+        function randomizeValues_{unique_id}() {{
+            document.querySelectorAll('#{unique_id} .changeable').forEach((elem) => {{
                 const key = elem.getAttribute('data-original');
-                const values = possibleValues[key];
+                const values = possibleValues_{unique_id}[key];
                 elem.textContent = values[Math.floor(Math.random() * values.length)];
-            });
-        }
+            }});
+        }}
 
-        function replacePlaceholder() {
-            document.querySelectorAll('.changeable').forEach((elem) => {
+        function replacePlaceholder_{unique_id}() {{
+            document.querySelectorAll('#{unique_id} .changeable').forEach((elem) => {{
                 const key = elem.getAttribute('data-original');
                 elem.textContent = key;
-            });
-        }
+            }});
+        }}
         </script>
 
         <style>
         /* CSS to highlight changeable parts */
-        .changeable {
+        #{unique_id} .changeable {{
             background-color: #ffeb3b;
             padding: 0 3px;
             border-radius: 3px;
-        }
+        }}
         </style>
         """
         
