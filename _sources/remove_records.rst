@@ -60,4 +60,4 @@ Plan 1 - Exercises
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   Click on the arrow on the bottom right to continue.
+   If you completed all the activities on this page, click on the arrow on the bottom right to continue.

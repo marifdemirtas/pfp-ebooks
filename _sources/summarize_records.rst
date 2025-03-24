@@ -18,7 +18,7 @@ This is a plan to view records summarized by some attribute. By summarize, we me
 
 Plan 6 - When to use this plan?
 --------------------------------
-This plan is used when you want to get insights about your data by using statistical aggregation functions.
+This plan is used when you want to get insights about your data by using statistical aggregation functions. You can use the 'GROUP BY' part to get results **for each subgroup**.
 
 Plan 6 - What parts can be customized to use this plan?
 -------------------------------------------------------
@@ -66,5 +66,5 @@ Plan 6 - Exercises
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   🔎  First, check the first two questions on your worksheet.
-   Then, click on the arrow on the bottom right to continue.
+   🔎  First, complete the next two questions (Q2a and Q2b) on your worksheet.
+   Then, if you completed all the activities on this page, click on the arrow on the bottom right to continue.

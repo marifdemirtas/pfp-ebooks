@@ -32,5 +32,5 @@ Please rate how much you agree with the each statement. Your responses will be a
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   Click on the arrow on the bottom right to continue.
+   If you completed all the activities on this page, click on the arrow on the bottom right to continue.
 

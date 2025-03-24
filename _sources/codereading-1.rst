@@ -41,5 +41,5 @@ Look at the code and describe what the queries might be doing.
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   Click on the arrow on the bottom right to continue.
+   If you completed all the activities on this page, click on the arrow on the bottom right to continue.
 

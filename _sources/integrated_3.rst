@@ -78,5 +78,5 @@ This example uses the following programming plans:
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   🔎  First, check the first two questions on your worksheet.
+   🔎  First, complete the first two questions (Q1a and Q1b) on your worksheet.
    Then, click on the arrow on the bottom right to continue.
