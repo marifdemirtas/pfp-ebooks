@@ -111,23 +111,5 @@ Now that you've assembled the correct plans, fill in the blanks to complete the 
             # Print the info
             print(______)
 
-.. reveal:: write_code_cl_reveal_3
-        :showtitle: After you've done the activity, click here.
-        :hidetitle: Hide question.
-
-        .. poll:: write_code_cl_3
-           :option_1: Very, very low mental effort
-           :option_2: Very low mental effort
-           :option_3: Low mental effort
-           :option_4: Rather low mental effort
-           :option_5: Neither low nor high mental effort
-           :option_6: Rather high mental effort
-           :option_7: High mental effort
-           :option_8: Very high mental effort
-           :option_9: Very, very high mental effort
-           :results: instructor
-           
-           In solving the preceding problem I invested:
-
 
 

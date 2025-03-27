@@ -75,23 +75,6 @@ Try to fix the buggy code below. Run the code to save your progress.
         # Print the info
         print(info)
 
-.. reveal:: debug_code_cl_reveal_1
-        :showtitle: After you've done the activity, click here.
-        :hidetitle: Hide question.
-
-        .. poll:: debug_code_cl_1
-           :option_1: Very, very low mental effort
-           :option_2: Very low mental effort
-           :option_3: Low mental effort
-           :option_4: Rather low mental effort
-           :option_5: Neither low nor high mental effort
-           :option_6: Rather high mental effort
-           :option_7: High mental effort
-           :option_8: Very high mental effort
-           :option_9: Very, very high mental effort
-           :results: instructor
-           
-           In solving the preceding problem I invested:
 
 .. sidebar:: Links to plans
 
