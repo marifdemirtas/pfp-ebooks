@@ -30,6 +30,15 @@ How this ebook works
    
    These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
 
+Start here
+::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   start_here.rst
+
+
 Two scraping examples
 ::::::::::::::::::::::::::::::::::::::
 
@@ -79,11 +88,11 @@ Putting it together
    activity-debugging.rst
    activity-explaining.rst
 
-Download the plans
-::::::::::::::::::
+End here
+::::::::::
 
 .. toctree::
    :maxdepth: 1
 
-   downloads.rst
-
+   end_here_comparison.rst
+   end_here_usability.rst
