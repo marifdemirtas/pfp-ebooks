@@ -65,7 +65,7 @@ Here's the relevant tag from ``https://siebelschool.illinois.edu/about/people/fa
            
 .. shortanswer:: explain_answer
 
-   Write down your best guess of what the code does.
+   Write down your best guess of what the code does. Please also write your response on your worksheet.
 
 
 .. sidebar:: Links to plans
