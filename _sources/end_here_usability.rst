@@ -61,8 +61,8 @@ Rate how much you agree with the given statement based on your experience with t
 
 
 
-.. shortanswer:: interview-opt-in
+.. shortanswer:: open-ended-feedback
 
-   If you would to participate in an OPTIONAL 30-minute interview about your experience, please provide your email address below.
+   If you have any additional feedback, please share it below (optional). 
 
 

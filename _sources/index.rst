@@ -43,38 +43,11 @@ Two scraping examples
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    example1.rst
    example2.rst
 
-
-Plans 2-3: Get the webpage
-::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan2.rst
-   plan3.rst
-
-Plans 4-5: Extract info from the webpage
-::::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan4.rst
-   plan5.rst
-
-Plans 9-10: Do something with the info
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan9.rst
-   plan10.rst
 
 Putting it together
 ::::::::::::::::::::::::::::::::::::::

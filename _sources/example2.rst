@@ -60,10 +60,17 @@ Run the code below to see what it collects.
 
 This code is made up of three plans. Click on each of the plans below to learn more about it.
 
+.. toctree::
+    :maxdepth: 1
+    
+    plan2
+    plan4
+    plan5
+
 .. raw:: html
 
    <pre><strong>Plan 2: Get a soup from multiple URLs</strong>
-   <a href="http://localhost:8000/plan3.html"><pre style="background-color:#FDEBD0;">
+   <a href="/ns/books/published/cs102web/plan2.html"><pre style="background-color:#FDEBD0;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
@@ -74,11 +81,11 @@ This code is made up of three plans. Click on each of the plans below to learn m
        url = base_url + ending
        r = requests.get(url)
        soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
-       <pre><strong>Plan 4: Get info from a single tag</strong><a href="http://localhost:8000/plan4.html"><pre style="background-color:#A9DFBF;">
+       <pre><strong>Plan 4: Get info from a single tag</strong><a href="/ns/books/published/cs102web/plan4.html"><pre style="background-color:#A9DFBF;">
        # Get first tag of a certain type from the soup
        tag = soup.find('a', class_='text-decoration-none')
        # Get info from tag
        info = tag.get('href')</pre></a></pre>  
-       <pre><strong>Plan 5: Print info</strong><a href="http://localhost:8000/plan9.html"><pre style="background-color:#D6EAF8;">
+       <pre><strong>Plan 5: Print info</strong><a href="/ns/books/published/cs102web/plan5.html"><pre style="background-color:#D6EAF8;">
        # Print the info
        print(info)</pre></a></pre>

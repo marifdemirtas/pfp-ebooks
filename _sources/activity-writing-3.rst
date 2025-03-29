@@ -46,37 +46,39 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
     :align: center
     :alt: Inspecting the tags on the Rate My Professor page
 
+
 .. sidebar:: Links to plans
+
+    |plan_1|
 
     |plan_2|
 
     |plan_3|
 
-    |plan_5|
-
     |plan_4|
 
-    |plan_9|
+    |plan_5|
+
+    .. |plan_1| raw:: html
+
+
+        <a href="/ns/books/published/cs102web/plan1.html" target="_blank">Plan 1: Get a soup from a URL</a>
 
     .. |plan_2| raw:: html
 
-        <a href="http://localhost:8000/plan2.html" target="_blank">Plan 1: Get a soup from a URL</a>
+        <a href="/ns/books/published/cs102web/plan2.html" target="_blank">Plan 2: Get a soup from multiple URLs</a> 
 
     .. |plan_3| raw:: html
 
-        <a href="http://localhost:8000/plan3.html" target="_blank">Plan 2: Get a soup from multiple URLs</a> 
-
-    .. |plan_5| raw:: html
-
-        <a href="http://localhost:8000/plan5.html" target="_blank">Plan 3: Get info from all tags of a certain type</a> 
+        <a href="/ns/books/published/cs102web/plan3.html" target="_blank">Plan 3: Get info from all tags of a certain type</a> 
 
     .. |plan_4| raw:: html
 
-        <a href="http://localhost:8000/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+        <a href="/ns/books/published/cs102web/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
    
-    .. |plan_9| raw:: html
+    .. |plan_5| raw:: html
 
-        <a href="http://localhost:8000/plan9.html" target="_blank">Plan 5: Print info</a> 
+        <a href="/ns/books/published/cs102web/plan5.html" target="_blank">Plan 5: Print info</a> 
 
     
 Here is the code that you assembled from the plans. 
