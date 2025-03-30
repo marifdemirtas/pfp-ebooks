@@ -42,7 +42,7 @@ It turns out that you can! Run the code below to see what it collects.
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from a URL 
-   url = 'https://bbqchicken.com/locations/'
+   url = 'https://web.archive.org/web/20250309231002/https://bbqchicken.com/locations/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -78,7 +78,7 @@ This code probably seems a bit complicated. In this ebook, we will break down we
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from a URL 
-   url = 'https://chickentown.com/pick-a-location/'
+   url = 'https://web.archive.org/web/20250309231002/https://bbqchicken.com/locations/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
    

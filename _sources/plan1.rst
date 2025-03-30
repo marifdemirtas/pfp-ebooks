@@ -38,7 +38,7 @@ Here is the code for getting a **soup** from the **bb.q Chicken locations page**
   from bs4 import BeautifulSoup
   import requests
   <strong># Get a soup from <mark style="background-color:#F1948A">a URL</mark></strong>
-  url = <mark style="background-color:#F1948A">'https://bbqchicken.com/locations/'</mark>
+  url = <mark style="background-color:#F1948A">'https://web.archive.org/web/20250309231002/https://bbqchicken.com/locations/'</mark>
   r = requests.get(url)
   soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
