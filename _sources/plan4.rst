@@ -105,11 +105,11 @@ Plan 4: Exercises
         :align: center
         :alt: Link to Katie's page
     
-    -   https://siebelschool.illinois.edu/about/people/all-faculty/katcun
+    -   https://siebelschool.illinois.edu/about/people/faculty/katcun
 
         -   No, this is the full link, but there is a relative link in the tag. 
 
-    -   /about/people/all-faculty/katcun
+    -   /about/people/faculty/katcun
 
         +   Correct!
 
