@@ -16,9 +16,9 @@ Look at the code below, and try to determine what it does.
 Relevant tags
 **********************
 
-Here's the relevant tag from ``https://siebelschool.illinois.edu/about/people/faculty/katcun``:
+Here's the relevant tag from ``https://ischool.illinois.edu/people/judith-pintar``:
 
-.. image:: _static/news_cunningham_multiple.png
+.. image:: _static/news_pintar_multiple.png
     :scale: 40%
     :align: center
     :alt: Code that you are asked to explain
@@ -117,13 +117,13 @@ Here's the relevant tag from ``https://siebelschool.illinois.edu/about/people/fa
         from bs4 import BeautifulSoup
         import requests
         # Get a soup from a URL 
-        url = 'https://www.si.umich.edu/people/barbara-ericson'
+        url = 'https://ischool.illinois.edu/people/judith-pintar'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
         #Extract info from the webpage
         # Get all tags of a certain type from the soup
-        tags = soup.find_all('a', class_='item-teaser--more')
+        tags = soup.find_all('a', class_='news-row__link')
         # Collect info from the tags
         collect_info = []
         for tag in tags:
@@ -133,7 +133,7 @@ Here's the relevant tag from ``https://siebelschool.illinois.edu/about/people/fa
 
         #Do something with the info
         # Get a soup from multiple URLs 
-        base_url = 'https://www.si.umich.edu/'
+        base_url = 'https://ischool.illinois.edu/'
         endings = collect_info
         for ending in endings:
             url = base_url + ending 
@@ -141,7 +141,7 @@ Here's the relevant tag from ``https://siebelschool.illinois.edu/about/people/fa
             soup = BeautifulSoup(r.content, 'html.parser')
 
             # Get all tags of a certain type from the soup
-            tags = soup.find_all('p')
+            tags = soup.find_all('span', class_='eyebrow-breadcrumbs__current-item')
             # Collect info from the tags
             collect_info = []
             for tag in tags:
