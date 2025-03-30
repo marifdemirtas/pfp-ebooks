@@ -1,7 +1,7 @@
 ..  Copyright (C)  Brad Miller, David Ranum, Jeffrey Elkner, Peter Wentworth, Allen B. Downey, Chris
     Meyers, and Dario Mitchell.  Permission is granted to copy, distribute
     and/or modify this document under the terms of the GNU Free Documentation
-    License, Version 1.3 or any later version published by the Free Software
+    License, Version 1.2 or any later version published by the Free Software
     Foundation; with Invariant Sections being Forward, Prefaces, and
     Contributor List, no Front-Cover Texts, and no Back-Cover Texts.  A copy of
     the license is included in the section entitled "GNU Free Documentation
@@ -19,96 +19,99 @@
 
 .. _plan_2:
 
-Plan 1: Get a soup from a URL
+Plan 2: Get a soup from multiple URLs
 #####################################
 
-Plan 1: Example
+Plan 2: Example
 ====================================
 
-The first step in web scraping is getting information from a webpage. 
-To use the BeautifulSoup web scraping library, we have to put the webpage into something called a *soup*.
+Sometimes we want to get information from multiple web pages that have the same layout. For example, all of the SCDS faculty pages have the same general design.
 
-Here is the code for getting a **soup** from the **bb.q Chicken locations page**.
+.. image:: _static/katie_cunningham.png
+    :scale: 20%
+    :align: center
+    :alt: Plan 2 outline
+
+.. image:: _static/geoffrey_challen.png
+    :scale: 20%
+    :align: center
+    :alt: Plan 2 outline
+
+We are interested in getting information about mutliple SCDS professors: Prof. Katie Cunningham, Prof. Geoffrey Challen, and Prof. Michael Nowak. 
+
+Their webpages are:
+
+``https://siebelschool.illinois.edu/about/people/faculty/katcun``
+
+``https://siebelschool.illinois.edu/about/people/faculty/challen``
+
+``https://siebelschool.illinois.edu/about/people/faculty/mnowak1``
+
+In this code, we get a **soup** from multiple **SCDS faculty pages**.
 
 .. raw:: html
 
-  <pre>Goal: Get a soup from one webpage
-  <pre style="background-color:#FCF3CF;">
-  <strong># Load libraries for web scraping</strong>
-  from bs4 import BeautifulSoup
-  import requests
-  <strong># Get a soup from <mark style="background-color:#F1948A">a URL</mark></strong>
-  url = <mark style="background-color:#F1948A">'https://bbqchicken.com/locations/'</mark>
-  r = requests.get(url)
-  soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
+   <pre>Goal: Get a soup from multiple webpages
+   <pre style="background-color:#FDEBD0;">
+   <strong># Load libraries for web scraping</strong>
+   from bs4 import BeautifulSoup
+   import requests
+   <strong># Get a soup from <mark style="background-color:#FEF5E7">multiple URLs</mark></strong>
+   base_url = <mark style="background-color:#FEF5E7">'https://siebelschool.illinois.edu/about/people/faculty/'</mark>
+   endings = <mark style="background-color:#FEF5E7">['katcun', 'challen', 'mnowak1']</mark>
+   for ending in endings:
+       url = base_url + ending
+       r = requests.get(url)
+       soup = BeautifulSoup(r.content, 'html.parser')</pre></pre>
 
-Plan 1: When to use this plan
+
+Plan 2: When to use this plan
 ====================================
 
-Use this plan when you want to scrape **one webpage**.
+Use this plan when you want to scrape the same thing from multiple webpages.
 
-Plan 1: How to use this plan
+Plan 2: How to use this plan
 ====================================
 
-**Replace the URL with the URL of the website you want to scrape.**
+Look at the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the ``base_url``. The parts that are different are the ``endings``.
 
-A URL is a web address, like you see in your web browser. 
-It should be complete (starting with http:// or https://). 
-In this plan, a URL should be surrounded by quotes (:code:`' '`).
-
-.. image:: _static/bbq_URL.gif
-    :scale: 25%
-    :align: center
-    :alt: Copying a URL from the bb.q Chicken locations page
-
-
-Plan 1: Exercises
+Plan 2: Exercises
 ====================================
 
-.. clickablearea:: plan2_click
-    :question: If you wanted to get a soup from the Illini Union Bookstore homepage instead of the bb.q Chicken locations page, which part(s) of the code below would you change? Click on those part(s) of the code.
-    :iscode:
-    :feedback: Check out the example of this plan above to identify the area that should be changed.
+If you want to also get the link to the most recent news item from Director Nancy Amato's page, how would you change the code below? Director Amato's web page is ``https://siebelschool.illinois.edu/about/people/faculty/namato``.
 
-    :click-incorrect:# Load libraries for web scraping:endclick:
-    :click-incorrect:from bs4 import BeautifulSoup:endclick:
-    :click-incorrect:import requests:endclick:
+Change the code and run it to see if you're right!
 
-    :click-incorrect:# Get a soup from a URL:endclick: 
-    :click-incorrect:url =:endclick: :click-correct:'https://bbqchicken.com/locations/':endclick:
-    :click-incorrect:r = requests.get(url):endclick:
-    :click-incorrect:soup = BeautifulSoup(r.content, 'html.parser')::endclick:
+.. activecode:: plan2_edit_finholt
+   :language: python2
+   :nocodelens:
 
-.. fillintheblank:: plan2_fill
+   #Get the webpage
+   # Load libraries for web scraping
+   from bs4 import BeautifulSoup
+   import requests
+   # Get a soup from multiple URLs
+   base_url = 'https://web.archive.org/web/20250314223200/https://siebelschool.illinois.edu/about/people/faculty' # replaced with web archive link for tutorial purposes
+   endings = ['katcun', 'challen', 'mnowak1']
+   for ending in endings:
+       url = base_url + ending
+       r = requests.get(url)
+       soup = BeautifulSoup(r.content, 'html.parser')
 
-   Fill in the plan in order to get a soup from the University of Illinois Urbana-Champaign wikipedia page.
+       #Extract info from the page
+       # Get first tag of a certain type from the soup
+       tag = soup.find('a', class_='text-decoration-none')
+       # Get link from tag
+       info = tag.get('href')  
 
-   ``# Load libraries for web scraping``
+       #Do something with the info
+       # Print the info
+       print(info)
 
-   ``from bs4 import BeautifulSoup``
-
-   ``import requests``
-
-   ``# Get a soup from a URL`` 
-
-   ``url =`` |blank|
-
-   ``r = requests.get(url)``
-
-   ``soup = BeautifulSoup(r.content, 'html.parser')``
-
-
-   -    :['"]https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign['"]: Correct.  
-        :https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign: Remember that URLs in this plan should have quotes around them.
-        :en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign: Remember that URLs in this plan should start with https:// or http://
-        :.*: Incorrect. 
-        
 
 .. note:: 
       
         .. raw:: html
 
-           <a href="http://localhost:8000/example1.html" >Click here to go back to the bb.q Chicken example</a>
+           <a href="/ns/books/published/cs102web/example2.html" >Click here to go back to the Faculty Pages example</a>
 
-
- 

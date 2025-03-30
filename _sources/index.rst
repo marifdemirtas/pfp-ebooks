@@ -30,42 +30,24 @@ How this ebook works
    
    These plans represent the most common patterns in web scraping with the BeautifulSoup library. The plans in this ebook were created after an anaylsis of 100 web scraping files from `Github <https://github.com/search?l=Python&q=BeautifulSoup%28&type=Code>`_, as well as two interviews with people who use web scraping in their jobs. 
 
+Start here
+::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+
+   start_here.rst
+
+
 Two scraping examples
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    example1.rst
    example2.rst
 
-
-Plans 2-3: Get the webpage
-::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan2.rst
-   plan3.rst
-
-Plans 4-5: Extract info from the webpage
-::::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan4.rst
-   plan5.rst
-
-Plans 9-10: Do something with the info
-::::::::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 1
-
-   plan9.rst
-   plan10.rst
 
 Putting it together
 ::::::::::::::::::::::::::::::::::::::
@@ -79,11 +61,11 @@ Putting it together
    activity-debugging.rst
    activity-explaining.rst
 
-Download the plans
-::::::::::::::::::
+End here
+::::::::::
 
 .. toctree::
    :maxdepth: 1
 
-   downloads.rst
-
+   end_here_comparison.rst
+   end_here_usability.rst

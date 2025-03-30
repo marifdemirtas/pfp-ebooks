@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "PurposeFirstWebScraping"
+project_name = "cs102web"
 ###############################
 
 master_url = "https://runestone.academy"
@@ -36,13 +36,13 @@ options(
         project_name=project_name,
         template_args={
             "course_id": project_name,
-            "login_required": "false",
+            "login_required": "true",
             "appname": master_app,
             "loglevel": 10,
             "course_url": master_url,
-            "dynamic_pages": False,
-            "use_services": "true",
-            "basecourse": "PurposeFirstWebScraping",
+            "dynamic_pages": True,
+            "use_services": "false",
+            "basecourse": "cs102web",
             "python3": "true",
             "downloads_enabled": "true",
             "allow_pairs": "false",

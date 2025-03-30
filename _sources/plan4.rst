@@ -105,11 +105,11 @@ Plan 4: Exercises
         :align: center
         :alt: Link to Katie's page
     
-    -   https://siebelschool.illinois.edu/about/people/all-faculty/katcun
+    -   https://siebelschool.illinois.edu/about/people/faculty/katcun
 
         -   No, this is the full link, but there is a relative link in the tag. 
 
-    -   /about/people/all-faculty/katcun
+    -   /about/people/faculty/katcun
 
         +   Correct!
 
@@ -186,5 +186,5 @@ Check out the image below, that inspects the name of the class INFO 102.
       
         .. raw:: html
 
-           <a href="http://localhost:8000/example2.html" >Click here to go back to the Faculty Pages example</a>
+           <a href="/ns/books/published/cs102web/example2.html" >Click here to go back to the Faculty Pages example</a>
 

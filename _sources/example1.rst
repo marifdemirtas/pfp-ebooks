@@ -42,7 +42,7 @@ It turns out that you can! Run the code below to see what it collects.
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from a URL 
-   url = 'https://bbqchicken.com/locations/'
+   url = 'https://web.archive.org/web/20250309231002/https://bbqchicken.com/locations/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -63,19 +63,26 @@ It turns out that you can! Run the code below to see what it collects.
 
 This code probably seems a bit complicated. In this ebook, we will break down web scraping into a few common "plans". This example is made up of three plans. Click on each of them to learn more.
 
+.. toctree::
+   :maxdepth: 1
+
+   plan1
+   plan3
+   plan5
+
 .. raw:: html
 
    <pre><strong>Plan 1: Get a soup from a URL</strong>
-   <a href="http://localhost:8000/plan2.html"><pre style="background-color:#FCF3CF;">
+   <a href="/ns/books/published/cs102web/plan1.html"><pre style="background-color:#FCF3CF;">
    # Load libraries for web scraping
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from a URL 
-   url = 'https://chickentown.com/pick-a-location/'
+   url = 'https://web.archive.org/web/20250309231002/https://bbqchicken.com/locations/'
    r = requests.get(url)
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
    
-   <pre><strong>Plan 3: Get info from all tags of a certain type</strong><a href="http://localhost:8000/plan5.html"><pre style="background-color:#D5F5E3;">
+   <pre><strong>Plan 3: Get info from all tags of a certain type</strong><a href="/ns/books/published/cs102web/plan3.html"><pre style="background-color:#D5F5E3;">
    # Get all tags of a certain type from the soup
    tags = soup.find_all('h4')
    # Collect info from the tags
@@ -85,7 +92,7 @@ This code probably seems a bit complicated. In this ebook, we will break down we
        info = tag.text
        collect_info.append(info)</pre></a></pre>
 
-   <pre><strong>Plan 5: Print the info</strong><a href="http://localhost:8000/plan9.html"><pre style="background-color:#D6EAF8;">
+   <pre><strong>Plan 5: Print the info</strong><a href="/ns/books/published/cs102web/plan5.html"><pre style="background-color:#D6EAF8;">
    # Print the info
    print(collect_info)</pre></a></pre>
 

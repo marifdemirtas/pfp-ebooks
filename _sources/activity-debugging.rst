@@ -29,7 +29,7 @@ Can you fix it? Here is the buggy code:
 .. raw:: html
 
    <pre>Plan 1: Get a soup from a URL
-   <a href="http://localhost:8000/plan2.html"><pre style="background-color:#FCF3CF;">
+   <a href="/ns/books/published/cs102web/plan1.html"><pre style="background-color:#FCF3CF;">
    <strong># Load libraries for web scraping</strong>
    from bs4 import BeautifulSoup
    import requests
@@ -39,14 +39,14 @@ Can you fix it? Here is the buggy code:
    soup = BeautifulSoup(r.content, 'html.parser')</pre></a></pre>
 
    <pre>Plan 4: Get info from a single tag
-   <a href="http://localhost:8000/plan4.html"><pre style="background-color:#A9DFBF;">
+   <a href="/ns/books/published/cs102web/plan4.html"><pre style="background-color:#A9DFBF;">
    <strong># Get first tag of <mark>a certain type</mark> from the soup</strong>
    tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'h1', class_='wp-block-post-title'</mark>)
    <strong># Get <mark>info</mark> from tag</strong>
    info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
    <pre>Plan 5: Print the info
-   <a href="http://localhost:8000/plan9.html"><pre style="background-color:#D6EAF8;">
+   <a href="/ns/books/published/cs102web/plan5.html"><pre style="background-color:#D6EAF8;">
    <strong># Print <mark>the info</mark></strong>
    print(<mark style="border:2px; border-style:solid; border-color:#1A5276">info</mark>)</pre></a></pre>
 
@@ -75,55 +75,38 @@ Try to fix the buggy code below. Run the code to save your progress.
         # Print the info
         print(info)
 
-.. reveal:: debug_code_cl_reveal_1
-        :showtitle: After you've done the activity, click here.
-        :hidetitle: Hide question.
-
-        .. poll:: debug_code_cl_1
-           :option_1: Very, very low mental effort
-           :option_2: Very low mental effort
-           :option_3: Low mental effort
-           :option_4: Rather low mental effort
-           :option_5: Neither low nor high mental effort
-           :option_6: Rather high mental effort
-           :option_7: High mental effort
-           :option_8: Very high mental effort
-           :option_9: Very, very high mental effort
-           :results: instructor
-           
-           In solving the preceding problem I invested:
 
 .. sidebar:: Links to plans
+
+    |plan_1|
 
     |plan_2|
 
     |plan_3|
 
-    |plan_5|
-
     |plan_4|
 
-    |plan_9|
+    |plan_5|
+
+    .. |plan_1| raw:: html
+
+
+        <a href="/ns/books/published/cs102web/plan1.html" target="_blank">Plan 1: Get a soup from a URL</a>
 
     .. |plan_2| raw:: html
 
-
-        <a href="http://localhost:8000/plan2.html" target="_blank">Plan 1: Get a soup from a URL</a>
+        <a href="/ns/books/published/cs102web/plan2.html" target="_blank">Plan 2: Get a soup from multiple URLs</a> 
 
     .. |plan_3| raw:: html
 
-        <a href="http://localhost:8000/plan3.html" target="_blank">Plan 2: Get a soup from multiple URLs</a> 
-
-    .. |plan_5| raw:: html
-
-        <a href="http://localhost:8000/plan5.html" target="_blank">Plan 3: Get info from all tags of a certain type</a> 
+        <a href="/ns/books/published/cs102web/plan3.html" target="_blank">Plan 3: Get info from all tags of a certain type</a> 
 
     .. |plan_4| raw:: html
 
-        <a href="http://localhost:8000/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
+        <a href="/ns/books/published/cs102web/plan4.html" target="_blank">Plan 4: Get info from a single tag</a>
    
-    .. |plan_9| raw:: html
+    .. |plan_5| raw:: html
 
-        <a href="http://localhost:8000/plan9.html" target="_blank">Plan 5: Print info</a> 
+        <a href="/ns/books/published/cs102web/plan5.html" target="_blank">Plan 5: Print info</a> 
 
 
