@@ -35,7 +35,7 @@ Here's the relevant tag from ``https://ischool.illinois.edu/people/judith-pintar
   soup = BeautifulSoup(r.content, 'html.parser')</pre></a>
   <a href="https://runestone.academy/runestone/books/published/PurposeFirstWebScraping/plan5.html"><pre style="background-color:#D5F5E3;">
   <strong># Get all tags of <mark>a certain type</mark> from the soup</strong>
-  tags = soup.find_all(<mark>'a', class_='item-teaser--more'</mark>)
+  tags = soup.find_all(<mark>'a', class_='news-row__link'</mark>)
   <strong># Collect info from the tags</strong>
   collect_info = []
   for tag in tags:
