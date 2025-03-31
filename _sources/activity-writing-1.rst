@@ -95,11 +95,7 @@ The comments all have the same tag name, which is ``'div'`` tag with ``class='Co
    =====
    Plan #4: Get info from a single tag#paired
    =====
-   Plan #6: Get info from all tags of a certain type, within another tag#paired
-   =====
    Plan #5: Print info
-   =====
-   Plan #7: Store info in a json file#paired
 
 
 
