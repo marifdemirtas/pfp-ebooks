@@ -41,7 +41,7 @@ Run the code below to see what it collects.
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from multiple URLs
-   base_url = 'https://web.archive.org/web/20250314223200/https://siebelschool.illinois.edu/about/people/faculty' # replaced with web archive link for tutorial purposes
+   base_url = 'https://web.archive.org/web/20250314223200/https://siebelschool.illinois.edu/about/people/faculty/' # replaced with web archive link for tutorial purposes
    endings = ['katcun', 'challen', 'mnowak1']
    for ending in endings:
        url = base_url + ending

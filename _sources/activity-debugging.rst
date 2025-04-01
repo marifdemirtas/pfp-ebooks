@@ -41,7 +41,7 @@ Can you fix it? Here is the buggy code:
    <pre>Plan 4: Get info from a single tag
    <a href="/ns/books/published/cs102web/plan4.html"><pre style="background-color:#A9DFBF;">
    <strong># Get first tag of <mark>a certain type</mark> from the soup</strong>
-   tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'h1', class_='wp-block-post-title'</mark>)
+   tag = soup.find(<mark style="border:2px; border-style:solid; border-color:#1A5276; "background-color:#FCF3CF;">'p', class_='wp-block-post-excerpt__excerpt'</mark>)
    <strong># Get <mark>info</mark> from tag</strong>
    info = tag.<mark style="border:2px; border-style:solid; border-color:#1A5276">get('href')</mark></pre></a></pre>
 
@@ -67,7 +67,7 @@ Try to fix the buggy code below. Run the code to save your progress.
 
         #Get info from one tag
         # Get first tag of a certain type from the soup
-        tag = soup.find('h1', class_='wp-block-post-title')
+        tag = soup.find('p', class_='wp-block-post-excerpt__excerpt')
         # Get info from tag
         info = tag.get('href')
 

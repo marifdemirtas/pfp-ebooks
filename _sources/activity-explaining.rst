@@ -126,7 +126,7 @@ Here's the relevant tag from ``https://ischool.illinois.edu/people/judith-pintar
 
         #Extract info from the webpage
         # Get all tags of a certain type from the soup
-        tags = soup.find_all('p')
+        tags = soup.find_all('a', class_='news-row__link')
         # Collect info from the tags
         collect_info = []
         for tag in tags:

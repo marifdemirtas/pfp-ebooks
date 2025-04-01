@@ -83,7 +83,7 @@ If you want to also get the link to the most recent news item from Director Nanc
 Change the code and run it to see if you're right!
 
 .. activecode:: plan2_edit_finholt
-   :language: python2
+   :language: python3
    :nocodelens:
 
    #Get the webpage
@@ -91,7 +91,7 @@ Change the code and run it to see if you're right!
    from bs4 import BeautifulSoup
    import requests
    # Get a soup from multiple URLs
-   base_url = 'https://web.archive.org/web/20250314223200/https://siebelschool.illinois.edu/about/people/faculty' # replaced with web archive link for tutorial purposes
+   base_url = 'https://web.archive.org/web/20250314223200/https://siebelschool.illinois.edu/about/people/faculty/' # replaced with web archive link for tutorial purposes
    endings = ['katcun', 'challen', 'mnowak1']
    for ending in endings:
        url = base_url + ending
