@@ -39,14 +39,14 @@ Looking closer at a tag
 
 Behind every webpage is HTML code. HTML code is made up of *tags*.
 
-Here is the tag that creates the name of one of the Raising Cane's IL locations. The tag is surrounded by the blue rectangle. It is an 'h4' tag.
+Here is the tag that creates the name of one of the bb.q Chicken's IL locations. The tag is surrounded by the blue rectangle. It is an 'h4' tag.
 
 .. image:: _static/bbq_h4_text.png
     :scale: 50%
     :align: center
     :alt: h4 tag example
 
-The name of this tag is 'h4'. In-between the start and end tag (between the ``<h4>`` and ``</h4>`` is the tag's **text**. For this tag, the text is **Green & 5th**
+The name of this tag is 'h4'. In-between the start and end tag (between the ``<h4>`` and ``</h4>`` is the tag's **text**. For this tag, the text is **bb.q Chicken Urbana Champaign Urbana, IL**. The ``<br>`` tag stands for **break** and adds a line break to the text.
 
 Plan 3: Example
 ====================================

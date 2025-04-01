@@ -19,13 +19,13 @@ Here is |alawini_link|.
 
 Here is |herman_link|.
 
-.. |alawini_link| raw:: html
-
-   <a href="https://www.ratemyprofessors.com/professor/2442487" target="_blank">the link to Prof. Herman's Rate My Professor page</a>
-
 .. |herman_link| raw:: html
 
-   <a href="https://www.ratemyprofessors.com/professor/1799030" target="_blank">the link to Prof. Alawini's Rate My Professor page</a> 
+   <a href="https://web.archive.org/web/20250331181529/https://www.ratemyprofessors.com/professor/2442487" target="_blank">the link to Prof. Herman's Rate My Professor page</a>
+
+.. |alawini_link| raw:: html
+
+   <a href="https://web.archive.org/web/20250331181529/https://www.ratemyprofessors.com/professor/1799030" target="_blank">the link to Prof. Alawini's Rate My Professor page</a> 
 
 You can see that both the pages have the same layout.
 
@@ -39,7 +39,7 @@ You can see that both the pages have the same layout.
     :align: center
     :alt: Prof. Alawini's Rate My Professor page
 
-The comments all have the same tag name, which is ``'div'`` tag with ``class='Comments__StyledComments-dzzyvm-0 dvnRbr'``. Here's what it looks like when you inspect Prof. Herman's page:
+The comments all have the same tag name, which is ``'div'`` tag with ``class='Comments__StyledComments-dzzyvm-0'``. Here's what it looks like when you inspect Prof. Herman's page:
 
 .. image:: _static/rate_my_prof_herman_tags.png
     :scale: 40%
@@ -93,8 +93,8 @@ Now that you've assembled the correct plans, fill in the blanks to complete the 
         from bs4 import BeautifulSoup
         import requests
         # Get a soup from multiple URLs
-        base_url = '___URL_goes_here___'
-        endings = ['_endings_', '_go_', '_here_']
+        base_url = 'https://web.archive.org/web/20250331181529/https://www.ratemyprofessors.com/professor/'
+        endings = ['_endings_go_here_', '_endings_go_here_']
         for ending in endings:
             url = base_url + ending
             r = requests.get(url)
