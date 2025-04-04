@@ -1,73 +1,74 @@
-Example 2: Awarding Grammy's and finding recent Grammy nominee songs
+Integrated Example - 2
 ===============================
 
-In this example, we are managing a database of songs and their artists. Recently, several artists have won Grammy awards, and we need to update our records to reflect their new status as Grammy winners. The database contains columns such as 'artist_name', 'song_title', 'release_date', and 'award_status'. We will update the 'award_status' to 'Awarded' for all songs by artists who have won a Grammy.
+In this example, we will integrate several programming plans to fetch a 5-day weather forecast for New York, NY using a paid API from weather.com. The goal is to demonstrate how to set up a basic API call with authentication and parameters to retrieve specific data. We will use a Bearer token for authentication, which is common for paid APIs that require user identification and authorization. The API will return weather data in JSON format, which we will check for successful retrieval before printing. This example is useful for developers who need to integrate weather data into their applications for features like weather widgets, alerts, or travel planning.
 
-Additionally, to showcase the most recent Grammy-winning songs, we will order the records by their release date in descending order. This allows us to present the latest award-winning songs at the top.
++----------------+---------------+-----------------+
+| Parameter      | Value         | Description     |
++================+===============+=================+
+| start_date     | 2023-10-01    | Start date for  |
+|                |               | the forecast    |
++----------------+---------------+-----------------+
+| location       | New York, NY  | Location for    |
+|                |               | the forecast    |
++----------------+---------------+-----------------+
+| units          | metric        | Measurement     |
+|                |               | units for data  |
++----------------+---------------+-----------------+
 
-Below is an example of the table structure:
+We will walk through setting the target URL, parameters, authentication credentials, and making the GET request, followed by handling the API response.
 
-+-----------------+-------------------------+--------------+--------------+
-| artist_name     | song_title              | release_date | award_status |
-+=================+=========================+==============+==============+
-| Taylor Swift    | Anti-Hero               | 2023-05-01   | Nominated    |
-+-----------------+-------------------------+--------------+--------------+
-| Harry Styles    | As It Was               | 2023-02-15   | Awarded      |
-+-----------------+-------------------------+--------------+--------------+
-| Adele           | Easy On Me              | 2022-11-12   | Nominated    |
-+-----------------+-------------------------+--------------+--------------+
-| Lizzo           | About Damn Time         | 2022-09-20   | Awarded      |
-+-----------------+-------------------------+--------------+--------------+
-| Beyoncé         | Break My Soul           | 2022-07-29   | Awarded      |
-+-----------------+-------------------------+--------------+--------------+
-
-By employing the plans 'Update Records Conditionally' and 'Order Records', we effectively maintain and display our data in a way that highlights recent achievements in the music industry.
-
-.. highlightedtextbox::
-   :title:
-   :color: #f4e36e
-   :highlight-color: #ffe53e
-   :highlight-on-load:
-
-   Click on <b>Save & Run</b> to see the code run.
-
-.. activecode:: example_2_q1
+.. activecode:: integrated_2
    :language: sql
-   :dburl: /_static/songs.sqlite3
 
-   -- Update the value of a column in all records meeting a condition
-   UPDATE songs
-   SET award_status = 'Awarded'
-   WHERE artist_name = 'Adele';
-
-   -- View records sorted in a given order
-   SELECT * FROM songs
-   ORDER BY release_date DESC;
+   # Enter the URL for the API you will use.
+   import requests
+   target_url = 'https://api.weather.com/v3/wx/forecast/daily/5day'
    
+
+   # If the API requires a log in or a similar authentication, share your credentials
+   headers = {
+           'Content-Type': 'application/json',
+           'Authorization': 'Bearer YOUR_GPT_ACCESS_TOKEN'
+       }
+
+   # Enter parameters that will affect the response from the API.
+   my_params = {
+       "start_date": "2023-10-01", "location": "New York, NY", "units": "metric",
+   }
+
+   # Call the API by making a GET request to the server.
+   response = requests.get(target_url, params=my_params)
+   
+
+   # Check if response was successful, and show the data or the error message depending on the result.
+   # Check the result of the request
+   if response.status_code == 200:
+       print(response.json())
 
 This example uses the following programming plans:
 
 .. toctree::
    :maxdepth: 1
-   
-   update_records_conditionally
-   order_records
+   set_target_url
+   set_authentication_credentials
+   set_parameters
+   make_get_request
+   show_result_if_successful
 
-.. plandisplay:: plans.jsonupdate_records_conditionally_code
-   :plan: Update Records Conditionally
+.. plandisplay:: plans.jsonset_target_url_code
+   :plan: Set Target URL
 
-.. plandisplay:: plans.jsonorder_records_code
-   :plan: Order Records
+.. plandisplay:: plans.jsonset_authentication_credentials_code
+   :plan: Set Authentication Credentials
 
-.. shortanswer:: example_2_q2
+.. plandisplay:: plans.jsonset_parameters_code
+   :plan: Set Parameters
 
-   Click on "Show Examples" three times each for the plans above. Have you noticed any other values that could be used in these plans?
+.. plandisplay:: plans.jsonmake_get_request_code
+   :plan: Make GET Request
+
+.. plandisplay:: plans.jsonshow_result_if_successful_code
+   :plan: Show Result If Successful
 
 
-.. highlightedtextbox::
-   :title:
-   :color: #f4e36e
-   :highlight-color: #ffe53e
-   :highlight-on-load:
-
-   Click on the arrow on the bottom right to continue.

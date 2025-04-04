@@ -1,0 +1,58 @@
+..  shortname:: make_get_request
+
+..  description:: Call the API by making a GET request to the server.
+
+
+.. setup for automatic question numbering.
+
+.. qnum::
+   :start: 1
+   :prefix: p2-
+
+Plan: Make GET Request
+==========================
+
+.. plandisplay:: plans.jsonmake_get_request_code
+   :plan: Make GET Request
+
+This is a plan when you want to make a GET request from an API to obtain information. Sending a GET request is similar to going to an URL on your website.
+
+Plan I - When to use this plan?
+--------------------------------
+This plan is used when your goal is to collect information (e.g. such as weather or exchange rates). You can use it if you want to make a request to the API where you do not need to share sensitive information.
+
+Plan I - What parts can be customized to use this plan?
+-------------------------------------------------------
+To use this plan, provide the target url you set earlier, and provide parameters if there are any parameters you would like to share with the API.
+
+Plan I - Exercises
+--------------------
+.. mchoice:: make_get_request_q1
+   :answer_a: True
+   :feedback_a: Correct!
+   :answer_b: False
+   :feedback_b: No, 'Make GET Request' is primarily for retrieving data, not sending it.
+   :correct: a
+
+   The 'Make GET Request' plan is used to send sensitive data to a server by including it in the URL.
+
+.. mchoice:: make_get_request_q2
+   :random: 
+   :answer_a: None
+   :feedback_a: Correct!
+   :answer_b: my_params
+   :feedback_b: Using 'my_params' would imply that you need to specify certain query parameters, which is not required for this task.
+   :answer_c: default_params
+   :feedback_c: 'default_params' is not a recognized option in the given template.
+   :answer_d: all_params
+   :feedback_d: 'all_params' suggests including all possible parameters, which is unnecessary for a simple GET request without specific queries.
+   :correct: a
+
+   You are tasked with retrieving data from an online weather API to display the current weather information for a city. Which parameter setting should you use in the code template to ensure the GET request is made without additional query parameters?
+
+.. note:: 
+      
+      .. raw:: html
+
+       <a href="/index.html" >Click here to go back to the main page</a>
+    

@@ -1,82 +1,80 @@
-Example 1: Dropping students with failing grades from the class
+Integrated Example - 3
 ===============================
 
-At the University of Illinois Urbana-Champaign, the registrar's office manages a database that includes a table called `student_grades`. This table contains records of students' grades for various courses. The university needs to ensure that records of students who are currently failing a course (with a grade below 60) are reviewed and potentially removed for academic advising purposes. Additionally, they want to review the list of students and their grades for reporting.
+In this example, we are demonstrating how to interact with the ChatGPT API to ask a question and get a response. The scenario involves sending a question to ChatGPT, which requires setting up a target URL for the API, providing authentication credentials, preparing the question as the content, making a POST request, and handling the response. 
 
-The `student_grades` table may include columns such as:
+To begin, you will need an access token from OpenAI to authenticate your request. Once authenticated, you can send a question to the ChatGPT API and receive a response. This example covers how to set each part of the request and handle the response to ensure you get the information you need.
 
-+------------+----------------------+-----------+
-| student_id | name                 | grade     |
-+============+======================+===========+
-| 001        | James Smith          | 84        |
-+------------+----------------------+-----------+
-| 002        | Michael Brown        | 55        |
-+------------+----------------------+-----------+
-| 005        | Mary Wilson          | 68        |
-+------------+----------------------+-----------+
-| 006        | Jennifer Garcia      | 75        |
-+------------+----------------------+-----------+
-| 007        | Elizabeth Martinez   | 92        |
-+------------+----------------------+-----------+
-| 008        | Patricia Anderson    | 58        |
-+------------+----------------------+-----------+
-| ...        | ...                  | ...       |
-+------------+----------------------+-----------+
-| 015        | David Taylor         | 45        |
-+------------+----------------------+-----------+
+Here is a simple table outlining the steps:
 
-The goal is to remove records where the grade is below 60 and to view all students' records in the `student_grades` table.
++--------------------------+----------------------------------------------+
+| Step                     | Description                                  |
++==========================+==============================================+
+| Set Target URL           | Define the API endpoint URL                  |
++--------------------------+----------------------------------------------+
+| Set Authentication       | Provide necessary headers with credentials   |
++--------------------------+----------------------------------------------+
+| Set Private Content      | Prepare the question as request content      |
++--------------------------+----------------------------------------------+
+| Make POST Request        | Send the request with headers and content    |
++--------------------------+----------------------------------------------+
+| Show Result If Successful| Process the response and display results     |
++--------------------------+----------------------------------------------+
 
-.. highlightedtextbox::
-   :title:
-   :color: #f4e36e
-   :highlight-color: #ffe53e
-   :highlight-on-load:
+By following these steps, you can successfully query the ChatGPT API to obtain answers to your questions.
 
-   Click on <b>Save & Run</b> to see the code run.
-
-.. activecode:: example_1_q1a
+.. activecode:: integrated_3
    :language: sql
-   :dburl: /_static/student_grades.sqlite3
 
-   -- Remove records where the value in a column meets a condition
-   DELETE FROM student_grades
-   WHERE grade < 60;
+   # Enter the URL for the API you will use.
+   import requests
+   target_url = 'https://api.chatgpt.com/v1/ask'
+   
 
-   -- Select and view columns from the specified table
-   SELECT student_id, name, grade
-   FROM student_grades;
+   # If the API requires a log in or a similar authentication, share your credentials
+   headers = {
+           'Content-Type': application/json,
+           'Authorization': Bearer YOUR_GPT_ACCESS_TOKEN
+       }
 
+   # If you are calling an API on your data, send the data in the body of your message.
+   body = {
+       'content': 'my random content'
+       }
+   
 
-----------------
+   # Call the API with private data by making a POST request to the server.
+   response = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)
+   
+
+   # Check if response was successful, and show the data or the error message depending on the result.
+   # Check the result of the request
+   if response.status_code == 200:
+       print(response.json())
 
 This example uses the following programming plans:
 
 .. toctree::
    :maxdepth: 1
-   
-   remove_records
-   view_records
+   set_target_url
+   set_authentication_credentials
+   set_private_content
+   make_post_request
+   show_result_if_successful
+
+.. plandisplay:: plans.jsonset_target_url_code
+   :plan: Set Target URL
+
+.. plandisplay:: plans.jsonset_authentication_credentials_code
+   :plan: Set Authentication Credentials
+
+.. plandisplay:: plans.jsonset_private_content_code
+   :plan: Set Private Content
+
+.. plandisplay:: plans.jsonmake_post_request_code
+   :plan: Make POST Request
+
+.. plandisplay:: plans.jsonshow_result_if_successful_code
+   :plan: Show Result If Successful
 
 
-.. plandisplay:: plans.jsonremove_records_code
-   :plan: Remove Records
-
-
-.. plandisplay:: plans.jsonview_records_code
-   :plan: View Records
-
-
-.. shortanswer:: example_1_q2
-
-   Click on "Show Examples" three times each for the plans above. Did you notice anything?
-
-
-.. highlightedtextbox::
-   :title:
-   :color: #f4e36e
-   :highlight-color: #ffe53e
-   :highlight-on-load:
-
-   🔎  First, complete the first two questions (Q1a and Q1b) on your worksheet.
-   Then, click on the arrow on the bottom right to continue.

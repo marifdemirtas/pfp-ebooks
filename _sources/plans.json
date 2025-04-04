@@ -2,803 +2,715 @@
   {
     "code_template": {
       "changeable_areas": {
-        "condition": [
-          "grade IS NULL",
-          "product_count < 2",
-          "movie_name='Avatar'",
-          "grade < 60"
+        "c0-'application/json'": [
+          "'application/json'",
+          "application/json"
         ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs"
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": [
+          "'Bearer YOUR_ACCESS_TOKEN'",
+          "Bearer YOUR_GPT_ACCESS_TOKEN",
+          "'Bearer YOUR_GPT_ACCESS_TOKEN'"
         ]
       },
       "changeable_areas_annotations": {
-        "condition": "A condition using a column in the table, such as checking whether the column is equal to/less than/greater than a specific value, or does not exist (is NULL).",
-        "table": "Name of the table to delete from"
+        "c0-'application/json'": "TODO",
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": "TODO"
       },
       "changeable_areas_colors": {
-        "condition": "#ccebc5",
-        "table": "#ffe4a8"
+        "c0-'application/json'": "#ffd9a8",
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": "#ffd9a8"
       },
       "lines": [
-        "DELETE FROM @@table@@",
-        "WHERE @@condition@@;"
+        "headers = {",
+        "        'Content-Type': @@c0-'application/json'@@,",
+        "        'Authorization': @@c1-'Bearer YOUR_ACCESS_TOKEN'@@",
+        "    }"
       ]
     },
-    "goal": "Remove records where the value in a column meets a condition",
+    "goal": "If the API requires a log in or a similar authentication, share your credentials",
     "group": "3",
     "order": "1",
-    "plan_metadata": {
-      "description": "This plan is used to remove some records permanently from the table, using a condition to decide which records will be deleted.",
-      "instruction": "To use this plan, replace the table with the name of your table, and specify a condition using fields (columns) such that each record (row) that satisfies that condition will be deleted.",
-      "usage": "This plan is used when you want to remove records from the table using some criteria, such as dropping all student grades below some threshold, removing records that is missing a value in the specified field, or simply processing records that are marked for deletion."
-    },
-    "plan_name": "Remove Records",
-    "id": 0,
-    "questions": [
-      {
-        "type": "Parsons Problem",
-        "question_id": "Parsons Problem_1",
-        "stem": "Rearrange the SQL code blocks to remove records from the 'student_grades' table where the 'grade' is less than 60.",
-        "blocks": [
-          {
-            "text": "DELETE FROM student_grades",
-            "isDistractor": false
-          },
-          {
-            "text": "WHERE grade < 60",
-            "isDistractor": false
-          },
-          {
-            "text": "WHERE COLUMN IS NULL",
-            "isDistractor": true
-          },
-          {
-            "text": "WHERE column=1",
-            "isDistractor": true
-          },
-          {
-            "text": "WHERE COLUMN < 2",
-            "isDistractor": true
-          }
-        ],
-        "correctOrder": [
-          0,
-          1
-        ]
-      },
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are working with a database containing student grades. Students who have taken the first midterm have a value under the field 'mt1'. This field is empty for students who have not taken the exam (denoted by the special value NULL). You need to remove records for students who have not taken the exam. Which SQL statement correctly achieves this task?",
-        "correct": "DELETE FROM student_grades WHERE mt1 IS NULL;",
-        "distractors": [
-          "DELETE FROM student_grades WHERE grade IS NULL;",
-          "DELETE FROM student_grades WHERE mt1 = 0;"
-        ],
-        "feedback": [
-          "This option checks the 'grades' column for non-existent (NULL) values, but not the mt1 column.",
-          "This option removes records with a grade exactly equal to 0, but not for students who do not have any value."
-        ]
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "column_to_check": [
-          "likes",
-          "artist_name"
-        ],
-        "column_to_update": [
-          "engagement_score",
-          "award_status"
-        ],
-        "condition_value": [
-          "minimum_value",
-          "5",
-          "'test@email.com'",
-          "100",
-          "'Grammy Winner'"
-        ],
-        "new_value": [
-          "0",
-          "'a_new_value'",
-          "another_column_name",
-          "other_column * 2",
-          "engagement_score * 1.1",
-          "'Awarded'"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "tiktok_engagement",
-          "songs"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "column_to_check": "The column for selecting the records that will be updated. This could be the same as the column to be updated, or a different column of the table.",
-        "column_to_update": "The column whose values will be replaced with the new value.",
-        "condition_value": "The value that the column will be checked against, which could be a numerical or string value.",
-        "new_value": "New value for the column that will be updated, including numerical values, strings, or expressions with other columns.",
-        "table": "Name of the table to update"
-      },
-      "changeable_areas_colors": {
-        "column_to_check": "#f2f2f2",
-        "column_to_update": "#e5d8bd",
-        "condition_value": "#b3e2cd",
-        "new_value": "#fddaec",
-        "table": "#ffe4a8"
-      },
-      "lines": [
-        "UPDATE @@table@@",
-        "SET @@column_to_update@@ = @@new_value@@",
-        "WHERE @@column_to_check@@ = @@condition_value@@;"
-      ]
-    },
-    "goal": "Update the value of a column in all records meeting a condition",
-    "group": "2",
-    "order": "1",
-    "plan_metadata": {
-      "description": "This plan is used to update the value of a field (column) in records (rows) that meet a criteria.",
-      "instruction": "To use this plan, replace the table with the name of the table you want to update, and decide which field will be updated and which condition will be checked. You can use the same column in both update and condition parts of the query, or you could update a field based on the values in another field for each record.",
-      "usage": "This plan is used when you want to update records based on some rule or criteria, such as giving extra credit to all students who have completed an activity, or marking sales above some threshold to be successful."
-    },
-    "plan_name": "Update Records Conditionally",
-    "id": 1,
-    "questions": [
-      {
-        "type": "Parsons Problem",
-        "question_id": "Parsons Problem_1",
-        "blocks": [
-          {
-            "text": "SET award_status = 'Awarded'",
-            "isDistractor": false
-          },
-          {
-            "text": "UPDATE songs",
-            "isDistractor": false
-          },
-          {
-            "text": "WHERE artist_name = 'Grammy Winner'",
-            "isDistractor": false
-          },
-          {
-            "text": "UPDATE award_status  = 'awarded'",
-            "isDistractor": true
-          },
-          {
-            "text": "FROM songs",
-            "isDistractor": true
-          }
-        ],
-        "correctOrder": [
-          1,
-          0,
-          2
-        ],
-        "stem": "Arrange the code blocks to update the 'award_status' of songs in the 'songs' table for records where the 'artist_name' is 'Grammy Winner'."
-      },
-      {
-        "type": "Clickable Areas",
-        "question_id": "Clickable Areas_1",
-        "stem": "Click on which two parts of this query would be the same if you want to replace all grades lower than 25 with zero.",
-        "area": "column_to_check",
-        "correct": "artist_name",
-        "areas": [
-          "column_to_check",
-          "column_to_update"
-        ]
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "field_names": [
-          "(name, email)",
-          "(title, release_date, genre)"
-        ],
-        "field_values": [
-          "('Alice', 'alice@illinois.edu')",
-          "('Bob', 'bob@illinois.edu')",
-          "('Inception', '2010-07-16', 'Sci-Fi')"
-        ],
-        "table": [
-          "movies",
-          "products",
-          "student_grades",
-          "users",
-          "songs"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "field_names": "The fields (columns) that will be specified for the inserted records. ",
-        "field_values": "The values for the records that will be inserted, which are provided in the same order given in field_names.",
-        "table": "The name of the table to be updated."
-      },
-      "changeable_areas_colors": {
-        "field_names": "#f1c9fe",
-        "field_values": "#ffffcc",
-        "table": "#ffd9a8"
-      },
-      "lines": [
-        "INSERT INTO @@table@@ @@field_names@@ ",
-        "VALUES @@field_values@@ "
-      ]
-    },
-    "goal": "Insert a new record (row) into the specified table with values for specified columns",
-    "group": "4",
-    "order": "1",
-    "plan_metadata": {
-      "description": "This is a plan to add new records (rows) into a table.",
-      "instruction": "To use this plan, replace the name of the table, specify which fields will exist in the row you will insert, and then provide the values for those fields.",
-      "usage": "This plan is used when you want to add more data to a table in your database."
-    },
-    "plan_name": "Add New Record",
-    "id": 2,
-    "questions": [
-      {
-        "type": "Parsons Problem",
-        "question_id": "Parsons Problem_1",
-        "stem": "Arrange the code blocks to insert a new record into the 'users' table with the specified field names and values.",
-        "blocks": [
-          {
-            "text": "INSERT INTO users (name, email)",
-            "isDistractor": false
-          },
-          {
-            "text": "VALUES ('Alice', 'alice@illinois.edu')",
-            "isDistractor": false
-          },
-          {
-            "text": "INSERT INTO movies (title, release_date, genre)",
-            "isDistractor": true
-          },
-          {
-            "text": "VALUES ('Inception', '2010-07-16', 'Sci-Fi')",
-            "isDistractor": true
-          }
-        ],
-        "correctOrder": [
-          0,
-          1
-        ]
-      },
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are tasked with adding a new record into the 'movies' table in a database using SQL. Which of the following SQL statements correctly adds a movie titled 'Inception', released on '2010-07-16', with the genre 'Sci-Fi'?",
-        "correct": "INSERT INTO movies (title, release_date, genre) VALUES ('Inception', '2010-07-16', 'Sci-Fi');",
-        "distractors": [
-          "INSERT INTO users (name, email) VALUES ('Inception', '2010-07-16', 'Sci-Fi');",
-          "INSERT INTO movies (name, email) VALUES ('Inception', '2010-07-16', 'Sci-Fi');",
-          "INSERT INTO users (title, release_date, genre) VALUES ('Inception', '2010-07-16', 'Sci-Fi');"
-        ],
-        "feedback": [
-          "Incorrect. This statement attempts to insert into the 'users' table, which is not where movie data belongs.",
-          "Incorrect. This statement uses the wrong field names for the 'movies' table. It should be (title, release_date, genre).",
-          "Incorrect. This statement attempts to insert into the 'users' table, which is not where movie data belongs."
-        ]
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "column": [
-          "redundant_data",
-          "unnecessary_metric"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "tiktok_engagement"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "column": "The column to be removed.",
-        "table": "The table to be updated."
-      },
-      "changeable_areas_colors": {
-        "column": "#ffd9a8",
-        "table": "#ffd9a8"
-      },
-      "lines": [
-        "ALTER TABLE @@table@@",
-        "DROP COLUMN @@column@@;"
-      ]
-    },
-    "goal": "Alter the existing table to remove an unnecessary column",
-    "group": "1",
-    "order": "11",
     "plan_metadata": {
       "description": "This is a plan",
       "instruction": "To use this plan, follow these steps...",
       "usage": "This plan is used when..."
     },
-    "plan_name": "Drop Column",
+    "plan_name": "Set Authentication Credentials",
+    "id": 2
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "my_body": [
+          "my_body",
+          "None"
+        ],
+        "my_headers": [
+          "my_headers",
+          "None"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "my_body": "The body of your request, which will include the sensitive information you want to share with the server.",
+        "my_headers": "Headers you may want to set, such as the authorization information."
+      },
+      "changeable_areas_colors": {
+        "my_body": "#4CAF50",
+        "my_headers": "#4CAF50"
+      },
+      "lines": [
+        "response = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)",
+        ""
+      ]
+    },
+    "goal": "Call the API with private data by making a POST request to the server.",
+    "group": "3",
+    "order": 2,
+    "plan_metadata": {
+      "description": "This is a plan when you want to make a POST request to an API to obtain information. Sending a POST request is different than the GET request, as you may communicate with the API by sending a message body, rather than just providing parameters.",
+      "instruction": "To use this plan, provide the target url you set earlier, provide any headers that you want to share such as your authorization credentials, and provide the body of the message that contains the information you would like to share with the API.",
+      "usage": "This plan is used when your goal is to modify information on the server side (e.g. processing the data you sent). You can use it if you want to make a request to the API where you want to share potentially sensitive information, like private messages."
+    },
+    "plan_name": "Make POST Request",
     "id": 3,
     "questions": [
       {
         "type": "MCQ",
         "question_id": "MCQ_1",
+        "stem": "In the context of sending a JSON payload to an API endpoint that requires authentication, which part of the following code template is responsible for specifying the data being sent in the request body?\n\nresponse = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)",
+        "correct": "my_body",
         "distractors": [
-          "ALTER TABLE Books REMOVE COLUMN Edition;",
-          "DELETE COLUMN Edition FROM Books;",
-          "ALTER TABLE Books DELETE Edition;"
+          "my_headers",
+          "target_url",
+          "requests.post"
         ],
         "feedback": [
-          "The SQL command to remove a column is 'DROP COLUMN', not 'REMOVE COLUMN'.",
-          "The syntax for deleting a column is incorrect. You need to use 'ALTER TABLE ... DROP COLUMN'.",
-          "The correct SQL syntax is 'ALTER TABLE ... DROP COLUMN', not 'DELETE COLUMN'."
-        ],
-        "stem": "You are working with a database for a library management system. The table 'Books' contains a column 'Edition' that is no longer needed. How would you remove this column from the 'Books' table?",
-        "correct": "ALTER TABLE Books DROP COLUMN Edition;"
+          "Incorrect. 'my_headers' is used to specify the headers of the request, which might include authentication information.",
+          "Incorrect. 'target_url' specifies the endpoint to which the request is being sent.",
+          "Incorrect. 'requests.post' is the method used to send the POST request, but it does not specify the request body."
+        ]
       }
     ]
   },
   {
     "code_template": {
-      "changeable_areas": {
-        "aggregation_func": [
-          "COUNT",
-          "SUM",
-          "MAX",
-          "MIN",
-          "AVG"
-        ],
-        "column_to_process": [
-          "sales",
-          "grades",
-          "movie_title"
-        ],
-        "optional_column_to_group": [
-          "year",
-          "genre"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "aggregation_func": "A function that will process the values in each group and return a single summary value.",
-        "column_to_process": "The column(s) over which the aggregation function will be run.",
-        "optional_column_to_group": "Optional value - omit if you want to calculate statistics over all records. The column name that records will be grouped by. When you run this query, all the records with the same value in this column will be grouped together, and the aggregation function will be executed separately for each group.",
-        "table": "Name of the table to be examined."
-      },
-      "changeable_areas_colors": {
-        "aggregation_func": "#fbb4ae",
-        "column_to_process": "#f2f2f2",
-        "optional_column_to_group": "#b3e2cd",
-        "table": "#fddaec"
-      },
+      "changeable_areas": {},
+      "changeable_areas_annotations": {},
+      "changeable_areas_colors": {},
       "lines": [
-        "SELECT @@optional_column_to_group@@, @@aggregation_func@@(@@column_to_process@@) ",
-        "FROM @@table@@ ",
-        "GROUP BY @@optional_column_to_group@@;"
-      ]
-    },
-    "goal": "Calculate aggregated summary statistics for the whole table, or for subsets of the table",
-    "group": "4",
-    "order": 2,
-    "plan_metadata": {
-      "description": "This is a plan to view records summarized by some attribute. By summarize, we mean using some kind of aggregation function: such as taking the mean, maximum, minimum, or sum of the values. You can calculate this summary in subsets of the data (by using the GROUP BY part of the query), or you can calculate the summary values across all records.",
-      "instruction": "To use this plan, replace the name of the table with your table, decide which function you want to use and which column(s) you want to summarize or see. If you want to calculate summary values over subsets, keep the GROUP BY line in the query and replace the column with a field. A separate group will be shown for each value of that field. For example, if you select AVG(quiz_grade) and if you group by letter_grade, you can see what was the average quiz grade for students who got an A, for students who got a B, etc.",
-      "usage": "This plan is used when you want to get insights about your data by using statistical aggregation functions."
-    },
-    "plan_name": "Summarize Records",
-    "id": 4,
-    "questions": [
-      {
-        "type": "Parsons Problem",
-        "question_id": "Parsons Problem_1",
-        "stem": "Arrange the following SQL query blocks to calculate the maximum value of 'column_2' for each genre in the 'movies' table.",
-        "blocks": [
-          {
-            "text": "FROM movies",
-            "isDistractor": false
-          },
-          {
-            "text": "SELECT genre, MAX(column_2)",
-            "isDistractor": false
-          },
-          {
-            "text": "GROUP BY genre",
-            "isDistractor": false
-          },
-          {
-            "text": "SELECT title, AVG(column1)",
-            "isDistractor": true
-          },
-          {
-            "text": "GROUP BY column_name",
-            "isDistractor": true
-          }
-        ],
-        "correctOrder": [
-          1,
-          0,
-          2
-        ]
-      },
-      {
-        "type": "True/False",
-        "question_id": "True/False_1",
-        "stem": "In the context of a movie database, using the plan 'Summarize Records', the SQL query 'SELECT genre, AVG(rating) FROM movies GROUP BY genre;' correctly calculates the average rating for each genre.",
-        "label": "True",
-        "feedback": "This query correctly uses the 'AVG' aggregation function on the 'rating' column and groups the results by 'genre', which is a valid approach to obtain the average rating for each genre."
-      },
-      {
-        "type": "True/False",
-        "question_id": "True/False_2",
-        "stem": "Using the 'Summarize Records' plan, the following query will correctly calculate the average rating of movies grouped by genre: SELECT genre, AVG(rating) FROM movies GROUP BY genre;",
-        "label": "True",
-        "feedback": "Make sure to check if the aggregation function and the column names used in the query match the plan's template structure."
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "column_to_sort_by": [
-          "column_name",
-          "release_date"
-        ],
-        "order_direction": [
-          "ASC",
-          "DESC"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "column_to_sort_by": "The column that will be used for sorting the records.",
-        "order_direction": "The direction for the table to be sorted (ascending or descending)",
-        "table": "Name of the table to be examined."
-      },
-      "changeable_areas_colors": {
-        "column_to_sort_by": "#fff2ae",
-        "order_direction": "#decbe4",
-        "table": "#e6f5c9"
-      },
-      "lines": [
-        "SELECT * FROM @@table@@",
-        "ORDER BY @@column_to_sort_by@@ @@order_direction@@;",
+        "body = {",
+        "    'content': 'my random content'",
+        "    }",
         ""
       ]
     },
-    "goal": "View records sorted in a given order",
-    "group": "2",
-    "order": 2,
-    "plan_metadata": {
-      "description": "This plan is used to see records (rows) sorted by some field (column), without actually modifying the table. The sorting will only apply to the output you see. It will not be ordered if you try to see it with a regular SELECT query.",
-      "instruction": "To use this plan, complete the fields of the regular SELECT query as you saw in 'View Records', and then provide which field (column) to sort the records by, along with whether you want it ascending or descending. ",
-      "usage": "This plan may be used to see who are the top performers in a class, or which products in a database have the cheapest prices."
-    },
-    "plan_name": "Order Records",
-    "id": 5,
-    "questions": [
-      {
-        "type": "True/False",
-        "question_id": "True/False_1",
-        "stem": "In a music database, to view all songs sorted by their release date in descending order, the following query is used: SELECT * FROM songs ORDER BY release_date DESC;",
-        "label": "True",
-        "feedback": "Remember that DESC is used to sort results in descending order, which means from newest to oldest."
-      },
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are working with a music database and need to retrieve a list of songs sorted by their release date in descending order. Which SQL query would you use?",
-        "correct": "SELECT * FROM songs ORDER BY release_date DESC;",
-        "distractors": [
-          "SELECT * FROM songs ORDER BY release_date ASC;",
-          "SELECT * FROM songs ORDER BY column_name DESC;",
-          "SELECT * FROM table_name ORDER BY release_date DESC;"
-        ],
-        "feedback": [
-          "This option sorts the songs in ascending order, showing the oldest songs first. You need to sort them in descending order.",
-          "This option uses 'column_name' instead of 'release_date'. Make sure to use the correct column to sort by.",
-          "This option uses 'table_name' instead of 'songs'. Ensure you are querying from the correct table."
-        ]
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "column_to_process": [
-          "column_name",
-          "column1, column_2",
-          "likes"
-        ],
-        "processing_function": [
-          "processing_function",
-          "LENGTH",
-          "AVG"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs",
-          "tiktok_engagement"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "column_to_process": "The column(s) over which the processing function will be run.",
-        "processing_function": "A function that will process the values and return a processed value for each record.",
-        "table": "Name of the table to be examined."
-      },
-      "changeable_areas_colors": {
-        "column_to_process": "#f2f2f2",
-        "processing_function": "#fdcdac",
-        "table": "#fddaec"
-      },
-      "lines": [
-        "SELECT @@processing_function@@(@@column_to_process@@) ",
-        "FROM @@table@@;",
-        ""
-      ]
-    },
-    "goal": "Calculate aggregated summary statistics for the whole table, or for subsets of the table",
-    "group": "1",
-    "order": 12,
+    "goal": "If you are calling an API on your data, send the data in the body of your message.",
+    "group": "3",
+    "order": "1",
     "plan_metadata": {
       "description": "This is a plan",
       "instruction": "To use this plan, follow these steps...",
       "usage": "This plan is used when..."
     },
-    "plan_name": "View Processed Records",
-    "id": 7,
-    "questions": [
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are given a database table named 'students' with columns 'name', 'age', and 'grade'. You need to calculate the average grade of all students. Which SQL query correctly uses the 'View Processed Records' plan to achieve this?",
-        "correct": "SELECT AVG(grade) FROM students;",
-        "distractors": [
-          "SELECT LENGTH(grade) FROM students;",
-          "SELECT AVG(age) FROM students;",
-          "SELECT SUM(grade) FROM students;"
-        ],
-        "feedback": [
-          "The LENGTH function is used to calculate the length of a string, not to find an average.",
-          "This query calculates the average age, not the grade.",
-          "This query sums up the grades instead of calculating the average."
-        ]
-      },
-      {
-        "type": "Fill in the Blank",
-        "question_id": "Fill in the Blank_1",
-        "stem": "Suppose you have a database table named 'sales_data' which contains information about sales transactions. You want to calculate the sum of all sales figures in a column named 'total_sales'. Fill in the blank in the SQL query template to achieve this.",
-        "area": "processing_function",
-        "correct": "SUM"
-      }
-    ]
+    "plan_name": "Set Private Content",
+    "id": 6
   },
   {
     "code_template": {
       "changeable_areas": {
-        "column_to_check": [
-          "likes",
-          "artist_name"
-        ],
-        "column_to_update": [
-          "engagement_score",
-          "award_status"
-        ],
-        "condition_value": [
-          "min_val",
-          "5",
-          "'test@email.com'",
-          "100",
-          "'Grammy Winner'"
-        ],
-        "new_value": [
-          "0",
-          "'a_new_value'",
-          "another_column_name",
-          "other_column * 2",
-          "engagement_score * 1.1",
-          "'Awarded'"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "tiktok_engagement",
-          "songs"
+        "url": [
+          "https://api.weather.com/v3/wx/forecast/daily/5day",
+          "https://api.coindesk.com/v1/bpi/currentprice.json",
+          "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
+          "https://api.openai.com/v1/chat/completions",
+          "https://api.restaurantreviews.com/v1/reviews",
+          "https://api.chatgpt.com/v1/ask"
         ]
       },
       "changeable_areas_annotations": {
-        "column_to_check": "The column for selecting the records that will be updated. This could be the same as the column to be updated, or a different column of the table.",
-        "column_to_update": "The column whose values will be replaced with the new value.",
-        "condition_value": "The value that the column will be checked against, which could be a numerical or string value.",
-        "new_value": "New value for the column that will be updated, including numerical values, strings, or expressions with other columns.",
-        "table": "Name of the table to update"
+        "url": "The URL of the API you want to query."
       },
       "changeable_areas_colors": {
-        "column_to_check": "#f2f2f2",
-        "column_to_update": "#e5d8bd",
-        "condition_value": "#b3e2cd",
-        "new_value": "#fddaec",
-        "table": "#ffe4a8"
+        "url": "#fbb4ae"
       },
       "lines": [
-        "UPDATE @@table@@",
-        "SET @@column_to_update@@ = @@new_value@@",
-        "WHERE @@column_to_check@@ = @@condition_value@@;"
+        "import requests",
+        "target_url = '@@url@@'",
+        ""
       ]
     },
-    "goal": "Update the value of a column in all records meeting a condition",
+    "goal": "Enter the URL for the API you will use.",
     "group": "1",
-    "order": 1,
+    "order": 0,
     "plan_metadata": {
-      "description": "This is a plan",
-      "instruction": "To use this plan, follow these steps...",
-      "usage": "This plan is used when..."
+      "description": "This plan sets the URL address for the API you want to use.",
+      "instruction": "To use this plan, find the URL of the API you want to use online. These URLs might start with 'api' instead of 'www'. See the examples for the plan for some example URLs.",
+      "usage": "This plan is used before you send any requests."
     },
-    "plan_name": "Update Records Conditionally",
+    "plan_name": "Set Target URL",
     "id": 8,
     "questions": [
       {
-        "type": "Clickable Areas",
-        "question_id": "Clickable Areas_1",
-        "stem": "You need to update the email addresses of users in a database if their current email address matches a certain condition. Click on the field that you would need to change to check if the email column in the given table is 'test@email.com'.",
-        "area": "new_value",
-        "correct": "'a_new_value'",
-        "areas": [
-          "condition_value",
-          "column_to_check"
-        ]
-      },
-      {
-        "type": "Clickable Areas",
-        "question_id": "Clickable Areas_2",
-        "stem": "You need to update the verification status of users in a database if their current email address matches a certain condition. Click on the field that you would need to change to set the verified_status column to True.",
-        "areas": [
-          "column_to_update",
-          "new_value"
-        ]
-      },
-      {
         "type": "True/False",
         "question_id": "True/False_1",
-        "stem": "In a database of customer records, you want to update all records with an email of 'test@email.com' by setting their 'column_name' to 'a_new_value'. The query 'UPDATE table_name SET column_name = 'a_new_value' WHERE column1 = 'test@email.com';' will achieve this goal.",
+        "stem": "The URL must be in quotation marks (e.g. target_url = \"api.example.com\").",
         "label": "True",
-        "feedback": "Ensure that the column being checked is correctly specified and that the new value is being set to the desired column."
+        "feedback": "When using Python, you need to wrap the URL address in quotes (either with 'single quotes' or \"double quotes\")."
       }
     ]
   },
   {
     "code_template": {
       "changeable_areas": {
-        "column_or_columns": [
-          "*",
-          "student_id, name, grade",
-          "student_id"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs",
-          "student_grades"
+        "params": [
+          "my_params",
+          "None"
         ]
       },
       "changeable_areas_annotations": {
-        "column_or_columns": "Names of the fields (columns) to be viewed as a list separated by commas, or just a single column name, or an asterisk for all columns.",
-        "table": "Name of the table to be examined."
+        "params": "You can either send your parameters, or call the API with no parameters."
       },
       "changeable_areas_colors": {
-        "column_or_columns": "#cbd5e8",
-        "table": "#f4cae4"
+        "params": "#fbb4ae"
       },
       "lines": [
-        "SELECT @@column_or_columns@@",
-        "FROM @@table@@;"
+        "response = requests.get(target_url, params=@@params@@)",
+        ""
       ]
     },
-    "goal": "Select and view columns from the specified table",
-    "group": "5",
+    "goal": "Call the API by making a GET request to the server.",
+    "group": "1",
     "order": 2,
     "plan_metadata": {
-      "description": "The most fundamental query we will learn about is viewing records from the table using SELECT. This query will return a list of records (rows). For each record, you can see values for the fields (columns) that you specify in the query.",
-      "instruction": "To use this plan, replace the table with the table you want to get records (rows) from, and specify the fields (columns) you want to look for.",
-      "usage": "Use this plan when you want to **view** some values in the database without modifying the table."
+      "description": "This is a plan when you want to make a GET request from an API to obtain information. Sending a GET request is similar to going to an URL on your website.",
+      "instruction": "To use this plan, provide the target url you set earlier, and provide parameters if there are any parameters you would like to share with the API.",
+      "usage": "This plan is used when your goal is to collect information (e.g. such as weather or exchange rates). You can use it if you want to make a request to the API where you do not need to share sensitive information."
     },
-    "plan_name": "View Records",
+    "plan_name": "Make GET Request",
     "id": 9,
     "questions": [
       {
-        "type": "Fill in the Blank",
-        "question_id": "Fill in the Blank_1",
-        "stem": "Complete the query to show the values of student_id for all records in the table student_grades.",
-        "area": "column_or_columns"
-      },
-      {
         "type": "True/False",
         "question_id": "True/False_1",
-        "stem": "In the context of a database system where you want to view student records, the following SQL statement correctly selects all columns from the student_grades table: SELECT * FROM student_grades;",
+        "stem": "The 'Make GET Request' plan is used to send sensitive data to a server by including it in the URL.",
         "label": "True",
-        "feedback": "The SQL statement is correct. Using '*' in the SELECT clause retrieves all columns from the specified table, which in this case is 'student_grades'."
+        "feedback": "No, 'Make GET Request' is primarily for retrieving data, not sending it."
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You are tasked with retrieving data from an online weather API to display the current weather information for a city. Which parameter setting should you use in the code template to ensure the GET request is made without additional query parameters?",
+        "correct": "None",
+        "distractors": [
+          "my_params",
+          "default_params",
+          "all_params"
+        ],
+        "feedback": [
+          "Using 'my_params' would imply that you need to specify certain query parameters, which is not required for this task.",
+          "'default_params' is not a recognized option in the given template.",
+          "'all_params' suggests including all possible parameters, which is unnecessary for a simple GET request without specific queries."
+        ]
       }
     ]
   },
   {
     "code_template": {
       "changeable_areas": {
-        "column_or_columns": [
-          "*",
-          "student_id, name, grade",
-          "student_id"
-        ],
-        "table": [
-          "products",
-          "student_grades",
-          "users",
-          "movies",
-          "songs",
-          "student_grades"
+        "key_value_pair": [
+          "\"start_date\": \"2023-01-01\"",
+          "\"start_date\": \"2023-10-01\", \"location\": \"New York, NY\", \"units\": \"metric\"",
+          "\"exchange_rate\": \"USDEUR\"",
+          "\"date\": \"2023-10-01\", \"location\": \"Champaign-Urbana\", \"type\": \"rating\""
         ]
       },
       "changeable_areas_annotations": {
-        "column_or_columns": "Names of the fields (columns) to be viewed as a list separated by commas, or just a single column name, or an asterisk for all columns.",
-        "table": "Name of the table to be examined."
+        "key_value_pair": "A \"key\" that refers to the type of information, and a \"value\" that is the information you need to send to the API. You can add multiple pairs to send more information, depending on the API."
       },
       "changeable_areas_colors": {
-        "column_or_columns": "#cbd5e8",
-        "table": "#f4cae4"
+        "key_value_pair": "#b3cde3"
       },
       "lines": [
-        "SELECT @@column_or_columns@@",
-        "FROM @@table@@;"
+        "my_params = {",
+        "    @@key_value_pair@@,",
+        "}"
       ]
     },
-    "goal": "Select and view columns from the specified table",
-    "group": "3",
-    "order": 2,
+    "goal": "Enter parameters that will affect the response from the API.",
+    "group": "1",
+    "order": 1,
     "plan_metadata": {
-      "description": "The most fundamental query we will learn about is viewing records from the table using SELECT. This query will return a list of records (rows). For each record, you can see values for the fields (columns) that you specify in the query.",
-      "instruction": "To use this plan, replace the table with the table you want to get records (rows) from, and specify the fields (columns) you want to look for.",
-      "usage": "Use this plan when you want to **view** some values in the database without modifying the table."
+      "description": "This plan lists the parameters that will be shared with the API you are calling.",
+      "instruction": "To use this plan, check the documentation of the API to see what type of information is required to send a request. Then, add each piece of information according to the format described. You can Google for an API's documentation to see which parameters they accept.",
+      "usage": "This plan is used when you need to call an API with a set of parameters that do not contain private information. If you want to share private information with the API, you will need to use more secure methods that we will explore soon."
     },
-    "plan_name": "View Records",
+    "plan_name": "Set Parameters",
     "id": 10,
     "questions": [
       {
-        "type": "Fill in the Blank",
-        "question_id": "Fill in the Blank_1",
-        "stem": "Complete the query to show the values of student_id for all records in the table student_grades.",
-        "area": "column_or_columns"
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "Look at the \"request parameters\" for a weather API in their documentation: https://www.weatherapi.com/docs/ \nAccording to the documentation, which one of the options would be an incorrect parameter to provide?",
+        "correct": "\"days\": \"yesterday\"",
+        "distractors": [
+          "\"days\": 5",
+          "\"q\": \"Champaign\"",
+          "\"q\": 61820"
+        ],
+        "feedback": [
+          "This is a valid option for the number of days of forecast required, which must be between 1 and 14.",
+          "This is a valid option for the query parameter, as it is a city name.",
+          "This is a valid option for the query parameter, as it is an US zip code."
+        ]
       },
       {
         "type": "True/False",
         "question_id": "True/False_1",
-        "stem": "In the context of a database system where you want to view student records, the following SQL statement correctly selects all columns from the student_grades table: SELECT * FROM student_grades;",
+        "stem": "You can provide multiple parameters in the same API call.",
         "label": "True",
-        "feedback": "The SQL statement is correct. Using '*' in the SELECT clause retrieves all columns from the specified table, which in this case is 'student_grades'."
+        "feedback": "By providing multiple pairs of keys and values, you can pass many parameters to the API in the same call."
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "process_result": [
+          "print(response.json())",
+          "print({\"error\": \"404 Not Found\"})",
+          "print({\"error\": \"500 Internal Server Error\"})"
+        ],
+        "status_code": [
+          "200",
+          "404",
+          "500",
+          200
+        ]
+      },
+      "changeable_areas_annotations": {
+        "process_result": "This line processes the response to generate a result: It may show the response from the server or it might show an error message.",
+        "status_code": "A number that represents whether the request was successful (200) or had some particular error."
+      },
+      "changeable_areas_colors": {
+        "process_result": "#fbb4ae",
+        "status_code": "#cce8b5"
+      },
+      "lines": [
+        "# Check the result of the request",
+        "if response.status_code == @@status_code@@:",
+        "    @@process_result@@"
+      ]
+    },
+    "goal": "Check if response was successful, and show the data or the error message depending on the result.",
+    "group": "1",
+    "order": 6,
+    "plan_metadata": {
+      "description": "This is a plan to check the response from the API. The response might indicate a successful operation (code 200), or might indicate some type of error.",
+      "instruction": "To use this plan, look up the HTML error codes, and replace the status code with the code you need to watch out for. Then, you can process the result by printing it directly (if there are no errors), or by showing an error message.",
+      "usage": "This plan is used when you want to handle cases where the request to the API may fail."
+    },
+    "plan_name": "Show Result If Successful",
+    "id": 11,
+    "questions": [
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You are repeatedly sending requests to an API that has been not working for the past hour. You want to automatically print the data when the API is working again and your request is successfully completed. Which status code should you check for to ensure that the response was successful, allowing you to process and display the JSON data received?",
+        "correct": "200",
+        "distractors": [
+          "404",
+          "500"
+        ],
+        "feedback": [
+          "404 indicates that the requested resource could not be found, so you should handle this as an error.",
+          "500 indicates that there is a server error, thus the response is unsuccessful and should be treated as an error."
+        ]
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_2",
+        "stem": "You want to send a request to \"api.weather.com/forecast\", but you made a typo while writing the target URL, resulting in the incorrect URL \"api.weather.com/forcast\", which does not exist. Which status code would you need to look for to notice this error?",
+        "correct": "404",
+        "distractors": [
+          "200",
+          "500"
+        ],
+        "feedback": [
+          "200 indicates a successful response, but your response would have the \"Not Found\" error as the mistyped URL does not point to an existing resource.",
+          "500 indicates an error due to the server, but in your case the error would be caused from requesting an address that cannot be found."
+        ]
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "c0-'application/json'": [
+          "'application/json'",
+          "application/json"
+        ],
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": [
+          "'Bearer YOUR_ACCESS_TOKEN'",
+          "Bearer YOUR_GPT_ACCESS_TOKEN"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "c0-'application/json'": "TODO",
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": "TODO"
+      },
+      "changeable_areas_colors": {
+        "c0-'application/json'": "#ffd9a8",
+        "c1-'Bearer YOUR_ACCESS_TOKEN'": "#ffd9a8"
+      },
+      "lines": [
+        "headers = {",
+        "        'Content-Type': @@c0-'application/json'@@,",
+        "        'Authorization': @@c1-'Bearer YOUR_ACCESS_TOKEN'@@",
+        "    }"
+      ]
+    },
+    "goal": "If the API requires a log in or a similar authentication, share your credentials",
+    "group": "2",
+    "order": "1",
+    "plan_metadata": {
+      "description": "This is a plan",
+      "instruction": "To use this plan, follow these steps...",
+      "usage": "This plan is used when..."
+    },
+    "plan_name": "Set Authentication Credentials",
+    "id": 12
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "url": [
+          "https://api.weather.com/v3/wx/forecast/daily/5day",
+          "https://api.coindesk.com/v1/bpi/currentprice.json",
+          "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
+          "https://api.openai.com/v1/chat/completions"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "url": "The URL of the API you want to query."
+      },
+      "changeable_areas_colors": {
+        "url": "#fbb4ae"
+      },
+      "lines": [
+        "import requests",
+        "target_url = '@@url@@'",
+        ""
+      ]
+    },
+    "goal": "Enter the URL for the API you will use.",
+    "group": "2",
+    "order": 0,
+    "plan_metadata": {
+      "description": "This plan sets the URL address for the API you want to use.",
+      "instruction": "To use this plan, find the URL of the API you want to use online. These URLs might start with 'api' instead of 'www'. See the examples for the plan for some example URLs.",
+      "usage": "This plan is used before you send any requests."
+    },
+    "plan_name": "Set Target URL",
+    "id": 12,
+    "questions": [
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "The URL must be in quotation marks (e.g. target_url = \"api.example.com\").",
+        "label": "True",
+        "feedback": "When using Python, you need to wrap the URL address in quotes (either with 'single quotes' or \"double quotes\")."
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "url": [
+          "https://api.weather.com/v3/wx/forecast/daily/5day",
+          "https://api.coindesk.com/v1/bpi/currentprice.json",
+          "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
+          "https://api.openai.com/v1/chat/completions"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "url": "The URL of the API you want to query."
+      },
+      "changeable_areas_colors": {
+        "url": "#fbb4ae"
+      },
+      "lines": [
+        "import requests",
+        "target_url = '@@url@@'",
+        ""
+      ]
+    },
+    "goal": "Enter the URL for the API you will use.",
+    "group": "3",
+    "order": 0,
+    "plan_metadata": {
+      "description": "This plan sets the URL address for the API you want to use.",
+      "instruction": "To use this plan, find the URL of the API you want to use online. These URLs might start with 'api' instead of 'www'. See the examples for the plan for some example URLs.",
+      "usage": "This plan is used before you send any requests."
+    },
+    "plan_name": "Set Target URL",
+    "id": 13,
+    "questions": [
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "The URL must be in quotation marks (e.g. target_url = \"api.example.com\").",
+        "label": "True",
+        "feedback": "When using Python, you need to wrap the URL address in quotes (either with 'single quotes' or \"double quotes\")."
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "key_value_pair": [
+          "\"start_date\": \"2023-01-01\"",
+          "\"start_date\": \"2023-10-01\", \"location\": \"New York, NY\", \"units\": \"metric\"",
+          "\"exchange_rate\": \"USDEUR\""
+        ]
+      },
+      "changeable_areas_annotations": {
+        "key_value_pair": "A \"key\" that refers to the type of information, and a \"value\" that is the information you need to send to the API. You can add multiple pairs to send more information, depending on the API."
+      },
+      "changeable_areas_colors": {
+        "key_value_pair": "#b3cde3"
+      },
+      "lines": [
+        "my_params = {",
+        "    @@key_value_pair@@,",
+        "}"
+      ]
+    },
+    "goal": "Enter parameters that will affect the response from the API.",
+    "group": "2",
+    "order": 1,
+    "plan_metadata": {
+      "description": "This plan lists the parameters that will be shared with the API you are calling.",
+      "instruction": "To use this plan, check the documentation of the API to see what type of information is required to send a request. Then, add each piece of information according to the format described. You can Google for an API's documentation to see which parameters they accept.",
+      "usage": "This plan is used when you need to call an API with a set of parameters that do not contain private information. If you want to share private information with the API, you will need to use more secure methods that we will explore soon."
+    },
+    "plan_name": "Set Parameters",
+    "id": 13,
+    "questions": [
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "Look at the \"request parameters\" for a weather API in their documentation: https://www.weatherapi.com/docs/ \nAccording to the documentation, which one of the options would be an incorrect parameter to provide?",
+        "correct": "\"days\": \"yesterday\"",
+        "distractors": [
+          "\"days\": 5",
+          "\"q\": \"Champaign\"",
+          "\"q\": 61820"
+        ],
+        "feedback": [
+          "This is a valid option for the number of days of forecast required, which must be between 1 and 14.",
+          "This is a valid option for the query parameter, as it is a city name.",
+          "This is a valid option for the query parameter, as it is an US zip code."
+        ]
+      },
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "You can provide multiple parameters in the same API call.",
+        "label": "True",
+        "feedback": "By providing multiple pairs of keys and values, you can pass many parameters to the API in the same call."
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "process_result": [
+          "print(response.json())",
+          "print({\"error\": \"404 Not Found\"})",
+          "print({\"error\": \"500 Internal Server Error\"})"
+        ],
+        "status_code": [
+          "200",
+          "404",
+          "500"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "process_result": "This line processes the response to generate a result: It may show the response from the server or it might show an error message.",
+        "status_code": "A number that represents whether the request was successful (200) or had some particular error."
+      },
+      "changeable_areas_colors": {
+        "process_result": "#fbb4ae",
+        "status_code": "#cce8b5"
+      },
+      "lines": [
+        "# Check the result of the request",
+        "if response.status_code == @@status_code@@:",
+        "    @@process_result@@"
+      ]
+    },
+    "goal": "Check if response was successful, and show the data or the error message depending on the result.",
+    "group": "2",
+    "order": 6,
+    "plan_metadata": {
+      "description": "This is a plan to check the response from the API. The response might indicate a successful operation (code 200), or might indicate some type of error.",
+      "instruction": "To use this plan, look up the HTML error codes, and replace the status code with the code you need to watch out for. Then, you can process the result by printing it directly (if there are no errors), or by showing an error message.",
+      "usage": "This plan is used when you want to handle cases where the request to the API may fail."
+    },
+    "plan_name": "Show Result If Successful",
+    "id": 13,
+    "questions": [
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You are repeatedly sending requests to an API that has been not working for the past hour. You want to automatically print the data when the API is working again and your request is successfully completed. Which status code should you check for to ensure that the response was successful, allowing you to process and display the JSON data received?",
+        "correct": "200",
+        "distractors": [
+          "404",
+          "500"
+        ],
+        "feedback": [
+          "404 indicates that the requested resource could not be found, so you should handle this as an error.",
+          "500 indicates that there is a server error, thus the response is unsuccessful and should be treated as an error."
+        ]
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_2",
+        "stem": "You want to send a request to \"api.weather.com/forecast\", but you made a typo while writing the target URL, resulting in the incorrect URL \"api.weather.com/forcast\", which does not exist. Which status code would you need to look for to notice this error?",
+        "correct": "404",
+        "distractors": [
+          "200",
+          "500"
+        ],
+        "feedback": [
+          "200 indicates a successful response, but your response would have the \"Not Found\" error as the mistyped URL does not point to an existing resource.",
+          "500 indicates an error due to the server, but in your case the error would be caused from requesting an address that cannot be found."
+        ]
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "params": [
+          "my_params",
+          "None"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "params": "You can either send your parameters, or call the API with no parameters."
+      },
+      "changeable_areas_colors": {
+        "params": "#fbb4ae"
+      },
+      "lines": [
+        "response = requests.get(target_url, params=@@params@@)",
+        ""
+      ]
+    },
+    "goal": "Call the API by making a GET request to the server.",
+    "group": "2",
+    "order": 2,
+    "plan_metadata": {
+      "description": "This is a plan when you want to make a GET request from an API to obtain information. Sending a GET request is similar to going to an URL on your website.",
+      "instruction": "To use this plan, provide the target url you set earlier, and provide parameters if there are any parameters you would like to share with the API.",
+      "usage": "This plan is used when your goal is to collect information (e.g. such as weather or exchange rates). You can use it if you want to make a request to the API where you do not need to share sensitive information."
+    },
+    "plan_name": "Make GET Request",
+    "id": 15,
+    "questions": [
+      {
+        "type": "True/False",
+        "question_id": "True/False_1",
+        "stem": "The 'Make GET Request' plan is used to send sensitive data to a server by including it in the URL.",
+        "label": "True",
+        "feedback": "No, 'Make GET Request' is primarily for retrieving data, not sending it."
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You are tasked with retrieving data from an online weather API to display the current weather information for a city. Which parameter setting should you use in the code template to ensure the GET request is made without additional query parameters?",
+        "correct": "None",
+        "distractors": [
+          "my_params",
+          "default_params",
+          "all_params"
+        ],
+        "feedback": [
+          "Using 'my_params' would imply that you need to specify certain query parameters, which is not required for this task.",
+          "'default_params' is not a recognized option in the given template.",
+          "'all_params' suggests including all possible parameters, which is unnecessary for a simple GET request without specific queries."
+        ]
+      }
+    ]
+  },
+  {
+    "code_template": {
+      "changeable_areas": {
+        "process_result": [
+          "print(response.json())",
+          "print({\"error\": \"404 Not Found\"})",
+          "print({\"error\": \"500 Internal Server Error\"})"
+        ],
+        "status_code": [
+          "200",
+          "404",
+          "500"
+        ]
+      },
+      "changeable_areas_annotations": {
+        "process_result": "This line processes the response to generate a result: It may show the response from the server or it might show an error message.",
+        "status_code": "A number that represents whether the request was successful (200) or had some particular error."
+      },
+      "changeable_areas_colors": {
+        "process_result": "#fbb4ae",
+        "status_code": "#cce8b5"
+      },
+      "lines": [
+        "# Check the result of the request",
+        "if response.status_code == @@status_code@@:",
+        "    @@process_result@@"
+      ]
+    },
+    "goal": "Check if response was successful, and show the data or the error message depending on the result.",
+    "group": "3",
+    "order": 6,
+    "plan_metadata": {
+      "description": "This is a plan to check the response from the API. The response might indicate a successful operation (code 200), or might indicate some type of error.",
+      "instruction": "To use this plan, look up the HTML error codes, and replace the status code with the code you need to watch out for. Then, you can process the result by printing it directly (if there are no errors), or by showing an error message.",
+      "usage": "This plan is used when you want to handle cases where the request to the API may fail."
+    },
+    "plan_name": "Show Result If Successful",
+    "id": 13,
+    "questions": [
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_1",
+        "stem": "You are repeatedly sending requests to an API that has been not working for the past hour. You want to automatically print the data when the API is working again and your request is successfully completed. Which status code should you check for to ensure that the response was successful, allowing you to process and display the JSON data received?",
+        "correct": "200",
+        "distractors": [
+          "404",
+          "500"
+        ],
+        "feedback": [
+          "404 indicates that the requested resource could not be found, so you should handle this as an error.",
+          "500 indicates that there is a server error, thus the response is unsuccessful and should be treated as an error."
+        ]
+      },
+      {
+        "type": "MCQ",
+        "question_id": "MCQ_2",
+        "stem": "You want to send a request to \"api.weather.com/forecast\", but you made a typo while writing the target URL, resulting in the incorrect URL \"api.weather.com/forcast\", which does not exist. Which status code would you need to look for to notice this error?",
+        "correct": "404",
+        "distractors": [
+          "200",
+          "500"
+        ],
+        "feedback": [
+          "200 indicates a successful response, but your response would have the \"Not Found\" error as the mistyped URL does not point to an existing resource.",
+          "500 indicates an error due to the server, but in your case the error would be caused from requesting an address that cannot be found."
+        ]
       }
     ]
   }
