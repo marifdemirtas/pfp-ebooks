@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Purpose-First Introduction to Databases'
+project = 'Purpose-First Introduction to APIs and Requests'
 copyright = '2013-2020 Runestone Interactive LLC'
 
 # The version info for the project you're documenting, acts as replacement for

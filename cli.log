@@ -1,0 +1,208 @@
+Building with Runestone 7.5.10
+---> runestone.build
+git describe --long
+fatal: not a git repository (or any parent up to mount point /usr)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+Building into  ./build/cs102api
+mkdir_p path('././build/cs102api')
+mkdir_p path('./build/cs102api')
+mkdir_p path('././build/cs102api/doctrees')
+sphinx-build -b html -d ././build/cs102api/doctrees -c . -a -E -Acourse_id=cs102api -Alogin_required=true -Aappname=runestone -Aloglevel=10 -Acourse_url=https://runestone.academy -Adynamic_pages=True -Ause_services=false -Abasecourse=cs102api -Apython3=true -Adownloads_enabled=true -Aallow_pairs=false -Aenable_chatcodes=false -Arunestone_version=7.5.10 -Abuild_info=unknown ./_sources ./build/cs102api
+Running Sphinx v5.3.0
+conf called
+['/usr/books/cs102api', '/usr/books/cs102api/custom_components', '/usr/local/bin', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']
+Connecting to DB
+No custom CSS files
+No custom js files
+Customs added
+myst v1.0.0: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: all of 0 po files
+building [html]: all source files
+updating environment: [new config] 14 added, 0 changed, 0 removed
+Resetting questions
+reading sources... [  7%] end_here_comparison
+reading sources... [ 14%] end_here_usability
+reading sources... [ 21%] exercise_1
+reading sources... [ 28%] index
+reading sources... [ 35%] integrated_1
+reading sources... [ 42%] integrated_3
+reading sources... [ 50%] make_get_request
+reading sources... [ 57%] make_post_request
+reading sources... [ 64%] set_authentication_credentials
+reading sources... [ 71%] set_parameters
+reading sources... [ 78%] set_private_content
+reading sources... [ 85%] set_target_url
+reading sources... [ 92%] show_result_if_successful
+reading sources... [100%] start_here
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [  7%] end_here_comparison
+writing output... [ 14%] end_here_usability
+writing output... [ 21%] exercise_1
+writing output... [ 28%] index
+writing output... [ 35%] integrated_1
+writing output... [ 42%] integrated_3
+writing output... [ 50%] make_get_request
+writing output... [ 57%] make_post_request
+writing output... [ 64%] set_authentication_credentials
+writing output... [ 71%] set_parameters
+writing output... [ 78%] set_private_content
+writing output... [ 85%] set_target_url
+writing output... [ 92%] show_result_if_successful
+writing output... [100%] start_here
+
+generating indices... genindex done
+writing additional pages... search done
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+Deleteing Chapter / Subchapter info for cs102api
+Warning - always use build --all to ensure chapter info is consistent!
+Committing changes
+build succeeded, 8 warnings.
+
+The HTML pages are in build/cs102api.
+Done, build successful
+conf called
+['/usr/books/cs102api', '/usr/books/cs102api/custom_components', '/usr/books/cs102api', '/usr/local/bin', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']
+Purpose-First Introduction to Databases : 
+BUILD time is 2025-04-07 02:23:09.460646
+Updating library
+[33m[1mThe runestone command and RST extensions are deprecated.
+You should convert your book to PreTeXt.
+We will continue to add features to the interactive components, but
+you will only have access to them through PreTeXt.[0m
+
+====
+WARNING: while setting up extension conf.py: directive 'fillintheblank' is already registered, it will be overridden
+WARNING: html_static_path entry '_sources/_static' does not exist
+/usr/books/cs102api/_sources/end_here_comparison.rst:2: WARNING: Title underline too short.
+
+Before You Complete The Activity - 1
+===============================
+/usr/books/cs102api/_sources/end_here_usability.rst:2: WARNING: Title underline too short.
+
+Before You Complete The Activity - 2
+===============================
+/usr/books/cs102api/_sources/index.rst:2: WARNING: Title underline too short.
+
+How to communicate with an API?
+==============================
+/usr/books/cs102api/_sources/integrated_1.rst:2: WARNING: Title underline too short.
+
+Example 1: Looking for Restaurant Ratings in Champaign-Urbana
+===============================
+/usr/books/cs102api/_sources/integrated_3.rst:2: WARNING: Title underline too short.
+
+Example 2: Talking to your own ChatGPT
+===============================
+/usr/books/cs102api/_sources/set_parameters.rst:43: WARNING: Explicit markup ends without a blank line; unexpected unindent.
+Building with Runestone 7.5.10
+---> runestone.build
+git describe --long
+fatal: not a git repository (or any parent up to mount point /usr)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+Building into  ./build/cs102api
+mkdir_p path('././build/cs102api')
+mkdir_p path('./build/cs102api')
+mkdir_p path('././build/cs102api/doctrees')
+sphinx-build -b html -d ././build/cs102api/doctrees -c . -a -E -Acourse_id=cs102api -Alogin_required=true -Aappname=runestone -Aloglevel=10 -Acourse_url=https://runestone.academy -Adynamic_pages=True -Ause_services=false -Abasecourse=cs102api -Apython3=true -Adownloads_enabled=true -Aallow_pairs=false -Aenable_chatcodes=false -Arunestone_version=7.5.10 -Abuild_info=unknown ./_sources ./build/cs102api
+Running Sphinx v5.3.0
+conf called
+['/usr/books/cs102api', '/usr/books/cs102api/custom_components', '/usr/local/bin', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']
+Connecting to DB
+No custom CSS files
+No custom js files
+Customs added
+myst v1.0.0: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: all of 0 po files
+building [html]: all source files
+updating environment: [new config] 14 added, 0 changed, 0 removed
+Resetting questions
+reading sources... [  7%] end_here_comparison
+reading sources... [ 14%] end_here_usability
+reading sources... [ 21%] exercise_1
+reading sources... [ 28%] index
+reading sources... [ 35%] integrated_1
+reading sources... [ 42%] integrated_3
+reading sources... [ 50%] make_get_request
+reading sources... [ 57%] make_post_request
+reading sources... [ 64%] set_authentication_credentials
+reading sources... [ 71%] set_parameters
+reading sources... [ 78%] set_private_content
+reading sources... [ 85%] set_target_url
+reading sources... [ 92%] show_result_if_successful
+reading sources... [100%] start_here
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [  7%] end_here_comparison
+writing output... [ 14%] end_here_usability
+writing output... [ 21%] exercise_1
+writing output... [ 28%] index
+writing output... [ 35%] integrated_1
+writing output... [ 42%] integrated_3
+writing output... [ 50%] make_get_request
+writing output... [ 57%] make_post_request
+writing output... [ 64%] set_authentication_credentials
+writing output... [ 71%] set_parameters
+writing output... [ 78%] set_private_content
+writing output... [ 85%] set_target_url
+writing output... [ 92%] show_result_if_successful
+writing output... [100%] start_here
+
+generating indices... genindex done
+writing additional pages... search done
+copying static files... done
+copying extra files... done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+Deleteing Chapter / Subchapter info for cs102api
+Warning - always use build --all to ensure chapter info is consistent!
+Committing changes
+build succeeded, 8 warnings.
+
+The HTML pages are in build/cs102api.
+Done, build successful
+conf called
+['/usr/books/cs102api', '/usr/books/cs102api/custom_components', '/usr/books/cs102api', '/usr/local/bin', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']
+Purpose-First Introduction to Databases : 
+BUILD time is 2025-04-07 02:23:09.460646
+Updating library
+[33m[1mThe runestone command and RST extensions are deprecated.
+You should convert your book to PreTeXt.
+We will continue to add features to the interactive components, but
+you will only have access to them through PreTeXt.[0m
+
+====
+WARNING: while setting up extension conf.py: directive 'fillintheblank' is already registered, it will be overridden
+WARNING: html_static_path entry '_sources/_static' does not exist
+/usr/books/cs102api/_sources/end_here_comparison.rst:2: WARNING: Title underline too short.
+
+Before You Complete The Activity - 1
+===============================
+/usr/books/cs102api/_sources/end_here_usability.rst:2: WARNING: Title underline too short.
+
+Before You Complete The Activity - 2
+===============================
+/usr/books/cs102api/_sources/index.rst:2: WARNING: Title underline too short.
+
+How to communicate with an API?
+==============================
+/usr/books/cs102api/_sources/integrated_1.rst:2: WARNING: Title underline too short.
+
+Example 1: Looking for Restaurant Ratings in Champaign-Urbana
+===============================
+/usr/books/cs102api/_sources/integrated_3.rst:2: WARNING: Title underline too short.
+
+Example 2: Talking to your own ChatGPT
+===============================
+/usr/books/cs102api/_sources/set_parameters.rst:43: WARNING: Explicit markup ends without a blank line; unexpected unindent.

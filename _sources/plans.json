@@ -2,29 +2,23 @@
   {
     "code_template": {
       "changeable_areas": {
-        "c0-'application/json'": [
-          "'application/json'",
-          "application/json"
-        ],
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": [
-          "'Bearer YOUR_ACCESS_TOKEN'",
-          "Bearer YOUR_GPT_ACCESS_TOKEN",
-          "'Bearer YOUR_GPT_ACCESS_TOKEN'"
+        "authorization_token": [
+          "'YOUR_ACCESS_TOKEN'",
+          "YOUR_GPT_ACCESS_TOKEN",
+          "ACCESS_CS102_GPT",
+          "'YOUR_GPT_ACCESS_TOKEN'"
         ]
       },
       "changeable_areas_annotations": {
-        "c0-'application/json'": "TODO",
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": "TODO"
+        "authorization_token": "TODO"
       },
       "changeable_areas_colors": {
-        "c0-'application/json'": "#ffd9a8",
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": "#ffd9a8"
+        "authorization_token": "#ffd9a8"
       },
       "lines": [
         "headers = {",
-        "        'Content-Type': @@c0-'application/json'@@,",
-        "        'Authorization': @@c1-'Bearer YOUR_ACCESS_TOKEN'@@",
-        "    }"
+        "        'Authorization': @@authorization_token@@",
+        "}"
       ]
     },
     "goal": "If the API requires a log in or a similar authentication, share your credentials",
@@ -41,25 +35,25 @@
   {
     "code_template": {
       "changeable_areas": {
-        "my_body": [
-          "my_body",
+        "body": [
+          "body",
           "None"
         ],
-        "my_headers": [
-          "my_headers",
+        "headers": [
+          "headers",
           "None"
         ]
       },
       "changeable_areas_annotations": {
-        "my_body": "The body of your request, which will include the sensitive information you want to share with the server.",
-        "my_headers": "Headers you may want to set, such as the authorization information."
+        "body": "The body of your request, which will include the sensitive information you want to share with the server.",
+        "headers": "Headers you may want to set, such as the authorization information. You can omit this if you do not need to share any headers."
       },
       "changeable_areas_colors": {
-        "my_body": "#4CAF50",
-        "my_headers": "#4CAF50"
+        "body": "#4CAF50",
+        "headers": "#4CAF50"
       },
       "lines": [
-        "response = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)",
+        "response = requests.post(target_url, headers=@@headers@@, json=@@body@@)",
         ""
       ]
     },
@@ -99,8 +93,8 @@
       "changeable_areas_colors": {},
       "lines": [
         "body = {",
-        "    'content': 'my random content'",
-        "    }",
+        "    'content': 'Hello! How are you ChatGPT?'",
+        "}",
         ""
       ]
     },
@@ -221,7 +215,8 @@
           "\"start_date\": \"2023-01-01\"",
           "\"start_date\": \"2023-10-01\", \"location\": \"New York, NY\", \"units\": \"metric\"",
           "\"exchange_rate\": \"USDEUR\"",
-          "\"date\": \"2023-10-01\", \"location\": \"Champaign-Urbana\", \"type\": \"rating\""
+          "\"date\": \"2023-10-01\", \"location\": \"Champaign-Urbana\", \"type\": \"rating\"",
+          "\"count\": 5, \"location\": \"champaign\""
         ]
       },
       "changeable_areas_annotations": {
@@ -345,86 +340,6 @@
   {
     "code_template": {
       "changeable_areas": {
-        "c0-'application/json'": [
-          "'application/json'",
-          "application/json"
-        ],
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": [
-          "'Bearer YOUR_ACCESS_TOKEN'",
-          "Bearer YOUR_GPT_ACCESS_TOKEN"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "c0-'application/json'": "TODO",
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": "TODO"
-      },
-      "changeable_areas_colors": {
-        "c0-'application/json'": "#ffd9a8",
-        "c1-'Bearer YOUR_ACCESS_TOKEN'": "#ffd9a8"
-      },
-      "lines": [
-        "headers = {",
-        "        'Content-Type': @@c0-'application/json'@@,",
-        "        'Authorization': @@c1-'Bearer YOUR_ACCESS_TOKEN'@@",
-        "    }"
-      ]
-    },
-    "goal": "If the API requires a log in or a similar authentication, share your credentials",
-    "group": "2",
-    "order": "1",
-    "plan_metadata": {
-      "description": "This is a plan",
-      "instruction": "To use this plan, follow these steps...",
-      "usage": "This plan is used when..."
-    },
-    "plan_name": "Set Authentication Credentials",
-    "id": 12
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "url": [
-          "https://api.weather.com/v3/wx/forecast/daily/5day",
-          "https://api.coindesk.com/v1/bpi/currentprice.json",
-          "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
-          "https://api.openai.com/v1/chat/completions"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "url": "The URL of the API you want to query."
-      },
-      "changeable_areas_colors": {
-        "url": "#fbb4ae"
-      },
-      "lines": [
-        "import requests",
-        "target_url = '@@url@@'",
-        ""
-      ]
-    },
-    "goal": "Enter the URL for the API you will use.",
-    "group": "2",
-    "order": 0,
-    "plan_metadata": {
-      "description": "This plan sets the URL address for the API you want to use.",
-      "instruction": "To use this plan, find the URL of the API you want to use online. These URLs might start with 'api' instead of 'www'. See the examples for the plan for some example URLs.",
-      "usage": "This plan is used before you send any requests."
-    },
-    "plan_name": "Set Target URL",
-    "id": 12,
-    "questions": [
-      {
-        "type": "True/False",
-        "question_id": "True/False_1",
-        "stem": "The URL must be in quotation marks (e.g. target_url = \"api.example.com\").",
-        "label": "True",
-        "feedback": "When using Python, you need to wrap the URL address in quotes (either with 'single quotes' or \"double quotes\")."
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
         "url": [
           "https://api.weather.com/v3/wx/forecast/daily/5day",
           "https://api.coindesk.com/v1/bpi/currentprice.json",
@@ -461,187 +376,6 @@
         "stem": "The URL must be in quotation marks (e.g. target_url = \"api.example.com\").",
         "label": "True",
         "feedback": "When using Python, you need to wrap the URL address in quotes (either with 'single quotes' or \"double quotes\")."
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "key_value_pair": [
-          "\"start_date\": \"2023-01-01\"",
-          "\"start_date\": \"2023-10-01\", \"location\": \"New York, NY\", \"units\": \"metric\"",
-          "\"exchange_rate\": \"USDEUR\""
-        ]
-      },
-      "changeable_areas_annotations": {
-        "key_value_pair": "A \"key\" that refers to the type of information, and a \"value\" that is the information you need to send to the API. You can add multiple pairs to send more information, depending on the API."
-      },
-      "changeable_areas_colors": {
-        "key_value_pair": "#b3cde3"
-      },
-      "lines": [
-        "my_params = {",
-        "    @@key_value_pair@@,",
-        "}"
-      ]
-    },
-    "goal": "Enter parameters that will affect the response from the API.",
-    "group": "2",
-    "order": 1,
-    "plan_metadata": {
-      "description": "This plan lists the parameters that will be shared with the API you are calling.",
-      "instruction": "To use this plan, check the documentation of the API to see what type of information is required to send a request. Then, add each piece of information according to the format described. You can Google for an API's documentation to see which parameters they accept.",
-      "usage": "This plan is used when you need to call an API with a set of parameters that do not contain private information. If you want to share private information with the API, you will need to use more secure methods that we will explore soon."
-    },
-    "plan_name": "Set Parameters",
-    "id": 13,
-    "questions": [
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "Look at the \"request parameters\" for a weather API in their documentation: https://www.weatherapi.com/docs/ \nAccording to the documentation, which one of the options would be an incorrect parameter to provide?",
-        "correct": "\"days\": \"yesterday\"",
-        "distractors": [
-          "\"days\": 5",
-          "\"q\": \"Champaign\"",
-          "\"q\": 61820"
-        ],
-        "feedback": [
-          "This is a valid option for the number of days of forecast required, which must be between 1 and 14.",
-          "This is a valid option for the query parameter, as it is a city name.",
-          "This is a valid option for the query parameter, as it is an US zip code."
-        ]
-      },
-      {
-        "type": "True/False",
-        "question_id": "True/False_1",
-        "stem": "You can provide multiple parameters in the same API call.",
-        "label": "True",
-        "feedback": "By providing multiple pairs of keys and values, you can pass many parameters to the API in the same call."
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "process_result": [
-          "print(response.json())",
-          "print({\"error\": \"404 Not Found\"})",
-          "print({\"error\": \"500 Internal Server Error\"})"
-        ],
-        "status_code": [
-          "200",
-          "404",
-          "500"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "process_result": "This line processes the response to generate a result: It may show the response from the server or it might show an error message.",
-        "status_code": "A number that represents whether the request was successful (200) or had some particular error."
-      },
-      "changeable_areas_colors": {
-        "process_result": "#fbb4ae",
-        "status_code": "#cce8b5"
-      },
-      "lines": [
-        "# Check the result of the request",
-        "if response.status_code == @@status_code@@:",
-        "    @@process_result@@"
-      ]
-    },
-    "goal": "Check if response was successful, and show the data or the error message depending on the result.",
-    "group": "2",
-    "order": 6,
-    "plan_metadata": {
-      "description": "This is a plan to check the response from the API. The response might indicate a successful operation (code 200), or might indicate some type of error.",
-      "instruction": "To use this plan, look up the HTML error codes, and replace the status code with the code you need to watch out for. Then, you can process the result by printing it directly (if there are no errors), or by showing an error message.",
-      "usage": "This plan is used when you want to handle cases where the request to the API may fail."
-    },
-    "plan_name": "Show Result If Successful",
-    "id": 13,
-    "questions": [
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are repeatedly sending requests to an API that has been not working for the past hour. You want to automatically print the data when the API is working again and your request is successfully completed. Which status code should you check for to ensure that the response was successful, allowing you to process and display the JSON data received?",
-        "correct": "200",
-        "distractors": [
-          "404",
-          "500"
-        ],
-        "feedback": [
-          "404 indicates that the requested resource could not be found, so you should handle this as an error.",
-          "500 indicates that there is a server error, thus the response is unsuccessful and should be treated as an error."
-        ]
-      },
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_2",
-        "stem": "You want to send a request to \"api.weather.com/forecast\", but you made a typo while writing the target URL, resulting in the incorrect URL \"api.weather.com/forcast\", which does not exist. Which status code would you need to look for to notice this error?",
-        "correct": "404",
-        "distractors": [
-          "200",
-          "500"
-        ],
-        "feedback": [
-          "200 indicates a successful response, but your response would have the \"Not Found\" error as the mistyped URL does not point to an existing resource.",
-          "500 indicates an error due to the server, but in your case the error would be caused from requesting an address that cannot be found."
-        ]
-      }
-    ]
-  },
-  {
-    "code_template": {
-      "changeable_areas": {
-        "params": [
-          "my_params",
-          "None"
-        ]
-      },
-      "changeable_areas_annotations": {
-        "params": "You can either send your parameters, or call the API with no parameters."
-      },
-      "changeable_areas_colors": {
-        "params": "#fbb4ae"
-      },
-      "lines": [
-        "response = requests.get(target_url, params=@@params@@)",
-        ""
-      ]
-    },
-    "goal": "Call the API by making a GET request to the server.",
-    "group": "2",
-    "order": 2,
-    "plan_metadata": {
-      "description": "This is a plan when you want to make a GET request from an API to obtain information. Sending a GET request is similar to going to an URL on your website.",
-      "instruction": "To use this plan, provide the target url you set earlier, and provide parameters if there are any parameters you would like to share with the API.",
-      "usage": "This plan is used when your goal is to collect information (e.g. such as weather or exchange rates). You can use it if you want to make a request to the API where you do not need to share sensitive information."
-    },
-    "plan_name": "Make GET Request",
-    "id": 15,
-    "questions": [
-      {
-        "type": "True/False",
-        "question_id": "True/False_1",
-        "stem": "The 'Make GET Request' plan is used to send sensitive data to a server by including it in the URL.",
-        "label": "True",
-        "feedback": "No, 'Make GET Request' is primarily for retrieving data, not sending it."
-      },
-      {
-        "type": "MCQ",
-        "question_id": "MCQ_1",
-        "stem": "You are tasked with retrieving data from an online weather API to display the current weather information for a city. Which parameter setting should you use in the code template to ensure the GET request is made without additional query parameters?",
-        "correct": "None",
-        "distractors": [
-          "my_params",
-          "default_params",
-          "all_params"
-        ],
-        "feedback": [
-          "Using 'my_params' would imply that you need to specify certain query parameters, which is not required for this task.",
-          "'default_params' is not a recognized option in the given template.",
-          "'all_params' suggests including all possible parameters, which is unnecessary for a simple GET request without specific queries."
-        ]
       }
     ]
   },

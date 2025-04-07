@@ -10,7 +10,7 @@ from sphinxcontrib import paverutils
 
 
 ######## CHANGE THIS ##########
-project_name = "cs102sql"
+project_name = "cs102api"
 ###############################
 
 master_url = "https://runestone.academy"
@@ -42,7 +42,7 @@ options(
             "course_url": master_url,
             "dynamic_pages": True,
             "use_services": "false",
-            "basecourse": "cs102sql",
+            "basecourse": "cs102api",
             "python3": "true",
             "downloads_enabled": "true",
             "allow_pairs": "false",

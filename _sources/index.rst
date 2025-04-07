@@ -1,48 +1,32 @@
-Programming Plans Tutorial
+How to communicate with an API?
 ==============================
 
-Goal of this Tutorial
+Welcome! We have been learning about web servers and HTTP. Today, we will learn how to communicate with an API by sending HTTP requests. APIs (Application Programming Interfaces) provide a structured way to ask for information. APIs are hosted on servers, and we (clients) can send requests to them to obtain information.
+
+In this lab, we will go over two common request types: GET and POST. GET requests are used to retrieve information from the server based on some parameters (such as asking the weather in a city). POST requests are used to send information to the server (such as sending a private message).
+
 ------------------------------
 
-This tutorial introduces you to common programming plans - reusable code patterns that help solve specific programming tasks. Each plan comes with examples, explanations, and interactive exercises to help you master its usage.
-
-.. admonition:: Learning Approach
+.. admonition:: Tutorial Structure
    :class: note
 
-   Each programming plan is presented with:
-   * A clear explanation of its purpose and when to use it
-   * Code examples showing how to implement it
-   * Interactive exercises to practice applying the plan
-   * Common variations and edge cases to consider
+   This tutorial is organized around common *patterns* in programs that send requests to APIs, also known as programming plans.
 
-Integrated Examples
+   Each programming plan has a clear goal describing what it helps you achieve, a code template that you can modify for your own use case, and annotations on which areas to change.
+
+   Throughout the tutorial, you will first see real-world examples of how APIs are useful, and then you will see how these examples break down into plans.
+
+======
+
+Contents
 ::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   integrated_3.rst
+   start_here.rst
    integrated_1.rst
-   integrated_2.rst
-
-List of Plans
---------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   set_authentication_credentials
-   make_post_request
-   set_private_content
-   set_target_url
-   make_get_request
-   set_parameters
-   show_result_if_successful
-   set_authentication_credentials
-   set_target_url
-   set_target_url
-   set_parameters
-   show_result_if_successful
-   make_get_request
-   show_result_if_successful
-
+   integrated_3.rst
+   exercise_1.rst
+   end_here_comparison.rst
+   end_here_usability.rst

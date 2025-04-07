@@ -1,61 +1,49 @@
-Integrated Example - 3
+Example 2: Talking to your own ChatGPT 
 ===============================
 
-In this example, we are demonstrating how to interact with the ChatGPT API to ask a question and get a response. The scenario involves sending a question to ChatGPT, which requires setting up a target URL for the API, providing authentication credentials, preparing the question as the content, making a POST request, and handling the response. 
+In this example, we will see how we can talk to ChatGPT using the API to ask a question and get a response. 
 
-To begin, you will need an access token from OpenAI to authenticate your request. Once authenticated, you can send a question to the ChatGPT API and receive a response. This example covers how to set each part of the request and handle the response to ensure you get the information you need.
+To achieve this, you would need to buy an **access token** from OpenAI to authenticate your request. For today, you will use a custom large language model that we are providing to you, using the following endpoint URL: https://one02-api-fastapi.onrender.com/api/chat.
 
-Here is a simple table outlining the steps:
+The access token for this API is: ACCESS_CS102_GPT
 
-+--------------------------+----------------------------------------------+
-| Step                     | Description                                  |
-+==========================+==============================================+
-| Set Target URL           | Define the API endpoint URL                  |
-+--------------------------+----------------------------------------------+
-| Set Authentication       | Provide necessary headers with credentials   |
-+--------------------------+----------------------------------------------+
-| Set Private Content      | Prepare the question as request content      |
-+--------------------------+----------------------------------------------+
-| Make POST Request        | Send the request with headers and content    |
-+--------------------------+----------------------------------------------+
-| Show Result If Successful| Process the response and display results     |
-+--------------------------+----------------------------------------------+
-
-By following these steps, you can successfully query the ChatGPT API to obtain answers to your questions.
+To use the API, you will need to send your message in the body of your request, as content. Once authenticated, you can send a question to the ChatGPT API and receive a response. This example covers how to set each part of the request and print the response.
 
 .. activecode:: integrated_3
-   :language: sql
+   :language: python3
 
    # Enter the URL for the API you will use.
    import requests
-   target_url = 'https://api.chatgpt.com/v1/ask'
+   target_url = 'https://one02-api-fastapi.onrender.com/api/chat'
    
 
    # If the API requires a log in or a similar authentication, share your credentials
    headers = {
-           'Content-Type': application/json,
-           'Authorization': Bearer YOUR_GPT_ACCESS_TOKEN
-       }
+           'Authorization': ACCESS_CS102_GPT
+   } 
 
-   # If you are calling an API on your data, send the data in the body of your message.
+   # If you are calling an API on your data, send the content in the body.
    body = {
-       'content': 'my random content'
-       }
+       'content': 'Hello! How are you ChatGPT?'
+   }
    
 
    # Call the API with private data by making a POST request to the server.
-   response = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)
-   
+   response = requests.post(target_url, headers=headers, json=body)
+
 
    # Check if response was successful, and show the data or the error message depending on the result.
    # Check the result of the request
    if response.status_code == 200:
        print(response.json())
+   if response.status_code == 404:
+       print("Error 404 (Not Found): ", response.json())
 
 This example uses the following programming plans:
 
 .. toctree::
    :maxdepth: 1
+
    set_target_url
    set_authentication_credentials
    set_private_content

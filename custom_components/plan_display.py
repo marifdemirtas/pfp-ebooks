@@ -57,7 +57,7 @@ class PlanDisplay(Directive):
         html_code += "</pre></div>"
         
         # Generate a unique ID for this instance
-        instance_id = f"plan-display-{uuid.uuid4().hex[:8]}"
+        instance_id = f"plan_display_{uuid.uuid4().hex[:8]}"
         
         # Add annotations section before processing changeable areas
         html_code += f"""
@@ -103,8 +103,8 @@ class PlanDisplay(Directive):
         
         <script>
         // Possible replacements loaded directly from JSON
-        const possibleValues_{instance_id} = """ + {json.dumps(changeable_areas)} + """;
-        const annotations_{instance_id} = """ + {json.dumps(code_template.get('changeable_areas_annotations', {}))} + """;
+        const possibleValues_{instance_id} = {json.dumps(changeable_areas)};
+        const annotations_{instance_id} = {json.dumps(code_template.get('changeable_areas_annotations', {}))};
 
         function randomizeValues_{instance_id}() {{
             document.querySelectorAll('.changeable.{instance_id}').forEach((elem) => {{
