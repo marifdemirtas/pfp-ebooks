@@ -40,8 +40,7 @@ Plan 7 - Exercises
    :correct: a
 
    In the context of sending a JSON payload to an API endpoint that requires authentication, which part of the following code template is responsible for specifying the data being sent in the request body?
-
-response = requests.post(target_url, headers=@@my_headers@@, json=@@my_body@@)
+   response = requests.post(target_url, headers=my_headers, json=my_body)
 
 .. note:: 
       

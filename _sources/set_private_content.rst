@@ -23,10 +23,20 @@ This plan is used when you want to send sensitive information to an API. For exa
 
 Plan 6 - What parts can be customized to use this plan?
 -------------------------------------------------------
-To use this plan, provide the content you want to send in the body of the request. In our examples, we send the data as 'content', but this tag can change depending on the API you are using.
+To use this plan, provide the content you want to send in the body of the request. In our examples, we send the data as 'message', but this tag can change depending on the API you are using.
 
 Plan 6 - Exercises
 --------------------
+.. mchoice:: set_private_content_q1
+   :answer_a: True
+   :feedback_a: Correct!
+   :answer_b: False
+   :feedback_b: No, you would use this plan as it prevents the message from being visible in the URL.
+   :correct: a
+
+   To send a message to a chatbot using a POST request, you would use the 'Set Private Content' plan that holds the message in the body of the request.
+
+
 .. note:: 
       
       .. raw:: html

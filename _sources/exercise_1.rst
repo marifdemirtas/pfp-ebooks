@@ -5,7 +5,7 @@ In this exercise, you will play a game with an API: the API has a secret number,
 
 The endpoint for the API is: https://one02-api-fastapi.onrender.com/api/guess
 
-This endpoint will process your guess, so you will need to POST a request to it. Your guess should be in the body of the request, as your content.
+This endpoint will process your guess, so you will need to POST a request to it. Your guess should be in the body of the request, not in the URL.
 
 
 Try to plan your solution below.
@@ -33,6 +33,8 @@ Try to plan your solution below.
 
 
 Optional: If you want, you can write the code for these plans by copy pasting the code from the plans! Let's see if you can guess the number!
+
+The body of your response should contain two values: a "guess" and a "netid". For example, this could be the body for guessing 25: {"guess": 25, "netid": "katcun"}.
 
 .. activecode:: exercise_1
    :language: python3
@@ -62,3 +64,12 @@ Here is a list of all programming plans you have learned today:
 
 .. plandisplay:: plans.jsonshow_result_if_successful_code
    :plan: Show Result If Successful
+
+
+.. highlightedtextbox::
+   :title:
+   :color: #f4e36e
+   :highlight-color: #ffe53e
+   :highlight-on-load:
+
+   Click on the arrow on the bottom right to continue.

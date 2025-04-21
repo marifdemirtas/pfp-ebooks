@@ -40,7 +40,7 @@ Plan 2 - Exercises
    :correct: a
 
    Look at the "request parameters" for a weather API in their documentation: https://www.weatherapi.com/docs/ 
-According to the documentation, which one of the options would be an incorrect parameter to provide?
+   According to the documentation, which one of the options would be an incorrect parameter to provide?
 
 .. mchoice:: set_parameters_q2
    :answer_a: True

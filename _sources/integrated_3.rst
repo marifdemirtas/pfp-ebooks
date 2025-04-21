@@ -7,7 +7,7 @@ To achieve this, you would need to buy an **access token** from OpenAI to authen
 
 The access token for this API is: ACCESS_CS102_GPT
 
-To use the API, you will need to send your message in the body of your request, as content. Once authenticated, you can send a question to the ChatGPT API and receive a response. This example covers how to set each part of the request and print the response.
+To use the API, you will need to send your message in the body of your request, as "message". Once authenticated, you can send a question to the ChatGPT API and receive a response. This example covers how to set each part of the request and print the response.
 
 .. activecode:: integrated_3
    :language: python3
@@ -24,7 +24,7 @@ To use the API, you will need to send your message in the body of your request, 
 
    # If you are calling an API on your data, send the content in the body.
    body = {
-       'content': 'Hello! How are you ChatGPT?'
+       'message': 'Hello! How are you ChatGPT?'
    }
    
 

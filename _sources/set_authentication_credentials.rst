@@ -25,8 +25,6 @@ Plan 5 - What parts can be customized to use this plan?
 -------------------------------------------------------
 To use this plan, provide the access token you received from the API provider. In our examples, we use 'ACCESS_CS102_GPT', but this can change depending on the API you are using.
 
-Plan 5 - Exercises
---------------------
 .. note:: 
       
       .. raw:: html

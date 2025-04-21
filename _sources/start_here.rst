@@ -12,7 +12,7 @@ Please rate how much you agree with the each statement. Your responses will be a
    :option_6: Agree
    :option_7: Strongly Agree
 
-   I am interested in learning how to manage data and run SQL queries on databases.
+   I am interested in understanding how to interact with and retrieve data from APIs.
 
 .. poll:: poll-pre2
    :option_1: Strongly Disagree
@@ -23,7 +23,7 @@ Please rate how much you agree with the each statement. Your responses will be a
    :option_6: Agree
    :option_7: Strongly Agree
 
-   I am confident in my ability to write or edit SQL queries to analyze datasets.
+   I am confident in my ability to make API requests and show JSON responses.
 
 .. highlightedtextbox::
    :title:

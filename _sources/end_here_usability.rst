@@ -70,13 +70,11 @@ Rate how much you agree with the given statement based on your experience with t
 
 ----
 
-
-
 .. highlightedtextbox::
    :title:
    :color: #f4e36e
    :highlight-color: #ffe53e
    :highlight-on-load:
 
-   🔎 Complete the last two questions (Q4 and Q5) on your worksheet.
-   You have reached the end of the online activities. If you completed the online activities and your reflection sheet, you can check in with your TA. <a href='/ns/books/published/cs102sql/index.html'>If not, click here to go back to the table of contents.</a>
+   You have reached the end of the activity. Complete your worksheet.
+

@@ -4,13 +4,11 @@
       "changeable_areas": {
         "authorization_token": [
           "'YOUR_ACCESS_TOKEN'",
-          "YOUR_GPT_ACCESS_TOKEN",
-          "ACCESS_CS102_GPT",
           "'YOUR_GPT_ACCESS_TOKEN'"
         ]
       },
       "changeable_areas_annotations": {
-        "authorization_token": "TODO"
+        "authorization_token": "A token or a key that you will obtain from the owner of the API. This is usually a long string of letters and numbers that you will need to use to access the API."
       },
       "changeable_areas_colors": {
         "authorization_token": "#ffd9a8"
@@ -88,12 +86,21 @@
   },
   {
     "code_template": {
-      "changeable_areas": {},
-      "changeable_areas_annotations": {},
-      "changeable_areas_colors": {},
+      "changeable_areas": {
+        "key_value_pair": [
+          "\"message\": \"Hello! How are you ChatGPT?\"",
+          "\"guess\": 15, \"netid\": \"katcun\""
+        ]
+      },
+      "changeable_areas_annotations": {
+        "key_value_pair": "A \"key\" that refers to the type of information, and a \"value\" that is the information you need to send to the API, similar to setting parameters."
+      },
+      "changeable_areas_colors": {
+        "key_value_pair": "#b3cde3"
+      },
       "lines": [
         "body = {",
-        "    'content': 'Hello! How are you ChatGPT?'",
+        "    @@key_value_pair@@,",
         "}",
         ""
       ]

@@ -29,10 +29,10 @@ Plan 3 - Exercises
 --------------------
 .. mchoice:: make_get_request_q1
    :answer_a: True
-   :feedback_a: Correct!
+   :feedback_a: No, 'Make GET Request' is primarily for retrieving data, not sending it.
    :answer_b: False
-   :feedback_b: No, 'Make GET Request' is primarily for retrieving data, not sending it.
-   :correct: a
+   :feedback_b: Correct!
+   :correct: b
 
    The 'Make GET Request' plan is used to send sensitive data to a server by including it in the URL.
 
